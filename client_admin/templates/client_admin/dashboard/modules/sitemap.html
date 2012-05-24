@@ -1,0 +1,65 @@
+{% extends "client_admin/dashboard/module.html" %}
+
+{% macro list_child(object) %}
+    <li class="clear">
+        <div>
+            {% if object.change_url %}
+                <a href="{{ object.change_url }}">{{ object.title }}</a>
+            {% elif object.list_url %}
+                <a href="{{ object.list_url }}">{{ object.title }}</a>
+            {% else %}
+                {{ object.title }}
+            {% endif %}
+        	{% if object.type %}<span class="object_type">({{ object.type|title }})</span> {% endif %}
+            {% if object.add_url or object.change_url or object.list_url %}
+            <ul class="list-options">
+                {% if object.add_url %}<li><a href="{{ object.add_url }}" class="addlink"><span class="icon">{{ _("Add") }}</span></a></li>{% endif %}
+                {% if object.change_url %}<li><a href="{{ object.change_url }}" class="changelink"><span class="icon">{{ _("Edit") }}</span></a></li>{% endif %}
+                {% if object.list_url %}<li><a href="{{ object.list_url }}" class="listlink"><span class="icon">{{ _("List") }}</span></a></li>{% endif %}
+            </ul>
+            {% endif %}
+        </div>
+        {% if object.children %}
+        <ul class="children">
+            {% for child in object.children %}
+                {{ list_child(child) }}
+            {% endfor %}
+        </ul>
+        {% endif %}
+    </li>
+	
+   
+{% endmacro %}
+
+
+{% block module_content %}
+    <ul>
+
+    
+        {% for object in module.children %}
+        
+            	<li class="first clear">
+			    {% if object.change_url %}
+			        <a href="{{ object.change_url }}">{{ object.title }}</a>
+			    {% elif object.list_url %}
+			        <a href="{{ object.list_url }}">{{ object.title }}</a>
+			    {% else %}
+			        {{ object.title }}
+			    {% endif %}
+				{% if object.type %}<span class="object_type">({{ object.type|title }})</span> {% endif %}
+			    {% if object.add_url or object.change_url or object.list_url %}
+			        <ul class="list-options">
+			            {% if object.add_url %}<li><a href="{{ object.add_url }}" class="addlink"><span class="icon">{{ _("Add") }}</span></a></li>{% endif %}
+			            {% if object.change_url %}<li><a href="{{ object.change_url }}" class="changelink"><span class="icon">{{ _("Edit") }}</span></a></li>{% endif %}
+			            {% if object.list_url %}<li><a href="{{ object.list_url }}" class="listlink"><span class="icon">{{ _("List") }}</span></a></li>{% endif %}
+			        </ul>
+			    {% endif %}
+		    	</li>
+        
+                {% for child in object.children %}
+            		{{ list_child(child) }}
+        		{% endfor %}
+        
+        {% endfor %}
+    </ul>
+{% endblock %}

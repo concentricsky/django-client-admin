@@ -1,0 +1,9 @@
+{% set form_url=url('client-admin-menu-add-bookmark')  %}
+{% if form_url %}
+<form id="bookmark-form" action="{{ form_url }}" method="POST">
+    <input type="hidden" name="next" value="{{request.get_full_path()|escape}}" />
+    <input type="hidden" name="url" value="{{request.get_full_path()|escape}}" />
+    <input type="hidden" name="title" value="{{ title }}" />
+    <button id="bookmark-button" type="submit">Add</button>
+</form>
+{% endif %}

@@ -1,0 +1,44 @@
+{% load i18n %}
+{% load generic jinja %}
+
+{% extends_jinja "client_admin/client_admin_base.html" %}
+
+{% block title %}{{ title }} | {% trans 'Django site admin' %}{% endblock %}
+
+{% block bodyclass %}{% endblock %}
+
+{% block branding %}
+<h1 id="site-name">{% trans 'Django administration' %}</h1>
+{% endblock %}
+
+{% block nav-global %}{% endblock %}
+
+{% block extrastyle %}{% endblock %}
+
+{% block stylesheet_rtl %}{% endblock %}
+
+{% block extrahead %}{% endblock %}
+
+{% block blockbots %}<meta name="robots" content="NONE,NOARCHIVE" />{% endblock %}
+
+{# block userlinks %}{% endblock #}
+
+{% block breadcrumbs %}{% endblock %}
+
+{% block messages %}{%block_super%}{% endblock messages %}
+
+{% block pretitle %}{% endblock %}
+
+{% block content_title %}{{ title }}{% endblock %}
+
+{% block object-tools %}{% endblock %}
+
+{% block pre_content %}{%block_super%}{% endblock %}
+
+{% block content %}{{ content }}{% endblock %}
+
+{% block sidebar %}{% endblock %}
+
+{# block scripts %}{%block_super%}{% endblock #}
+    
+{% block footer %}<div id="footer"></div>{% endblock %}

@@ -1,0 +1,66 @@
+<!doctype html>  
+
+<!--[if lt IE 7 ]> <html lang="en" class="no-js ie6"> <![endif]-->
+<!--[if IE 7 ]>    <html lang="en" class="no-js ie7"> <![endif]-->
+<!--[if IE 8 ]>    <html lang="en" class="no-js ie8"> <![endif]-->
+<!--[if IE 9 ]>    <html lang="en" class="no-js ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html lang="en" class="no-js"> <!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+	{% block head %}{% endblock %}
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<title>{% block title %}Concentric Sky Client Admin{% endblock %}</title>
+	<meta name="description" content="">
+	<meta name="author" content="">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	
+	{% block extra_style %}{% endblock %}
+	{% block extrahead %}{% endblock %}
+	{% block blockbots %}{% endblock %}
+	
+	<link href="{{ STATIC_URL }}client_admin/css/style.css" media="screen, projection" rel="stylesheet" type="text/css" />
+	<link href="{{ STATIC_URL }}client_admin/css/menu.css" media="screen, projection" rel="stylesheet" type="text/css" />
+	<script src="{{STATIC_URL}}client_admin/js/modernizr-2.5.3.min.js"></script>
+	<!--[if lte IE 8]>
+		<link rel="stylesheet" href="{{ STATIC_URL }}client_admin/css/ie.css" type="text/css" media="screen, projection"/>
+	<![endif]-->
+</head>
+
+<body class="{% if is_popup %}popup {% endif %}{% block bodyclass %}{% endblock %}">
+	
+	{% if not is_popup %}
+	<header>
+		<nav class="clear">
+			<h1><a href="{{url('admin:index')}}"{% if menu and menu.site_logo %} style="background-image:url({{menu.site_logo}})"{% endif %}>Client Admin</a></h1>
+			{% block nav_global %}{% endblock %}
+			<ul>
+				{% block secondary_nav %}{% endblock %}		
+			</ul>
+		</nav>
+	</header>
+	{% endif %}
+	
+	<div id="content_container" class="clear">
+		<div id="page_header" class="clear">
+			{% block pre_content %}{% endblock %}
+		</div>
+		<div id="admin_content" class="clear {% block admin_content_class %}{% endblock %}">
+			{% block content %}{% endblock %}
+		</div>
+	</div>
+	
+	{% if not is_popup %}
+	<footer>
+		<p>Built by <a href="http://www.concentricsky.com" target="_blank">Concentric Sky</a>.</p>
+	</footer>
+	{% endif %}
+
+{% block scripts %}{% endblock %}
+
+<!--[if lt IE 7 ]>
+<script src="//ajax.googleapis.com/ajax/libs/chrome-frame/1.0.3/CFInstall.min.js"></script>
+<script>window.attachEvent('onload',function(){CFInstall.check({mode:'overlay'})})</script>
+<![endif]-->
+
+</body>
+</html>

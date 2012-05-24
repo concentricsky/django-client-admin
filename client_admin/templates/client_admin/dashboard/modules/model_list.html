@@ -1,0 +1,16 @@
+{% extends "client_admin/dashboard/module.html" %}
+{% block module_content %}
+        <ul>
+            {% for child in module.children %}
+            <li class="clear">
+                {% if child.change_url %}<a href="{{ child.change_url }}">{{ child.title }}</a>{% else %}{{ child.title }}{% endif %}
+                {% if child.add_url or child.change_url %}
+                <ul class="list-options">
+                    {% if child.add_url %}<li><a class="addlink" href="{{ child.add_url }}"><span class="icon">{% trans "Add" %}</span></a></li>{% endif %}
+                    {% if child.change_url %}<li><a class="changelink" href="{{ child.change_url }}"><span class="icon">{% trans "Change" %}</span></a></li>{% endif %}
+                </ul>
+                {% endif %}
+            </li>
+            {% endfor %}
+        </ul>
+{% endblock %}

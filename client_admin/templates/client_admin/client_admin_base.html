@@ -1,0 +1,181 @@
+{% extends "client_admin/base.html" %}
+
+{% set dashboard, dashboard_preferences, split_at, has_disabled_modules = get_current_dashboard() %}
+{% set menu, has_bookmark_item, bookmark = get_menu() %}
+
+{% block title %}{{ title }} | {{ _('Site admin') }}{% endblock %}
+
+{% block branding %}
+<h1 id="site-name">{{ _('Site administration') }}</h1>
+{% endblock %}
+
+{% block extra_style %}
+{{ super() }}
+
+<link rel="stylesheet" type="text/css" href="{% block stylesheet %}{#{% load adminmedia %}#}{{ STATIC_URL }}admin/css/base.css{% endblock %}" />
+{% if LANGUAGE_BIDI %}<link rel="stylesheet" type="text/css" href="{% block stylesheet_rtl %}{{ STATIC_URL }}admin/css/rtl.css{% endblock %}" />{% endif %}
+<script type="text/javascript">window.__admin_media_prefix__ = "{{ STATIC_URL }}admin/";</script>
+<link rel="stylesheet" href="{{ STATIC_URL }}client_admin/css/jquery/jquery-ui.css" type="text/css" media="screen, projection"/>
+{% if dashboard and dashboard.Media %}
+{% for css in dashboard.Media.css %}
+<link rel="stylesheet" href="{{ STATIC_URL }}{{ css }}" type="text/css" media="screen, projection"/>
+{% endfor %}
+{% endif %}
+
+<!--{% if user.is_active and user.is_staff %}
+{% if not is_popup %}
+<link rel="stylesheet" href="{{ STATIC_URL }}client_admin/css/menu.css" type="text/css" media="screen, projection"/>
+<!--[if lt IE 8]>
+<link rel="stylesheet" href="{{ STATIC_URL }}client_admin/css/ie.css" type="text/css" media="screen, projection"/>
+<![endif]-->
+<!--{% endif %}
+{% endif %}-->
+{% block extrastyle %}{% endblock %}
+{% endblock %}
+
+
+{% block bodyclass %}dashboard{% endblock %}
+
+{% block blockbots %}  
+    {{ super() }}
+    <meta name="robots" content="NONE,NOARCHIVE" />
+{% endblock %}
+
+{% block secondary_nav %}
+    {# if user.is_active and user.is_staff and not is_popup #}
+    {% if user.is_active and user.is_staff %}
+
+            {% if menu %}
+                {% include menu.template %}
+            {% endif %}
+
+    {% endif %}
+{% endblock %}
+
+
+{% block pre_content %}
+
+    {% block messages %}
+        {% if messages %}
+        <ul class="messagelist">{% for message in messages %}
+          <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+        {% endfor %}</ul>
+        {% endif %}
+    {% endblock messages %}
+
+    <h2>{% block content_title %}{{ title }}{% endblock %}</h2>
+	{% if has_bookmark_item and not is_popup %}
+	    {% if bookmark %}
+	        {% include "client_admin/menu/remove_bookmark_form.html" %}
+	    {% else %}
+	        {% include "client_admin/menu/add_bookmark_form.html" %}
+	    {% endif %}
+	{% endif %}
+
+    {% block breadcrumbs %}{% endblock %}
+
+{% endblock %}
+
+
+{% block scripts %}
+    {% if dashboard and dashboard.Media %}{% for js in dashboard.Media.js %}
+    <script type="text/javascript" src="{{ STATIC_URL }}{{ js }}"></script>
+    {% endfor %}{% endif %}
+    <script src="{{STATIC_URL}}client_admin/js/jquery/jquery-1.7.2.min.js"></script>
+    <script type="text/javascript">
+        var jQuery = django.jQuery;
+    </script>
+{#    <script type="text/javascript" src="{{ STATIC_URL }}client_admin/js/jquery/jquery.collapsed_stacked_inlines.js"></script>#}
+    <script type="text/javascript" src="{{ STATIC_URL }}client_admin/js/utils.js"></script>
+{#    <script type="text/javascript" src="{{ STATIC_URL }}client_admin/js/jquery/jquery.grp_autocomplete_generic.min.js"></script> #}
+    <script type="text/javascript" src="{{ STATIC_URL }}client_admin/js/jquery/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="{{ STATIC_URL }}client_admin/js/json.min.js"></script>
+    <script type="text/javascript" src="{{ STATIC_URL }}client_admin/js/jquery/jquery.cookie.min.js"></script>
+    <script type="text/javascript" src="{{ STATIC_URL }}client_admin/js/jquery/jquery.dashboard.js"></script>
+    <script type="text/javascript" src="{{ STATIC_URL }}client_admin/js/jquery/jquery.ui.nestedSortable.js"></script>
+    <script type="text/javascript" src="{{ STATIC_URL }}client_admin/js/dashboard.js"></script>
+    <script type="text/javascript" src="{{ STATIC_URL }}client_admin/js/menu.js"></script>
+    
+    <script type="text/javascript">
+
+        reset_order_fields = function(){
+            parent_item = jQuery('ul.inline-group');
+            order_fields = parent_item.find('select').filter(function() {
+                return this.id.match(/.*?-order/);
+            }).each(function(index) {
+                jQuery(this).val(index+1);
+            });
+        };
+
+        jQuery(document).ready(function($){
+
+            {% if has_bookmark_item %}
+            process_bookmarks(
+               "{{ request.get_full_path() }}",
+               "Page: {{ title }}",
+               "{{ _('Please enter a name for the bookmark') }}"
+            );
+            {% endif %}
+            
+            {% if dashboard %}
+            init_dashboard(
+                '{{ dashboard.get_id() }}',
+                {{ dashboard.columns }},
+                {{ dashboard_preferences|safe }},
+                '{{ url("client-admin-dashboard-set-preferences", dashboard.get_id()) }}'
+            );
+            {% endif %}
+
+            reset_order_fields();
+			            
+			$("div.dashboard-module-content ul > li").hover(function () {
+			   	$(this).addClass('hover');
+			  	}, 
+				function () {
+			    	$(this).removeClass('hover');
+			});
+
+            $('.sortable').nestedSortable({
+                listType: 'ul',
+                items: 'li',
+                handle: '> div',
+                accept: 'inline-related',
+                stop: function(event, ui) {
+                    parent_item = ui.item.parent('ul').parent('li.inline-related');
+                    item_parent_field = ui.item.children('div').first().find('select').filter(function() {
+                        return this.id.match(/.*?-parent$/);
+                    });
+                    if (parent_item.html()) {
+                        parent_id_field = parent_item.children('div').first().find('input').filter(function() {
+                            return this.id.match(/.*?-id$/);
+                        });
+                        item_parent_field.val(parent_id_field.val());
+                    } else {
+                        item_parent_field.val(false);
+                    };
+                    reset_order_fields();
+                },
+            });
+
+            $('#serialize').click(function(){
+                serialized = $('.sortable').nestedSortable('serialize');
+                $('#serializeOutput').text(serialized+'\n\n');
+            })
+
+            $('#toHierarchy').click(function(e){
+                hiered = $('.sortable').nestedSortable('toHierarchy', {startDepthCount: 0});
+                hiered = dump(hiered);
+                (typeof($('#toHierarchyOutput')[0].textContent) != 'undefined') ?
+                $('#toHierarchyOutput')[0].textContent = hiered : $('#toHierarchyOutput')[0].innerText = hiered;
+            })
+
+            $('#toArray').click(function(e){
+                arraied = $('.sortable').nestedSortable('toArray', {startDepthCount: 0});
+                arraied = dump(arraied);
+                (typeof($('#toArrayOutput')[0].textContent) != 'undefined') ?
+                $('#toArrayOutput')[0].textContent = arraied : $('#toArrayOutput')[0].innerText = arraied;
+            })
+
+        });
+    </script>
+{% endblock %}

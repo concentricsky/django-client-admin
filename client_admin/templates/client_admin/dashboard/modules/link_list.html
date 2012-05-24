@@ -1,0 +1,10 @@
+{% extends "client_admin/dashboard/module.html" %}
+{% block module_content %}
+<ul class="{{ module.layout }}">
+    {% for child in module.children %}
+    <li class="clear">
+    <a{% if child.external %} class="external-link"{% endif %} href="{{ child.url }}" {% if child.description %} title="{{ child.description }}"{% endif %}>{{ child.title }}</a> 
+    </li>
+    {% endfor %}
+</ul>
+{% endblock %}

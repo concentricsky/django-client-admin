@@ -1,0 +1,7 @@
+{% set form_url = url('client-admin-menu-remove-bookmark', bookmark.id) %}
+{% if form_url %}
+<form id="bookmark-form" action="{{ form_url }}" method="POST">
+    <input type="hidden" name="next" value="{{ request.get_full_path()|escape }}" />
+    <button id="bookmark-button" class="bookmarked" type="submit">Remove</button>
+</form>
+{% endif %}

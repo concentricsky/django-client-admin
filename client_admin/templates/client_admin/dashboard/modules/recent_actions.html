@@ -1,0 +1,23 @@
+{% extends "client_admin/dashboard/module.html" %}
+
+{% block module_content %}
+<ul>
+    <li class="activity-types">
+        <a href="#" class="active" data-filter="mine">Mine</a>
+        <a href="#" data-filter="others">Others</a>
+        <a href="#" data-filter="all">All</a>
+    </li>
+    {% for child in module.children %}
+    <li class="clear{% if module.current_user and child.user and child.user.id == module.current_user %} mine{% endif %}">
+        <span class="date_time">{{ child.action_time|datetime() }}</span>
+        {% if child.is_deletion() %}
+            <span class="deletelink">Deleted&nbsp;{{ child.object_repr }}&nbsp;{% if child.content_type %}{{ _(child.content_type.name) }}{% endif %}</span>
+        {% else %}
+            <span class="{% if child.is_addition() %} addlink{% endif %}{% if child.is_change() %} changelink{% endif %}">
+            {% if child.is_addition() %}Added&nbsp;{% endif %}{% if child.is_change() %}Edited&nbsp;{% endif %}&ldquo;<a href="{{ admin_url }}{{ child.get_admin_url() }}">{{ child.object_repr }}</a>&rdquo;{% if child.content_type %}&nbsp;{{ _(child.content_type.name)|title() }}{% endif %}
+            </span>
+        {% endif %}
+    </li>
+    {% endfor %}
+</ul>
+{% endblock %}

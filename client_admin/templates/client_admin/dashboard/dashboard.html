@@ -1,0 +1,50 @@
+{% extends "client_admin/client_admin_base.html" %}
+
+{% set dashboard, dashboard_preferences, split_at, has_disabled_modules = get_current_dashboard() %}
+
+{% block extrastyle %}
+{{ super() }}
+{% block dashboard_css %}
+{% endblock %}
+{% endblock %}
+
+{% block bodyclass %}dashboard{% endblock %}
+
+{% block breadcrumbs %}{% endblock %}
+{% set title=dashboard.title %}
+
+{% block admin_content_class %}dashboard{% endblock %}
+
+{% block content %}
+ 
+    {% block object_tools %}
+        {% if not is_popup %}
+          <ul class="object-tools">
+            {% block object_tools_items %}
+            {% if has_absolute_url %}<li><a href="../../../r/{{ content_type_id }}/{{ object_id }}/" class="viewsitelink">{{ _("View on site") }}</a></li>{% endif%}
+            <li id="dashboard-panel">
+                <a href="#">{{ _("Additional Modules") }}</a>
+                {% if has_disabled_modules %}
+                <ul>
+                    {% for module in dashboard.children %}
+                    {% if not module.enabled %}
+                    <li><a href="#" rel="module_{{ module.id }}" class="addlink add-dashboard-module">{{ module.title }}</a></li>
+                    {% endif %}
+                    {% endfor %}
+                </ul>
+                {% endif %}
+            </li>
+            {% endblock %}
+          </ul>
+        {% endif %}
+    {% endblock %}
+    
+    {% if dashboard %}
+    <div id="{{ dashboard.get_id() }}" class="dashboard-container clear">
+        {% for module in dashboard.children %}
+            {% include module.template %}
+        {% endfor %}
+    </div>
+    {% endif %}
+    
+{% endblock %}
