@@ -1,9 +1,6 @@
 """
 django-client-admin is a collection of extensions/tools for the default django 
-administration interface, it includes:
+administration interface, including a dashboard, a customizable menu bar, and
 
- * a full featured dashboard,
- * a customizable menu bar,
- 
 """
-VERSION = '0.1'
+VERSION = '0.8'
