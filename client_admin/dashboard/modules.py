@@ -795,10 +795,11 @@ class TextSnippets(DashboardModule):
             qs = []
 
         self.children = []
-        model_admin = admin.site._registry[TextSnippetClass]
         perms = []
-        if model_admin:
-            perms = model_admin.get_model_perms(context['request'])
+        if TextSnippetClass:
+            model_admin = admin.site._registry[TextSnippetClass]
+            if model_admin:
+                perms = model_admin.get_model_perms(context['request'])
 
         for item in qs:
             item_dict = {'item': item}
