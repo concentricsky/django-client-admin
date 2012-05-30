@@ -1090,11 +1090,21 @@ input[type="submit"].default:active {
 
 /* Listing Filter
 - - - - - - - - - - - - - - - -*/
+#changelist:after {	
+	content: ".";
+	height: 0;
+	visibility: hidden;
+	display: block;
+	clear: both;
+}
 #changelist #changelist-filter {
 	border-left: none;
 	background: none;
 	z-index: 50 !important;
-	top: 40px;
+	float: right;
+	position: relative;
+	display: block;
+	padding-bottom: 10px;
 }
 #changelist #changelist-filter h2 {
 	background: none;
@@ -1463,204 +1473,7 @@ form .aligned p.help {
 	background-image: -moz-linear-gradient(top, #969595, #ababab);	
 	background-image: -o-linear-gradient(top, #969595, #ababab);
 	background-image: -ms-linear-gradient(top, #969595, #ababab);
-}
-
-
-
- /* CKEditor
- - - - - - - - - - - - - - - - -*/
- .cke_skin_kama {
- 	margin-left: 8.5em !important;
- 	border: none !important;
- 	padding: 0 !important;
- }
- .cke_wrapper, .cke_skin_karma {
- 	border: 1px solid #7b7b7b !important;
- 	border-bottom: 1px solid #555657 !important;
- 	background-color: #bdbdbd !important;
- 	border-top-left-radius: 5px;
- 	-webkit-border-top-left-radius: 5px;
- 	-moz-border-radius-topleft: 5px;
- 	border-top-right-radius: 5px;
- 	-webkit-border-top-right-radius: 5px;
- 	-moz-border-radius-topright: 5px;
- 	box-shadow: 0 1px 0 0 #ebebeb inset;
- 	background-image: -webkit-linear-gradient(top, #c8c8c8, #afafaf) !important;
- 	background-image: -moz-linear-gradient(top, #c8c8c8, #afafaf) !important;	
- 	background-image: -o-linear-gradient(top, #c8c8c8, #afafaf) !important;
- 	background-image: -ms-linear-gradient(top, #c8c8c8, #afafaf) !important;
- }
- #content-main .module table.cke_editor {
- 	border: none;
- }
- #content-main .module table.cke_editor tr:nth-child(odd) {
- 	background: transparent;
- 	border: none;
- 	padding: 0;
- }
- #content-main .module table.cke_editor tr td,
- #content-main .module table.cke_editor tr th {
- 	border: none;
- 	padding: 0;
- 	height: auto;
- }
- .cke_focus {
- 	outline: none !important;
- }
-
-.cke_dialog_body {
-	border: 1px solid #7b7b7b !important;
-	border-bottom: 1px solid #555657 !important;
-	background-color: #bdbdbd !important;
-	border-top-left-radius: 5px;
-	-webkit-border-top-left-radius: 5px;
-	-moz-border-radius-topleft: 5px;
-	border-top-right-radius: 5px;
-	-webkit-border-top-right-radius: 5px;
-	-moz-border-radius-topright: 5px;
-	box-shadow: 0 1px 0 0 #ebebeb inset;
-	background-image: -webkit-linear-gradient(top, #c8c8c8, #afafaf) !important;
-	background-image: -moz-linear-gradient(top, #c8c8c8, #afafaf) !important;	
-	background-image: -o-linear-gradient(top, #c8c8c8, #afafaf) !important;
-	background-image: -ms-linear-gradient(top, #c8c8c8, #afafaf) !important;
-}
-.cke_dialog_title {
-	color: #555555;
-	font-size: 19px;
-	text-transform: uppercase;
-	text-shadow: 1px 1px #dadada;
-	border: none !important;
-}
-.cke_skin_kama .cke_dialog .cke_dialog_body .cke_dialog_close_button {
-	background: url(images/icon_close.png) no-repeat 0 0 !important;
-	height: 20px;
-	width: 20px;
-	text-indent: -9999px;
-	background-position: 0 0 !important;
-}
-.cke_skin_kama .cke_dialog_contents {
-	background: #fff !important;
-	border: none !important;
-}
-.cke_dialog_ui_select .cke_dialog_ui_labeled_label,
-.cke_dialog_ui_text .cke_dialog_ui_labeled_label {
-	color: #116bb9;
-	font-size: 12px;
-	margin-bottom: 10px !important;
-	font-weight: bold !important;
-	height: 25px !important;
-	line-height: 25px !important;
-}
-.cke_skin_kama .cke_dialog_footer {
-	background: transparent !important;
-	border: none !important;
-}
-.cke_skin_kama .cke_browser_webkit a.cke_dialog_ui_button {
-	margin:  0 !important;
-	height: 28px;
-	line-height: 26px;
-	border: 1px solid #6d6d6d;
-	border-radius: 15px;
-	padding: 0;
-	font-size: 12px;
-	font-weight: normal;
-	background: #ababab;
-	background-image: -webkit-linear-gradient(top, #ababab, #969595);
-	background-image: -moz-linear-gradient(top, #ababab, #969595);	
-	background-image: -o-linear-gradient(top, #ababab, #969595);
-	background-image: -ms-linear-gradient(top, #ababab, #969595);
-	box-shadow: #bababa 0 1px 0 0 inset;
-}
-.cke_skin_kama .cke_browser_webkit a.cke_dialog_ui_button:hover {
-	background: #7b7b7c;
-	background-image: -webkit-linear-gradient(top, #b4b4b4, #909090);
-	background-image: -moz-linear-gradient(top, #b4b4b4, #909090);	
-	background-image: -o-linear-gradient(top, #b4b4b4, #909090);
-	background-image: -ms-linear-gradient(top, #b4b4b4, #909090);
-}
-.cke_skin_kama .cke_browser_webkit a.cke_dialog_ui_button:active {
-	background: #969595;
-	background-image: -webkit-linear-gradient(top, #969595, #ababab);
-	background-image: -moz-linear-gradient(top, #969595, #ababab);	
-	background-image: -o-linear-gradient(top, #969595, #ababab);
-	background-image: -ms-linear-gradient(top, #969595, #ababab);
-}
-.cke_skin_kama .cke_browser_webkit a.cke_dialog_ui_button_cancel {
-	display: block;
-	float: right;
-	width: auto;
-	margin: -10px 0 0 0 !important;
-	height: 28px;
-	line-height: 26px;
-	border: 1px solid #6d6d6d;
-	border-radius: 15px;
-	padding: 0;
-	font-size: 12px;
-	font-weight: normal;
-	background: #ababab;
-	background-image: -webkit-linear-gradient(top, #ababab, #969595);
-	background-image: -moz-linear-gradient(top, #ababab, #969595);	
-	background-image: -o-linear-gradient(top, #ababab, #969595);
-	background-image: -ms-linear-gradient(top, #ababab, #969595);
-	box-shadow: #bababa 0 1px 0 0 inset;
-}
-.cke_skin_kama .cke_browser_webkit a.cke_dialog_ui_button_cancel:hover {
-	background: #7b7b7c;
-	background-image: -webkit-linear-gradient(top, #b4b4b4, #909090);
-	background-image: -moz-linear-gradient(top, #b4b4b4, #909090);	
-	background-image: -o-linear-gradient(top, #b4b4b4, #909090);
-	background-image: -ms-linear-gradient(top, #b4b4b4, #909090);
-}
-.cke_skin_kama .cke_browser_webkit a.cke_dialog_ui_button_cancel:active {
-	background: #969595;
-	background-image: -webkit-linear-gradient(top, #969595, #ababab);
-	background-image: -moz-linear-gradient(top, #969595, #ababab);	
-	background-image: -o-linear-gradient(top, #969595, #ababab);
-	background-image: -ms-linear-gradient(top, #969595, #ababab);
-}
-.cke_skin_kama .cke_browser_webkit a.cke_dialog_ui_button_ok {
-	background: none;
-	width: auto;
-	height: 28px;
-	line-height: 28px;
-	margin: -10px 0 0 0 !important;
-	border: 1px solid #185488;
-	border-radius: 15px;
-	padding: 0;
-	color: white;
-	text-shadow: -1px -1px #185488;
-	text-transform: uppercase;
-	font-size: 12px;
-	font-weight: normal;
-	background: #0F74CB;
-	background-image: -webkit-linear-gradient(top, #208CEA, #116BB9);
-	background-image: -moz-linear-gradient(top, #208CEA, #116BB9);
-	background-image: -o-linear-gradient(top, #208CEA, #116BB9);
-	background-image: -ms-linear-gradient(top, #208CEA, #116BB9);
-	box-shadow: #55A6EB 0 1px 0 0 inset;
-}
-.cke_skin_kama .cke_browser_webkit a.cke_dialog_ui_button_ok:hover {
-	background: #208CEA;
-	background-image: -webkit-linear-gradient(top, #4DA5F2, #208CEA);
-	background-image: -moz-linear-gradient(top, #4DA5F2, #208CEA);
-	background-image: -o-linear-gradient(top, #4DA5F2, #208CEA);
-	background-image: -ms-linear-gradient(top, #4DA5F2, #208CEA);
-	box-shadow: #79BAF2 0 1px 0 0 inset;
-}
-.cke_skin_kama .cke_browser_webkit a.cke_dialog_ui_button_ok:active {
-	background: #116BB9;
-	background-image: -webkit-linear-gradient(top, #116BB9, #208CEA);
-	background-image: -moz-linear-gradient(top, #116BB9, #208CEA);
-	background-image: -o-linear-gradient(top, #116BB9, #208CEA);
-	background-image: -ms-linear-gradient(top, #116BB9, #208CEA);
-}
-.cke_skin_kama a.cke_dialog_ui_button_ok span, 
-.cke_skin_kama a.cke_dialog_ui_button_cancel span,
-.cke_skin_kama a.cke_dialog_ui_button span {
-	background: none !important;
-	color: white !important;
-	text-shadow: -1px -1px #6d6d6d !important;}
- 
+} 
 
 
 
@@ -1950,14 +1763,14 @@ form .aligned p.help {
 	color: #555;
 	padding-left: 5px;
 }
-#content-main .inline-group .module table tr {
+#content-main .module table tr {
 	border-bottom: 1px solid #ccc;
 }
-#content-main .inline-group .module table tr:nth-child(odd),
+#content-main .module table tr:nth-child(odd),
 .row1 {
 	background: #fff !important;
 }
-#content-main .inline-group .module table tr:nth-child(even),
+#content-main .module table tr:nth-child(even),
 .row2 {
 	background: #f3f3f3 !important;
 }
@@ -2127,4 +1940,3 @@ button {  width: auto; overflow: visible; }
   p, h2, h3 { orphans: 3; widows: 3; }
   h2, h3{ page-break-after: avoid; }
 }
-
