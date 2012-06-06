@@ -1766,11 +1766,11 @@ form .aligned p.help {
 #content-main .module table tr {
 	border-bottom: 1px solid #ccc;
 }
-#content-main .module table tr:nth-child(odd),
+#content-main .module table:not(.cke_editor) tr:nth-child(odd),
 .row1 {
 	background: #fff !important;
 }
-#content-main .module table tr:nth-child(even),
+#content-main .module table:not(.cke_editor) tr:nth-child(even),
 .row2 {
 	background: #f3f3f3 !important;
 }
