@@ -18,7 +18,7 @@ def find_package_data(**packages):
 
 setup(
     name='django-client-admin',
-    version=".".join(map(str, client_admin.VERSION)),
+    version=client_admin.VERSION,
     packages = find_packages(),
     package_data = find_package_data(client_admin=['static', 'templates']),
 
