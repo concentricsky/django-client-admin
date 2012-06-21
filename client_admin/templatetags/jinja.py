@@ -36,11 +36,8 @@ class JinjaNode(template.Node):
                 # handle {{super()}} specially, as that needs to be passed through from django templates to jinja renderer
                 rendered_node = node.render(context)
                 r = re.compile(r'\{\{\s*super\(\)\s*\}\}')
-                if re.search(r, rendered_node):
-                    spr = '{{super()}}'
-                    rendered_node = re.sub(r, '', rendered_node)
-                else:
-                    spr = ''
+                spr = '{{super()}}' if re.search(r, rendered_node) else ''
+                rendered_node = re.sub(r, '', rendered_node)
                 # wrap blocks in a {{ raw }} tag in case we need to display tags in admin pages (eg. emailtemplates)
                 output_string += '{%% block %s %%}%s{%% raw %%} %s {%% endraw %%}{%% endblock %%}' % (node_name, spr, rendered_node)
             else:
