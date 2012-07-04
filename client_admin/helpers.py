@@ -5,6 +5,8 @@ from client_admin.menu import items, Menu
 from client_admin.menu.models import Bookmark
 from client_admin.dashboard.dashboards import Dashboard
 from client_admin.dashboard.models import DashboardPreferences
+from django.utils.importlib import import_module
+from django.conf import settings
 from django import template
 from django.db.models import Model
 from django.contrib.contenttypes.models import ContentType
@@ -98,7 +100,19 @@ def get_current_dashboard(context):
     if not context['request'].user.is_staff:
         return [None, None, None, None]
     # - an instance of the dashboard
-    dashboard = Dashboard()
+
+
+    dashboard_cls = getattr(settings, 'CLIENT_ADMIN_DASHBOARD', None)
+    if dashboard_cls:
+        try:
+            mod, inst = dashboard_cls.rsplit('.', 1)
+            mod = import_module(mod)
+            dashboard = getattr(mod, inst)()
+        except:
+            dashboard = Dashboard()
+    else:
+        dashboard = Dashboard()
+
     dashboard.init_with_context(context)
     dashboard._prepare_children()
     dashboard.init_children_with_context(context)
