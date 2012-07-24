@@ -3,12 +3,12 @@
 {% block module_content %}
 <ul>
     <li class="activity-types">
-        <a href="#" class="active" data-filter="mine">Mine</a>
+        <a href="#"  data-filter="mine">Mine</a>
         <a href="#" data-filter="others">Others</a>
-        <a href="#" data-filter="all">All</a>
+        <a href="#" class="active" data-filter="all">All</a>
     </li>
     {% for child in module.children %}
-    <li class="clear{% if module.current_user and child.user and child.user.id == module.current_user %} mine{% endif %}">
+    <li class="clear{% if module.current_user and child.user and child.user.id == module.current_user %} mine{% endif %}" {% if loop.index > 10 %}style="display: none;"{% endif %}>
         <span class="date_time">{{ child.action_time|datetime() }}</span>
         {% if child.is_deletion() %}
             <span class="deletelink">Deleted&nbsp;{{ child.object_repr }}&nbsp;{% if child.content_type %}{{ _(child.content_type.name) }}{% endif %}</span>

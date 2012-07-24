@@ -16,15 +16,13 @@ var init_dashboard = function(id, columns, preferences, url) {
     $(".activity-types a").click(function(){
         $(".activity-types a").removeClass('active');
         $(this).addClass('active')
-        filter = $(this).attr('data-filter');
-        items = $(this).parent().siblings()
-        items.each(function(){
-            $(this).show();
-            if (filter == 'others' && $(this).hasClass('mine') ){
-                    $(this).hide();
-            } else if (filter == 'mine' && !$(this).hasClass('mine') ){
-                    $(this).hide();
-            } 
+        var filter = $(this).attr('data-filter');
+        var items = $(this).parent().siblings()
+        items.each(function(i){
+            var visible = (filter == 'mine' && $(this).hasClass('mine') )
+                ||  (filter == 'others' && !$(this).hasClass('mine') )
+                ||  (filter == 'all' && i < 10)
+            $(this).toggle(visible)
         });
 
     })
