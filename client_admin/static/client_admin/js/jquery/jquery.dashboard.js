@@ -227,7 +227,7 @@
                 '<li><a href="#" rel="'
                 + elt.attr('id')
                 + '" class="addlink dashboard-module-add">'
-                + elt.find('h2').contents().first().text()
+                + elt.find('h3').contents().first().text()
                 + '</a></li>'
             );
             _set_addable(elt, options, $('#'+options.panel_id).find('li a[rel='+elt.attr('id')+']'));
