@@ -1,3 +1,4 @@
+import re
 import jingo
 from django import template
 
@@ -30,7 +31,15 @@ class JinjaNode(template.Node):
         for node in self.nodelist:
             if node.__class__.__name__ == 'BlockNode':
                 # replace dashes in block names because they aren't allowed in jinja2
-                output_string += '{%% block %s %%} %s {%% endblock %%}' % (node.name.replace('-','_'), node.render(context))
+                node_name = node.name.replace('-','_')
+
+                # handle {{super()}} specially, as that needs to be passed through from django templates to jinja renderer
+                rendered_node = node.render(context)
+                r = re.compile(r'\{\{\s*super\(\)\s*\}\}')
+                spr = '{{super()}}' if re.search(r, rendered_node) else ''
+                rendered_node = re.sub(r, '', rendered_node)
+                # wrap blocks in a {{ raw }} tag in case we need to display tags in admin pages (eg. emailtemplates)
+                output_string += '{%% block %s %%}%s{%% raw %%} %s {%% endraw %%}{%% endblock %%}' % (node_name, spr, rendered_node)
             else:
                 output_string += node.render(context)
         output_template = jingo.env.from_string(output_string)
