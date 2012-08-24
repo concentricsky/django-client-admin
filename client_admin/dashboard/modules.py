@@ -745,7 +745,17 @@ class AllRecentActions(DashboardModule):
             qs = qs.exclude(get_qset(self.exclude_list))
         if context['request'] and context['request'].user:
             self.current_user = context['request'].user.id
-        self.children = qs.select_related('content_type', 'user')[:self.limit]
+
+        mine = qs.filter(user=self.current_user).select_related('content_type', 'user')[:self.limit]
+        others = qs.exclude(user=self.current_user).select_related('content_type', 'user')[:self.limit]
+        self.children = list(mine)+list(others)
+        if LogEntry._meta.ordering:
+            order = LogEntry._meta.ordering[0]
+            if order[0] == '-':
+                self.children.sort(key=lambda x:getattr(x, order[1:]))
+                self.children.reverse()
+            else:
+                self.children.sort(key=lambda x:getattr(x, order))
         if not len(self.children):
             self.pre_content = _('No recent actions.')
         self._initialized = True
