@@ -1,4 +1,6 @@
-try: 
+from functools import wraps
+
+try:
     import json
 except ImportError: 
     import simplejson as json
@@ -79,7 +81,17 @@ def get_generic_rel_list(request, blacklist=(), whitelist=(), url_params={}):
         return HttpResponseNotAllowed(['GET'])
 
 
-@staff_member_required
+# Decorator
+def admin_login_required(view_func):
+
+    @wraps(view_func)
+    def _checklogin(request, *args, **kwargs):
+        from django.contrib import admin
+        return admin.site.admin_view(view_func)(request, *args, **kwargs)
+    return _checklogin
+
+
+@admin_login_required
 def dashboard(request):
 
     """
