@@ -59,26 +59,26 @@ class RecursiveInlinesModelAdmin(admin.ModelAdmin):
         super(RecursiveInlinesModelAdmin, self).__init__(model, admin_site)
 
     def save_formset(self, request, form, formset, change):
-        super(RecursiveInlinesModelAdmin, self).save_formset(request, form, formset, change=change)
         for form in formset.forms:
             for recursive_formset in getattr(form, 'recursive_formsets', []):
                 self.save_formset(request, form, recursive_formset, change=change)
+        super(RecursiveInlinesModelAdmin, self).save_formset(request, form, formset, change=change)
 
     def add_recursive_inline_formsets(self, request, inline, formset):
         for form in formset.forms:
-            recursive_formsets = []
-            for recursive_inline in inline.get_inline_instances(request):
-                FormSet = recursive_inline.get_formset(request, form.instance)
-                prefix = "%s-%s" % (form.prefix, FormSet.get_default_prefix())
-                if request.method == 'POST':
-                    if form.instance.pk:
+            if form.instance.pk:
+                recursive_formsets = []
+                for recursive_inline in inline.get_inline_instances(request):
+                    FormSet = recursive_inline.get_formset(request, form.instance)
+                    prefix = "%s-%s" % (form.prefix, FormSet.get_default_prefix())
+                    if request.method == 'POST':
                         recursive_formset = FormSet(request.POST, request.FILES, instance=form.instance, prefix=prefix, queryset=recursive_inline.queryset(request))
-                else:
-                    recursive_formset = FormSet(instance=form.instance, prefix=prefix, queryset=recursive_inline.queryset(request))
-                recursive_formsets.append(recursive_formset)
-                if hasattr(recursive_inline, 'inlines'):
-                    self.add_recursive_inline_formsets(request, recursive_inline, recursive_formset)
-            form.recursive_formsets = recursive_formsets
+                    else:
+                        recursive_formset = FormSet(instance=form.instance, prefix=prefix, queryset=recursive_inline.queryset(request))
+                    recursive_formsets.append(recursive_formset)
+                    if hasattr(recursive_inline, 'inlines'):
+                        self.add_recursive_inline_formsets(request, recursive_inline, recursive_formset)
+                form.recursive_formsets = recursive_formsets
 
     def wrap_recursive_inline_formsets(self, request, inline, formset):
         media = None
@@ -91,19 +91,15 @@ class RecursiveInlinesModelAdmin(admin.ModelAdmin):
         for form in formset.forms:
             wrapped_recursive_formsets = []
             for recursive_inline, recursive_formset in zip(inline.get_inline_instances(request), form.recursive_formsets):
-                if form.instance.pk:
-                    instance = form.instance
-                else:
-                    instance = None
-
+                instance = form.instance if form.instance.pk else None
                 fieldsets = list(recursive_inline.get_fieldsets(request))
                 readonly = list(recursive_inline.get_readonly_fields(request))
                 prepopulated = dict(recursive_inline.get_prepopulated_fields(request))
-                if hasattr(recursive_inline, 'inlines'):
-                    media = get_media(self.wrap_recursive_inline_formsets(request, recursive_inline, recursive_formset))
                 wrapped_recursive_formset = helpers.InlineAdminFormSet(recursive_inline, recursive_formset, fieldsets, prepopulated, readonly, model_admin=self)
                 wrapped_recursive_formsets.append(wrapped_recursive_formset)
                 media = get_media(wrapped_recursive_formset.media)
+                if hasattr(recursive_inline, 'inlines'):
+                    media = media + get_media(self.wrap_recursive_inline_formsets(request, recursive_inline, recursive_formset))
             form.recursive_formsets = wrapped_recursive_formsets
 
         return media
@@ -198,12 +194,12 @@ class RecursiveInlinesModelAdmin(admin.ModelAdmin):
             fieldsets = list(inline.get_fieldsets(request))
             readonly = list(inline.get_readonly_fields(request))
             prepopulated = dict(inline.get_prepopulated_fields(request))
-            if hasattr(inline, 'inlines'):
-                media = media + self.wrap_recursive_inline_formsets(request, inline, formset)
             inline_admin_formset = helpers.InlineAdminFormSet(inline, formset,
                 fieldsets, prepopulated, readonly, model_admin=self)
             inline_admin_formsets.append(inline_admin_formset)
             media = media + inline_admin_formset.media
+            if hasattr(inline, 'inlines'):
+                media = media + self.wrap_recursive_inline_formsets(request, inline, formset)
 
         context = {
             'title': _('Add %s') % force_unicode(opts.verbose_name),
@@ -296,12 +292,12 @@ class RecursiveInlinesModelAdmin(admin.ModelAdmin):
             fieldsets = list(inline.get_fieldsets(request, obj))
             readonly = list(inline.get_readonly_fields(request, obj))
             prepopulated = dict(inline.get_prepopulated_fields(request, obj))
-            if hasattr(inline, 'inlines'):
-                media = media + self.wrap_recursive_inline_formsets(request, inline, formset)
             inline_admin_formset = helpers.InlineAdminFormSet(inline, formset,
                 fieldsets, prepopulated, readonly, model_admin=self)
             inline_admin_formsets.append(inline_admin_formset)
             media = media + inline_admin_formset.media
+            if hasattr(inline, 'inlines'):
+                media = media + self.wrap_recursive_inline_formsets(request, inline, formset)
 
         context = {
             'title': _('Change %s') % force_unicode(opts.verbose_name),

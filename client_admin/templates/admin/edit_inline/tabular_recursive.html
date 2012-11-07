@@ -57,13 +57,13 @@
             {% endfor %}
             {% endfor %}
             {% if recursive_formset.formset.can_delete %}
-            <td class="delete">{% if inline_admin_form.original %}{{ inline_admin_form.deletion_field.field }}{% endif %}</td>
+            <td class="delete">{% if inline_admin_form.original or not forloop.last %}{{ inline_admin_form.deletion_field.field }}{% endif %}</td>
             {% endif %}
             </tr>
             {% if inline_admin_form.form.recursive_formsets %}
                 {% for inline_admin_formset in inline_admin_form.form.recursive_formsets %}
                     <tr class="recursive-inline-row {{ row_number_class }}{% if not forloop.last %} no-bottom-border{% endif %}">
-                        <td colspan="0">
+                        <td colspan="2">
                         {% if inline_admin_formset.opts.template == stacked_template %}
                             {% include stacked_template with indent=0 prev_prefix=recursive_formset.formset.prefix %}
                         {% else %}
