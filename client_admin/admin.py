@@ -123,7 +123,7 @@ class RecursiveInlinesModelAdmin(admin.ModelAdmin):
     @transaction.commit_on_success
     def add_view(self, request, form_url='', extra_context={}):
         "The 'add' admin view for this model."
-        #copied from django/contrib/admin/options.py:924 because THAT'S WHAT YOU HAVE TO DO TO CHANGE THREE GODDAMN LINES
+        #copied from django/contrib/admin/options.py:924 at version 1.4.0
         model = self.model
         opts = model._meta
 
@@ -218,7 +218,7 @@ class RecursiveInlinesModelAdmin(admin.ModelAdmin):
     @transaction.commit_on_success
     def change_view(self, request, object_id, form_url='', extra_context=None):
         "The 'change' admin view for this model."
-        # also copied from django/contrib/admin/options.py
+        # copied from django/contrib/admin/options.py at version 1.4.0
         model = self.model
         opts = model._meta
 
