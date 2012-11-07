@@ -311,9 +311,6 @@ class InnerInlinesModelAdmin(admin.ModelAdmin):
             'app_label': opts.app_label,
         }
         context.update(extra_context or {})
-        for inline_admin_formset in inline_admin_formsets:
-            for inline_admin_form in inline_admin_formset:
-                print getattr(inline_admin_form.form, 'inner_formsets', None)
         return self.render_change_form(request, context, change=True, obj=obj, form_url=form_url)
 
 
