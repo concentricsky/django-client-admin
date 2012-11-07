@@ -96,7 +96,7 @@
   					var row = $(this).parents("." + options.formCssClass);
   					// Remove the parent form containing this button:
   					var formset_to_update = row.parent();
-  					while (row.next().hasClass('inner-inline-row')) {
+  					while (row.next().hasClass('recursive-inline-row')) {
   						row.next().remove();
   					}
   					row.remove();
@@ -111,27 +111,27 @@
   				if (row.is("tr")) {
   					// If the forms are laid out in table rows, insert
   					// the remove button into the last table cell:
-  					// Insert the inner formsets into the new form
-  					var inner_formsets = create_inner_formset(options.prefix, nextIndex, options, false);
-  					if (inner_formsets.length) {
+  					// Insert the recursive formsets into the new form
+  					var recursive_formsets = create_recursive_formset(options.prefix, nextIndex, options, false);
+  					if (recursive_formsets.length) {
   						row.addClass("no-bottom-border");
   					}
-  					inner_formsets.each(function() {
+  					recursive_formsets.each(function() {
                         var border_class;
   						if (!$(this).next()) {
   							border_class = "";
   						} else {
   							border_class = " no-bottom-border";
   						}
-  						($('<tr class="inner-inline-row' + border_class + '">').html(($('<td>', {
+  						($('<tr class="recursive-inline-row' + border_class + '">').html(($('<td>', {
   									colspan : '100%'
   								}).html($(this))))).insertBefore($(template));
   					});
   				} else {
   					// stacked
-  					// Insert the inner formsets into the new form
-  					inner_formsets = create_inner_formset(options.prefix, nextIndex, options, true);
-  					inner_formsets.each(function() {
+  					// Insert the recursive formsets into the new form
+  					recursive_formsets = create_recursive_formset(options.prefix, nextIndex, options, true);
+  					recursive_formsets.each(function() {
   						row.append($(this));
   					});
   				}
@@ -168,7 +168,7 @@
   			$($rows.selector).not(".add-row").removeClass("row1 row2").each(function() {
   				$(this).addClass('row' + ((row_number%2)+1));
   				next = $(this).next();
-  				while (next.hasClass('inner-inline-row')) {
+  				while (next.hasClass('recursive-inline-row')) {
   					next.addClass('row' + ((row_number%2)+1));
   					next = next.next();
   				}
@@ -294,26 +294,26 @@
   		return $rows;
   	};
   
-  	function create_inner_formset(parent_formset_prefix, next_form_id, options, add_bottom_border) {
+  	function create_recursive_formset(parent_formset_prefix, next_form_id, options, add_bottom_border) {
   		var formsets = $(false);
   		// update options
   		// Normalize prefix to something we can rely on
   		var normalized_parent_formset_prefix = parent_formset_prefix.replace(/[-][0-9][-]/g, "-0-");
-  		// Check if the form should have inner formsets
-  		var inner_inlines = $('#' + normalized_parent_formset_prefix + "-group ." + normalized_parent_formset_prefix + "-inner-inline").not('.cloned');
-  		inner_inlines.each(function() {
-  			// prefixes for the inner formset
+  		// Check if the form should have recursive formsets
+  		var recursive_inlines = $('#' + normalized_parent_formset_prefix + "-group ." + normalized_parent_formset_prefix + "-recursive-inline").not('.cloned');
+  		recursive_inlines.each(function() {
+  			// prefixes for the recursive formset
   			var normalized_formset_prefix = $(this).attr('id').split('-group')[0];
-  			// = "parent_formset_prefix"-0-"inner_inline_name"_set
+  			// = "parent_formset_prefix"-0-"recursive_inline_name"_set
   			var formset_prefix = normalized_formset_prefix.replace(normalized_parent_formset_prefix + "-0", parent_formset_prefix + "-" + next_form_id);
-  			// = "parent_formset_prefix"-"next_form_id"-"inner_inline_name"_set
+  			// = "parent_formset_prefix"-"next_form_id"-"recursive_inline_name"_set
   			// Find the normalized formset and clone it
   			var template = $("#" + normalized_formset_prefix + "-group").clone();
   			template.addClass('cloned');
   			if (template.children().first().hasClass('tabular')) {
   				// Template is tabular
   				template.find(".form-row").not(".empty-form").remove();
-  				template.find(".inner-inline-row").remove();
+  				template.find(".recursive-inline-row").remove();
   				// Make a new form
   				template_form = template.find("#" + normalized_formset_prefix + "-empty")
   				new_form = template_form.clone().removeClass(options.emptyCssClass).addClass("dynamic-" + formset_prefix);
@@ -323,32 +323,32 @@
   				update_props(template, normalized_formset_prefix, formset_prefix);
   				var add_text = template.find('.add-row').text();
   				template.find('.add-row').remove();
-  				template.find('.tabular.inline-related tbody tr.' + formset_prefix + '-not-inner').tabularFormset({
+  				template.find('.tabular.inline-related tbody tr.' + formset_prefix + '-not-recursive').tabularFormset({
   					prefix : formset_prefix,
   					adminStaticPrefix : options.adminStaticPrefix,
   					addText : add_text,
   					deleteText : options.deleteText
   				});
-  				// Create the inner formset
-  				var inner_formsets = create_inner_formset(formset_prefix, 0, options, false);
-  				if (inner_formsets.length) {
+  				// Create the recursive formset
+  				var recursive_formsets = create_recursive_formset(formset_prefix, 0, options, false);
+  				if (recursive_formsets.length) {
   					template.find(".form-row").addClass('no-bottom-border');
   				}
-  				// Insert inner formsets
-  				inner_formsets.each(function() {
+  				// Insert recursive formsets
+  				recursive_formsets.each(function() {
   					if (!$(this).next()) {
   						border_class = "";
   					} else {
   						border_class = " no-bottom-border";
   					}
-  					template.find("#" + formset_prefix + "-empty").before(($('<tr class="inner-inline-row' + border_class + '">').html(($('<td>', {
+  					template.find("#" + formset_prefix + "-empty").before(($('<tr class="recursive-inline-row' + border_class + '">').html(($('<td>', {
   								colspan : '100%'
   							}).html($(this))))));
   				});
   			} else {
   				// Template is stacked
-  				// Create the inner formset
-  				var inner_formsets = create_inner_formset(formset_prefix, 0, options, true);
+  				// Create the recursive formset
+  				var recursive_formsets = create_recursive_formset(formset_prefix, 0, options, true);
   				template.find(".inline-related").not(".empty-form").remove();
   				// Make a new form
   				template_form = template.find("#" + normalized_formset_prefix + "-empty")
@@ -366,12 +366,12 @@
   					addText : add_text,
   					deleteText : options.deleteText
   				});
-  				inner_formsets.each(function() {
+  				recursive_formsets.each(function() {
   					new_form.append($(this));
   				});
   			}
   			if (add_bottom_border) {
-  				template = template.add($('<div class="inner-inline-bottom-border">'));
+  				template = template.add($('<div class="recursive-inline-bottom-border">'));
   			}
   			if (formsets.length) {
   				formsets = formsets.add(template);

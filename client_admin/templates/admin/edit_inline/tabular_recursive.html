@@ -1,11 +1,11 @@
 {% load i18n admin_static admin_modify %}
-<div class="inline-group{% if inner_formset %} {{ inner_formset.formset.prefix|default:"Root" }}-nested-inline nested-inline{% endif %}" id="{{ inline_admin_formset.formset.prefix }}-group">
-{% with inner_formset=inline_admin_formset stacked_template='admin/edit_inline/stacked_inner.html' tabular_template='admin/edit_inline/tabular_inner.html'%}
+<div class="inline-group{% if recursive_formset %} {{ recursive_formset.formset.prefix|default:"Root" }}-nested-inline nested-inline{% endif %}" id="{{ inline_admin_formset.formset.prefix }}-group">
+{% with recursive_formset=inline_admin_formset stacked_template='admin/edit_inline/stacked_recursive.html' tabular_template='admin/edit_inline/tabular_recursive.html'%}
     <div class="tabular inline-related {% if forloop.last %}last-related{% endif %}">
-    {{ inner_formset.formset.management_form }}
+    {{ recursive_formset.formset.management_form }}
     <fieldset class="module">
-    <h2>{{ inner_formset.opts.verbose_name_plural|capfirst }}</h2>
-    {{ inner_formset.formset.non_form_errors }}
+    <h2>{{ recursive_formset.opts.verbose_name_plural|capfirst }}</h2>
+    {{ recursive_formset.formset.non_form_errors }}
     <table>
         <thead><tr>
         {% for field in inline_admin_formset.fields %}
@@ -15,16 +15,16 @@
             </th>
         {% endif %}
         {% endfor %}
-        {% if inner_formset.formset.can_delete %}<th>{% trans "Delete?" %}</th>{% endif %}
+        {% if recursive_formset.formset.can_delete %}<th>{% trans "Delete?" %}</th>{% endif %}
         </tr></thead>
 
         <tbody>
-        {% for inline_admin_form in inner_formset %}
+        {% for inline_admin_form in recursive_formset %}
             {% if inline_admin_form.form.non_field_errors %}
             <tr><td colspan="{{ inline_admin_form|cell_count }}">{{ inline_admin_form.form.non_field_errors }}</td></tr>
             {% endif %}
-            <tr class="form-row {% cycle "row1" "row2" as row_number-class %} {% if inline_admin_form.original or inline_admin_form.show_url %}has_original{% endif %}{% if forloop.last %} empty-form{% endif %} {{inner_formset.formset.prefix }}-not-nested {% if inline_admin_form.form.inner_formsets %} no-bottom-border {% endif %}"
-                id="{{ inner_formset.formset.prefix }}-{% if not forloop.last %}{{ forloop.counter0 }}{% else %}empty{% endif %}">
+            <tr class="form-row {% cycle "row1" "row2" as row_number-class %} {% if inline_admin_form.original or inline_admin_form.show_url %}has_original{% endif %}{% if forloop.last %} empty-form{% endif %} {{recursive_formset.formset.prefix }}-not-nested {% if inline_admin_form.form.recursive_formsets %} no-bottom-border {% endif %}"
+                id="{{ recursive_formset.formset.prefix }}-{% if not forloop.last %}{{ forloop.counter0 }}{% else %}empty{% endif %}">
             <td class="original">
             {% if inline_admin_form.original or inline_admin_form.show_url %}<p>
             {% if inline_admin_form.original %} {{ inline_admin_form.original }}{% endif %}
@@ -56,18 +56,18 @@
                 {% endfor %}
             {% endfor %}
             {% endfor %}
-            {% if inner_formset.formset.can_delete %}
+            {% if recursive_formset.formset.can_delete %}
             <td class="delete">{% if inline_admin_form.original %}{{ inline_admin_form.deletion_field.field }}{% endif %}</td>
             {% endif %}
             </tr>
-            {% if inline_admin_form.form.inner_formsets %}
-                {% for inline_admin_formset in inline_admin_form.form.inner_formsets %}
-                    <tr class="inner-inline-row {{ row_number_class }}{% if not forloop.last %} no-bottom-border{% endif %}">
+            {% if inline_admin_form.form.recursive_formsets %}
+                {% for inline_admin_formset in inline_admin_form.form.recursive_formsets %}
+                    <tr class="recursive-inline-row {{ row_number_class }}{% if not forloop.last %} no-bottom-border{% endif %}">
                         <td colspan="0">
                         {% if inline_admin_formset.opts.template == stacked_template %}
-                            {% include stacked_template with indent=0 prev_prefix=inner_formset.formset.prefix %}
+                            {% include stacked_template with indent=0 prev_prefix=recursive_formset.formset.prefix %}
                         {% else %}
-                            {% include tabular_template with indent=0 prev_prefix=inner_formset.formset.prefix %}
+                            {% include tabular_template with indent=0 prev_prefix=recursive_formset.formset.prefix %}
                         {% endif %}
                         </td>
                     </tr>
@@ -82,10 +82,10 @@
 
     <script type="text/javascript">
     (function($) {
-        $("#{{ inner_formset.formset.prefix }}-group .tabular.inline-related tbody tr.{{ inner_formset.formset.prefix }}-not-nested").tabularFormset({
-            prefix: "{{ inner_formset.formset.prefix }}",
+        $("#{{ recursive_formset.formset.prefix }}-group .tabular.inline-related tbody tr.{{ recursive_formset.formset.prefix }}-not-nested").tabularFormset({
+            prefix: "{{ recursive_formset.formset.prefix }}",
             adminStaticPrefix: '{% static "admin/" %}',
-            addText: "{% blocktrans with inner_formset.opts.verbose_name|title as verbose_name %}Add another {{ verbose_name }}{% endblocktrans %}",
+            addText: "{% blocktrans with recursive_formset.opts.verbose_name|title as verbose_name %}Add another {{ verbose_name }}{% endblocktrans %}",
             deleteText: "{% trans 'Remove' %}",
         });
     })(django.jQuery);
