@@ -10,10 +10,12 @@ from django.contrib.admin.util import unquote
 from django.contrib.contenttypes import generic
 from django.db import transaction
 from django.forms import models
+from django.forms.formsets import all_valid
 from django.utils.decorators import method_decorator
 from django.utils.encoding import force_unicode
 from django.utils.translation import ugettext as _
 from django.views.decorators.csrf import csrf_protect
+
 from functools import update_wrapper, partial
 
 csrf_protect_m = method_decorator(csrf_protect)
@@ -21,6 +23,8 @@ csrf_protect_m = method_decorator(csrf_protect)
 JS_PATH = getattr(settings, 'GENERICADMIN_JS', 'client_admin/js/') 
 
 
+## Recursive Inlines!
+## inspired in part by https://code.djangoproject.com/ticket/9025
 
 class BaseRecursiveInline(object):
     inlines = []
