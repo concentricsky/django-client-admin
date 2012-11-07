@@ -5,6 +5,8 @@
 
     updated by Troy Melhase (troy.melhase@gmail.com)
 
+    updated by Elijah Hamovitz (elijah.hamovitz@gmail.com)
+
  */
  (function($) {
     var GenericAdmin = {
@@ -39,7 +41,7 @@
             var vars = $(this.object_input).attr("id").split('-');
             if (vars.length !== 1) {
                 //contentTypeSelect = $('#' + vars[0] + '-' + vars[1] + '-content_type').first();
-                contentTypeSelect = $('#' + $(this.object_input).attr("id").replace('-object_id', '-content_type'))
+                contentTypeSelect = $('#' + $(this.object_input).attr("id").replace('object_id', 'content_type'))
             }
             // polish the look of the select
             $(contentTypeSelect).find('option').each(function() {
