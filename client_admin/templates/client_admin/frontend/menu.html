@@ -13,16 +13,16 @@
             <ul>
                 {% if admin_change_link and admin_perm_change_object %}
                 <li class="menu-item"> 
-                    <a class="newwindow" href="{{admin_change_link}}?_popup=1">Edit {{admin_changelist_link_name}}
+                    <a class="clientadmin-window" href="{{admin_change_link}}">Edit {{admin_changelist_link_name}}
                     <div class="subtitle">'{{object}}'</div></a>
                 </li>
                 {% endif %}
                 <li class="menu-item">
-                    <a class="newwindow" href="{{admin_changelist_link}}">All {{admin_changelist_link_name_plural}}</a>
+                    <a class="clientadmin-window" navcount="2" href="{{admin_changelist_link}}">All {{admin_changelist_link_name_plural}}</a>
                 </li>
                 {%if admin_perm_add_object %}
                 <li class="menu-item">
-                    <a class="newwindow" href="{{admin_add_link}}">New {{admin_changelist_link_name}}</a>
+                    <a class="clientadmin-window" href="{{admin_add_link}}">New {{admin_changelist_link_name}}</a>
                 </li>
                 {% endif %}
             </ul>
@@ -35,11 +35,11 @@
             <a href="#"><span class="icon"></span>Users</a>
             <ul>
                 <li class="menu-item">
-                    <a class="newwindow" href="/staff/auth/user/">All users</a>
+                    <a class="clientadmin-window" href="/staff/auth/user/">All users</a>
                 </li>
                 {% if request.user.has_perm('auth.add_user') %}
                 <li class="menu-item">
-                    <a class="newwindow" href="/staff/auth/user/add/">New user</a>
+                    <a class="clientadmin-window" href="/staff/auth/user/add/">New user</a>
                 </li>
                 {% endif %}
             </ul>
