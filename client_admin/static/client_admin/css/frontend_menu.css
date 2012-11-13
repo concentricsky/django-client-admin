@@ -1,0 +1,196 @@
+/* header.frontend_admin & Main Nav
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -*/
+header.frontend_admin {
+	height: 40px;
+	border-top: 1px solid #55a6eb;
+	border-bottom: 1px solid #062f53;
+	background: #0f74cb;
+	background-image: -webkit-linear-gradient(top, #208cea, #116bb9);
+	background-image: -moz-linear-gradient(top, #208cea, #116bb9);	
+	background-image: -o-linear-gradient(top, #208cea, #116bb9);
+	background-image: -ms-linear-gradient(top, #208cea, #116bb9);
+	box-shadow: rgba(0, 0, 0, .15) 0 5px 0 0;
+	margin-bottom: 5px;
+	position: fixed;
+	z-index: 800;
+	width: 100%;
+}
+header.frontend_admin nav {
+	width: 960px;
+	margin: 0 auto;
+}
+header.frontend_admin nav ul {
+	float: right;
+	border-left: 1px solid #052a49;
+	border-right: 1px solid #3d95e2;
+}
+header.frontend_admin nav ul li {
+	float: left;
+	height: 40px;
+	line-height: 40px;
+	list-style: none;
+	padding: 0;
+	position: relative;
+}
+header.frontend_admin nav ul li a:link,
+header.frontend_admin nav ul li a:visited {
+	padding: 0 15px;
+	display: block;
+	border-right: 1px solid #052a49;
+	border-left: 1px solid #3d95e2;
+	color: #062b4a; 
+	font-weight: bold;
+	text-decoration: none;
+	text-transform: uppercase;
+	text-shadow: 1px 1px 0 #3f8ed2;
+}
+header.frontend_admin nav ul li.user-tools {
+	width: 47px;
+	height: 40px;
+	padding: 0;
+	position: relative;
+}
+header.frontend_admin nav ul li.user-tools > a,
+header.frontend_admin nav ul li.user-tools > a:visited {
+	text-indent: -9999px;
+	padding: 0;
+}
+header.frontend_admin nav ul li.user-tools span {
+	height: 40px;
+	width: 47px;
+	display: block;
+	background: url(images/icon_my_account.png) 0 0 no-repeat;
+	text-indent: -9999px;
+	overflow: hidden;	
+	position: absolute;
+}
+header.frontend_admin nav ul li.user-tools.selected span {
+	height: 40px;
+	width: 47px;
+	display: block;
+	background: url(images/icon_my_account.png) 0 -40px no-repeat;
+	text-indent: -9999px;
+}
+header.frontend_admin nav ul li:last-child a.active span,
+header.frontend_admin nav ul li:last-child a:active span {
+	background-position: 0 -40px;
+}
+header.frontend_admin nav ul li a:hover,
+header.frontend_admin nav ul li:hover a {
+	background: #208cea;
+	background-image: -webkit-linear-gradient(top, #4da5f2, #208cea);
+	background-image: -moz-linear-gradient(top, #4da5f2, #208cea);	
+	background-image: -o-linear-gradient(top, #4da5f2, #208cea);
+	background-image: -ms-linear-gradient(top, #4da5f2, #208cea);
+	text-shadow: 1px 1px 0 #79baf2;
+}
+header.frontend_admin nav ul li a:active,
+header.frontend_admin nav ul li.selected a {
+	background: #0e63ac;
+	background-image: -webkit-linear-gradient(top, #094981, #0e63ac);
+	background-image: -moz-linear-gradient(top, #094981, #0e63ac);	
+	background-image: -o-linear-gradient(top, #094981, #0e63ac);
+	background-image: -ms-linear-gradient(top, #094981, #0e63ac);
+	color: #fff;
+	text-shadow: 1px 1px 2px #073257;
+	border-left: 1px solid transparent;
+}
+header.frontend_admin nav ul li.disabled a {
+	color: #005095;
+	text-shadow: 1px 1px 0 #3f8ed2;
+	border-right: 1px solid #052a49;
+	border-left: 1px solid #3d95e2;
+}
+header.frontend_admin nav ul li.disabled a:hover {
+	background: transparent;
+	background-image: none;
+}
+
+
+/* 2nd Level Menu
+- - - - - - - - - - - - - - - -*/
+header.frontend_admin nav ul ul {
+	display: none;
+	position: absolute;
+	width: 150px;
+	top: 40px;
+	right: -1px;
+	padding-top: 1px;
+	background: #bfbfbf;
+	z-index: 100;
+	border-top: 1px solid #062f53;
+	border-left: none;
+	border-right: none;
+	border-bottom: 1px solid #d7d7d7;
+	box-shadow: #535558 0 5px 10px -5px inset, #434343 0 2px 5px 0;
+}
+header.frontend_admin nav ul ul li {
+	position: relative;
+	float: none;
+	display: block;
+	line-height: 19px;
+	height: auto;
+	border: 1px solid #d7d7d7;
+	border-bottom: none;
+}
+header.frontend_admin nav ul ul li:first-child {
+	border-top: none;
+}
+header.frontend_admin nav ul ul li a:link, 
+header.frontend_admin nav ul ul li a:visited {
+	background: transparent;
+	background-image: none;
+	text-transform: none;
+	border: none;
+	color: #434343;
+	padding: 10px;
+	text-shadow: 1px 1px #d7d7d7;
+}
+header.frontend_admin nav ul ul li a:hover,
+header.frontend_admin nav ul ul li:hover a {
+	background: #cecece;
+}
+header.frontend_admin nav ul li:hover ul {
+	display: block;
+}
+
+
+
+/* 3rd Level Menu
+- - - - - - - - - - - - - - - -*/
+header.frontend_admin nav ul ul ul,
+header.frontend_admin nav ul li:hover ul ul {
+	display: none;
+	top: 0px;
+	right: 158px;
+	background: #cecece;
+	box-shadow: none;
+	border: none;
+}
+header.frontend_admin nav ul ul ul li {
+	border-top: 1px solid #d7d7d7;
+}
+header.frontend_admin nav ul li:hover ul ul li:first-child {
+	padding-right: 10px;
+	margin: -1px -10px 0 0;
+	background: #cecece;
+	border: none;
+}
+header.frontend_admin nav ul ul ul li a:link, 
+header.frontend_admin nav ul ul ul li a:visited {
+	color: #7e7e7e;
+}
+header.frontend_admin nav ul ul ul li a:hover {
+	color: #434343;
+}
+header.frontend_admin nav ul ul li:hover ul {
+	display: block;
+}
+
+
+
+div.subtitle {
+	font-size: 9px;
+	font-weight: normal;
+
+}

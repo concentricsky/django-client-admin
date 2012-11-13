@@ -1,6 +1,7 @@
 import math
 import jingo
 import jinja2
+import string
 from client_admin.menu import items, Menu
 from client_admin.menu.models import Bookmark
 from client_admin.dashboard.dashboards import Dashboard
@@ -133,3 +134,35 @@ def get_current_dashboard(context):
     # - which modules have been disabled
     return [ dashboard, preferences, math.ceil(float(len(dashboard.children))/float(dashboard.columns)), len([m for m in dashboard.children \
                                 if not m.enabled]) > 0]
+
+
+@jingo.register.inclusion_tag('client_admin/frontend/menu.html')
+@jinja2.contextfunction
+def frontend_admin_menu(jinja_context):
+    """
+    Adds an admin menu to a frontend template
+    """
+    # make a mutable context
+    context = {}
+    context.update(jinja_context)
+
+    # add an edit link for detail pages
+    obj = context.get('object', None)
+    if obj: 
+        app_label = obj._meta.app_label
+        model_name = obj._meta.module_name
+        context['admin_change_link'] = reverse('admin:%s_%s_change' % (app_label, model_name), args=(obj.id,))
+
+    # add a changelist link for list pages and detail pages
+    obj_list = context.get('object_list', None)
+    if obj_list:
+        obj = obj_list[0]
+    if obj:        
+        app_label = obj._meta.app_label
+        model_name = obj._meta.module_name
+        context['admin_add_link'] = reverse('admin:%s_%s_add' % (app_label, model_name))
+        context['admin_changelist_link'] = reverse('admin:%s_%s_changelist' % (app_label, model_name))
+        context['admin_changelist_link_name'] = string.capwords(obj._meta.verbose_name)
+        context['admin_changelist_link_name_plural'] = string.capwords(obj._meta.verbose_name_plural)
+
+    return context
