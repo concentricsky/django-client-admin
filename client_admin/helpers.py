@@ -146,6 +146,11 @@ def frontend_admin_menu(jinja_context):
     context = {}
     context.update(jinja_context)
 
+    def perm_codename(action,obj):
+        return '%s.%s_%s' % (obj._meta.app_label, action, obj.__class__.__name__.lower())
+
+    request = context.get('request', None)
+
     # add an edit link for detail pages
     obj = context.get('object', None)
     if obj: 
@@ -164,5 +169,11 @@ def frontend_admin_menu(jinja_context):
         context['admin_changelist_link'] = reverse('admin:%s_%s_changelist' % (app_label, model_name))
         context['admin_changelist_link_name'] = string.capwords(obj._meta.verbose_name)
         context['admin_changelist_link_name_plural'] = string.capwords(obj._meta.verbose_name_plural)
+
+    # does user have permission to object?
+    if obj and request:
+        context['admin_perm_change_object'] = request.user.has_perm(perm_codename('change', obj))
+        context['admin_perm_add_object'] = request.user.has_perm(perm_codename('add', obj))
+        context['admin_perm_module'] = request.user.has_module_perms(obj._meta.app_label)
 
     return context

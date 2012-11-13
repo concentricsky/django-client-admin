@@ -7,11 +7,11 @@
     <ul>
         <li class="menu-item first"><a href="/staff">Dashboard</a></li>
 
-        {% if admin_changelist_link %}
+        {% if admin_perm_module %}
         <li class="menu-item">
             <a href="#">Edit this page</a>
             <ul>
-                {% if admin_change_link %}
+                {% if admin_change_link and admin_perm_change_object %}
                 <li class="menu-item"> 
                     <a class="newwindow" href="{{admin_change_link}}?_popup=1">Edit {{admin_changelist_link_name}}
                     <div class="subtitle">'{{object}}'</div></a>
@@ -20,9 +20,11 @@
                 <li class="menu-item">
                     <a class="newwindow" href="{{admin_changelist_link}}">All {{admin_changelist_link_name_plural}}</a>
                 </li>
+                {%if admin_perm_add_object %}
                 <li class="menu-item">
                     <a class="newwindow" href="{{admin_add_link}}">New {{admin_changelist_link_name}}</a>
                 </li>
+                {% endif %}
             </ul>
         </li>
         {% endif %}
@@ -33,7 +35,7 @@
             <a href="#"><span class="icon"></span>Users</a>
             <ul>
                 <li class="menu-item">
-                    <a class="newwindow" href="/staff/auth/user/">Manage users</a>
+                    <a class="newwindow" href="/staff/auth/user/">All users</a>
                 </li>
                 {% if request.user.has_perm('auth.add_user') %}
                 <li class="menu-item">
