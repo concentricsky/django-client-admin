@@ -1,10 +1,10 @@
 import math
 import jingo
 import jinja2
-from client_admin.menu import items, Menu
-from client_admin.menu.models import Bookmark
-from client_admin.dashboard.dashboards import Dashboard
-from client_admin.dashboard.models import DashboardPreferences
+from client_admin.items import Bookmarks
+from client_admin.menus import Menu
+from client_admin.models import Bookmark, DashboardPreferences
+from client_admin.dashboards import Dashboard
 from django.utils.importlib import import_module
 from django.conf import settings
 from django import template
@@ -71,7 +71,7 @@ def get_menu(context):
     menu.init_with_context(context)
     has_bookmark_item = False
     bookmark = None
-    if len([c for c in menu.children if isinstance(c, items.Bookmarks)]) > 0:
+    if len([c for c in menu.children if isinstance(c, Bookmarks)]) > 0:
         # - if the user has any bookmarks
         has_bookmark_item = True
         url = context['request'].get_full_path()

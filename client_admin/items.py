@@ -4,6 +4,7 @@ from django.utils.safestring import mark_safe
 from django.utils.text import capfirst
 from django.utils.translation import ugettext_lazy as _
 from client_admin.utils import *
+from client_admin.models import Bookmark
 
 
 class MenuItem(object):
@@ -338,7 +339,6 @@ class Bookmarks(MenuItem, AppListElementMixin):
         Please refer to the :meth:`~client_admin.menu.items.MenuItem.init_with_context`
         documentation from :class:`~client_admin.menu.items.MenuItem` class.
         """
-        from client_admin.menu.models import Bookmark
 
         for b in Bookmark.objects.filter(user=context['request'].user):
             self.children.append(MenuItem(mark_safe(b.title), b.url))

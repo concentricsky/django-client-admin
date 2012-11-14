@@ -5,17 +5,26 @@ try:
 except ImportError: 
     import simplejson as json
     
-from django.http import HttpResponse, HttpResponseNotAllowed
+from django.http import HttpResponse, HttpResponseNotAllowed, HttpResponseRedirect
 from django.core import serializers
-from django.contrib.contenttypes.models import ContentType
-from django.contrib.admin.widgets import url_params_from_lookup_dict
-
-from django.views.generic.simple import direct_to_template
-from django.utils.translation import ugettext as _
 from django.contrib import admin
 from django.contrib.admin.views.decorators import staff_member_required
+from django.contrib.admin.widgets import url_params_from_lookup_dict
+from django.contrib.auth.decorators import login_required
+from django.contrib.contenttypes.models import ContentType
+from django.shortcuts import get_object_or_404
+from django.utils.translation import ugettext as _
 from django.utils.safestring import mark_safe
 from django.utils.text import capfirst
+from django.views.generic.simple import direct_to_template
+
+try:
+    from django.views.decorators.csrf import csrf_exempt
+except ImportError:
+    from django.contrib.csrf.middleware import csrf_exempt
+
+from forms import DashboardPreferencesForm, BookmarkForm
+from models import DashboardPreferences, Bookmark
 
 
 def get_obj(content_type_id, object_id):
@@ -140,3 +149,119 @@ def dashboard(request):
     }
 
     return direct_to_template(request, 'client_admin/dashboard/dashboard.html', extra_context=context)
+
+
+
+
+@login_required
+@csrf_exempt
+def set_preferences(request, dashboard_id):
+    """
+    This view serves and validates a preferences form.
+    """
+    try:
+        preferences = DashboardPreferences.objects.get(
+            user=request.user,
+            dashboard_id=dashboard_id
+        )
+    except DashboardPreferences.DoesNotExist:
+        preferences = None
+    if request.method == "POST":
+        form = DashboardPreferencesForm(
+            user=request.user,
+            dashboard_id=dashboard_id,
+            data=request.POST,
+            instance=preferences
+        )
+        if form.is_valid():
+            preferences = form.save()
+            if request.is_ajax():
+                return HttpResponse('true')
+            request.user.message_set.create(message='Preferences saved')
+        elif request.is_ajax():
+            return HttpResponse('false')
+    else:
+        form = DashboardPreferencesForm(
+            user=request.user,
+            dashboard_id=dashboard_id,
+            instance=preferences
+        )
+    return direct_to_template(request, 'client_admin/dashboard/preferences_form.html', {
+        'form': form,   
+    })
+
+
+@login_required
+@csrf_exempt
+def add_bookmark(request):
+    """
+    This view serves and validates a bookmark form.
+    If requested via ajax it also returns the drop bookmark form to replace the 
+    add bookmark form.
+    """
+    if request.method == "POST":
+        form = BookmarkForm(user=request.user, data=request.POST)
+        if form.is_valid():
+            bookmark = form.save()
+            if not request.is_ajax():
+                request.user.message_set.create(message='Bookmark added')
+                if request.POST.get('next'):
+                    return HttpResponseRedirect(request.POST.get('next'))
+                return HttpResponse('Added')
+            return direct_to_template(request, 'client_admin/menu/remove_bookmark_form.html', {
+                'bookmark': bookmark,
+                'url': bookmark.url,
+            });
+    else:
+        form = BookmarkForm(user=request.user)
+    return direct_to_template(request, 'client_admin/menu/form.html', {
+        'form': form,   
+        'title': 'Add Bookmark',
+    })
+
+
+@login_required
+@csrf_exempt
+def edit_bookmark(request, id):
+    bookmark = get_object_or_404(Bookmark, id=id)
+    if request.method == "POST":
+        form = BookmarkForm(user=request.user, data=request.POST, instance=bookmark)
+        if form.is_valid():
+            form.save()
+            if not request.is_ajax():
+                request.user.message_set.create(message='Bookmark updated')
+                if request.POST.get('next'):
+                    return HttpResponseRedirect(request.POST.get('next'))
+            return HttpResponse('Saved')
+    else:
+        form = BookmarkForm(user=request.user, instance=bookmark)
+    return direct_to_template(request, 'client_admin/menu/form.html', {
+        'form': form,   
+        'title': 'Edit Bookmark',
+    })
+
+
+@login_required
+@csrf_exempt
+def remove_bookmark(request, id):
+    """
+    This view deletes a bookmark.
+    If requested via ajax it also returns the add bookmark form to replace the 
+    drop bookmark form.
+    """
+    bookmark = get_object_or_404(Bookmark, id=id)
+    if request.method == "POST":
+        bookmark.delete()
+        if not request.is_ajax():
+            request.user.message_set.create(message='Bookmark removed')
+            if request.POST.get('next'):
+                return HttpResponseRedirect(request.POST.get('next'))
+            return HttpResponse('Deleted')
+        return direct_to_template(request, 'client_admin/menu/add_bookmark_form.html', {
+            'url': request.POST.get('next'),
+            'title': '**title**' #This gets replaced on the javascript side
+        });
+    return direct_to_template(request, 'client_admin/menu/delete_confirm.html', {
+        'bookmark': bookmark,
+        'title': 'Delete Bookmark',
+    })

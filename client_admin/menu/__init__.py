@@ -1,1 +1,1 @@
-from client_admin.menu.menus import *
+# Kept for backwards compatibility
