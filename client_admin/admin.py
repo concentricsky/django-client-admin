@@ -28,6 +28,7 @@ JS_PATH = getattr(settings, 'GENERICADMIN_JS', 'client_admin/js/')
 
 class BaseRecursiveInline(object):
     inlines = []
+    extra = 0
 
     def get_inline_instances(self, request):
         for inline_class in self.inlines:
