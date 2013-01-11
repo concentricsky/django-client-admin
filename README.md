@@ -79,6 +79,25 @@ The Recent Activity module lists all activity registered to the
 
 ### Quick Links
 
+## Recursive Inlines
+
+Basic Django admin allows for a model to be edited inline with a related model, but it is limited to one level of nesting. Client Admin provides several classes that allow inlines to be nested recursively.
+
+### Example
+
+    class AwardInline(admin.StackedInline):
+        model = Award
+    
+    class ChapterInline(admin.TabularInline):
+        model = Chapter
+    
+    class BookInline(client_admin.StackedRecursiveInline):
+        model = Book
+        inlines = [ChapterInline]
+    
+    class AuthorAdmin(client_admin.RecursiveInlinesModelAdmin):
+        model = Author
+        inlines = [BookInline, AwardInline]
 
 
 ## Best Practices
@@ -110,4 +129,4 @@ Client Admin wants to:
 
 - Support including foreign keys and manytomany relationships as inlines on a change form. This would mean the original field would be excluded in the main form, and the inverse inlines would be saved first, with their resulting PKs saved as the value for the corresponding relationship on the main form.
 
-- Support for nested inlines, either with a more complicated form element prefix system, or with AJAX submissions of inline forms.
+- Support for nested inlines using AJAX submissions of inline forms instead of nested formsets.
