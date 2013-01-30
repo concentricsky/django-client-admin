@@ -66,8 +66,19 @@ def get_generic_relation_list(request):
 def get_menu(context):
     if not context['request'].user.is_staff:
         return [None, None, None]
+        
     # - an instance of the menu
-    menu = Menu()
+    menu_cls = getattr(settings, 'CLIENT_ADMIN_MENU', None)
+    if menu_cls:
+        try:
+            mod, inst = menu_cls.rsplit('.', 1)
+            mod = import_module(mod)
+            menu = getattr(mod, inst)()
+        except:
+            menu = Menu()
+    else:
+        menu = Menu()
+    
     menu.init_with_context(context)
     has_bookmark_item = False
     bookmark = None
