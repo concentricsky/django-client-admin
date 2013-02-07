@@ -181,7 +181,7 @@ class RecursiveInlinesModelAdmin(admin.ModelAdmin):
                 formset = FormSet(instance=self.model(), prefix=prefix,
                                   queryset=inline.queryset(request))
                 formsets.append(formset)
-                if inline.inlines:
+                if hasattr(inline, 'inlines'):
                     self.add_recursive_inline_formsets(request, inline, formset)
 
         adminForm = helpers.AdminForm(form, list(self.get_fieldsets(request)),
