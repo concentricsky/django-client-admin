@@ -9,8 +9,8 @@ from django.http import HttpResponse, HttpResponseNotAllowed
 from django.core import serializers
 from django.contrib.contenttypes.models import ContentType
 from django.contrib.admin.widgets import url_params_from_lookup_dict
-
-from django.views.generic.simple import direct_to_template
+from django.template.response import TemplateResponse
+from django.views.generic import TemplateView
 from django.utils.translation import ugettext as _
 from django.contrib import admin
 from django.contrib.admin.views.decorators import staff_member_required
@@ -138,5 +138,5 @@ def dashboard(request):
         'title': _('Dashboard'),
         'app_list': app_list,
     }
-
-    return direct_to_template(request, 'client_admin/dashboard/dashboard.html', extra_context=context)
+    return TemplateResponse(request, 'client_admin/dashboard/dashboard.html', context=context)
+    # return TemplateView.as_view(request, 'client_admin/dashboard/dashboard.html', extra_context=context)
