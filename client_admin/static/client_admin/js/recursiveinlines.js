@@ -107,12 +107,14 @@
                     }
  
                 });
- 
+                
+                var recursive_formsets;
+
                 if (row.is("tr")) {
                     // If the forms are laid out in table rows, insert
                     // the remove button into the last table cell:
                     // Insert the recursive formsets into the new form
-                    var recursive_formsets = create_recursive_formset(options.prefix, nextIndex, options, false);
+                    recursive_formsets = create_recursive_formset(options.prefix, nextIndex, options, false);
                     if (recursive_formsets.length) {
                         row.addClass("no-bottom-border");
                     }
