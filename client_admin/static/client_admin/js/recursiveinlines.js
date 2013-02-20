@@ -226,6 +226,8 @@
                 reinitDateTimeShortCuts();
                 updateSelectFilter();
                 alternatingRows(row);
+                install_on_add(row);
+                InitCKEditors();
             }
         });
   
@@ -290,7 +292,81 @@
                 reinitDateTimeShortCuts();
                 updateSelectFilter();
                 update_inline_labels(row.parent());
+                install_on_add(row);
+                InitCKEditors();
             })
+        });
+  
+        return $rows;
+    };
+
+    // Grouped inlines ---------------------------------------------------------
+    $.fn.groupedFormset = function(options) {
+        var $rows = $(this);
+        var alternatingRows = function(row) {
+            row_number = 0;
+            $($rows.selector).not(".add-row").removeClass("row1 row2").each(function() {
+                $(this).addClass('row' + ((row_number%2)+1));
+                next = $(this).next();
+                while (next.hasClass('recursive-inline-row')) {
+                    next.addClass('row' + ((row_number%2)+1));
+                    next = next.next();
+                }
+                row_number = row_number + 1;
+            });
+        };
+ 
+        var reinitDateTimeShortCuts = function() {
+            // Reinitialize the calendar and clock widgets by force
+            if ( typeof DateTimeShortcuts != "undefined") {
+                $(".datetimeshortcuts").remove();
+                DateTimeShortcuts.init();
+            }
+        };
+ 
+        var updateSelectFilter = function() {
+            // If any SelectFilter widgets are a part of the new form,
+            // instantiate a new SelectFilter instance for it.
+            if ( typeof SelectFilter != 'undefined') {
+                $('.selectfilter').each(function(index, value) {
+                    var namearr = value.name.split('-');
+                    SelectFilter.init(value.id, namearr[namearr.length - 1], false, options.adminStaticPrefix);
+                });
+                $('.selectfilterstacked').each(function(index, value) {
+                    var namearr = value.name.split('-');
+                    SelectFilter.init(value.id, namearr[namearr.length - 1], true, options.adminStaticPrefix);
+                });
+            }
+        };
+ 
+        var initPrepopulatedFields = function(row) {
+            row.find('.prepopulated_field').each(function() {
+                var field = $(this), input = field.find('input, select, textarea'), dependency_list = input.data('dependency_list') || [], dependencies = [];
+                $.each(dependency_list, function(i, field_name) {
+                    dependencies.push('#' + row.find('.field-' + field_name).find('input, select, textarea').attr('id'));
+                });
+                if (dependencies.length) {
+                    input.prepopulate(dependencies, input.attr('maxlength'));
+                }
+            });
+        };
+  
+        $rows.formset({
+            prefix : options.prefix,
+            addText : options.addText,
+            formCssClass : "dynamic-" + options.prefix,
+            deleteCssClass : "inline-deletelinkzz",
+            deleteText : options.deleteText,
+            emptyCssClass : "empty-form",
+            removed : alternatingRows,
+            added : function(row) {
+                initPrepopulatedFields(row);
+                reinitDateTimeShortCuts();
+                updateSelectFilter();
+                alternatingRows(row);
+                install_on_add(row);
+                InitCKEditors();
+            }
         });
   
         return $rows;

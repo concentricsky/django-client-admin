@@ -20,7 +20,45 @@ from functools import update_wrapper, partial
 
 csrf_protect_m = method_decorator(csrf_protect)
 
-JS_PATH = getattr(settings, 'GENERICADMIN_JS', 'client_admin/js/') 
+JS_PATH = getattr(settings, 'GENERICADMIN_JS', 'client_admin/js/')
+
+
+from django.contrib.admin.helpers import AdminReadonlyField, AdminField
+
+
+# class GroupedAdminForm(helpers.AdminForm):
+#     def __iter__(self):
+#         for name, options in self.fieldsets:
+#             yield GroupedFieldset(self.form, name,
+#                 readonly_fields=self.readonly_fields,
+#                 model_admin=self.model_admin,
+#                 **options
+#             )
+
+
+# class GroupedFieldset(helpers.Fieldset):
+#     def __iter__(self):
+#         for field in self.fields:
+#             yield GroupedFieldline(self.form, field, self.readonly_fields, model_admin=self.model_admin)
+
+
+# class GroupedFieldline(helpers.Fieldline):
+#     def __iter__(self):
+#         for i, field in enumerate(self.fields):
+#             try:
+#                 grouped_fields = self.model_admin.grouped_fields
+#             except AttributeError:
+#                 grouped_fields = []
+#             if field in grouped_fields:
+#                 pass
+#             else:
+#                 if field in self.readonly_fields:
+#                     yield AdminReadonlyField(self.form, field, is_first=(i == 0),
+#                         model_admin=self.model_admin)
+#                 else:
+#                     yield AdminField(self.form, field, is_first=(i == 0))
+
+
 
 
 ## Recursive Inlines!
@@ -48,7 +86,12 @@ class StackedRecursiveInline(BaseRecursiveInline, admin.StackedInline):
 class TabularRecursiveInline(BaseRecursiveInline, admin.TabularInline):
     template = 'admin/edit_inline/tabular_recursive.html'
 
+class GroupedFieldInline(StackedRecursiveInline):
+    template = 'admin/edit_inline/grouped_field.html'
+
+
 class RecursiveInlinesModelAdmin(admin.ModelAdmin):
+    grouped_fields = []
     
     class Media:
         pass
@@ -67,8 +110,8 @@ class RecursiveInlinesModelAdmin(admin.ModelAdmin):
 
     def add_recursive_inline_formsets(self, request, inline, formset):
         for form in formset.forms:
+            recursive_formsets = []
             if form.instance.pk:
-                recursive_formsets = []
                 for recursive_inline in inline.get_inline_instances(request):
                     FormSet = recursive_inline.get_formset(request, form.instance)
                     prefix = "%s-%s" % (form.prefix, FormSet.get_default_prefix())
@@ -79,7 +122,7 @@ class RecursiveInlinesModelAdmin(admin.ModelAdmin):
                     recursive_formsets.append(recursive_formset)
                     if hasattr(recursive_inline, 'inlines'):
                         self.add_recursive_inline_formsets(request, recursive_inline, recursive_formset)
-                form.recursive_formsets = recursive_formsets
+            form.recursive_formsets = recursive_formsets
 
     def wrap_recursive_inline_formsets(self, request, inline, formset):
         media = None
