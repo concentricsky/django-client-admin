@@ -1,5 +1,6 @@
 # # Client Admin admin classes
 from client_admin.views import generic_lookup, get_generic_rel_list
+from client_admin.widgets import ThumbnailImageWidget
 
 from django.conf import settings
 from django.conf.urls.defaults import patterns, url
@@ -453,3 +454,10 @@ class ReverseInlinesModelAdmin(admin.ModelAdmin):
                     inline.max_num = 0
             inline_instances.append(inline)
         return inline_instances
+
+
+class ClientModelAdmin(admin.ModelAdmin):
+    # Override image widget
+    formfield_overrides = {
+        ImageField: {'widget': ThumbnailImageWidget},
+    }
