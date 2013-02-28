@@ -18,6 +18,7 @@ from django.utils.formats import get_format
 from django.utils.safestring import mark_safe
 from django.db import models
 from django.contrib import admin
+from django.core.urlresolvers import reverse
 from django.conf import settings
 
 register = template.Library()
@@ -203,3 +204,10 @@ def get_autocomplete_lookup_fields_m2m(model_admin):
 def get_autocomplete_lookup_fields_generic(model_admin):
     return model_admin.autocomplete_lookup_fields.get("generic", [])
 
+
+# Admin urls
+
+@register.filter
+def get_admin_object_change_url(obj):
+    info = obj._meta.app_label, obj._meta.module_name
+    return reverse('admin:%s_%s_change' % info, args=(obj.id,))
