@@ -2,7 +2,8 @@
     $('#changelist-filter .vForeignKeyRawIdAdminField').each(function(){
         watch(this, "value", function(){
             prefix_obj = $(this).siblings('#'+this.id+'_prefix')[0];
-            window.location.href = window.location.href.split(/\?/)[0] + prefix_obj.value + this.value;
+            new_url = prefix_obj.value.replace("PLACEHOLDER", this.value);
+            window.location.href = window.location.href.split(/\?/)[0] + new_url;
         });
     });
 })(django.jQuery);

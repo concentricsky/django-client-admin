@@ -10,7 +10,7 @@ class LookupFilter(RelatedFieldListFilter):
     def choices(self, cl):
         yield {
             'lookup_url': "%s?t=id" % get_admin_change_url(self.field.rel.to),
-            'query_string': cl.get_query_string({self.lookup_kwarg: ""}),
+            'query_string': cl.get_query_string({self.lookup_kwarg: "PLACEHOLDER"}),
             'filter_name': self.field.rel.to._meta.module_name,
         }
         yield {
