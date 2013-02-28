@@ -1,0 +1,16 @@
+{% load i18n %}
+<h3>{% blocktrans with filter_title=title %} By {{ filter_title }} {% endblocktrans %}</h3>
+
+
+<ul>
+{% for choice in choices %}
+    {% if choice.lookup_url %}
+        <input type="hidden" name="{{choice.filter_name}}_prefix" id="id_{{choice.filter_name}}_prefix" value="{{ choice.query_string|iriencode }}">
+        <input class="vForeignKeyRawIdAdminField" type="hidden" name="{{choice.filter_name}}" id="id_{{choice.filter_name}}">
+        <a href="/staff/location/location/?t=id" class="related-lookup" id="lookup_id_{{choice.filter_name}}" onclick="return showRelatedObjectLookupPopup(this);"> <img src="/static/admin/img/selector-search.gif" width="16" height="16" alt="Lookup"></a>
+    {% else %}
+        <li{% if choice.selected %} class="selected"{% endif %}>
+        <a href="{{ choice.query_string|iriencode }}">{{ choice.display }}</a></li>
+    {% endif %}
+{% endfor %}
+</ul>
