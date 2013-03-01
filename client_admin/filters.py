@@ -1,4 +1,4 @@
-from django.contrib.admin import RelatedFieldListFilter
+from django.contrib.admin import RelatedFieldListFilter, ChoicesFieldListFilter
 from django.utils.encoding import smart_text
 
 from client_admin.utils import get_admin_change_url
@@ -27,3 +27,7 @@ class LookupFilter(RelatedFieldListFilter):
                     }, [self.lookup_kwarg_isnull]),
                     'display': val,
                 }
+
+
+class SelectFilter(ChoicesFieldListFilter):
+    template = "admin/select_filter.html"

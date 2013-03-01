@@ -6,4 +6,8 @@
             window.location.href = window.location.href.split(/\?/)[0] + new_url;
         });
     });
+
+    $('#changelist-filter select.href-trigger').change(function(){
+        window.location.href = this.value;
+    });
 })(django.jQuery);
