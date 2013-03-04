@@ -1,7 +1,7 @@
 {% extends "client_admin/dashboard/module.html" %}
 {% block module_content %}
         {% for child in module.children %}
-        <h4>{{ child.title }}</h4>
+        <h3>{{ child.title }}</h3>
         <ul>
             {% for model in child.models %}
             <li class="clear">

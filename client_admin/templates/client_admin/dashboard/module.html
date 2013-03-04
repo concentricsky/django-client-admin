@@ -1,6 +1,6 @@
 {% if not module.is_empty() %}
     <div id="module_{{ module.id }}" class="{{ module.render_css_classes() }}">
-        {% if module.show_title %}<h3>{{ module.title }}</h3>{% endif %}
+        {% if module.show_title %}<h4>{{ module.title }}</h4>{% endif %}
         <div class="dashboard-module-content">
             {% if module.pre_content %}
             <p>{{ module.pre_content }}</p>

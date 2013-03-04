@@ -6,13 +6,13 @@
 {% block title %}{{ title }} | {{ _('Site admin') }}{% endblock %}
 
 {% block branding %}
-<h1 id="site-name">{{ _('Site administration') }}</h1>
+<h3 id="site-name">{{ _('Site administration') }}</h3>
 {% endblock %}
 
 {% block extra_style %}
 {{ super() }}
 
-<link rel="stylesheet" type="text/css" href="{% block stylesheet %}{#{% load adminmedia %}#}{{ STATIC_URL }}admin/css/base.css{% endblock %}" />
+<!--<link rel="stylesheet" type="text/css" href="{% block stylesheet %}{#{% load adminmedia %}#}{{ STATIC_URL }}admin/css/base.css{% endblock %}" />-->
 {% if LANGUAGE_BIDI %}<link rel="stylesheet" type="text/css" href="{% block stylesheet_rtl %}{{ STATIC_URL }}admin/css/rtl.css{% endblock %}" />{% endif %}
 <script type="text/javascript">window.__admin_media_prefix__ = "{{ STATIC_URL }}admin/";</script>
 <link rel="stylesheet" href="{{ STATIC_URL }}client_admin/css/jquery/jquery-ui.css" type="text/css" media="screen, projection"/>
@@ -78,6 +78,9 @@
 
 
 {% block scripts %}
+    {% if dashboard and dashboard.Media %}{% for js in dashboard.Media.js %}
+    <script type="text/javascript" src="{{ STATIC_URL }}{{ js }}"></script>
+    {% endfor %}{% endif %}
     <script src="{{STATIC_URL}}client_admin/js/jquery/jquery-1.7.2.min.js"></script>
     <script type="text/javascript">
         var jQuery = django.jQuery;
@@ -94,6 +97,7 @@
     <script type="text/javascript" src="{{ STATIC_URL }}client_admin/js/client_admin.js"></script>
     <script type="text/javascript" src="{{ STATIC_URL }}client_admin/js/dashboard.js"></script>
     <script type="text/javascript" src="{{ STATIC_URL }}client_admin/js/menu.js"></script>
+    <script src="http://code.jquery.com/ui/1.10.0/jquery-ui.js"></script>
     
     <script type="text/javascript">
 
@@ -175,11 +179,93 @@
                 $('#toArrayOutput')[0].textContent = arraied : $('#toArrayOutput')[0].innerText = arraied;
             })
 
+            // $("div.inline-related").sortable();
+            // $("div.inline-related").disableSelection();
+
+            $('<span class="toggleswitch">Show/Hide</span>').insertBefore('div.inline-related h3 > b');
+            $("div.inline-related h3 > span.toggleswitch").click(function(){
+                $(this).toggleClass("hidden");
+                $(this).parents("div.inline-related").children("fieldset.module.aligned").slideToggle();
+            })
+
+            // $("div.inline-related h3 > span.deleteinline").click(function(){
+            //     $(this).addClass("hidden");
+            //     $(this).siblings("span.undo_deleteinline").removeClass("hidden");
+            //     $(this).parent("h3").addClass("tobe_removed");
+            //     $(this).parents("div.inline-related").children("fieldset.module.aligned").slideToggle();
+            //     $(this).siblings("span.toggleswitch").addClass("tobe_removed");
+            // })
+            // $("div.inline-related h3 > span.undo_deleteinline").click(function(){
+            //     $(this).addClass("hidden");
+            //     $(this).siblings("span.deleteinline").removeClass("hidden");
+            //     $(this).parent("h3").removeClass("tobe_removed");
+            //     $(this).parents("div.inline-related").children("fieldset.module.aligned").slideToggle();
+            //     $(this).siblings("span.toggleswitch").removeClass("tobe_removed");
+            // })
+            
+            $("div.inline-group h3 span.delete input[type='checkbox']").click(function(){
+                $(this).siblings("label.stackedinline_delete").toggleClass("hidden");
+                $(this).siblings("label.undo_stackedinline_delete").toggleClass("hidden");
+                $(this).parents("h3").toggleClass("tobe_removed");
+                $(this).parents("div.inline-related").children("fieldset.module.aligned").slideToggle();
+            })
+
+
+            $("fieldset.module table td.delete input[type='checkbox']").click(function(){
+                $(this).siblings("label.tabularinline_delete").toggleClass("hidden");
+                $(this).siblings("label.undo_tabularinline_delete").toggleClass("hidden");
+                $(this).parents("tr").toggleClass("tobe_removed");
+            })
+
+            $("<img src='{{STATIC_URL}}client_admin/images/missing_image.png' class='imageupload-thumbnail-hidden' />").insertBefore("div.imageupload-widget");
+
+            $("span.clearable-file-input input[type='checkbox']").click(function(){
+                $(this).siblings("label").toggleClass("hidden");
+                $(this).parents("div.field_container").toggleClass("hidden");
+            })
+
+
+            $.fn.followTo = function ( pos ) {
+                var $this = this,
+                    $window = $(window);
+                
+                $window.scroll(function(e){
+                    if ($window.scrollTop() > pos) {
+                        $this.css({
+                            position: 'absolute',
+                            top: pos
+                        });
+                    } else {
+                        $this.css({
+                            position: 'fixed',
+                            top: 0
+                        });
+                    }
+                });
+            };
+
+            $.fn.followAt = function ( pos ) {
+                var $this = this,
+                    $window = $(window);
+                
+                $window.scroll(function(e){
+                    if ($window.scrollTop() > pos) {
+                        $this.css({
+                            position: 'fixed',
+                            top: '-5px'
+                        });
+                    } else {
+                        $this.css({
+                            position: 'relative'
+                        });
+                    }
+                });
+            };
+
+            $('header').followTo(123);
+            $('div.submit-row').followAt(170);
+
         });
     </script>
 
-    
-    {% if dashboard and dashboard.Media %}{% for js in dashboard.Media.js %}
-    <script type="text/javascript" src="{{ STATIC_URL }}{{ js }}"></script>
-    {% endfor %}{% endif %}
 {% endblock %}

@@ -10,17 +10,26 @@
                 <div{% if not line.fields|length_is:'1' %} class="field-box{% if field.field.name %} field-{{ field.field.name }}{% endif %}{% if not field.is_readonly and field.errors %} errors{% endif %}"{% endif %}>
                     {% if not line.fields|length_is:'1' and not field.is_readonly %}{{ field.errors }}{% endif %}
                     {% if field.is_checkbox %}
-                        {{ field.field }}{{ field.label_tag }}
+                        <div class="checkbox_container">
+                            {{ field.field }}{{ field.label_tag }}
+                        </div>
                     {% else %}
                         {{ field.label_tag }}
                         {% if field.is_readonly %}
-                            <p>{{ field.contents|linebreaksbr }}</p>
+                            <div class="field_container">
+                                {% if field.field.help_text %}
+                                    <p class="help"><span>{{ field.field.help_text|safe }}</span></p>
+                                {% endif %}
+                                <p>{{ field.contents }}</p>
+                            </div>
                         {% else %}
-                            {{ field.field }}
+                            <div class="field_container">
+                                {% if field.field.help_text %}
+                                    <p class="help"><span>{{ field.field.help_text|safe }}</span></p>
+                                {% endif %}
+                                {{ field.field }}
+                            </div>
                         {% endif %}
-                    {% endif %}
-                    {% if field.field.help_text %}
-                        <p class="help">{{ field.field.help_text|safe }}</p>
                     {% endif %}
                 </div>
             {% endfor %}
