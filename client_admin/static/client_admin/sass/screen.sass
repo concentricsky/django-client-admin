@@ -116,7 +116,7 @@ ul.errorlist
     width: 40%
     margin: 0 auto
   ul.errorlist
-    margin-left: 98px
+    margin-left: 98px !important
 
 
 
@@ -371,7 +371,7 @@ header
   // Message List
   // - - - - - - - - - - - - -
   ul.messagelist
-    background: $primary
+    background: $secondary
     display: block
     margin: 20px 0
     li
@@ -564,9 +564,6 @@ header
 // Dashboard
 //  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-body.dashboard table
-  border: 1px solid red
-  background: blue
   
 // Generic Dashboard
 //  - - - - - - - - - - - - - - -
@@ -823,244 +820,285 @@ li.ui-sortable-placeholder
 
 
 
-// Listing Page
+// App Index
 //  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-.change-list .filtered
-  background: url(images/filter_bg.png) white right repeat-y !important
-  .paginator
-    border-right: none
-    border-bottom: none
-
-#changelist
-  border-top-right-radius: 5px
-  border-top-left-radius: 5px
-  -webkit-border-top-left-radius: 5px
-  -webkit-border-top-right-radius: 5px
-  -moz-border-radius-topleft: 5px
-  -moz-border-radius-topright: 5px
-  border: none
-  margin-bottom: 0
-  #toolbar
-    padding: 6px 10px 0 0
-    width: 152px !important
-    height: 30px
-    position: absolute
-    margin-right: 0 !important
-    right: 0px
-    top: 0
-    z-index: 100
-    border: 1px solid #7b7b7b
-    border-bottom: 1px solid #555657
-    border-left: none
-    border-top-right-radius: 5px
-    -webkit-border-top-right-radius: 5px
-    -moz-border-radius-topright: 5px
-    box-shadow: 0 1px 0 0 #ebebeb inset
-    background: #bdbdbd
-    background-image: -webkit-linear-gradient(top, #c8c8c8, #afafaf)
-    background-image: -moz-linear-gradient(top, #c8c8c8, #afafaf)
-    background-image: -o-linear-gradient(top, #c8c8c8, #afafaf)
-    background-image: -ms-linear-gradient(top, #c8c8c8, #afafaf)
-    label
-      display: none
-    form
-      #searchbar
-        position: relative
-        height: 23px
-        border: none
-        padding: 0 25px 0 5px
-        width: 128px
-        border-radius: 15px
-        box-shadow: 0 1px 0 0 #ebebeb
-        background: #48494b
-        background-image: -webkit-linear-gradient(top, #48494b, #7e7e7e)
-        background-image: -moz-linear-gradient(top, #48494b, #7e7e7e)
-        background-image: -o-linear-gradient(top, #48494b, #7e7e7e)
-        background-image: -ms-linear-gradient(top, #48494b, #7e7e7e)
+body.app_index #content-main
+  width: 960px
+  table
+    border: 1px solid #cdcdcd
+    width: 960px
+    caption
+      font-size: 23px
+      text-transform: uppercase
+      height: 40px
+      line-height: 40px
+      position: relative
+      background: $primary
+      a
+        padding-left: 10px
         color: #fff
-        &:focus
-          outline: none
-      input[type="submit"]
-        background: url(images/icon_search.png) no-repeat
-        height: 14px
-        width: 13px
+        &:hover
+          color: $secondary
+    tbody
+      background: #fff
+      tr
+        border-bottom: 1px solid #cdcdcd
+        &:nth-child(even)
+          background: #f6f6f6
+        td
+          padding: 7px 10px
+          a
+            position: relative
+            padding-left: 20px
+            color: $body
+            &.addlink
+              +sprite-icon(icon_add, $vertical: 2px)
+              &:hover
+                +sprite-icon(icon_add_orange, $vertical: 2px)
+                color: $secondary
+            &.changelink
+              +sprite-icon(icon_edit, $vertical: 2px)
+              &:hover
+                +sprite-icon(icon_edit_orange, $vertical: 2px)
+                color: $secondary
+        th
+          width: 880px
+          padding: 7px
+          a
+            color: $primary
+            &:hover
+              color: $secondary
+      td:last-child
+        border-right: none
+
+
+
+// Change Lists
+//  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+body.change-list 
+  #changelist
+    border: none
+    margin-bottom: 0
+    &.filtered
+      background: transparent !important
+
+
+    // Changelist Filters
+    // - - - - - - - - - - - 
+    div#changelist-filter
+      padding: 0 10px 10px 10px
+      width: 140px
+      border-left: none
+      float: right
+      display: block
+      background: #fff 
+      position: relative
+      z-index: 50
+
+      // Search
+      // - - - - - - - - - - - 
+      #toolbar
+        background: #fff !important
         border: none
-        position: absolute
-        top: 11px
-        right: 10px
-        text-indent: -9999px
-      span.small
-        position: absolute
-        top: 10px
-        right: 170px
-        width: 160px
-        color: #555 !important
+        padding: 0
+        width: 150px !important
+        margin: 0 0 10px 0 !important
+        position: relative
+        label
+          display: none
+        form
+          #searchbar
+            +input()
+            width: 115px
+            height: 33px
+            padding: 3px 25px 3px 6px
+            &:focus
+              outline: none
+          input[type="submit"]
+            background: url(images/icons/icon_search_orange.png) no-repeat
+            height: 14px
+            width: 14px
+            border: none
+            position: absolute
+            top: 14px
+            right: 12px
+            text-indent: -9999px
+            cursor: pointer
+          span.small
+            width: 160px
+            color: $body !important
+            text-transform: uppercase
+            font-size: 10px
+            a
+              color: $body
+              &:hover
+                color: $secondary
+      
+
+      // Filter Content
+      // - - - - - - - - - - - 
+      h2
+        background: none
+        font-size: 24px
+        margin: 0 0 0 -4px
+        color: $primary
+        border: none
+        height: auto !important
         text-transform: uppercase
-        text-align: right
-        text-shadow: 1px 1px #ebebeb
+      h3
+        color: $secondary
+      ul
+        margin-bottom: 10px
+        li
+          font-size: 12px
+          font-weight: bold
+          margin: 0
+          padding: 0
+          &.selected
+            border: none
+            a
+              color: $body !important
+          a
+            color: $body-secondary
+            &:hover
+              color: $body
+   
+
+    // Form
+    // - - - - - - - - - - - 
+    form#changelist-form 
+      background: #fff
+
+
+    // Table Actions
+    // - - - - - - - - - - - 
+    div.actions
+      font-size: 14px
+      line-height: 40px
+      height: 40px
+      width: 788px
+      display: block
+      padding: 0 10px 0 2px
+      position: relative
+      z-index: 100
+      border: none
+      background: $primary
+      margin-right: 0 !important
+      label
+        position: absolute
+        text-transform: uppercase
+        font-size: 14px
+        margin: 2px 0 0 10px
+        color: #fff
+        font-weight: bold
+        select
+          width: 145px
+          border: none
+          margin: -2px 0 0 5px
+          &:focus
+            outline: none
+      button
+        margin: 16px 0 0 230px
+        padding: 0px 3px
+        font-family: $body-font
+        font-weight: bold
+        color: $primary
+        font-size: 12px
+        background: #fff
+        border: none
+        cursor: pointer
+        &:hover
+          color: $secondary
+      span.action-counter
+        color: #fff
+        text-transform: uppercase
         font-size: 10px
-  div.actions
-    font-size: 19px
-    line-height: 36px
-    height: 36px
-    display: block
-    padding: 0 10px 0 2px
-    position: relative
-    border: 1px solid #7b7b7b
-    border-bottom: 1px solid #555657
-    border-top-left-radius: 5px
-    -webkit-border-top-left-radius: 5px
-    -moz-border-radius-topleft: 5px
-    border-top-right-radius: 5px
-    -webkit-border-top-right-radius: 5px
-    -moz-border-radius-topright: 5px
-    box-shadow: 0 1px 0 0 #ebebeb inset
-    background: #bdbdbd
-    background-image: -webkit-linear-gradient(top, #c8c8c8, #afafaf)
-    background-image: -moz-linear-gradient(top, #c8c8c8, #afafaf)
-    background-image: -o-linear-gradient(top, #c8c8c8, #afafaf)
-    background-image: -ms-linear-gradient(top, #c8c8c8, #afafaf)
-    margin-right: 0 !important
-    label
-      position: absolute
-      text-transform: uppercase
-      font-size: 10px
-      text-shadow: 1px 1px #ebebeb
-      color: #505050
-      select
-        width: 145px
-    button
-      margin: 9px 0 0 210px
-      height: 16px
-      width: 16px
-      background: url(images/button_action_submit.png) 0 0 no-repeat transparent
-      text-indent: -9999px
+
+    
+    // List Table
+    // - - - - - - - - - - - 
+    div.results
+      table#result_list
+        border-bottom: 1px solid #dfdfdf
+
+
+        // Table Head and Sorting
+        // - - - - - - - - - - - 
+        thead th
+          border: 1px solid #434343
+          border-top: 2px solid #434343
+          height: 24px
+          padding: 0 7px 2px 7px
+          vertical-align: middle
+          color: #fff
+          background: $body
+          +legacy-pie-clearfix
+          a
+            color: #fff
+            &:hover
+              color: #434343
+          &.sorted
+            background: #434343
+            div.text a
+              color: #fff
+            div.sortoptions 
+              float: right
+              text-align: right
+              +legacy-pie-clearfix
+              span.sortpriority
+                float: left
+                display: block
+                font-size: 10px
+              a
+                display: block
+                height: 10px
+                width: 12px
+                float: right
+                margin: 4px 0 0 2px
+                position: relative
+                &.sortremove
+                  height: 15px
+                  width: 15px
+                  display: none
+                  margin: 6px 4px 0 0
+                  float: left
+                  +sprite-icon(icon_delete_white_small)
+                &.ascending
+                  +sprite-icon(icon_arrow_down)
+                &.descending
+                  +sprite-icon(icon_arrow_up)
+            &:hover div.sortoptions a.sortremove
+              display: block
+        
+
+        // Table Body
+        // - - - - - - - - - - -           
+        tbody
+          background: #fff
+          tr
+            border-bottom: 1px solid #cdcdcd
+            &.row1
+              background: #f6f6f6
+          td, th
+            padding: 7px
+            border: 1px solid #cdcdcd
+            border-bottom: none
+            a
+              color: $primary
+              &:hover
+                color: $secondary
+          td:last-child
+            border-right: none
+
+
+    // Listing Paginator
+    //  - - - - - - - - - - - - - - -
+    p.paginator
+      font-size: 14px
+      font-weight: bold
       border: none
-      &:hover
-        background-position: 0 -16px
-    span.action-counter
-      color: #0f74cc
-      text-transform: uppercase
-      font-size: 10px
+      background: transparent
 
-// Listing Search Bar
-//  - - - - - - - - - - - - - - -
-
-// Listing Action Bar
-//  - - - - - - - - - - - - - - -
-
-// Listing Table
-//  - - - - - - - - - - - - - - -
-
-.change-list .filtered table#result_list
-  border-right: none
-  border-bottom: 1px solid #dfdfdf
-
-#changelist #changelist-form table thead, #change-history thead
-  border-bottom: none
-
-#changelist #changelist-form table thead th, #change-history thead th
-  border: 1px solid #434343
-  border-top: 2px solid #434343
-  border-bottom: none
-  height: 21px
-  padding: 0 7px 2px 7px
-  vertical-align: middle
-  color: #fff
-  background: #565656
-  background-image: -webkit-linear-gradient(top, #565656, #606060)
-  background-image: -moz-linear-gradient(top, #565656, #606060)
-  background-image: -o-linear-gradient(top, #565656, #606060)
-  background-image: -ms-linear-gradient(top, #565656, #606060)
-
-#changelist #changelist-form table thead th
-  a
-    color: #fff
-  &.sorted
-    background: #353535
-    background-image: -webkit-linear-gradient(top, #353535, #565656)
-    background-image: -moz-linear-gradient(top, #353535, #565656)
-    background-image: -o-linear-gradient(top, #353535, #565656)
-    background-image: -ms-linear-gradient(top, #353535, #565656)
-    a
-      text-shadow: 1px 1px #000
-      height: 15px
-
-table thead th.sorted .sortoptions a
-  &.ascending
-    background: url(images/icon_sort_asc.png) center right no-repeat
-    &:hover
-      background: url(images/icon_sort_asc.png) center right no-repeat
-  &.descending
-    background: url(images/icon_sort_desc.png) center right no-repeat
-    &:hover
-      background: url(images/icon_sort_desc.png) center right no-repeat
-  &.sortremove
-    background: url(images/icon_close_small.png) no-repeat
-    height: 15px
-    &:hover
-      background: url(images/icon_close_small.png) no-repeat
-      height: 15px
-
-#changelist #changelist-form table tbody
-  tr
-    border-bottom: 1px solid #dfdfdf
-    &.row1
-      background: #f3f3f3
-  td, th
-    padding: 7px
-    border: 1px solid #dfdfdf
-    border-bottom: none
-  td:last-child
-    border-right: none
-
-#content-main .module table#change-history
-  border: none
-  tr:last-child
-    border-bottom: none
-
-
-// Listing Paginator
-//  - - - - - - - - - - - - - - -
-#changelist #changelist-form p.paginator
-  border: none
-  background: transparent
-
-
-// Listing Filter
-//  - - - - - - - - - - - - - - -
-#changelist
-  &:after
-    content: "."
-    height: 0
-    visibility: hidden
-    display: block
-    clear: both
-  #changelist-filter
-    border-left: none
-    background: none
-    z-index: 50 !important
-    float: right
-    position: relative
-    display: block
-    padding-bottom: 10px
-    h2
-      background: none
-      font-size: 19px
-      margin-left: 5px
-      color: #555
-      border: none
-      height: auto !important
-      text-transform: uppercase
-    li
-      &.selected
-        border-left: 5px solid #f79421
-        a
-          color: #116bb9 !important
-          &:hover
-            color: #278adf
-      a:hover
-        color: #278adf
 
 
 
@@ -1092,7 +1130,7 @@ body.delete_confirmation div#admin_content
 
 
 
-// Edit Screens
+// Change Form
 //  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 body.change-form 
   width: 100%
@@ -1151,6 +1189,8 @@ body.change-form
               background: url(images/icons/icon_edit_blue.png) center left no-repeat transparent
           p.deletelink-box
             margin: 0 0 0 0
+            a.deletelink
+              padding: 0 0 0 6px
       .form_submit_container
         width: 960px
         margin: 0 auto
@@ -1614,80 +1654,88 @@ table#change-history
 
 // Date Time Stamp
 //  - - - - - - - - - - - - - - -
+p.datetime
+  input
+    width: 75px
+    margin: 0 8px 8px 8px
+    &:first-child
+      margin-left: 11px
+  span.datetimeshortcuts
+    a:first-child
+      font-size: 14px
+      color: $primary
+      margin-right: 5px
+      &:hover
+        color: $secondary
+    a:last-child
+      display: inline-block
+      margin-left: 5px
+      img
+        margin-top: -3px
 
-.vDateField
-  margin: 0 8px 8px 8px
 
-.vTimeField
-  margin: 0 8px 0 8px
-
-.clockbox, .calendarbox
+div.clockbox, div.calendarbox
   box-shadow: #434343 0 0 5px 0
   border: none !important
   margin: 22px 0 0 15px
-
-.clockbox:before, .calendarbox:before
-  content: ""
-  position: absolute
-  left: -10px
-  top: 0px
-  width: 0
-  height: 0
-  border-right: 18px solid #116bb9
-  border-top: 18px solid transparent
-  border-bottom: 18px solid transparent
-
-.clockbox h2
-  background: #116bb9
-  border: none
-
-.calendarbox
+  &:before
+    content: ""
+    position: absolute
+    left: -10px
+    top: 0px
+    width: 0
+    height: 0
+    border-right: 18px solid #116bb9
+    border-top: 18px solid transparent
+    border-bottom: 18px solid transparent
+  h2
+    background: $primary
+    color: #fff
+    padding: 0 16px
+    font-size: 14px
+    border: none
+  ul.timelist li
+    border-bottom: 1px solid #f6f6f6
+    &:last-child
+      border-bottom: none
+    a
+      padding: 5px 0
+      &:hover
+        background: $secondary
+        color: #fff
+  p.calendar-cancel
+    border: none
+    font-size: 14px
+    background: #747474
+    a
+      color: #fff
+      padding: 5px 0
+      &:hover
+        background: $secondary
   table
     width: 100%
   .calendarnav-previous, .calendarnav-next
-    background: #116bb9
+    background: $primary
     height: 34px
     line-height: 34px
   .calendarnav-previous:hover, .calendarnav-next:hover
     background: #036
+    color: #fff
   caption
-    background: #116bb9
+    background: $primary
     font-size: 14px
+    font-weight: bold
+    color: #fff
     line-height: 31px
     padding: 3px 0
     width: 100%
-  table td.today a:link
-    background: #ed8d1f
-    color: #fff
-
-.clockbox
-  .timelist li a
-    &:link, &:visited
-      padding: 5px 0
-    &:hover, &:active
+  table td
+    &.today a
       background: #ed8d1f
-  .calendar-cancel
-    background: #555
-    padding: 0
+      color: #fff
+    a:hover
+      background: $primary
 
-.calendarbox .calendar-cancel
-  background: #555
-  padding: 0
-
-.clockbox .calendar-cancel a
-  &:link, &:visited
-    display: block
-    color: #fff
-    padding: 4px 0
-
-.calendarbox .calendar-cancel a
-  &:link, &:visited
-    display: block
-    color: #fff
-    padding: 4px 0
-
-.clockbox .calendar-cancel a:hover, .calendarbox .calendar-cancel a:hover
-  background: #ed8d1f
 
 // Sitemap Modal
 //  - - - - - - - - - - - - - - -

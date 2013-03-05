@@ -1,6 +1,8 @@
+from django import forms
 from django.utils.safestring import mark_safe
 from django.contrib.admin.widgets import AdminFileWidget
 from django.conf import settings
+from django.utils.translation import ugettext as _
 
 
 def thumbnail(image_path):
@@ -26,3 +28,47 @@ class ThumbnailImageWidget(AdminFileWidget):
 
         output.append('<div class="imageupload-widget"><a href="#" class="file_upload_button">Change Image</a><p class="file-upload">%s</p></div>' % super(ThumbnailImageWidget, self).render(name, value, attrs))
         return mark_safe(u''.join(output))
+
+class AdminDateWidget(forms.DateInput):
+
+    @property
+    def media(self):
+        js = ["calendar.js", "admin/DateTimeShortcuts.js"]
+        return forms.Media(js=[static("admin/js/%s" % path) for path in js])
+
+    def __init__(self, attrs=None, format=None):
+        final_attrs = {'class': 'vDateField', 'size': '10'}
+        if attrs is not None:
+            final_attrs.update(attrs)
+        super(AdminDateWidget, self).__init__(attrs=final_attrs, format=format)
+
+class AdminTimeWidget(forms.TimeInput):
+
+    @property
+    def media(self):
+        js = ["calendar.js", "admin/DateTimeShortcuts.js"]
+        return forms.Media(js=[static("admin/js/%s" % path) for path in js])
+
+    def __init__(self, attrs=None, format=None):
+        final_attrs = {'class': 'vTimeField', 'size': '8'}
+        if attrs is not None:
+            final_attrs.update(attrs)
+        super(AdminTimeWidget, self).__init__(attrs=final_attrs, format=format)
+
+class AdminSplitDateTime(forms.SplitDateTimeWidget):
+    """
+    A SplitDateTime Widget that has some admin-specific styling.
+    """
+    def __init__(self, attrs=None):
+        widgets = [AdminDateWidget, AdminTimeWidget]
+        # Note that we're calling MultiWidget, not SplitDateTimeWidget, because
+        # we want to define widgets.
+        forms.MultiWidget.__init__(self, widgets, attrs)
+
+    def format_output(self, rendered_widgets):
+        return mark_safe(u'<p class="datetime">%s %s<br />%s %s</p>' % \
+            (_('<span>Date:</span>'), rendered_widgets[0], _('<span>Time:</span>'), rendered_widgets[1]))
+
+
+
+
