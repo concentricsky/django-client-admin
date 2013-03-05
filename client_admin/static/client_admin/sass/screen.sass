@@ -561,14 +561,15 @@ header
 
 
 
+
 // Dashboard
 //  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-
-  
-// Generic Dashboard
-//  - - - - - - - - - - - - - - -
-
 div
+  &#dashboard
+    +legacy-pie-clearfix
+
+  // Dashboard Columns and Placeholders
+  // - - - - - - - - - - - - -   
   &.dashboard-column
     padding-bottom: 15px
     &:first-child
@@ -576,248 +577,270 @@ div
     &:last-child
       width: 34% !important
     &:first-child div.dashboard-placeholder
-      margin: 0 13px 20px 0
+      margin: 0 13px 25px 0
     &:last-child div.dashboard-placeholder
-      margin: 0 13px 20px 12px
-  &.dashboard-placeholder
-    border: 1px dashed #f79421
-    border-radius: 5px
-    background-color: rgba(247, 148, 33, 0.2)
-    margin: 0 0 20px 0
-  &.dashboard-column
+      margin: 0 13px 25px 12px
     &:first-child div.dashboard-module
       margin-right: 13px
     &:last-child div.dashboard-module
       margin-left: 12px
-  &.dashboard-module
-    margin-bottom: 20px
-    h4
-      font-size: 19px
-      line-height: 36px
-      height: 36px
+  &.dashboard-placeholder
+    border: 1px dashed #f79421
+    background-color: rgba(247, 148, 33, 0.15)
+    margin: 0 0 25px 0
+  
+
+  // Dashboard Modules
+  // - - - - - - - - - - - - -   
+  div.dashboard-module
+    margin-bottom: 25px
+    span      
+      &.changelink
+        position: relative
+        padding-left: 18px
+        +sprite-icon(icon_edit_orange, $vertical: 1px)
+      &.addlink
+        position: relative
+        padding-left: 18px
+        +sprite-icon(icon_add_orange, $vertical: 1px)
+      &.listlink
+        position: relative
+        padding-left: 18px
+        +sprite-icon(icon_list_orange, $vertical: 2px)
+
+
+    // Dashboard Headers
+    // - - - - - - - - - - - - -   
+    h3
+      line-height: 40px
+      height: 40px
+      font-size: 23px !important
+      color: #fff 
       display: block
       cursor: move
       padding: 0 10px
       position: relative
-      border: 1px solid #7b7b7b
-      border-bottom: 1px solid #555657
-      background: #bdbdbd
-      box-shadow: 0 1px 0 0 #ebebeb inset
+      background: $primary
       a
-        &.close-icon
-          background: url(images/icon_close.png) no-repeat 0 0
-          height: 20px
-          width: 20px
-          text-indent: -9999px
-          position: absolute
-          top: 9px
-          right: 10px
-          &:hover
-            background-position: 0 -20px
-        &.toggle-icon
-          background: url(images/icon_toggle.png) 0 -22px no-repeat
-          position: absolute
-          top: 8px
-          right: 40px
-          text-indent: -9999px
-          height: 22px
-          width: 56px
-          &:hover
-            background-position: 0 -66px
-          &.collapsed
-            background-position: 0 0
-            &:hover
-              background-position: 0 -44px
-  &.dashboard-module-content
-    border: 1px solid #c5c5c5
-    border-top: 1px solid #555657
-    h4
-      margin: 0 -1px 0 -1px
-      height: 20px
-      line-height: 20px
-      &:first-child
-        margin-top: -2px
-    li
-      line-height: 19px
-      border-bottom: 1px solid #c5c5c5
-      padding: 7px 10px 7px 10px
-      list-style: none
-      position: relative
-      &:nth-child(even)
-        background: #f6f6f6
-      span.date_time
-        color: #b0b0b0
+        text-indent: -9999px
+        display: block
+        margin-top: 13px
         float: right
-        margin-left: 15px
-      &:last-child
-        border-bottom: none
-    span.changelink, a.changelink
-      background: url(images/icon_edit.png) 0 0 no-repeat
-      padding-left: 18px
-    span.addlink, a.addlink
-      background: url(images/icon_add.png) 0 0 no-repeat
-      padding-left: 18px
-    span.listlink, a.listlink
-      background: url(images/icon_list.png) 0 0 no-repeat
-      padding-left: 18px
-    span.deletelink, a.deletelink
-      padding-left: 18px
-    li span.object_type
-      color: #565656
-      background-position: 0 -28px
-      opacity: .25
-      font-style: italic
-    div:hover span.object_type, li:hover span.object_type
-      opacity: 1
-    ul.list-options
-      position: absolute
-      top: 0
-      right: 0
+        &.close-icon
+          height: 14px
+          width: 14px
+          position: relative
+          +sprite-icon(icon_delete_white)
+          &:hover
+            +sprite-icon(icon_delete_orange)          
+        &.toggle-icon
+          height: 14px
+          width: 14px
+          position: relative
+          float: left
+          margin-right: 10px
+          +sprite-icon(icon_minus_white)
+          &:hover
+            +sprite-icon(icon_minus_orange)
+          &.collapsed
+            +sprite-icon(icon_add_white)
+            &:hover
+              +sprite-icon(icon_add_orange)
 
-// Generic Dashboard Module Content
-//  - - - - - - - - - - - - - - -
 
-// Generic Dashboard Inline Options
-//  - - - - - - - - - - - - - - -
+    // Dashboard Module Content
+    // - - - - - - - - - - - - -           
+    div.dashboard-module-content
+      border: 1px solid #cdcdcd
+      border-top: none
+      li
+        border-bottom: 1px solid #cdcdcd
+        padding: 7px 10px 7px 10px
+        list-style: none
+        position: relative
+        &:nth-child(even)
+          background: #f6f6f6
+        
+        &:last-child
+          border-bottom: none
 
-div.dashboard-module-content li:hover ul.list-options
-  display: block
+        span.date_time
+          color: #b0b0b0
+          float: right
+          margin-left: 15px
 
-div.dashboard-module-content
-  ul.list-options li
-    float: left
-    height: 30px
-    border: none
-    margin: 0
-    padding: 7px 12px 0 0
-    &:nth-child(even)
-      background: transparent
-    a
-      &:link, &:visited
-        color: #565656
-        background-position: 0 -28px
-        opacity: .15
-  div:hover ul.list-options li a:link
-    opacity: 1
-  li:hover ul.list-options li a:hover, ul.list-options li a:hover
-    color: #f79421
-    background-position: 0 0
-    opacity: 1
 
-// Sitemap Module
-//  - - - - - - - - - - - - - - -
+        // Object Type Text
+        // - - - - - - - - - - - - -  
+        span.object_type
+          color: #747474
+          opacity: .5
 
-#module_1
-  ul li.first
-    font-size: 10px
-    text-transform: uppercase
-    text-shadow: 1px 1px #181818
-    display: block
-    font-weight: 500
-    height: 24px
-    line-height: 24px
-    padding: 0 10px
-    border-top: 2px solid #434343
-    background: #565656
-    margin: -2px -1px 0 -1px
-    span.object_type
-      display: none
-    a
-      &:link, &:visited
-        color: #fff
-      &:hover
-        color: #f79421
-  li
-    ul.list-options li
-      padding: 7px 10px 0 0
-    &.first
-      ul.list-options li
-        height: 20px
-        line-height: 20px
-        margin-right: 10px
-        padding: 0
-        background: none
-        a
-          &:link, &:visited
-            color: #fff
-            background-position: 0 -42px
-            opacity: .15
-            text-shadow: none
-            padding-left: 18px
-      &:hover ul.list-options li a
-        &:link
-          opacity: 1
-        &:hover
-          color: #f79421
-          background-position: 0 0
-      ul.list-options li a:hover
-        color: #f79421
-        background-position: 0 0
-  ul
-    li
-      padding: 0px 10px
-      margin: 0
-      div
-        padding: 7px 0px
-        margin: 0
-    ul.children
-      margin: 0
-      > li
-        padding: 0 10px 0 4%
-        width: 96%
-        background: url(images/icon_nested_arrow.png) left top no-repeat
-        border-top: 1px dashed #c5c5c5
-        border-bottom: none
 
-// Quicklinks Module
-//  - - - - - - - - - - - - - - -
+        // Module Row Options
+        // - - - - - - - - - - - - -  
+        ul.list-options 
+          position: absolute
+          top: 0
+          right: 0
+          display: block
+          li
+            float: left
+            height: 30px
+            margin: 0
+            padding: 7px 12px 0 0
+            &:nth-child(even)
+              background: transparent
+            a
+              position: relative
+              color: $body
+              opacity: .15
+              &.changelink
+                padding-left: 18px
+                +sprite-icon(icon_edit, $vertical: 1px)
+              &.addlink
+                padding-left: 18px
+                +sprite-icon(icon_add, $vertical: 1px)
+              &.listlink
+                padding-left: 18px
+                +sprite-icon(icon_list, $vertical: 2px)
+              &:hover
+                color: $secondary
+                &.changelink
+                  +sprite-icon(icon_edit_orange, $vertical: 1px)
+                &.addlink
+                  +sprite-icon(icon_add_orange, $vertical: 1px)
+                &.listlink
+                  +sprite-icon(icon_list_orange, $vertical: 2px)
+          
+      &:hover div:hover ul.list-options li a
+        opacity: 1 
+      
+      span.deletelink, a.deletelink
+        padding-left: 18px
 
-#module_4 h4
-  cursor: default
 
-li.ui-sortable-placeholder
-  border: 1px dashed #f79421 !important
-  background-color: rgba(247, 148, 33, 0.2) !important
-  margin: 0 0 20px 0
-  visibility: visible !important
+    // Sitemap Module
+    // - - - - - - - - - - - - - 
+    &#module_1
+      div.dashboard-module-content
+        border: none
+        border-bottom: 1px solid #cdcdcd
 
-// Recent Activity Module
-//  - - - - - - - - - - - - - - -
 
-#dashboard .activity ul li.activity-types
-  font-size: 10px
-  text-transform: uppercase
-  text-shadow: 1px 1px #181818
-  display: block
-  font-weight: 500
-  height: 24px
-  line-height: 24px
-  padding: 0 10px
-  border-top: 2px solid #434343
-  background: #565656
-  margin: -2px -1px 0 -1px
-  span.object_type
-    display: none
-  a
-    padding-right: 2em
-    &:link, &:visited
-      color: #fff
-      position: relative
+        // Sitemap First Row
+        // - - - - - - - - - - - - - 
+        ul 
+          li.first
+            height: 24px
+            padding: 4px 7px 0 7px
+            vertical-align: middle
+            color: white
+            background: #434343
+            border: 1px solid #434343
+            span.object_type
+              display: none
+            a
+              &:link, &:visited
+                color: #fff
+              &:hover
+                color: #f79421
+            ul.list-options li
+              margin: -3px 0 0 0 
+              a
+                position: relative
+                color: #fff
+                opacity: 1
+                &.changelink
+                  padding-left: 18px
+                  +sprite-icon(icon_edit_white, $vertical: 1px)
+                &:hover
+                  color: $secondary
+                  &.changelink
+                    padding-left: 18px
+                    +sprite-icon(icon_edit_orange, $vertical: 1px)
+
+
+          // Sitemap Addtl Rows
+          // - - - - - - - - - - - - - 
+          li
+            border-left: 1px solid #cdcdcd
+            border-right: 1px solid #cdcdcd
+            a
+              color: $primary
+              &:hover
+                color: $secondary
+            
+
+            // Sitemap Child Rows
+            // - - - - - - - - - - - - - 
+            ul.children
+              margin: 10px 0 0 0
+              > li
+                padding-left: 4%
+                width: 96%
+                background: url(images/icon_nested_arrow.png) left top no-repeat
+                border: none
+                border-top: 1px dashed #c5c5c5
+                &:last-child
+                  padding-bottom: 0
+
+
+            // Sitemap List Options
+            // - - - - - - - - - - - - - 
+            ul.list-options li
+              border: none 
+              a
+                color: $body
+                &:hover
+                  color: $secondary
+
+
+    // Recent Activity Module
+    //  - - - - - - - - - - - - - - -
+    &.activity ul li.activity-types
+      font-size: 12px
       display: block
-      float: left
-    &.active, &:hover
-      color: #f79421
-    &.active:after
-      content: ""
-      position: absolute
-      left: 0
-      bottom: -3px
-      width: 0
-      height: 0
-      border-left: 7px solid transparent
-      border-right: 7px solid transparent
-      border-bottom: 7px solid #f6f6f6
+      height: 24px
+      padding: 4px 7px 0 7px
+      background: #434343
+      margin: 0 -1px 0 -1px
+      span.object_type
+        display: none
+      a
+        padding-right: 2em
+        &:link, &:visited
+          color: #fff
+          position: relative
+          display: block
+          float: left
+        &.active, &:hover
+          color: #f79421
+        &.active:after
+          content: ""
+          position: absolute
+          left: -3px
+          bottom: -3px
+          width: 0
+          height: 0
+          border-left: 7px solid transparent
+          border-right: 7px solid transparent
+          border-bottom: 7px solid #f6f6f6
 
+
+
+    // Snippet Module
+    //  - - - - - - - - - - - - - - -
+    &.snippets ul li.listmeta
+      background: #434343
+      a
+        color: #fff
+        padding-left: 18px
+        position: relative
+        +sprite-icon(icon_edit_white, $vertical: 1px)
+        &:hover
+          color: $secondary
+          +sprite-icon(icon_edit_orange, $vertical: 1px)
 
 
 // App Index
@@ -829,7 +852,6 @@ body.app_index #content-main
     width: 960px
     caption
       font-size: 23px
-      text-transform: uppercase
       height: 40px
       line-height: 40px
       position: relative
@@ -849,7 +871,7 @@ body.app_index #content-main
           padding: 7px 10px
           a
             position: relative
-            padding-left: 20px
+            padding-left: 18px
             color: $body
             &.addlink
               +sprite-icon(icon_add, $vertical: 2px)
@@ -893,7 +915,7 @@ body.change-list
       display: block
       background: #fff 
       position: relative
-      z-index: 50
+      z-index: 150
 
       // Search
       // - - - - - - - - - - - 
@@ -976,7 +998,6 @@ body.change-list
       font-size: 14px
       line-height: 40px
       height: 40px
-      width: 788px
       display: block
       padding: 0 10px 0 2px
       position: relative
@@ -1079,6 +1100,8 @@ body.change-list
             border-bottom: 1px solid #cdcdcd
             &.row1
               background: #f6f6f6
+            &.selected
+              background: rgba($secondary, .15)
           td, th
             padding: 7px
             border: 1px solid #cdcdcd
@@ -1087,8 +1110,6 @@ body.change-list
               color: $primary
               &:hover
                 color: $secondary
-          td:last-child
-            border-right: none
 
 
     // Listing Paginator
@@ -1937,30 +1958,23 @@ div.clockbox, div.calendarbox
 // Admin Tables
 //  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-.dashboard #content-main .module
-  margin-bottom: 0
-  border-top-left-radius: 5px
-  -webkit-border-top-left-radius: 5px
-  -moz-border-radius-topleft: 5px
-  border-top-right-radius: 5px
-  -webkit-border-top-right-radius: 5px
-  -moz-border-radius-topright: 5px
-  border: none
+// .dashboard #content-main .module
+//   margin-bottom: 0
+//   border-top-left-radius: 5px
+//   -webkit-border-top-left-radius: 5px
+//   -moz-border-radius-topleft: 5px
+//   border-top-right-radius: 5px
+//   -webkit-border-top-right-radius: 5px
+//   -moz-border-radius-topright: 5px
+//   border: none
 
-a
-  &.addlink
-    &:link, &:visited
-      color: #555
-  &.changelink
-    &:link, &:visited
-      color: #555
 
-.addlink:hover, .changelink:hover
-  background-position: 0 0
+// .addlink:hover, .changelink:hover
+//   background-position: 0 0
 
-a
-  &.addlink:hover, &.changelink:hover
-    color: #ed8d1f
+// a
+//   &.addlink:hover, &.changelink:hover
+//     color: #ed8d1f
 
 // Footer
 //  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
