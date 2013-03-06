@@ -81,7 +81,6 @@
     {% if dashboard and dashboard.Media %}{% for js in dashboard.Media.js %}
     <script type="text/javascript" src="{{ STATIC_URL }}{{ js }}"></script>
     {% endfor %}{% endif %}
-    <script src="{{STATIC_URL}}client_admin/js/jquery/jquery-1.7.2.min.js"></script>
     <script type="text/javascript">
         var jQuery = django.jQuery;
     </script>
