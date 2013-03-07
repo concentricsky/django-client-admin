@@ -456,8 +456,12 @@ class ReverseInlinesModelAdmin(admin.ModelAdmin):
         return inline_instances
 
 
-class ClientModelAdmin(admin.ModelAdmin):
+class ImageWidgetMixin(object):
     # Override image widget
     formfield_overrides = {
         ImageField: {'widget': ThumbnailImageWidget},
     }
+
+
+class ClientModelAdmin(ImageWidgetMixin, admin.ModelAdmin):
+    pass
