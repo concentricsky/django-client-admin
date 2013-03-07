@@ -255,14 +255,17 @@
                         });
                     } else {
                         $this.css({
-                            position: 'relative'
+                            position: 'relative',
+                            top: 0
                         });
                     }
                 });
             };
 
-            $('body.change-form header').followTo(123);
-            $('div.submit-row').followAt(170);
+            $submitrow = $('div.submit-row')
+
+            $('body.change-form header').followTo($submitrow.offset().top-$submitrow.height()-2);
+            $('div.submit-row').followAt($submitrow.offset().top);
 
         });
     </script>

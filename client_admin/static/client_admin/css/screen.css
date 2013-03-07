@@ -1986,6 +1986,9 @@ body.change-form #content_container #admin_content #content-main form.change_for
 body.change-form #content_container #admin_content #content-main .object-tools {
   top: -53px;
 }
+body.change-form #content_container #admin_content .submit-row-placeholder {
+  height: 58px;
+}
 /* line 1179, ../sass/screen.sass */
 body.change-form #content_container #admin_content .submit-row {
   background: #e1e1e1;
