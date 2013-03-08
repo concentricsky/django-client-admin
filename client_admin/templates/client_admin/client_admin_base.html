@@ -201,16 +201,17 @@
             //     $(this).parents("div.inline-related").children("fieldset.module.aligned").slideToggle();
             //     $(this).siblings("span.toggleswitch").removeClass("tobe_removed");
             // })
+
+            $("div.inline-related h3 input[type='checkbox']").click(function(){
+                $(this).siblings("label.stackedinline_delete").toggleClass("hidden");
+                $(this).siblings("label.undo_stackedinline_delete").toggleClass("hidden");
+                $(this).parents("h3").toggleClass("tobe_removed");
+                $(this).parents("div.inline-related").children("fieldset.module.aligned").slideToggle();
+            })
             
             $("fieldset.module div.grouped input[type='checkbox']").click(function(){
                 $(this).parent("div.delete").toggleClass("tobe_removed");
                 $(this).parents("ul.inline-related").toggleClass("tobe_removed");
-            })
-
-            $("fieldset.module table td.delete input[type='checkbox']").click(function(){
-                $(this).siblings("label.tabularinline_delete").toggleClass("hidden");
-                $(this).siblings("label.undo_tabularinline_delete").toggleClass("hidden");
-                $(this).parents("tr").toggleClass("tobe_removed");
             })
 
             $("fieldset.module table td.delete input[type='checkbox']").click(function(){
