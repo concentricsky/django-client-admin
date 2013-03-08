@@ -1,5 +1,8 @@
 from django import forms
 from django.utils.safestring import mark_safe
+from django.utils.encoding import force_text
+from django.utils.html import escape, format_html, format_html_join, smart_urlquote
+from django.forms.util import flatatt
 from django.contrib.admin.widgets import AdminFileWidget
 from django.conf import settings
 from django.utils.translation import ugettext as _
@@ -68,6 +71,24 @@ class AdminSplitDateTime(forms.SplitDateTimeWidget):
     def format_output(self, rendered_widgets):
         return mark_safe(u'<p class="datetime">%s %s<br />%s %s</p>' % \
             (_('<span>Date:</span>'), rendered_widgets[0], _('<span>Time:</span>'), rendered_widgets[1]))
+
+class AdminURLFieldWidget(forms.TextInput):
+    def __init__(self, attrs=None):
+        final_attrs = {'class': 'vURLField'}
+        if attrs is not None:
+            final_attrs.update(attrs)
+        super(AdminURLFieldWidget, self).__init__(attrs=final_attrs)
+
+    def render(self, name, value, attrs=None):
+        html = super(AdminURLFieldWidget, self).render(name, value, attrs)
+        if value:
+            value = force_text(self._format_value(value))
+            final_attrs = {'href': mark_safe(smart_urlquote(value))}
+            html = format_html(
+                '<p class="url"><a {0} target="_blank">Visit this site</a><br />{1}</p>',
+                flatatt(final_attrs), html
+            )
+        return html
 
 
 

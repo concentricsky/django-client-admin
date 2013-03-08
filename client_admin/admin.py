@@ -1,6 +1,6 @@
 # # Client Admin admin classes
 from client_admin.views import generic_lookup, get_generic_rel_list
-from client_admin.widgets import ThumbnailImageWidget
+from client_admin.widgets import ThumbnailImageWidget, AdminURLFieldWidget
 
 from django.conf import settings
 from django.conf.urls.defaults import patterns, url
@@ -11,7 +11,7 @@ from django.contrib.admin.util import unquote
 from django.contrib.contenttypes import generic
 from django.core.urlresolvers import reverse
 from django.db import transaction
-from django.db.models import ImageField, ManyToManyField, FieldDoesNotExist
+from django.db.models import ImageField, ManyToManyField, FieldDoesNotExist, URLField
 from django.forms.formsets import all_valid
 from django.http import Http404
 from django.utils.decorators import method_decorator
@@ -454,6 +454,12 @@ class ReverseInlinesModelAdmin(admin.ModelAdmin):
                     inline.max_num = 0
             inline_instances.append(inline)
         return inline_instances
+
+
+class URLFieldMixin(object):
+    formfield_overrides = {
+        URLField: {'widget': AdminURLFieldWidget},
+    }
 
 
 class ImageWidgetMixin(object):

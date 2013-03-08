@@ -349,7 +349,7 @@ header
   +legacy-pie-clearfix
 
 .popup #content_container
-  width: 700px
+  width: 960px
   +legacy-pie-clearfix
 
 
@@ -429,7 +429,8 @@ header
 .dashboard #page_header
   overflow: hidden
 .popup #page_header
-  width: 700px  
+  width: 960px  
+  margin-top: 20px
   +legacy-pie-clearfix
 
 
@@ -460,19 +461,21 @@ header
     padding: 0
     float: none
     z-index: 200
-    +clearfix
+    +legacy-pie-clearfix
     li
       background: none
       height: 14px
       line-height: 14px
       margin: 0
+      padding: 0 10px 0 0
       float: left
       display: block
       &:first-child
         border-right: 2px solid $body
       &:last-child
         border: none
-        margin-left: 10px
+        margin: 0 0 0 10px
+        padding: 0
 
 
       // Single Links
@@ -481,10 +484,9 @@ header
         background: none
         display: block
         color: $body
-        font-size: 14px
         font-weight: bold
         background-position: 0 0
-        padding: 0 10px 0 18px 
+        padding: 0 0 10px 20px 
         position: relative
         &.historylink
           +sprite-icon(icon_history)
@@ -493,11 +495,32 @@ header
             color: $secondary
         &.viewsitelink
           +sprite-icon(icon_view_onsite, $vertical: 1px)
-          padding-left: 20px
           &:hover
             +sprite-icon(icon_view_onsite_orange, $vertical: 1px)
             color: $secondary
-    
+        &.addlink
+          +sprite-icon(icon_add)
+          &:hover
+            +sprite-icon(icon_add_orange)
+            color: $secondary
+        &.recoverlink
+          +sprite-icon(icon_recover)
+          &:hover
+            +sprite-icon(icon_recover_orange)
+            color: $secondary
+      
+
+      // Dashboard View Additional
+      //  - - - - - - - - - - - - - - -
+      &#dashboard-panel > a
+        +sprite-icon(icon_view_additional)
+        &:hover
+          +sprite-icon(icon_view_additional_orange)
+          color: $secondary
+      &#dashboard-panel:hover > a
+        color: $secondary
+        +sprite-icon(icon_view_additional_orange)
+
 
     // Sub Menu
     //  - - - - - - - - - - - - - - -
@@ -505,14 +528,12 @@ header
       display: none
       position: absolute
       z-index: 90
-      top: 42px
+      top: 24px
       right: 0
-      width: 100%
-      padding-top: 1px
-      margin-top: -1px
+      width: 85%
       background: #bfbfbf
-      border-top: 1px solid #185488
-      box-shadow: #535558 0 5px 10px -5px inset, #434343 0 2px 5px 0
+      border-top: 1px solid #bfbfbf
+      box-shadow: #434343 0 2px 5px 0
       &:before
         content: ""
         position: absolute
@@ -522,33 +543,32 @@ header
         height: 0
         border-left: 10px solid transparent
         border-right: 10px solid transparent
-        border-bottom: 10px solid #185488
+        border-bottom: 10px solid #bfbfbf
       li
-        border: none
         background: none
-        width: 90%
-        height: 25px
-        line-height: 40px
-        padding: 5px 5%
+        width: 100%
+        height: 35px
+        line-height: 35px
         text-align: left
         margin: 0
-        border: 1px solid #d7d7d7
-        border-top: none
+        border-bottom: 1px solid #efefef
+        &:last-child
+          margin: 0
         a
           &:link, &:visited
+            font-size: 12px
             background: none
-            padding: 0
             margin: 0
             border: none
-            box-shadow: none
             display: block
-            width: 100%
+            padding: 0 5% !important
+            width: 90%
             height: 100%
-            border-radius: 0
             color: #434343
-            text-shadow: 1px 1px #d7d7d7
           &:hover, &:active
-            color: #116bb9
+            color: $primary !important
+          &:after
+            display: none
     li:hover ul
       display: block
 
@@ -556,7 +576,7 @@ header
 // Admin Content Addtl Classes
 // - - - - - - - - - - - - -   
 .popup #admin_content
-  width: 700px
+  width: 960px
   +legacy-pie-clearfix
 
 
@@ -607,6 +627,10 @@ div
         position: relative
         padding-left: 18px
         +sprite-icon(icon_list_orange, $vertical: 2px)
+      &.deletelink
+        position: relative
+        padding-left: 18px
+        +sprite-icon(icon_delete_orange, $vertical: 2px)
 
 
     // Dashboard Headers
@@ -653,6 +677,13 @@ div
     div.dashboard-module-content
       border: 1px solid #cdcdcd
       border-top: none
+      h3
+        background: #434343
+        font-size: 14px !important
+        height: 30px
+        line-height: 30px
+        margin: 0 -1px
+        cursor: auto
       li
         border-bottom: 1px solid #cdcdcd
         padding: 7px 10px 7px 10px
@@ -689,12 +720,13 @@ div
             height: 30px
             margin: 0
             padding: 7px 12px 0 0
+            border: none !important
             &:nth-child(even)
               background: transparent
             a
               position: relative
               color: $body
-              opacity: .15
+              opacity: .25
               &.changelink
                 padding-left: 18px
                 +sprite-icon(icon_edit, $vertical: 1px)
@@ -713,7 +745,7 @@ div
                 &.listlink
                   +sprite-icon(icon_list_orange, $vertical: 2px)
           
-      &:hover div:hover ul.list-options li a
+      &:hover ul.list-options li a:hover
         opacity: 1 
       
       span.deletelink, a.deletelink
@@ -766,10 +798,6 @@ div
           li
             border-left: 1px solid #cdcdcd
             border-right: 1px solid #cdcdcd
-            a
-              color: $primary
-              &:hover
-                color: $secondary
             
 
             // Sitemap Child Rows
@@ -784,16 +812,6 @@ div
                 border-top: 1px dashed #c5c5c5
                 &:last-child
                   padding-bottom: 0
-
-
-            // Sitemap List Options
-            // - - - - - - - - - - - - - 
-            ul.list-options li
-              border: none 
-              a
-                color: $body
-                &:hover
-                  color: $secondary
 
 
     // Recent Activity Module
@@ -984,6 +1002,9 @@ body.change-list
             color: $body-secondary
             &:hover
               color: $body
+      select
+        width: 100%
+        margin-bottom: 15px
    
 
     // Form
@@ -1150,11 +1171,11 @@ body.delete_confirmation div#admin_content
 
 
 
-
 // Change Form
 //  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 body.change-form 
   width: 100%
+  padding-bottom: 30px
   #content_container
     width: 100%
     margin: 0 auto
@@ -1193,8 +1214,7 @@ body.change-form
         position: relative
         z-index: 250
         .submit_container
-          width: 940px
-          padding: 0 10px
+          width: 960px
           position: relative
           margin: 0 auto
           +legacy-pie-clearfix
@@ -1213,22 +1233,27 @@ body.change-form
           p.deletelink-box
             margin: 0 0 0 0
             a.deletelink
-              padding: 0 0 0 6px
+              padding: 0 0 0 16px
       .form_submit_container
         width: 960px
         margin: 0 auto
+        h3.change_password_help
+          margin: 20px 0
+
 
 
 // Save Button
 //  - - - - - - - - - - - - - - -
 .button.default, input[type="submit"].default
   +button()
-  right: 10px
   +sprite-icon(icon_add)
   z-index: 250
+  &.change_password
+    width: 250px
   &:hover
     color: #fff
     background: #024f84
+
 
 
 // Basic Label / Field Styles
@@ -1260,8 +1285,8 @@ fieldset.module, div.inline-group
   div.form-row
     padding: 5px 25px 15px 25px
     margin: 10px 0
-    // border-bottom: 1px solid #f6f6f6
     border-bottom: none
+    overflow: visible
     +legacy-pie-clearfix
     &:first-child
       margin-top: 20px
@@ -1301,7 +1326,6 @@ fieldset.module, div.inline-group
       input[type="file"]
         height: 20px
         padding: 5px
-
 
       // Image Widget
       //  - - - - - - - - - - - - - - - 
@@ -1760,9 +1784,9 @@ div.clockbox, div.calendarbox
       background: $primary
 
 
+// Need to do
 // Sitemap Modal
-//  - - - - - - - - - - - - - - -
-
+//  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 .ui-dialog fieldset
   border-radius: 5px
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif
@@ -1841,9 +1865,9 @@ div.clockbox, div.calendarbox
         background-image: -ms-linear-gradient(top, #969595, #ababab)
 
 
+// Need to do
 // Menu Edit Screen
 //  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-
 #menuitem_set-group
   margin: 0
   border: 1px solid #c5c5c5
@@ -1981,16 +2005,16 @@ div.clockbox, div.calendarbox
 // Footer
 //  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-footer
-  width: 960px
-  margin: 0 auto
-  p
-    height: 24px
-    width: 121px
-    margin: 0 auto
-    text-indent: -9999px
-    a
-      display: block
-      padding: 15px
-      background: url(images/footer_csky.png) center no-repeat
+// footer
+//   width: 960px
+//   margin: 0 auto
+//   p
+//     height: 24px
+//     width: 121px
+//     margin: 0 auto
+//     text-indent: -9999px
+//     a
+//       display: block
+//       padding: 15px
+//       background: url(images/footer_csky.png) center no-repeat
 

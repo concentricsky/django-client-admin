@@ -132,7 +132,7 @@
             } else {
                 href = link.href + '?pop=1';
             }
-            win = window.open(href, name, 'height=500,width=800,resizable=yes,scrollbars=yes');
+            win = window.open(href, name, 'height=500,width=1000,resizable=yes,scrollbars=yes');
 
             // wait for popup to be closed and load object data
             this.pollInputChange(win);

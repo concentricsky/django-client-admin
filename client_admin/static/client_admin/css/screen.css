@@ -1,4 +1,4 @@
-/* line 17, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 17, ../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -20,52 +20,52 @@ time, mark, audio, video {
   vertical-align: baseline;
 }
 
-/* line 22, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 22, ../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 html {
   line-height: 1;
 }
 
-/* line 24, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 24, ../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 ol, ul {
   list-style: none;
 }
 
-/* line 26, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 26, ../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 table {
   border-collapse: collapse;
   border-spacing: 0;
 }
 
-/* line 28, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 28, ../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 caption, th, td {
   text-align: left;
   font-weight: normal;
   vertical-align: middle;
 }
 
-/* line 30, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 30, ../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 q, blockquote {
   quotes: none;
 }
-/* line 103, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 103, ../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 q:before, q:after, blockquote:before, blockquote:after {
   content: "";
   content: none;
 }
 
-/* line 32, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 32, ../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 a img {
   border: none;
 }
 
-/* line 116, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 116, ../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
   display: block;
 }
 
-/* line 346, icons/*.png */
-.icons-sprite, a.deletelink:after, a.deletelink:link:after, a.deletelink:visited:after, a.deletelink:hover:after, a.deletelink:link:hover:after, a.deletelink:visited:hover:after, p.errornote:after, ul.errorlist li:after, header nav ul li.user-tools > a:after, header nav ul li.user-tools:visited:after, header nav ul li.user-tools > a:hover:after, header nav ul li.user-tools:visited:hover:after, #page_header #bookmark-form #bookmark-button:after, #page_header #bookmark-form #bookmark-button.bookmarked:after, #page_header #bookmark-form #bookmark-button:hover:after, #admin_content ul.object-tools li a.historylink:after, #admin_content ul.object-tools li a.historylink:link:after, #admin_content ul.object-tools li a.historylink:visited:after, #admin_content ul.object-tools li a.historylink:hover:after, #admin_content ul.object-tools li a.historylink:link:hover:after, #admin_content ul.object-tools li a.historylink:visited:hover:after, #admin_content ul.object-tools li a.viewsitelink:after, #admin_content ul.object-tools li a.viewsitelink:link:after, #admin_content ul.object-tools li a.viewsitelink:visited:after, #admin_content ul.object-tools li a.viewsitelink:hover:after, #admin_content ul.object-tools li a.viewsitelink:link:hover:after, #admin_content ul.object-tools li a.viewsitelink:visited:hover:after, div div.dashboard-module span.changelink:after, div div.dashboard-module span.addlink:after, div div.dashboard-module span.listlink:after, div div.dashboard-module h3 a.close-icon:after, div div.dashboard-module h3 a.close-icon:hover:after, div div.dashboard-module h3 a.toggle-icon:after, div div.dashboard-module h3 a.toggle-icon:hover:after, div div.dashboard-module h3 a.toggle-icon.collapsed:after, div div.dashboard-module h3 a.toggle-icon.collapsed:hover:after, div div.dashboard-module div.dashboard-module-content li ul.list-options li a.changelink:after, div div.dashboard-module div.dashboard-module-content li ul.list-options li a.addlink:after, div div.dashboard-module div.dashboard-module-content li ul.list-options li a.listlink:after, div div.dashboard-module div.dashboard-module-content li ul.list-options li a.changelink:hover:after, div div.dashboard-module div.dashboard-module-content li ul.list-options li a.addlink:hover:after, div div.dashboard-module div.dashboard-module-content li ul.list-options li a.listlink:hover:after, div div.dashboard-module#module_1 div.dashboard-module-content ul li.first ul.list-options li a.changelink:after, div div.dashboard-module#module_1 div.dashboard-module-content ul li.first ul.list-options li a.changelink:hover:after, div div.dashboard-module.snippets ul li.listmeta a:after, div div.dashboard-module.snippets ul li.listmeta a:hover:after, body.app_index #content-main table tbody tr td a.addlink:after, body.app_index #content-main table tbody tr td a.addlink:hover:after, body.app_index #content-main table tbody tr td a.changelink:after, body.app_index #content-main table tbody tr td a.changelink:hover:after, body.change-list #changelist div.results table#result_list thead th.sorted div.sortoptions a.sortremove:after, body.change-list #changelist div.results table#result_list thead th.sorted div.sortoptions a.ascending:after, body.change-list #changelist div.results table#result_list thead th.sorted div.sortoptions a.descending:after, .button.default:after, input[type="submit"].default:after, fieldset.module div.form-row div.field_container div.imageupload-widget a.file_upload_button:after, div.inline-group div.form-row div.field_container div.imageupload-widget a.file_upload_button:after, fieldset.module div.form-row div.field_container div.imageupload-widget span.clearable-file-input label:after, div.inline-group div.form-row div.field_container div.imageupload-widget span.clearable-file-input label:after, fieldset.module div.form-row div.field_container div.imageupload-widget span.clearable-file-input label:hover:after, div.inline-group div.form-row div.field_container div.imageupload-widget span.clearable-file-input label:hover:after, fieldset.module div.form-row div.field_container div.imageupload-widget span.clearable-file-input label.hidden:after, div.inline-group div.form-row div.field_container div.imageupload-widget span.clearable-file-input label.hidden:after, fieldset.module div.form-row div.field_container p.help span:after, fieldset.module div.form-row div.field_container .help span:after, div.inline-group div.form-row div.field_container p.help span:after, div.inline-group div.form-row div.field_container .help span:after, fieldset.module div.inline-related h3 span.delete label.stackedinline_delete:after, div.inline-group div.inline-related h3 span.delete label.stackedinline_delete:after, fieldset.module div.inline-related h3 span.delete label.stackedinline_delete:hover:after, div.inline-group div.inline-related h3 span.delete label.stackedinline_delete:hover:after, fieldset.module div.inline-related h3 span.delete label.undo_stackedinline_delete:after, div.inline-group div.inline-related h3 span.delete label.undo_stackedinline_delete:after, fieldset.module div.inline-related h3 span.delete label.undo_stackedinline_delete:hover:after, div.inline-group div.inline-related h3 span.delete label.undo_stackedinline_delete:hover:after, fieldset.module div.inline-related h3 a.inline-deletelink:after, div.inline-group div.inline-related h3 a.inline-deletelink:after, fieldset.module div.inline-related h3 a.inline-deletelink:hover:after, div.inline-group div.inline-related h3 a.inline-deletelink:hover:after, fieldset.module div.add-row a:after, div.inline-group div.add-row a:after, fieldset.module div.tabular table tbody tr td.link button:after, div.inline-group div.tabular table tbody tr td.link button:after, fieldset.module div.tabular table tbody tr td.delete a.inline-deletelink:after, div.inline-group div.tabular table tbody tr td.delete a.inline-deletelink:after, fieldset.module div.tabular table tbody tr td.delete a.inline-deletelink:hover:after, div.inline-group div.tabular table tbody tr td.delete a.inline-deletelink:hover:after, fieldset.module div.tabular table tbody tr td.delete label.tabularinline_delete:after, div.inline-group div.tabular table tbody tr td.delete label.tabularinline_delete:after, fieldset.module div.tabular table tbody tr td.delete label.tabularinline_delete:hover:after, div.inline-group div.tabular table tbody tr td.delete label.tabularinline_delete:hover:after, fieldset.module div.tabular table tbody tr td.delete label.undo_tabularinline_delete:after, div.inline-group div.tabular table tbody tr td.delete label.undo_tabularinline_delete:after, fieldset.module div.tabular table tbody tr td.delete label.undo_tabularinline_delete:hover:after, div.inline-group div.tabular table tbody tr td.delete label.undo_tabularinline_delete:hover:after, fieldset.module div.tabular table tbody tr.add-row td a:after, div.inline-group div.tabular table tbody tr.add-row td a:after {
-  background: url('images/icons-s77ca3bc314.png') no-repeat;
+/* line 394, icons/*.png */
+.icons-sprite, a.deletelink:after, a.deletelink:link:after, a.deletelink:visited:after, a.deletelink:hover:after, a.deletelink:link:hover:after, a.deletelink:visited:hover:after, p.errornote:after, ul.errorlist li:after, header nav ul li.user-tools > a:after, header nav ul li.user-tools:visited:after, header nav ul li.user-tools > a:hover:after, header nav ul li.user-tools:visited:hover:after, #page_header #bookmark-form #bookmark-button:after, #page_header #bookmark-form #bookmark-button.bookmarked:after, #page_header #bookmark-form #bookmark-button:hover:after, #admin_content ul.object-tools li a.historylink:after, #admin_content ul.object-tools li a.historylink:link:after, #admin_content ul.object-tools li a.historylink:visited:after, #admin_content ul.object-tools li a.historylink:hover:after, #admin_content ul.object-tools li a.historylink:link:hover:after, #admin_content ul.object-tools li a.historylink:visited:hover:after, #admin_content ul.object-tools li a.viewsitelink:after, #admin_content ul.object-tools li a.viewsitelink:link:after, #admin_content ul.object-tools li a.viewsitelink:visited:after, #admin_content ul.object-tools li a.viewsitelink:hover:after, #admin_content ul.object-tools li a.viewsitelink:link:hover:after, #admin_content ul.object-tools li a.viewsitelink:visited:hover:after, #admin_content ul.object-tools li a.addlink:after, #admin_content ul.object-tools li a.addlink:link:after, #admin_content ul.object-tools li a.addlink:visited:after, #admin_content ul.object-tools li a.addlink:hover:after, #admin_content ul.object-tools li a.addlink:link:hover:after, #admin_content ul.object-tools li a.addlink:visited:hover:after, #admin_content ul.object-tools li a.recoverlink:after, #admin_content ul.object-tools li a.recoverlink:link:after, #admin_content ul.object-tools li a.recoverlink:visited:after, #admin_content ul.object-tools li a.recoverlink:hover:after, #admin_content ul.object-tools li a.recoverlink:link:hover:after, #admin_content ul.object-tools li a.recoverlink:visited:hover:after, #admin_content ul.object-tools li#dashboard-panel > a:after, #admin_content ul.object-tools li#dashboard-panel > a:hover:after, #admin_content ul.object-tools li#dashboard-panel:hover > a:after, div div.dashboard-module span.changelink:after, div div.dashboard-module span.addlink:after, div div.dashboard-module span.listlink:after, div div.dashboard-module span.deletelink:after, div div.dashboard-module h3 a.close-icon:after, div div.dashboard-module h3 a.close-icon:hover:after, div div.dashboard-module h3 a.toggle-icon:after, div div.dashboard-module h3 a.toggle-icon:hover:after, div div.dashboard-module h3 a.toggle-icon.collapsed:after, div div.dashboard-module h3 a.toggle-icon.collapsed:hover:after, div div.dashboard-module div.dashboard-module-content li ul.list-options li a.changelink:after, div div.dashboard-module div.dashboard-module-content li ul.list-options li a.addlink:after, div div.dashboard-module div.dashboard-module-content li ul.list-options li a.listlink:after, div div.dashboard-module div.dashboard-module-content li ul.list-options li a.changelink:hover:after, div div.dashboard-module div.dashboard-module-content li ul.list-options li a.addlink:hover:after, div div.dashboard-module div.dashboard-module-content li ul.list-options li a.listlink:hover:after, div div.dashboard-module#module_1 div.dashboard-module-content ul li.first ul.list-options li a.changelink:after, div div.dashboard-module#module_1 div.dashboard-module-content ul li.first ul.list-options li a.changelink:hover:after, div div.dashboard-module.snippets ul li.listmeta a:after, div div.dashboard-module.snippets ul li.listmeta a:hover:after, body.app_index #content-main table tbody tr td a.addlink:after, body.app_index #content-main table tbody tr td a.addlink:hover:after, body.app_index #content-main table tbody tr td a.changelink:after, body.app_index #content-main table tbody tr td a.changelink:hover:after, body.change-list #changelist div.results table#result_list thead th.sorted div.sortoptions a.sortremove:after, body.change-list #changelist div.results table#result_list thead th.sorted div.sortoptions a.ascending:after, body.change-list #changelist div.results table#result_list thead th.sorted div.sortoptions a.descending:after, .button.default:after, input[type="submit"].default:after, fieldset.module div.form-row div.field_container div.imageupload-widget a.file_upload_button:after, div.inline-group div.form-row div.field_container div.imageupload-widget a.file_upload_button:after, fieldset.module div.form-row div.field_container div.imageupload-widget span.clearable-file-input label:after, div.inline-group div.form-row div.field_container div.imageupload-widget span.clearable-file-input label:after, fieldset.module div.form-row div.field_container div.imageupload-widget span.clearable-file-input label:hover:after, div.inline-group div.form-row div.field_container div.imageupload-widget span.clearable-file-input label:hover:after, fieldset.module div.form-row div.field_container div.imageupload-widget span.clearable-file-input label.hidden:after, div.inline-group div.form-row div.field_container div.imageupload-widget span.clearable-file-input label.hidden:after, fieldset.module div.form-row div.field_container p.help span:after, fieldset.module div.form-row div.field_container .help span:after, div.inline-group div.form-row div.field_container p.help span:after, div.inline-group div.form-row div.field_container .help span:after, fieldset.module div.inline-related h3 span.delete label.stackedinline_delete:after, div.inline-group div.inline-related h3 span.delete label.stackedinline_delete:after, fieldset.module div.inline-related h3 span.delete label.stackedinline_delete:hover:after, div.inline-group div.inline-related h3 span.delete label.stackedinline_delete:hover:after, fieldset.module div.inline-related h3 span.delete label.undo_stackedinline_delete:after, div.inline-group div.inline-related h3 span.delete label.undo_stackedinline_delete:after, fieldset.module div.inline-related h3 span.delete label.undo_stackedinline_delete:hover:after, div.inline-group div.inline-related h3 span.delete label.undo_stackedinline_delete:hover:after, fieldset.module div.inline-related h3 a.inline-deletelink:after, div.inline-group div.inline-related h3 a.inline-deletelink:after, fieldset.module div.inline-related h3 a.inline-deletelink:hover:after, div.inline-group div.inline-related h3 a.inline-deletelink:hover:after, fieldset.module div.add-row a:after, div.inline-group div.add-row a:after, fieldset.module div.tabular table tbody tr td.link button:after, div.inline-group div.tabular table tbody tr td.link button:after, fieldset.module div.tabular table tbody tr td.delete a.inline-deletelink:after, div.inline-group div.tabular table tbody tr td.delete a.inline-deletelink:after, fieldset.module div.tabular table tbody tr td.delete a.inline-deletelink:hover:after, div.inline-group div.tabular table tbody tr td.delete a.inline-deletelink:hover:after, fieldset.module div.tabular table tbody tr td.delete label.tabularinline_delete:after, div.inline-group div.tabular table tbody tr td.delete label.tabularinline_delete:after, fieldset.module div.tabular table tbody tr td.delete label.tabularinline_delete:hover:after, div.inline-group div.tabular table tbody tr td.delete label.tabularinline_delete:hover:after, fieldset.module div.tabular table tbody tr td.delete label.undo_tabularinline_delete:after, div.inline-group div.tabular table tbody tr td.delete label.undo_tabularinline_delete:after, fieldset.module div.tabular table tbody tr td.delete label.undo_tabularinline_delete:hover:after, div.inline-group div.tabular table tbody tr td.delete label.undo_tabularinline_delete:hover:after, fieldset.module div.tabular table tbody tr.add-row td a:after, div.inline-group div.tabular table tbody tr.add-row td a:after {
+  background: url('images/icons-s855e362bc6.png') no-repeat;
 }
 
 /* line 7, ../sass/screen.sass */
@@ -154,7 +154,7 @@ a.deletelink:after, a.deletelink:link:after, a.deletelink:visited:after {
   position: absolute;
   top: 21px;
   left: -2px;
-  background-position: 0 -114px;
+  background-position: 0 -142px;
   height: 14px;
   width: 14px;
 }
@@ -168,7 +168,7 @@ a.deletelink:hover:after, a.deletelink:link:hover:after, a.deletelink:visited:ho
   position: absolute;
   top: 21px;
   left: -2px;
-  background-position: 0 -156px;
+  background-position: 0 -198px;
   height: 14px;
   width: 14px;
 }
@@ -190,7 +190,7 @@ p.errornote:after {
   position: absolute;
   top: 9px;
   left: 8px;
-  background-position: 0 -298px;
+  background-position: 0 -354px;
   height: 14px;
   width: 14px;
 }
@@ -217,7 +217,7 @@ ul.errorlist li:after {
   position: absolute;
   top: 4px;
   left: 0px;
-  background-position: 0 -128px;
+  background-position: 0 -156px;
   height: 14px;
   width: 14px;
 }
@@ -268,7 +268,7 @@ ul.errorlist li:after {
 .login #login-form div.form-row {
   *zoom: 1;
 }
-/* line 22, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
+/* line 22, ../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
 .login #login-form div.form-row:after {
   content: "\0020";
   display: block;
@@ -401,7 +401,7 @@ header nav {
   margin: 0 auto;
   overflow: visible;
 }
-/* line 22, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
+/* line 22, ../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
 header nav:after {
   content: "\0020";
   display: block;
@@ -424,7 +424,7 @@ header nav ul {
   float: right;
   overflow: visible;
 }
-/* line 22, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
+/* line 22, ../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
 header nav ul:after {
   content: "\0020";
   display: block;
@@ -477,7 +477,7 @@ header nav ul li.user-tools > a:after, header nav ul li.user-tools:visited:after
   position: absolute;
   top: 19px;
   left: 12px;
-  background-position: 0 -269px;
+  background-position: 0 -325px;
   height: 17px;
   width: 20px;
 }
@@ -487,7 +487,7 @@ header nav ul li.user-tools > a:hover:after, header nav ul li.user-tools:visited
   position: absolute;
   top: 19px;
   left: 12px;
-  background-position: 0 -200px;
+  background-position: 0 -256px;
   height: 17px;
   width: 20px;
 }
@@ -596,7 +596,7 @@ header nav ul li:hover ul li:hover ul {
   margin: 60px auto 0;
   *zoom: 1;
 }
-/* line 22, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
+/* line 22, ../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
 #content_container:after {
   content: "\0020";
   display: block;
@@ -608,10 +608,10 @@ header nav ul li:hover ul li:hover ul {
 
 /* line 351, ../sass/screen.sass */
 .popup #content_container {
-  width: 700px;
+  width: 960px;
   *zoom: 1;
 }
-/* line 22, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
+/* line 22, ../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
 .popup #content_container:after {
   content: "\0020";
   display: block;
@@ -630,7 +630,7 @@ header nav ul li:hover ul li:hover ul {
   z-index: 100;
   *zoom: 1;
 }
-/* line 22, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
+/* line 22, ../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
 #page_header:after {
   content: "\0020";
   display: block;
@@ -681,7 +681,7 @@ header nav ul li:hover ul li:hover ul {
   position: absolute;
   top: 0;
   left: 0;
-  background-position: 0 -286px;
+  background-position: 0 -342px;
   height: 12px;
   width: 14px;
 }
@@ -695,7 +695,7 @@ header nav ul li:hover ul li:hover ul {
   position: absolute;
   top: 0;
   left: 0;
-  background-position: 0 -245px;
+  background-position: 0 -301px;
   height: 12px;
   width: 14px;
 }
@@ -709,7 +709,7 @@ header nav ul li:hover ul li:hover ul {
   position: absolute;
   top: 0;
   left: 0;
-  background-position: 0 -257px;
+  background-position: 0 -313px;
   height: 12px;
   width: 14px;
 }
@@ -740,10 +740,11 @@ header nav ul li:hover ul li:hover ul {
 
 /* line 431, ../sass/screen.sass */
 .popup #page_header {
-  width: 700px;
+  width: 960px;
+  margin-top: 20px;
   *zoom: 1;
 }
-/* line 22, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
+/* line 22, ../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
 .popup #page_header:after {
   content: "\0020";
   display: block;
@@ -753,7 +754,7 @@ header nav ul li:hover ul li:hover ul {
   visibility: hidden;
 }
 
-/* line 439, ../sass/screen.sass */
+/* line 440, ../sass/screen.sass */
 #admin_content {
   *zoom: 1;
   position: relative;
@@ -762,7 +763,7 @@ header nav ul li:hover ul li:hover ul {
   margin-top: -42px;
   padding: 50px 0 0 0;
 }
-/* line 22, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
+/* line 22, ../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
 #admin_content:after {
   content: "\0020";
   display: block;
@@ -771,15 +772,15 @@ header nav ul li:hover ul li:hover ul {
   overflow: hidden;
   visibility: hidden;
 }
-/* line 447, ../sass/screen.sass */
+/* line 448, ../sass/screen.sass */
 #admin_content > p, #admin_content > ul, #admin_content > ol, #admin_content > form {
   padding: 15px;
 }
-/* line 449, ../sass/screen.sass */
+/* line 450, ../sass/screen.sass */
 #admin_content > ul li, #admin_content > ol li {
   margin-left: 15px;
 }
-/* line 455, ../sass/screen.sass */
+/* line 456, ../sass/screen.sass */
 #admin_content ul.object-tools {
   position: absolute;
   top: 0;
@@ -788,36 +789,45 @@ header nav ul li:hover ul li:hover ul {
   padding: 0;
   float: none;
   z-index: 200;
-  overflow: hidden;
   *zoom: 1;
 }
-/* line 464, ../sass/screen.sass */
+/* line 22, ../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
+#admin_content ul.object-tools:after {
+  content: "\0020";
+  display: block;
+  height: 0;
+  clear: both;
+  overflow: hidden;
+  visibility: hidden;
+}
+/* line 465, ../sass/screen.sass */
 #admin_content ul.object-tools li {
   background: none;
   height: 14px;
   line-height: 14px;
   margin: 0;
+  padding: 0 10px 0 0;
   float: left;
   display: block;
 }
-/* line 471, ../sass/screen.sass */
+/* line 473, ../sass/screen.sass */
 #admin_content ul.object-tools li:first-child {
   border-right: 2px solid #747474;
 }
-/* line 473, ../sass/screen.sass */
+/* line 475, ../sass/screen.sass */
 #admin_content ul.object-tools li:last-child {
   border: none;
-  margin-left: 10px;
+  margin: 0 0 0 10px;
+  padding: 0;
 }
-/* line 480, ../sass/screen.sass */
+/* line 483, ../sass/screen.sass */
 #admin_content ul.object-tools li a, #admin_content ul.object-tools li a:link, #admin_content ul.object-tools li a:visited {
   background: none;
   display: block;
   color: #747474;
-  font-size: 14px;
   font-weight: bold;
   background-position: 0 0;
-  padding: 0 10px 0 18px;
+  padding: 0 0 10px 20px;
   position: relative;
 }
 /* line 29, ../sass/partials/_base.sass */
@@ -826,11 +836,11 @@ header nav ul li:hover ul li:hover ul {
   position: absolute;
   top: 0;
   left: 0;
-  background-position: 0 -217px;
+  background-position: 0 -273px;
   height: 14px;
   width: 14px;
 }
-/* line 491, ../sass/screen.sass */
+/* line 493, ../sass/screen.sass */
 #admin_content ul.object-tools li a.historylink:hover, #admin_content ul.object-tools li a:link.historylink:hover, #admin_content ul.object-tools li a:visited.historylink:hover {
   color: #f9910c;
 }
@@ -840,13 +850,9 @@ header nav ul li:hover ul li:hover ul {
   position: absolute;
   top: 0;
   left: 0;
-  background-position: 0 -231px;
+  background-position: 0 -287px;
   height: 14px;
   width: 14px;
-}
-/* line 494, ../sass/screen.sass */
-#admin_content ul.object-tools li a.viewsitelink, #admin_content ul.object-tools li a:link.viewsitelink, #admin_content ul.object-tools li a:visited.viewsitelink {
-  padding-left: 20px;
 }
 /* line 29, ../sass/partials/_base.sass */
 #admin_content ul.object-tools li a.viewsitelink:after, #admin_content ul.object-tools li a:link.viewsitelink:after, #admin_content ul.object-tools li a:visited.viewsitelink:after {
@@ -854,11 +860,11 @@ header nav ul li:hover ul li:hover ul {
   position: absolute;
   top: 1px;
   left: 0;
-  background-position: 0 -448px;
+  background-position: 0 -532px;
   height: 12px;
   width: 14px;
 }
-/* line 497, ../sass/screen.sass */
+/* line 498, ../sass/screen.sass */
 #admin_content ul.object-tools li a.viewsitelink:hover, #admin_content ul.object-tools li a:link.viewsitelink:hover, #admin_content ul.object-tools li a:visited.viewsitelink:hover {
   color: #f9910c;
 }
@@ -868,25 +874,109 @@ header nav ul li:hover ul li:hover ul {
   position: absolute;
   top: 1px;
   left: 0;
-  background-position: 0 -460px;
+  background-position: 0 -544px;
   height: 12px;
   width: 14px;
 }
-/* line 504, ../sass/screen.sass */
+/* line 29, ../sass/partials/_base.sass */
+#admin_content ul.object-tools li a.addlink:after, #admin_content ul.object-tools li a:link.addlink:after, #admin_content ul.object-tools li a:visited.addlink:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-position: 0 -584px;
+  height: 14px;
+  width: 14px;
+}
+/* line 503, ../sass/screen.sass */
+#admin_content ul.object-tools li a.addlink:hover, #admin_content ul.object-tools li a:link.addlink:hover, #admin_content ul.object-tools li a:visited.addlink:hover {
+  color: #f9910c;
+}
+/* line 29, ../sass/partials/_base.sass */
+#admin_content ul.object-tools li a.addlink:hover:after, #admin_content ul.object-tools li a:link.addlink:hover:after, #admin_content ul.object-tools li a:visited.addlink:hover:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-position: 0 -570px;
+  height: 14px;
+  width: 14px;
+}
+/* line 29, ../sass/partials/_base.sass */
+#admin_content ul.object-tools li a.recoverlink:after, #admin_content ul.object-tools li a:link.recoverlink:after, #admin_content ul.object-tools li a:visited.recoverlink:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-position: 0 -86px;
+  height: 14px;
+  width: 14px;
+}
+/* line 508, ../sass/screen.sass */
+#admin_content ul.object-tools li a.recoverlink:hover, #admin_content ul.object-tools li a:link.recoverlink:hover, #admin_content ul.object-tools li a:visited.recoverlink:hover {
+  color: #f9910c;
+}
+/* line 29, ../sass/partials/_base.sass */
+#admin_content ul.object-tools li a.recoverlink:hover:after, #admin_content ul.object-tools li a:link.recoverlink:hover:after, #admin_content ul.object-tools li a:visited.recoverlink:hover:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-position: 0 -100px;
+  height: 14px;
+  width: 14px;
+}
+/* line 29, ../sass/partials/_base.sass */
+#admin_content ul.object-tools li#dashboard-panel > a:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-position: 0 -184px;
+  height: 14px;
+  width: 14px;
+}
+/* line 517, ../sass/screen.sass */
+#admin_content ul.object-tools li#dashboard-panel > a:hover {
+  color: #f9910c;
+}
+/* line 29, ../sass/partials/_base.sass */
+#admin_content ul.object-tools li#dashboard-panel > a:hover:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-position: 0 -226px;
+  height: 14px;
+  width: 14px;
+}
+/* line 520, ../sass/screen.sass */
+#admin_content ul.object-tools li#dashboard-panel:hover > a {
+  color: #f9910c;
+}
+/* line 29, ../sass/partials/_base.sass */
+#admin_content ul.object-tools li#dashboard-panel:hover > a:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-position: 0 -226px;
+  height: 14px;
+  width: 14px;
+}
+/* line 527, ../sass/screen.sass */
 #admin_content ul.object-tools ul {
   display: none;
   position: absolute;
   z-index: 90;
-  top: 42px;
+  top: 24px;
   right: 0;
-  width: 100%;
-  padding-top: 1px;
-  margin-top: -1px;
+  width: 85%;
   background: #bfbfbf;
-  border-top: 1px solid #185488;
-  box-shadow: #535558 0 5px 10px -5px inset, #434343 0 2px 5px 0;
+  border-top: 1px solid #bfbfbf;
+  box-shadow: #434343 0 2px 5px 0;
 }
-/* line 516, ../sass/screen.sass */
+/* line 537, ../sass/screen.sass */
 #admin_content ul.object-tools ul:before {
   content: "";
   position: absolute;
@@ -896,50 +986,53 @@ header nav ul li:hover ul li:hover ul {
   height: 0;
   border-left: 10px solid transparent;
   border-right: 10px solid transparent;
-  border-bottom: 10px solid #185488;
+  border-bottom: 10px solid #bfbfbf;
 }
-/* line 526, ../sass/screen.sass */
+/* line 547, ../sass/screen.sass */
 #admin_content ul.object-tools ul li {
-  border: none;
   background: none;
-  width: 90%;
-  height: 25px;
-  line-height: 40px;
-  padding: 5px 5%;
+  width: 100%;
+  height: 35px;
+  line-height: 35px;
   text-align: left;
   margin: 0;
-  border: 1px solid #d7d7d7;
-  border-top: none;
+  border-bottom: 1px solid #efefef;
 }
-/* line 538, ../sass/screen.sass */
+/* line 555, ../sass/screen.sass */
+#admin_content ul.object-tools ul li:last-child {
+  margin: 0;
+}
+/* line 558, ../sass/screen.sass */
 #admin_content ul.object-tools ul li a:link, #admin_content ul.object-tools ul li a:visited {
+  font-size: 12px;
   background: none;
-  padding: 0;
   margin: 0;
   border: none;
-  box-shadow: none;
   display: block;
-  width: 100%;
+  padding: 0 5% !important;
+  width: 90%;
   height: 100%;
-  border-radius: 0;
   color: #434343;
-  text-shadow: 1px 1px #d7d7d7;
 }
-/* line 550, ../sass/screen.sass */
+/* line 568, ../sass/screen.sass */
 #admin_content ul.object-tools ul li a:hover, #admin_content ul.object-tools ul li a:active {
-  color: #116bb9;
+  color: #006fbb !important;
 }
-/* line 552, ../sass/screen.sass */
+/* line 570, ../sass/screen.sass */
+#admin_content ul.object-tools ul li a:after {
+  display: none;
+}
+/* line 572, ../sass/screen.sass */
 #admin_content ul.object-tools li:hover ul {
   display: block;
 }
 
-/* line 558, ../sass/screen.sass */
+/* line 578, ../sass/screen.sass */
 .popup #admin_content {
-  width: 700px;
+  width: 960px;
   *zoom: 1;
 }
-/* line 22, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
+/* line 22, ../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
 .popup #admin_content:after {
   content: "\0020";
   display: block;
@@ -949,11 +1042,11 @@ header nav ul li:hover ul li:hover ul {
   visibility: hidden;
 }
 
-/* line 568, ../sass/screen.sass */
+/* line 588, ../sass/screen.sass */
 div#dashboard {
   *zoom: 1;
 }
-/* line 22, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
+/* line 22, ../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
 div#dashboard:after {
   content: "\0020";
   display: block;
@@ -962,45 +1055,45 @@ div#dashboard:after {
   overflow: hidden;
   visibility: hidden;
 }
-/* line 573, ../sass/screen.sass */
+/* line 593, ../sass/screen.sass */
 div.dashboard-column {
   padding-bottom: 15px;
 }
-/* line 575, ../sass/screen.sass */
+/* line 595, ../sass/screen.sass */
 div.dashboard-column:first-child {
   width: 66% !important;
 }
-/* line 577, ../sass/screen.sass */
+/* line 597, ../sass/screen.sass */
 div.dashboard-column:last-child {
   width: 34% !important;
 }
-/* line 579, ../sass/screen.sass */
+/* line 599, ../sass/screen.sass */
 div.dashboard-column:first-child div.dashboard-placeholder {
   margin: 0 13px 25px 0;
 }
-/* line 581, ../sass/screen.sass */
+/* line 601, ../sass/screen.sass */
 div.dashboard-column:last-child div.dashboard-placeholder {
   margin: 0 13px 25px 12px;
 }
-/* line 583, ../sass/screen.sass */
+/* line 603, ../sass/screen.sass */
 div.dashboard-column:first-child div.dashboard-module {
   margin-right: 13px;
 }
-/* line 585, ../sass/screen.sass */
+/* line 605, ../sass/screen.sass */
 div.dashboard-column:last-child div.dashboard-module {
   margin-left: 12px;
 }
-/* line 587, ../sass/screen.sass */
+/* line 607, ../sass/screen.sass */
 div.dashboard-placeholder {
   border: 1px dashed #f79421;
   background-color: rgba(247, 148, 33, 0.15);
   margin: 0 0 25px 0;
 }
-/* line 595, ../sass/screen.sass */
+/* line 615, ../sass/screen.sass */
 div div.dashboard-module {
   margin-bottom: 25px;
 }
-/* line 598, ../sass/screen.sass */
+/* line 618, ../sass/screen.sass */
 div div.dashboard-module span.changelink {
   position: relative;
   padding-left: 18px;
@@ -1011,11 +1104,11 @@ div div.dashboard-module span.changelink:after {
   position: absolute;
   top: 1px;
   left: 0;
-  background-position: 0 -326px;
+  background-position: 0 -382px;
   height: 14px;
   width: 14px;
 }
-/* line 602, ../sass/screen.sass */
+/* line 622, ../sass/screen.sass */
 div div.dashboard-module span.addlink {
   position: relative;
   padding-left: 18px;
@@ -1026,11 +1119,11 @@ div div.dashboard-module span.addlink:after {
   position: absolute;
   top: 1px;
   left: 0;
-  background-position: 0 -486px;
+  background-position: 0 -570px;
   height: 14px;
   width: 14px;
 }
-/* line 606, ../sass/screen.sass */
+/* line 626, ../sass/screen.sass */
 div div.dashboard-module span.listlink {
   position: relative;
   padding-left: 18px;
@@ -1041,11 +1134,26 @@ div div.dashboard-module span.listlink:after {
   position: absolute;
   top: 2px;
   left: 0;
-  background-position: 0 -354px;
+  background-position: 0 -438px;
   height: 14px;
   width: 14px;
 }
-/* line 614, ../sass/screen.sass */
+/* line 630, ../sass/screen.sass */
+div div.dashboard-module span.deletelink {
+  position: relative;
+  padding-left: 18px;
+}
+/* line 29, ../sass/partials/_base.sass */
+div div.dashboard-module span.deletelink:after {
+  content: "";
+  position: absolute;
+  top: 2px;
+  left: 0;
+  background-position: 0 -212px;
+  height: 14px;
+  width: 14px;
+}
+/* line 638, ../sass/screen.sass */
 div div.dashboard-module h3 {
   line-height: 40px;
   height: 40px;
@@ -1057,14 +1165,14 @@ div div.dashboard-module h3 {
   position: relative;
   background: #006fbb;
 }
-/* line 624, ../sass/screen.sass */
+/* line 648, ../sass/screen.sass */
 div div.dashboard-module h3 a {
   text-indent: -9999px;
   display: block;
   margin-top: 13px;
   float: right;
 }
-/* line 629, ../sass/screen.sass */
+/* line 653, ../sass/screen.sass */
 div div.dashboard-module h3 a.close-icon {
   height: 14px;
   width: 14px;
@@ -1076,7 +1184,7 @@ div div.dashboard-module h3 a.close-icon:after {
   position: absolute;
   top: 0;
   left: 0;
-  background-position: 0 -396px;
+  background-position: 0 -480px;
   height: 14px;
   width: 14px;
 }
@@ -1086,11 +1194,11 @@ div div.dashboard-module h3 a.close-icon:hover:after {
   position: absolute;
   top: 0;
   left: 0;
-  background-position: 0 -170px;
+  background-position: 0 -212px;
   height: 14px;
   width: 14px;
 }
-/* line 636, ../sass/screen.sass */
+/* line 660, ../sass/screen.sass */
 div div.dashboard-module h3 a.toggle-icon {
   height: 14px;
   width: 14px;
@@ -1104,7 +1212,7 @@ div div.dashboard-module h3 a.toggle-icon:after {
   position: absolute;
   top: 0;
   left: 0;
-  background-position: 0 -528px;
+  background-position: 0 -612px;
   height: 14px;
   width: 14px;
 }
@@ -1114,7 +1222,7 @@ div div.dashboard-module h3 a.toggle-icon:hover:after {
   position: absolute;
   top: 0;
   left: 0;
-  background-position: 0 -514px;
+  background-position: 0 -598px;
   height: 14px;
   width: 14px;
 }
@@ -1124,7 +1232,7 @@ div div.dashboard-module h3 a.toggle-icon.collapsed:after {
   position: absolute;
   top: 0;
   left: 0;
-  background-position: 0 -420px;
+  background-position: 0 -504px;
   height: 14px;
   width: 14px;
 }
@@ -1134,66 +1242,76 @@ div div.dashboard-module h3 a.toggle-icon.collapsed:hover:after {
   position: absolute;
   top: 0;
   left: 0;
-  background-position: 0 -486px;
+  background-position: 0 -570px;
   height: 14px;
   width: 14px;
 }
-/* line 653, ../sass/screen.sass */
+/* line 677, ../sass/screen.sass */
 div div.dashboard-module div.dashboard-module-content {
   border: 1px solid #cdcdcd;
   border-top: none;
 }
-/* line 656, ../sass/screen.sass */
+/* line 680, ../sass/screen.sass */
+div div.dashboard-module div.dashboard-module-content h3 {
+  background: #434343;
+  font-size: 14px !important;
+  height: 30px;
+  line-height: 30px;
+  margin: 0 -1px;
+  cursor: auto;
+}
+/* line 687, ../sass/screen.sass */
 div div.dashboard-module div.dashboard-module-content li {
   border-bottom: 1px solid #cdcdcd;
   padding: 7px 10px 7px 10px;
   list-style: none;
   position: relative;
 }
-/* line 661, ../sass/screen.sass */
+/* line 692, ../sass/screen.sass */
 div div.dashboard-module div.dashboard-module-content li:nth-child(even) {
   background: #f6f6f6;
 }
-/* line 664, ../sass/screen.sass */
+/* line 695, ../sass/screen.sass */
 div div.dashboard-module div.dashboard-module-content li:last-child {
   border-bottom: none;
 }
-/* line 667, ../sass/screen.sass */
+/* line 698, ../sass/screen.sass */
 div div.dashboard-module div.dashboard-module-content li span.date_time {
   color: #b0b0b0;
   float: right;
   margin-left: 15px;
 }
-/* line 675, ../sass/screen.sass */
+/* line 706, ../sass/screen.sass */
 div div.dashboard-module div.dashboard-module-content li span.object_type {
   color: #747474;
   opacity: 0.5;
 }
-/* line 682, ../sass/screen.sass */
+/* line 713, ../sass/screen.sass */
 div div.dashboard-module div.dashboard-module-content li ul.list-options {
   position: absolute;
   top: 0;
   right: 0;
   display: block;
 }
-/* line 687, ../sass/screen.sass */
+/* line 718, ../sass/screen.sass */
 div div.dashboard-module div.dashboard-module-content li ul.list-options li {
   float: left;
   height: 30px;
   margin: 0;
   padding: 7px 12px 0 0;
+  border: none !important;
 }
-/* line 692, ../sass/screen.sass */
+/* line 724, ../sass/screen.sass */
 div div.dashboard-module div.dashboard-module-content li ul.list-options li:nth-child(even) {
   background: transparent;
 }
-/* line 694, ../sass/screen.sass */
+/* line 726, ../sass/screen.sass */
 div div.dashboard-module div.dashboard-module-content li ul.list-options li a {
   position: relative;
   color: #747474;
-  opacity: 0.15;
+  opacity: 0.25;
 }
-/* line 698, ../sass/screen.sass */
+/* line 730, ../sass/screen.sass */
 div div.dashboard-module div.dashboard-module-content li ul.list-options li a.changelink {
   padding-left: 18px;
 }
@@ -1203,11 +1321,11 @@ div div.dashboard-module div.dashboard-module-content li ul.list-options li a.ch
   position: absolute;
   top: 1px;
   left: 0;
-  background-position: 0 -100px;
+  background-position: 0 -128px;
   height: 14px;
   width: 14px;
 }
-/* line 701, ../sass/screen.sass */
+/* line 733, ../sass/screen.sass */
 div div.dashboard-module div.dashboard-module-content li ul.list-options li a.addlink {
   padding-left: 18px;
 }
@@ -1217,11 +1335,11 @@ div div.dashboard-module div.dashboard-module-content li ul.list-options li a.ad
   position: absolute;
   top: 1px;
   left: 0;
-  background-position: 0 -500px;
+  background-position: 0 -584px;
   height: 14px;
   width: 14px;
 }
-/* line 704, ../sass/screen.sass */
+/* line 736, ../sass/screen.sass */
 div div.dashboard-module div.dashboard-module-content li ul.list-options li a.listlink {
   padding-left: 18px;
 }
@@ -1231,11 +1349,11 @@ div div.dashboard-module div.dashboard-module-content li ul.list-options li a.li
   position: absolute;
   top: 2px;
   left: 0;
-  background-position: 0 -340px;
+  background-position: 0 -424px;
   height: 14px;
   width: 14px;
 }
-/* line 707, ../sass/screen.sass */
+/* line 739, ../sass/screen.sass */
 div div.dashboard-module div.dashboard-module-content li ul.list-options li a:hover {
   color: #f9910c;
 }
@@ -1245,7 +1363,7 @@ div div.dashboard-module div.dashboard-module-content li ul.list-options li a:ho
   position: absolute;
   top: 1px;
   left: 0;
-  background-position: 0 -326px;
+  background-position: 0 -382px;
   height: 14px;
   width: 14px;
 }
@@ -1255,7 +1373,7 @@ div div.dashboard-module div.dashboard-module-content li ul.list-options li a:ho
   position: absolute;
   top: 1px;
   left: 0;
-  background-position: 0 -486px;
+  background-position: 0 -570px;
   height: 14px;
   width: 14px;
 }
@@ -1265,24 +1383,24 @@ div div.dashboard-module div.dashboard-module-content li ul.list-options li a:ho
   position: absolute;
   top: 2px;
   left: 0;
-  background-position: 0 -354px;
+  background-position: 0 -438px;
   height: 14px;
   width: 14px;
 }
-/* line 716, ../sass/screen.sass */
-div div.dashboard-module div.dashboard-module-content:hover div:hover ul.list-options li a {
+/* line 748, ../sass/screen.sass */
+div div.dashboard-module div.dashboard-module-content:hover ul.list-options li a:hover {
   opacity: 1;
 }
-/* line 719, ../sass/screen.sass */
+/* line 751, ../sass/screen.sass */
 div div.dashboard-module div.dashboard-module-content span.deletelink, div div.dashboard-module div.dashboard-module-content a.deletelink {
   padding-left: 18px;
 }
-/* line 726, ../sass/screen.sass */
+/* line 758, ../sass/screen.sass */
 div div.dashboard-module#module_1 div.dashboard-module-content {
   border: none;
   border-bottom: 1px solid #cdcdcd;
 }
-/* line 734, ../sass/screen.sass */
+/* line 766, ../sass/screen.sass */
 div div.dashboard-module#module_1 div.dashboard-module-content ul li.first {
   height: 24px;
   padding: 4px 7px 0 7px;
@@ -1291,29 +1409,29 @@ div div.dashboard-module#module_1 div.dashboard-module-content ul li.first {
   background: #434343;
   border: 1px solid #434343;
 }
-/* line 741, ../sass/screen.sass */
+/* line 773, ../sass/screen.sass */
 div div.dashboard-module#module_1 div.dashboard-module-content ul li.first span.object_type {
   display: none;
 }
-/* line 744, ../sass/screen.sass */
+/* line 776, ../sass/screen.sass */
 div div.dashboard-module#module_1 div.dashboard-module-content ul li.first a:link, div div.dashboard-module#module_1 div.dashboard-module-content ul li.first a:visited {
   color: white;
 }
-/* line 746, ../sass/screen.sass */
+/* line 778, ../sass/screen.sass */
 div div.dashboard-module#module_1 div.dashboard-module-content ul li.first a:hover {
   color: #f79421;
 }
-/* line 748, ../sass/screen.sass */
+/* line 780, ../sass/screen.sass */
 div div.dashboard-module#module_1 div.dashboard-module-content ul li.first ul.list-options li {
   margin: -3px 0 0 0;
 }
-/* line 750, ../sass/screen.sass */
+/* line 782, ../sass/screen.sass */
 div div.dashboard-module#module_1 div.dashboard-module-content ul li.first ul.list-options li a {
   position: relative;
   color: white;
   opacity: 1;
 }
-/* line 754, ../sass/screen.sass */
+/* line 786, ../sass/screen.sass */
 div div.dashboard-module#module_1 div.dashboard-module-content ul li.first ul.list-options li a.changelink {
   padding-left: 18px;
 }
@@ -1323,15 +1441,15 @@ div div.dashboard-module#module_1 div.dashboard-module-content ul li.first ul.li
   position: absolute;
   top: 1px;
   left: 0;
-  background-position: 0 -368px;
+  background-position: 0 -452px;
   height: 14px;
   width: 14px;
 }
-/* line 757, ../sass/screen.sass */
+/* line 789, ../sass/screen.sass */
 div div.dashboard-module#module_1 div.dashboard-module-content ul li.first ul.list-options li a:hover {
   color: #f9910c;
 }
-/* line 759, ../sass/screen.sass */
+/* line 791, ../sass/screen.sass */
 div div.dashboard-module#module_1 div.dashboard-module-content ul li.first ul.list-options li a:hover.changelink {
   padding-left: 18px;
 }
@@ -1341,28 +1459,20 @@ div div.dashboard-module#module_1 div.dashboard-module-content ul li.first ul.li
   position: absolute;
   top: 1px;
   left: 0;
-  background-position: 0 -326px;
+  background-position: 0 -382px;
   height: 14px;
   width: 14px;
 }
-/* line 766, ../sass/screen.sass */
+/* line 798, ../sass/screen.sass */
 div div.dashboard-module#module_1 div.dashboard-module-content ul li {
   border-left: 1px solid #cdcdcd;
   border-right: 1px solid #cdcdcd;
 }
-/* line 769, ../sass/screen.sass */
-div div.dashboard-module#module_1 div.dashboard-module-content ul li a {
-  color: #006fbb;
-}
-/* line 771, ../sass/screen.sass */
-div div.dashboard-module#module_1 div.dashboard-module-content ul li a:hover {
-  color: #f9910c;
-}
-/* line 777, ../sass/screen.sass */
+/* line 805, ../sass/screen.sass */
 div div.dashboard-module#module_1 div.dashboard-module-content ul li ul.children {
   margin: 10px 0 0 0;
 }
-/* line 779, ../sass/screen.sass */
+/* line 807, ../sass/screen.sass */
 div div.dashboard-module#module_1 div.dashboard-module-content ul li ul.children > li {
   padding-left: 4%;
   width: 96%;
@@ -1370,23 +1480,11 @@ div div.dashboard-module#module_1 div.dashboard-module-content ul li ul.children
   border: none;
   border-top: 1px dashed #c5c5c5;
 }
-/* line 785, ../sass/screen.sass */
+/* line 813, ../sass/screen.sass */
 div div.dashboard-module#module_1 div.dashboard-module-content ul li ul.children > li:last-child {
   padding-bottom: 0;
 }
-/* line 791, ../sass/screen.sass */
-div div.dashboard-module#module_1 div.dashboard-module-content ul li ul.list-options li {
-  border: none;
-}
-/* line 793, ../sass/screen.sass */
-div div.dashboard-module#module_1 div.dashboard-module-content ul li ul.list-options li a {
-  color: #747474;
-}
-/* line 795, ../sass/screen.sass */
-div div.dashboard-module#module_1 div.dashboard-module-content ul li ul.list-options li a:hover {
-  color: #f9910c;
-}
-/* line 801, ../sass/screen.sass */
+/* line 819, ../sass/screen.sass */
 div div.dashboard-module.activity ul li.activity-types {
   font-size: 12px;
   display: block;
@@ -1395,26 +1493,26 @@ div div.dashboard-module.activity ul li.activity-types {
   background: #434343;
   margin: 0 -1px 0 -1px;
 }
-/* line 808, ../sass/screen.sass */
+/* line 826, ../sass/screen.sass */
 div div.dashboard-module.activity ul li.activity-types span.object_type {
   display: none;
 }
-/* line 810, ../sass/screen.sass */
+/* line 828, ../sass/screen.sass */
 div div.dashboard-module.activity ul li.activity-types a {
   padding-right: 2em;
 }
-/* line 812, ../sass/screen.sass */
+/* line 830, ../sass/screen.sass */
 div div.dashboard-module.activity ul li.activity-types a:link, div div.dashboard-module.activity ul li.activity-types a:visited {
   color: white;
   position: relative;
   display: block;
   float: left;
 }
-/* line 817, ../sass/screen.sass */
+/* line 835, ../sass/screen.sass */
 div div.dashboard-module.activity ul li.activity-types a.active, div div.dashboard-module.activity ul li.activity-types a:hover {
   color: #f79421;
 }
-/* line 819, ../sass/screen.sass */
+/* line 837, ../sass/screen.sass */
 div div.dashboard-module.activity ul li.activity-types a.active:after {
   content: "";
   position: absolute;
@@ -1426,11 +1524,11 @@ div div.dashboard-module.activity ul li.activity-types a.active:after {
   border-right: 7px solid transparent;
   border-bottom: 7px solid #f6f6f6;
 }
-/* line 834, ../sass/screen.sass */
+/* line 852, ../sass/screen.sass */
 div div.dashboard-module.snippets ul li.listmeta {
   background: #434343;
 }
-/* line 836, ../sass/screen.sass */
+/* line 854, ../sass/screen.sass */
 div div.dashboard-module.snippets ul li.listmeta a {
   color: white;
   padding-left: 18px;
@@ -1442,11 +1540,11 @@ div div.dashboard-module.snippets ul li.listmeta a:after {
   position: absolute;
   top: 1px;
   left: 0;
-  background-position: 0 -368px;
+  background-position: 0 -452px;
   height: 14px;
   width: 14px;
 }
-/* line 841, ../sass/screen.sass */
+/* line 859, ../sass/screen.sass */
 div div.dashboard-module.snippets ul li.listmeta a:hover {
   color: #f9910c;
 }
@@ -1456,21 +1554,21 @@ div div.dashboard-module.snippets ul li.listmeta a:hover:after {
   position: absolute;
   top: 1px;
   left: 0;
-  background-position: 0 -326px;
+  background-position: 0 -382px;
   height: 14px;
   width: 14px;
 }
 
-/* line 848, ../sass/screen.sass */
+/* line 866, ../sass/screen.sass */
 body.app_index #content-main {
   width: 960px;
 }
-/* line 850, ../sass/screen.sass */
+/* line 868, ../sass/screen.sass */
 body.app_index #content-main table {
   border: 1px solid #cdcdcd;
   width: 960px;
 }
-/* line 853, ../sass/screen.sass */
+/* line 871, ../sass/screen.sass */
 body.app_index #content-main table caption {
   font-size: 23px;
   height: 40px;
@@ -1478,32 +1576,32 @@ body.app_index #content-main table caption {
   position: relative;
   background: #006fbb;
 }
-/* line 859, ../sass/screen.sass */
+/* line 877, ../sass/screen.sass */
 body.app_index #content-main table caption a {
   padding-left: 10px;
   color: white;
 }
-/* line 862, ../sass/screen.sass */
+/* line 880, ../sass/screen.sass */
 body.app_index #content-main table caption a:hover {
   color: #f9910c;
 }
-/* line 864, ../sass/screen.sass */
+/* line 882, ../sass/screen.sass */
 body.app_index #content-main table tbody {
   background: white;
 }
-/* line 866, ../sass/screen.sass */
+/* line 884, ../sass/screen.sass */
 body.app_index #content-main table tbody tr {
   border-bottom: 1px solid #cdcdcd;
 }
-/* line 868, ../sass/screen.sass */
+/* line 886, ../sass/screen.sass */
 body.app_index #content-main table tbody tr:nth-child(even) {
   background: #f6f6f6;
 }
-/* line 870, ../sass/screen.sass */
+/* line 888, ../sass/screen.sass */
 body.app_index #content-main table tbody tr td {
   padding: 7px 10px;
 }
-/* line 872, ../sass/screen.sass */
+/* line 890, ../sass/screen.sass */
 body.app_index #content-main table tbody tr td a {
   position: relative;
   padding-left: 18px;
@@ -1515,11 +1613,11 @@ body.app_index #content-main table tbody tr td a.addlink:after {
   position: absolute;
   top: 2px;
   left: 0;
-  background-position: 0 -500px;
+  background-position: 0 -584px;
   height: 14px;
   width: 14px;
 }
-/* line 878, ../sass/screen.sass */
+/* line 896, ../sass/screen.sass */
 body.app_index #content-main table tbody tr td a.addlink:hover {
   color: #f9910c;
 }
@@ -1529,7 +1627,7 @@ body.app_index #content-main table tbody tr td a.addlink:hover:after {
   position: absolute;
   top: 2px;
   left: 0;
-  background-position: 0 -486px;
+  background-position: 0 -570px;
   height: 14px;
   width: 14px;
 }
@@ -1539,11 +1637,11 @@ body.app_index #content-main table tbody tr td a.changelink:after {
   position: absolute;
   top: 2px;
   left: 0;
-  background-position: 0 -100px;
+  background-position: 0 -128px;
   height: 14px;
   width: 14px;
 }
-/* line 883, ../sass/screen.sass */
+/* line 901, ../sass/screen.sass */
 body.app_index #content-main table tbody tr td a.changelink:hover {
   color: #f9910c;
 }
@@ -1553,38 +1651,38 @@ body.app_index #content-main table tbody tr td a.changelink:hover:after {
   position: absolute;
   top: 2px;
   left: 0;
-  background-position: 0 -326px;
+  background-position: 0 -382px;
   height: 14px;
   width: 14px;
 }
-/* line 886, ../sass/screen.sass */
+/* line 904, ../sass/screen.sass */
 body.app_index #content-main table tbody tr th {
   width: 880px;
   padding: 7px;
 }
-/* line 889, ../sass/screen.sass */
+/* line 907, ../sass/screen.sass */
 body.app_index #content-main table tbody tr th a {
   color: #006fbb;
 }
-/* line 891, ../sass/screen.sass */
+/* line 909, ../sass/screen.sass */
 body.app_index #content-main table tbody tr th a:hover {
   color: #f9910c;
 }
-/* line 893, ../sass/screen.sass */
+/* line 911, ../sass/screen.sass */
 body.app_index #content-main table tbody td:last-child {
   border-right: none;
 }
 
-/* line 901, ../sass/screen.sass */
+/* line 919, ../sass/screen.sass */
 body.change-list #changelist {
   border: none;
   margin-bottom: 0;
 }
-/* line 904, ../sass/screen.sass */
+/* line 922, ../sass/screen.sass */
 body.change-list #changelist.filtered {
   background: transparent !important;
 }
-/* line 910, ../sass/screen.sass */
+/* line 928, ../sass/screen.sass */
 body.change-list #changelist div#changelist-filter {
   padding: 0 10px 10px 10px;
   width: 140px;
@@ -1595,7 +1693,7 @@ body.change-list #changelist div#changelist-filter {
   position: relative;
   z-index: 150;
 }
-/* line 922, ../sass/screen.sass */
+/* line 940, ../sass/screen.sass */
 body.change-list #changelist div#changelist-filter #toolbar {
   background: white !important;
   border: none;
@@ -1604,11 +1702,11 @@ body.change-list #changelist div#changelist-filter #toolbar {
   margin: 0 0 10px 0 !important;
   position: relative;
 }
-/* line 929, ../sass/screen.sass */
+/* line 947, ../sass/screen.sass */
 body.change-list #changelist div#changelist-filter #toolbar label {
   display: none;
 }
-/* line 932, ../sass/screen.sass */
+/* line 950, ../sass/screen.sass */
 body.change-list #changelist div#changelist-filter #toolbar form #searchbar {
   height: 24px;
   background: #f6f6f6;
@@ -1624,11 +1722,11 @@ body.change-list #changelist div#changelist-filter #toolbar form #searchbar {
   height: 33px;
   padding: 3px 25px 3px 6px;
 }
-/* line 937, ../sass/screen.sass */
+/* line 955, ../sass/screen.sass */
 body.change-list #changelist div#changelist-filter #toolbar form #searchbar:focus {
   outline: none;
 }
-/* line 939, ../sass/screen.sass */
+/* line 957, ../sass/screen.sass */
 body.change-list #changelist div#changelist-filter #toolbar form input[type="submit"] {
   background: url(images/icons/icon_search_orange.png) no-repeat;
   height: 14px;
@@ -1640,22 +1738,22 @@ body.change-list #changelist div#changelist-filter #toolbar form input[type="sub
   text-indent: -9999px;
   cursor: pointer;
 }
-/* line 949, ../sass/screen.sass */
+/* line 967, ../sass/screen.sass */
 body.change-list #changelist div#changelist-filter #toolbar form span.small {
   width: 160px;
   color: #747474 !important;
   text-transform: uppercase;
   font-size: 10px;
 }
-/* line 954, ../sass/screen.sass */
+/* line 972, ../sass/screen.sass */
 body.change-list #changelist div#changelist-filter #toolbar form span.small a {
   color: #747474;
 }
-/* line 956, ../sass/screen.sass */
+/* line 974, ../sass/screen.sass */
 body.change-list #changelist div#changelist-filter #toolbar form span.small a:hover {
   color: #f9910c;
 }
-/* line 962, ../sass/screen.sass */
+/* line 980, ../sass/screen.sass */
 body.change-list #changelist div#changelist-filter h2 {
   background: none;
   font-size: 24px;
@@ -1665,42 +1763,47 @@ body.change-list #changelist div#changelist-filter h2 {
   height: auto !important;
   text-transform: uppercase;
 }
-/* line 970, ../sass/screen.sass */
+/* line 988, ../sass/screen.sass */
 body.change-list #changelist div#changelist-filter h3 {
   color: #f9910c;
 }
-/* line 972, ../sass/screen.sass */
+/* line 990, ../sass/screen.sass */
 body.change-list #changelist div#changelist-filter ul {
   margin-bottom: 10px;
 }
-/* line 974, ../sass/screen.sass */
+/* line 992, ../sass/screen.sass */
 body.change-list #changelist div#changelist-filter ul li {
   font-size: 12px;
   font-weight: bold;
   margin: 0;
   padding: 0;
 }
-/* line 979, ../sass/screen.sass */
+/* line 997, ../sass/screen.sass */
 body.change-list #changelist div#changelist-filter ul li.selected {
   border: none;
 }
-/* line 981, ../sass/screen.sass */
+/* line 999, ../sass/screen.sass */
 body.change-list #changelist div#changelist-filter ul li.selected a {
   color: #747474 !important;
 }
-/* line 983, ../sass/screen.sass */
+/* line 1001, ../sass/screen.sass */
 body.change-list #changelist div#changelist-filter ul li a {
   color: #b4b4b4;
 }
-/* line 985, ../sass/screen.sass */
+/* line 1003, ../sass/screen.sass */
 body.change-list #changelist div#changelist-filter ul li a:hover {
   color: #747474;
 }
-/* line 991, ../sass/screen.sass */
+/* line 1005, ../sass/screen.sass */
+body.change-list #changelist div#changelist-filter select {
+  width: 100%;
+  margin-bottom: 15px;
+}
+/* line 1012, ../sass/screen.sass */
 body.change-list #changelist form#changelist-form {
   background: white;
 }
-/* line 997, ../sass/screen.sass */
+/* line 1018, ../sass/screen.sass */
 body.change-list #changelist div.actions {
   font-size: 14px;
   line-height: 40px;
@@ -1713,7 +1816,7 @@ body.change-list #changelist div.actions {
   background: #006fbb;
   margin-right: 0 !important;
 }
-/* line 1008, ../sass/screen.sass */
+/* line 1029, ../sass/screen.sass */
 body.change-list #changelist div.actions label {
   position: absolute;
   text-transform: uppercase;
@@ -1722,17 +1825,17 @@ body.change-list #changelist div.actions label {
   color: white;
   font-weight: bold;
 }
-/* line 1015, ../sass/screen.sass */
+/* line 1036, ../sass/screen.sass */
 body.change-list #changelist div.actions label select {
   width: 145px;
   border: none;
   margin: -2px 0 0 5px;
 }
-/* line 1019, ../sass/screen.sass */
+/* line 1040, ../sass/screen.sass */
 body.change-list #changelist div.actions label select:focus {
   outline: none;
 }
-/* line 1021, ../sass/screen.sass */
+/* line 1042, ../sass/screen.sass */
 body.change-list #changelist div.actions button {
   margin: 16px 0 0 230px;
   padding: 0px 3px;
@@ -1744,21 +1847,21 @@ body.change-list #changelist div.actions button {
   border: none;
   cursor: pointer;
 }
-/* line 1031, ../sass/screen.sass */
+/* line 1052, ../sass/screen.sass */
 body.change-list #changelist div.actions button:hover {
   color: #f9910c;
 }
-/* line 1033, ../sass/screen.sass */
+/* line 1054, ../sass/screen.sass */
 body.change-list #changelist div.actions span.action-counter {
   color: white;
   text-transform: uppercase;
   font-size: 10px;
 }
-/* line 1042, ../sass/screen.sass */
+/* line 1063, ../sass/screen.sass */
 body.change-list #changelist div.results table#result_list {
   border-bottom: 1px solid #dfdfdf;
 }
-/* line 1048, ../sass/screen.sass */
+/* line 1069, ../sass/screen.sass */
 body.change-list #changelist div.results table#result_list thead th {
   border: 1px solid #434343;
   border-top: 2px solid #434343;
@@ -1769,7 +1872,7 @@ body.change-list #changelist div.results table#result_list thead th {
   background: #747474;
   *zoom: 1;
 }
-/* line 22, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
+/* line 22, ../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
 body.change-list #changelist div.results table#result_list thead th:after {
   content: "\0020";
   display: block;
@@ -1778,29 +1881,29 @@ body.change-list #changelist div.results table#result_list thead th:after {
   overflow: hidden;
   visibility: hidden;
 }
-/* line 1057, ../sass/screen.sass */
+/* line 1078, ../sass/screen.sass */
 body.change-list #changelist div.results table#result_list thead th a {
   color: white;
 }
-/* line 1059, ../sass/screen.sass */
+/* line 1080, ../sass/screen.sass */
 body.change-list #changelist div.results table#result_list thead th a:hover {
   color: #434343;
 }
-/* line 1061, ../sass/screen.sass */
+/* line 1082, ../sass/screen.sass */
 body.change-list #changelist div.results table#result_list thead th.sorted {
   background: #434343;
 }
-/* line 1063, ../sass/screen.sass */
+/* line 1084, ../sass/screen.sass */
 body.change-list #changelist div.results table#result_list thead th.sorted div.text a {
   color: white;
 }
-/* line 1065, ../sass/screen.sass */
+/* line 1086, ../sass/screen.sass */
 body.change-list #changelist div.results table#result_list thead th.sorted div.sortoptions {
   float: right;
   text-align: right;
   *zoom: 1;
 }
-/* line 22, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
+/* line 22, ../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
 body.change-list #changelist div.results table#result_list thead th.sorted div.sortoptions:after {
   content: "\0020";
   display: block;
@@ -1809,13 +1912,13 @@ body.change-list #changelist div.results table#result_list thead th.sorted div.s
   overflow: hidden;
   visibility: hidden;
 }
-/* line 1069, ../sass/screen.sass */
+/* line 1090, ../sass/screen.sass */
 body.change-list #changelist div.results table#result_list thead th.sorted div.sortoptions span.sortpriority {
   float: left;
   display: block;
   font-size: 10px;
 }
-/* line 1073, ../sass/screen.sass */
+/* line 1094, ../sass/screen.sass */
 body.change-list #changelist div.results table#result_list thead th.sorted div.sortoptions a {
   display: block;
   height: 10px;
@@ -1824,7 +1927,7 @@ body.change-list #changelist div.results table#result_list thead th.sorted div.s
   margin: 4px 0 0 2px;
   position: relative;
 }
-/* line 1080, ../sass/screen.sass */
+/* line 1101, ../sass/screen.sass */
 body.change-list #changelist div.results table#result_list thead th.sorted div.sortoptions a.sortremove {
   height: 15px;
   width: 15px;
@@ -1838,7 +1941,7 @@ body.change-list #changelist div.results table#result_list thead th.sorted div.s
   position: absolute;
   top: 0;
   left: 0;
-  background-position: 0 -410px;
+  background-position: 0 -494px;
   height: 10px;
   width: 10px;
 }
@@ -1848,7 +1951,7 @@ body.change-list #changelist div.results table#result_list thead th.sorted div.s
   position: absolute;
   top: 0;
   left: 0;
-  background-position: 0 -382px;
+  background-position: 0 -466px;
   height: 14px;
   width: 14px;
 }
@@ -1858,45 +1961,45 @@ body.change-list #changelist div.results table#result_list thead th.sorted div.s
   position: absolute;
   top: 0;
   left: 0;
-  background-position: 0 -434px;
+  background-position: 0 -518px;
   height: 14px;
   width: 14px;
 }
-/* line 1091, ../sass/screen.sass */
+/* line 1112, ../sass/screen.sass */
 body.change-list #changelist div.results table#result_list thead th.sorted:hover div.sortoptions a.sortremove {
   display: block;
 }
-/* line 1097, ../sass/screen.sass */
+/* line 1118, ../sass/screen.sass */
 body.change-list #changelist div.results table#result_list tbody {
   background: white;
 }
-/* line 1099, ../sass/screen.sass */
+/* line 1120, ../sass/screen.sass */
 body.change-list #changelist div.results table#result_list tbody tr {
   border-bottom: 1px solid #cdcdcd;
 }
-/* line 1101, ../sass/screen.sass */
+/* line 1122, ../sass/screen.sass */
 body.change-list #changelist div.results table#result_list tbody tr.row1 {
   background: #f6f6f6;
 }
-/* line 1103, ../sass/screen.sass */
+/* line 1124, ../sass/screen.sass */
 body.change-list #changelist div.results table#result_list tbody tr.selected {
   background: rgba(249, 145, 12, 0.15);
 }
-/* line 1105, ../sass/screen.sass */
+/* line 1126, ../sass/screen.sass */
 body.change-list #changelist div.results table#result_list tbody td, body.change-list #changelist div.results table#result_list tbody th {
   padding: 7px;
   border: 1px solid #cdcdcd;
   border-bottom: none;
 }
-/* line 1109, ../sass/screen.sass */
+/* line 1130, ../sass/screen.sass */
 body.change-list #changelist div.results table#result_list tbody td a, body.change-list #changelist div.results table#result_list tbody th a {
   color: #006fbb;
 }
-/* line 1111, ../sass/screen.sass */
+/* line 1132, ../sass/screen.sass */
 body.change-list #changelist div.results table#result_list tbody td a:hover, body.change-list #changelist div.results table#result_list tbody th a:hover {
   color: #f9910c;
 }
-/* line 1117, ../sass/screen.sass */
+/* line 1138, ../sass/screen.sass */
 body.change-list #changelist p.paginator {
   font-size: 14px;
   font-weight: bold;
@@ -1904,25 +2007,25 @@ body.change-list #changelist p.paginator {
   background: transparent;
 }
 
-/* line 1129, ../sass/screen.sass */
+/* line 1150, ../sass/screen.sass */
 body.delete_confirmation div#admin_content h2 {
   font-size: 23px;
   color: #747474;
 }
-/* line 1132, ../sass/screen.sass */
+/* line 1153, ../sass/screen.sass */
 body.delete_confirmation div#admin_content a {
   color: #006fbb;
 }
-/* line 1134, ../sass/screen.sass */
+/* line 1155, ../sass/screen.sass */
 body.delete_confirmation div#admin_content a:hover {
   color: #f9910c;
 }
-/* line 1136, ../sass/screen.sass */
+/* line 1157, ../sass/screen.sass */
 body.delete_confirmation div#admin_content form {
   padding: 0;
   margin-top: 15px;
 }
-/* line 1139, ../sass/screen.sass */
+/* line 1160, ../sass/screen.sass */
 body.delete_confirmation div#admin_content form input[type="submit"] {
   width: 200px;
   color: white;
@@ -1949,40 +2052,41 @@ body.delete_confirmation div#admin_content form input[type="submit"] {
   border-top: none;
   font-size: 14px;
 }
-/* line 1148, ../sass/screen.sass */
+/* line 1169, ../sass/screen.sass */
 body.delete_confirmation div#admin_content form input[type="submit"]:hover {
   background-color: #f9910c;
 }
 
-/* line 1156, ../sass/screen.sass */
+/* line 1176, ../sass/screen.sass */
 body.change-form {
   width: 100%;
+  padding-bottom: 30px;
 }
-/* line 1158, ../sass/screen.sass */
+/* line 1179, ../sass/screen.sass */
 body.change-form #content_container {
   width: 100%;
   margin: 0 auto;
 }
-/* line 1161, ../sass/screen.sass */
+/* line 1182, ../sass/screen.sass */
 body.change-form #content_container #page_header {
   width: 960px;
   margin: 80px auto 25px;
 }
-/* line 1164, ../sass/screen.sass */
+/* line 1185, ../sass/screen.sass */
 body.change-form #content_container #admin_content {
   width: 100%;
 }
-/* line 1167, ../sass/screen.sass */
+/* line 1188, ../sass/screen.sass */
 body.change-form #content_container #admin_content #content-main div.content-main-container {
   width: 960px;
   margin: 0 auto;
   position: relative;
 }
-/* line 1171, ../sass/screen.sass */
+/* line 1192, ../sass/screen.sass */
 body.change-form #content_container #admin_content #content-main form.change_form {
   background: white;
 }
-/* line 1173, ../sass/screen.sass */
+/* line 1194, ../sass/screen.sass */
 body.change-form #content_container #admin_content #content-main .object-tools {
   top: -53px;
 }
@@ -2005,15 +2109,14 @@ body.change-form #content_container #admin_content .submit-row {
   position: relative;
   z-index: 250;
 }
-/* line 1193, ../sass/screen.sass */
+/* line 1214, ../sass/screen.sass */
 body.change-form #content_container #admin_content .submit-row .submit_container {
-  width: 940px;
-  padding: 0 10px;
+  width: 960px;
   position: relative;
   margin: 0 auto;
   *zoom: 1;
 }
-/* line 22, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
+/* line 22, ../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
 body.change-form #content_container #admin_content .submit-row .submit_container:after {
   content: "\0020";
   display: block;
@@ -2022,7 +2125,7 @@ body.change-form #content_container #admin_content .submit-row .submit_container
   overflow: hidden;
   visibility: hidden;
 }
-/* line 1199, ../sass/screen.sass */
+/* line 1219, ../sass/screen.sass */
 body.change-form #content_container #admin_content .submit-row .submit_container input[name="_addanother"] {
   height: 57px;
   line-height: 57px;
@@ -2041,12 +2144,12 @@ body.change-form #content_container #admin_content .submit-row .submit_container
   position: relative;
   background: url(images/icons/icon_add.png) center left no-repeat transparent;
 }
-/* line 1202, ../sass/screen.sass */
+/* line 1222, ../sass/screen.sass */
 body.change-form #content_container #admin_content .submit-row .submit_container input[name="_addanother"]:hover, body.change-form #content_container #admin_content .submit-row .submit_container input[name="_addanother"]:active {
   color: #006fbb;
   background: url(images/icons/icon_add_blue.png) center left no-repeat transparent;
 }
-/* line 1205, ../sass/screen.sass */
+/* line 1225, ../sass/screen.sass */
 body.change-form #content_container #admin_content .submit-row .submit_container input[name="_continue"] {
   height: 57px;
   line-height: 57px;
@@ -2065,26 +2168,30 @@ body.change-form #content_container #admin_content .submit-row .submit_container
   position: relative;
   background: url(images/icons/icon_edit.png) center left no-repeat transparent;
 }
-/* line 1208, ../sass/screen.sass */
+/* line 1228, ../sass/screen.sass */
 body.change-form #content_container #admin_content .submit-row .submit_container input[name="_continue"]:hover, body.change-form #content_container #admin_content .submit-row .submit_container input[name="_continue"]:active {
   color: #006fbb;
   background: url(images/icons/icon_edit_blue.png) center left no-repeat transparent;
 }
-/* line 1211, ../sass/screen.sass */
+/* line 1231, ../sass/screen.sass */
 body.change-form #content_container #admin_content .submit-row .submit_container p.deletelink-box {
   margin: 0 0 0 0;
 }
-/* line 1213, ../sass/screen.sass */
+/* line 1233, ../sass/screen.sass */
 body.change-form #content_container #admin_content .submit-row .submit_container p.deletelink-box a.deletelink {
-  padding: 0 0 0 6px;
+  padding: 0 0 0 16px;
 }
-/* line 1215, ../sass/screen.sass */
+/* line 1235, ../sass/screen.sass */
 body.change-form #content_container #admin_content .form_submit_container {
   width: 960px;
   margin: 0 auto;
 }
+/* line 1238, ../sass/screen.sass */
+body.change-form #content_container #admin_content .form_submit_container h3.change_password_help {
+  margin: 20px 0;
+}
 
-/* line 1222, ../sass/screen.sass */
+/* line 1245, ../sass/screen.sass */
 .button.default, input[type="submit"].default {
   width: 200px;
   color: white;
@@ -2103,7 +2210,6 @@ body.change-form #content_container #admin_content .form_submit_container {
   float: none;
   background-color: #006fbb;
   cursor: pointer;
-  right: 10px;
   z-index: 250;
 }
 /* line 29, ../sass/partials/_base.sass */
@@ -2112,24 +2218,28 @@ body.change-form #content_container #admin_content .form_submit_container {
   position: absolute;
   top: 0;
   left: 0;
-  background-position: 0 -500px;
+  background-position: 0 -584px;
   height: 14px;
   width: 14px;
 }
-/* line 1227, ../sass/screen.sass */
+/* line 1249, ../sass/screen.sass */
+.button.default.change_password, input[type="submit"].default.change_password {
+  width: 250px;
+}
+/* line 1251, ../sass/screen.sass */
 .button.default:hover, input[type="submit"].default:hover {
   color: white;
   background: #024f84;
 }
 
-/* line 1234, ../sass/screen.sass */
+/* line 1259, ../sass/screen.sass */
 fieldset.module, div.inline-group {
   border: none !important;
   margin: 5px 0;
   width: 100%;
   *zoom: 1;
 }
-/* line 22, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
+/* line 22, ../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
 fieldset.module:after, div.inline-group:after {
   content: "\0020";
   display: block;
@@ -2138,7 +2248,7 @@ fieldset.module:after, div.inline-group:after {
   overflow: hidden;
   visibility: hidden;
 }
-/* line 1239, ../sass/screen.sass */
+/* line 1264, ../sass/screen.sass */
 fieldset.module h2, div.inline-group h2 {
   font-size: 23px;
   color: #f9910c;
@@ -2146,29 +2256,30 @@ fieldset.module h2, div.inline-group h2 {
   border-top: 2px solid #cdcdcd;
   padding: 5px 0 5px 10px;
 }
-/* line 1245, ../sass/screen.sass */
+/* line 1270, ../sass/screen.sass */
 fieldset.module h2 a.collapse-toggle, div.inline-group h2 a.collapse-toggle {
   height: 16px;
   width: 16px;
   text-indent: -9999px;
   display: inline-block !important;
 }
-/* line 1250, ../sass/screen.sass */
+/* line 1275, ../sass/screen.sass */
 fieldset.module.collapse a.collapse-toggle, div.inline-group.collapse a.collapse-toggle {
   background: url(images/icon_show_hide.png) 0 -16px no-repeat;
 }
-/* line 1252, ../sass/screen.sass */
+/* line 1277, ../sass/screen.sass */
 fieldset.module.collapsed a.collapse-toggle, div.inline-group.collapsed a.collapse-toggle {
   background: url(images/icon_show_hide.png) 0 0 no-repeat;
 }
-/* line 1258, ../sass/screen.sass */
+/* line 1283, ../sass/screen.sass */
 fieldset.module div.form-row, div.inline-group div.form-row {
   padding: 5px 25px 15px 25px;
   margin: 10px 0;
   border-bottom: none;
+  overflow: visible;
   *zoom: 1;
 }
-/* line 22, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
+/* line 22, ../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
 fieldset.module div.form-row:after, div.inline-group div.form-row:after {
   content: "\0020";
   display: block;
@@ -2177,15 +2288,15 @@ fieldset.module div.form-row:after, div.inline-group div.form-row:after {
   overflow: hidden;
   visibility: hidden;
 }
-/* line 1264, ../sass/screen.sass */
+/* line 1289, ../sass/screen.sass */
 fieldset.module div.form-row:first-child, div.inline-group div.form-row:first-child {
   margin-top: 20px;
 }
-/* line 1266, ../sass/screen.sass */
+/* line 1291, ../sass/screen.sass */
 fieldset.module div.form-row:last-child, div.inline-group div.form-row:last-child {
   border-bottom: none;
 }
-/* line 1272, ../sass/screen.sass */
+/* line 1297, ../sass/screen.sass */
 fieldset.module div.form-row label, div.inline-group div.form-row label {
   font-size: 14px;
   padding: 0;
@@ -2194,19 +2305,19 @@ fieldset.module div.form-row label, div.inline-group div.form-row label {
   text-align: right;
   color: #006fbb !important;
 }
-/* line 1274, ../sass/screen.sass */
+/* line 1299, ../sass/screen.sass */
 fieldset.module div.form-row div.field_container, div.inline-group div.form-row div.field_container {
   float: left;
 }
-/* line 1280, ../sass/screen.sass */
+/* line 1305, ../sass/screen.sass */
 fieldset.module div.form-row div.field_container.hidden a.imageupload-thumbcontainer, div.inline-group div.form-row div.field_container.hidden a.imageupload-thumbcontainer {
   display: none;
 }
-/* line 1282, ../sass/screen.sass */
+/* line 1307, ../sass/screen.sass */
 fieldset.module div.form-row div.field_container.hidden img.imageupload-thumbnail-hidden, div.inline-group div.form-row div.field_container.hidden img.imageupload-thumbnail-hidden {
   display: inline-block;
 }
-/* line 1285, ../sass/screen.sass */
+/* line 1310, ../sass/screen.sass */
 fieldset.module div.form-row div.field_container p, fieldset.module div.form-row div.field_container ul, div.inline-group div.form-row div.field_container p, div.inline-group div.form-row div.field_container ul {
   padding: 0 !important;
   margin: 0 !important;
@@ -2214,7 +2325,7 @@ fieldset.module div.form-row div.field_container p, fieldset.module div.form-row
   font-size: 14px;
   color: #747474;
 }
-/* line 1291, ../sass/screen.sass */
+/* line 1316, ../sass/screen.sass */
 fieldset.module div.form-row div.field_container input, div.inline-group div.form-row div.field_container input {
   height: 24px;
   background: #f6f6f6;
@@ -2227,11 +2338,11 @@ fieldset.module div.form-row div.field_container input, div.inline-group div.for
   font-size: 14px;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
-/* line 1293, ../sass/screen.sass */
+/* line 1318, ../sass/screen.sass */
 fieldset.module div.form-row div.field_container input.vIntegerField, div.inline-group div.form-row div.field_container input.vIntegerField {
   width: 50px;
 }
-/* line 1295, ../sass/screen.sass */
+/* line 1320, ../sass/screen.sass */
 fieldset.module div.form-row div.field_container textarea, div.inline-group div.form-row div.field_container textarea {
   background: #f6f6f6;
   border: 1px solid #cdcdcd;
@@ -2244,17 +2355,18 @@ fieldset.module div.form-row div.field_container textarea, div.inline-group div.
   line-height: 22px;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   height: 100px;
+  resize: vertical;
 }
-/* line 1297, ../sass/screen.sass */
+/* line 1322, ../sass/screen.sass */
 fieldset.module div.form-row div.field_container input[type="checkbox"], div.inline-group div.form-row div.field_container input[type="checkbox"] {
   margin-right: 10px;
 }
-/* line 1299, ../sass/screen.sass */
+/* line 1324, ../sass/screen.sass */
 fieldset.module div.form-row div.field_container input[type="file"], div.inline-group div.form-row div.field_container input[type="file"] {
   height: 20px;
   padding: 5px;
 }
-/* line 1306, ../sass/screen.sass */
+/* line 1330, ../sass/screen.sass */
 fieldset.module div.form-row div.field_container a.imageupload-thumbcontainer, div.inline-group div.form-row div.field_container a.imageupload-thumbcontainer {
   float: left;
   width: 150px;
@@ -2262,7 +2374,7 @@ fieldset.module div.form-row div.field_container a.imageupload-thumbcontainer, d
   display: inline-block;
   *zoom: 1;
 }
-/* line 22, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
+/* line 22, ../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
 fieldset.module div.form-row div.field_container a.imageupload-thumbcontainer:after, div.inline-group div.form-row div.field_container a.imageupload-thumbcontainer:after {
   content: "\0020";
   display: block;
@@ -2271,21 +2383,21 @@ fieldset.module div.form-row div.field_container a.imageupload-thumbcontainer:af
   overflow: hidden;
   visibility: hidden;
 }
-/* line 1312, ../sass/screen.sass */
+/* line 1336, ../sass/screen.sass */
 fieldset.module div.form-row div.field_container img.imageupload-thumbnail, fieldset.module div.form-row div.field_container img.imageupload-thumbnail-hidden, div.inline-group div.form-row div.field_container img.imageupload-thumbnail, div.inline-group div.form-row div.field_container img.imageupload-thumbnail-hidden {
   max-width: 150px;
   margin: 0 15px 10px 0;
   float: left;
 }
-/* line 1316, ../sass/screen.sass */
+/* line 1340, ../sass/screen.sass */
 fieldset.module div.form-row div.field_container img.imageupload-thumbnail-hidden, div.inline-group div.form-row div.field_container img.imageupload-thumbnail-hidden {
   display: none;
 }
-/* line 1318, ../sass/screen.sass */
+/* line 1342, ../sass/screen.sass */
 fieldset.module div.form-row div.field_container div.imageupload-widget, div.inline-group div.form-row div.field_container div.imageupload-widget {
   float: left;
 }
-/* line 1320, ../sass/screen.sass */
+/* line 1344, ../sass/screen.sass */
 fieldset.module div.form-row div.field_container div.imageupload-widget a.file_upload_button, div.inline-group div.form-row div.field_container div.imageupload-widget a.file_upload_button {
   width: 200px;
   color: white;
@@ -2321,15 +2433,15 @@ fieldset.module div.form-row div.field_container div.imageupload-widget a.file_u
   position: absolute;
   top: 9px;
   left: 10px;
-  background-position: 0 -184px;
+  background-position: 0 -240px;
   height: 16px;
   width: 16px;
 }
-/* line 1333, ../sass/screen.sass */
+/* line 1357, ../sass/screen.sass */
 fieldset.module div.form-row div.field_container div.imageupload-widget a.file_upload_button:hover, div.inline-group div.form-row div.field_container div.imageupload-widget a.file_upload_button:hover {
   background: #024f84;
 }
-/* line 1335, ../sass/screen.sass */
+/* line 1359, ../sass/screen.sass */
 fieldset.module div.form-row div.field_container div.imageupload-widget input[type="file"], div.inline-group div.form-row div.field_container div.imageupload-widget input[type="file"] {
   background: transparent;
   border: none;
@@ -2339,12 +2451,12 @@ fieldset.module div.form-row div.field_container div.imageupload-widget input[ty
   font-size: 12px;
   cursor: pointer;
 }
-/* line 1343, ../sass/screen.sass */
+/* line 1367, ../sass/screen.sass */
 fieldset.module div.form-row div.field_container div.imageupload-widget span.clearable-file-input, div.inline-group div.form-row div.field_container div.imageupload-widget span.clearable-file-input {
   display: block;
   *zoom: 1;
 }
-/* line 22, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
+/* line 22, ../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
 fieldset.module div.form-row div.field_container div.imageupload-widget span.clearable-file-input:after, div.inline-group div.form-row div.field_container div.imageupload-widget span.clearable-file-input:after {
   content: "\0020";
   display: block;
@@ -2353,13 +2465,13 @@ fieldset.module div.form-row div.field_container div.imageupload-widget span.cle
   overflow: hidden;
   visibility: hidden;
 }
-/* line 1346, ../sass/screen.sass */
+/* line 1370, ../sass/screen.sass */
 fieldset.module div.form-row div.field_container div.imageupload-widget span.clearable-file-input input[type="checkbox"], div.inline-group div.form-row div.field_container div.imageupload-widget span.clearable-file-input input[type="checkbox"] {
   cursor: pointer;
   margin-right: 5px;
   display: none;
 }
-/* line 1350, ../sass/screen.sass */
+/* line 1374, ../sass/screen.sass */
 fieldset.module div.form-row div.field_container div.imageupload-widget span.clearable-file-input label, div.inline-group div.form-row div.field_container div.imageupload-widget span.clearable-file-input label {
   cursor: pointer;
   margin-top: 2px;
@@ -2374,15 +2486,15 @@ fieldset.module div.form-row div.field_container div.imageupload-widget span.cle
   position: absolute;
   top: 2px;
   left: 0px;
-  background-position: 0 -114px;
+  background-position: 0 -142px;
   height: 14px;
   width: 14px;
 }
-/* line 1358, ../sass/screen.sass */
+/* line 1382, ../sass/screen.sass */
 fieldset.module div.form-row div.field_container div.imageupload-widget span.clearable-file-input label span, div.inline-group div.form-row div.field_container div.imageupload-widget span.clearable-file-input label span {
   display: none;
 }
-/* line 1360, ../sass/screen.sass */
+/* line 1384, ../sass/screen.sass */
 fieldset.module div.form-row div.field_container div.imageupload-widget span.clearable-file-input label:hover, div.inline-group div.form-row div.field_container div.imageupload-widget span.clearable-file-input label:hover {
   color: #f9910c !important;
 }
@@ -2392,11 +2504,11 @@ fieldset.module div.form-row div.field_container div.imageupload-widget span.cle
   position: absolute;
   top: 2px;
   left: 0px;
-  background-position: 0 -170px;
+  background-position: 0 -212px;
   height: 14px;
   width: 14px;
 }
-/* line 1363, ../sass/screen.sass */
+/* line 1387, ../sass/screen.sass */
 fieldset.module div.form-row div.field_container div.imageupload-widget span.clearable-file-input label.hidden, div.inline-group div.form-row div.field_container div.imageupload-widget span.clearable-file-input label.hidden {
   color: #f9910c !important;
 }
@@ -2410,18 +2522,18 @@ fieldset.module div.form-row div.field_container div.imageupload-widget span.cle
   height: 15px;
   width: 13px;
 }
-/* line 1366, ../sass/screen.sass */
+/* line 1390, ../sass/screen.sass */
 fieldset.module div.form-row div.field_container div.imageupload-widget span.clearable-file-input label.hidden span, div.inline-group div.form-row div.field_container div.imageupload-widget span.clearable-file-input label.hidden span {
   display: inline-block;
 }
-/* line 1373, ../sass/screen.sass */
+/* line 1397, ../sass/screen.sass */
 fieldset.module div.form-row div.field_container p.help, fieldset.module div.form-row div.field_container .help, div.inline-group div.form-row div.field_container p.help, div.inline-group div.form-row div.field_container .help {
   color: #999999;
   font-style: italic;
   font-size: 12px !important;
   margin-bottom: 10px !important;
 }
-/* line 1378, ../sass/screen.sass */
+/* line 1402, ../sass/screen.sass */
 fieldset.module div.form-row div.field_container p.help span, fieldset.module div.form-row div.field_container .help span, div.inline-group div.form-row div.field_container p.help span, div.inline-group div.form-row div.field_container .help span {
   background-color: #f6f6f6;
   padding: 5px 10px 5px 28px !important;
@@ -2433,11 +2545,11 @@ fieldset.module div.form-row div.field_container p.help span:after, fieldset.mod
   position: absolute;
   top: 5px;
   left: 5px;
-  background-position: 0 -86px;
+  background-position: 0 -114px;
   height: 14px;
   width: 14px;
 }
-/* line 1383, ../sass/screen.sass */
+/* line 1407, ../sass/screen.sass */
 fieldset.module div.form-row div.field_container p.help span:before, fieldset.module div.form-row div.field_container .help span:before, div.inline-group div.form-row div.field_container p.help span:before, div.inline-group div.form-row div.field_container .help span:before {
   content: "";
   position: absolute;
@@ -2449,11 +2561,11 @@ fieldset.module div.form-row div.field_container p.help span:before, fieldset.mo
   border-right: 12px solid #f6f6f6;
   border-bottom: 12px solid transparent;
 }
-/* line 1397, ../sass/screen.sass */
+/* line 1421, ../sass/screen.sass */
 fieldset.module div.form-row div.field_container div.chzn-container, div.inline-group div.form-row div.field_container div.chzn-container {
   left: 0;
 }
-/* line 1399, ../sass/screen.sass */
+/* line 1423, ../sass/screen.sass */
 fieldset.module div.form-row div.field_container div.chzn-container ul.chzn-choices, div.inline-group div.form-row div.field_container div.chzn-container ul.chzn-choices {
   height: 24px;
   background: #f6f6f6;
@@ -2466,7 +2578,7 @@ fieldset.module div.form-row div.field_container div.chzn-container ul.chzn-choi
   font-size: 14px;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
-/* line 1401, ../sass/screen.sass */
+/* line 1425, ../sass/screen.sass */
 fieldset.module div.form-row div.field_container div.chzn-container ul.chzn-choices li.search-choice, div.inline-group div.form-row div.field_container div.chzn-container ul.chzn-choices li.search-choice {
   background: white;
   border-radius: none !important;
@@ -2476,41 +2588,41 @@ fieldset.module div.form-row div.field_container div.chzn-container ul.chzn-choi
   padding: 4px 19px 4px 7px;
   border: 1px solid #cdcdcd;
 }
-/* line 1409, ../sass/screen.sass */
+/* line 1433, ../sass/screen.sass */
 fieldset.module div.form-row div.field_container div.chzn-container ul.chzn-choices li.search-field input, div.inline-group div.form-row div.field_container div.chzn-container ul.chzn-choices li.search-field input {
   height: 18px;
 }
-/* line 1411, ../sass/screen.sass */
+/* line 1435, ../sass/screen.sass */
 fieldset.module div.form-row div.field_container div.chzn-container div.chzn-drop, div.inline-group div.form-row div.field_container div.chzn-container div.chzn-drop {
   width: 200px !important;
   margin: 0 !important;
 }
-/* line 1414, ../sass/screen.sass */
+/* line 1438, ../sass/screen.sass */
 fieldset.module div.form-row div.field_container div.chzn-container div.chzn-drop ul.chzn-results li, div.inline-group div.form-row div.field_container div.chzn-container div.chzn-drop ul.chzn-results li {
   line-height: 14px !important;
 }
-/* line 1420, ../sass/screen.sass */
+/* line 1444, ../sass/screen.sass */
 fieldset.module div.form-row div.field_container span.cke_skin_kama, div.inline-group div.form-row div.field_container span.cke_skin_kama {
   margin-left: 0 !important;
 }
-/* line 1426, ../sass/screen.sass */
+/* line 1450, ../sass/screen.sass */
 fieldset.module div.form-row div.checkbox_container, div.inline-group div.form-row div.checkbox_container {
   margin-left: 140px;
 }
-/* line 1428, ../sass/screen.sass */
+/* line 1452, ../sass/screen.sass */
 fieldset.module div.form-row div.checkbox_container input[type="checkbox"], div.inline-group div.form-row div.checkbox_container input[type="checkbox"] {
   margin-right: 10px;
 }
-/* line 1430, ../sass/screen.sass */
+/* line 1454, ../sass/screen.sass */
 fieldset.module div.form-row div.checkbox_container label, div.inline-group div.form-row div.checkbox_container label {
   color: #747474 !important;
 }
-/* line 1436, ../sass/screen.sass */
+/* line 1460, ../sass/screen.sass */
 fieldset.module div.inline-related, div.inline-group div.inline-related {
   width: 100%;
   *zoom: 1;
 }
-/* line 22, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
+/* line 22, ../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
 fieldset.module div.inline-related:after, div.inline-group div.inline-related:after {
   content: "\0020";
   display: block;
@@ -2519,7 +2631,7 @@ fieldset.module div.inline-related:after, div.inline-group div.inline-related:af
   overflow: hidden;
   visibility: hidden;
 }
-/* line 1439, ../sass/screen.sass */
+/* line 1463, ../sass/screen.sass */
 fieldset.module div.inline-related h3, div.inline-group div.inline-related h3 {
   background: #f6f6f6;
   height: 44px;
@@ -2530,18 +2642,18 @@ fieldset.module div.inline-related h3, div.inline-group div.inline-related h3 {
   border-top: 2px solid white;
   color: #afafaf;
 }
-/* line 1448, ../sass/screen.sass */
+/* line 1472, ../sass/screen.sass */
 fieldset.module div.inline-related h3.tobe_removed, div.inline-group div.inline-related h3.tobe_removed {
   background: #f9910c;
   color: white;
   line-height: 44px;
   text-decoration: line-through;
 }
-/* line 1453, ../sass/screen.sass */
+/* line 1477, ../sass/screen.sass */
 fieldset.module div.inline-related h3.tobe_removed span.toggleswitch, div.inline-group div.inline-related h3.tobe_removed span.toggleswitch {
   display: none;
 }
-/* line 1455, ../sass/screen.sass */
+/* line 1479, ../sass/screen.sass */
 fieldset.module div.inline-related h3 span.toggleswitch, div.inline-group div.inline-related h3 span.toggleswitch {
   margin: 15px 10px 0 0;
   height: 16px;
@@ -2551,19 +2663,19 @@ fieldset.module div.inline-related h3 span.toggleswitch, div.inline-group div.in
   background: url(images/icon_show_hide.png) 0 -16px no-repeat;
   cursor: pointer;
 }
-/* line 1463, ../sass/screen.sass */
+/* line 1487, ../sass/screen.sass */
 fieldset.module div.inline-related h3 span.toggleswitch.hidden, div.inline-group div.inline-related h3 span.toggleswitch.hidden {
   background-position: 0 0;
 }
-/* line 1465, ../sass/screen.sass */
+/* line 1489, ../sass/screen.sass */
 fieldset.module div.inline-related h3 span.toggleswitch.tobe_removed, div.inline-group div.inline-related h3 span.toggleswitch.tobe_removed {
   display: none;
 }
-/* line 1468, ../sass/screen.sass */
+/* line 1492, ../sass/screen.sass */
 fieldset.module div.inline-related h3 span.delete input[type="checkbox"], div.inline-group div.inline-related h3 span.delete input[type="checkbox"] {
   display: none;
 }
-/* line 1470, ../sass/screen.sass */
+/* line 1494, ../sass/screen.sass */
 fieldset.module div.inline-related h3 span.delete label, div.inline-group div.inline-related h3 span.delete label {
   float: right;
   font-size: 14px !important;
@@ -2574,7 +2686,7 @@ fieldset.module div.inline-related h3 span.delete label, div.inline-group div.in
   cursor: pointer;
   position: relative;
 }
-/* line 1479, ../sass/screen.sass */
+/* line 1503, ../sass/screen.sass */
 fieldset.module div.inline-related h3 span.delete label.stackedinline_delete, div.inline-group div.inline-related h3 span.delete label.stackedinline_delete {
   color: #747474;
 }
@@ -2584,11 +2696,11 @@ fieldset.module div.inline-related h3 span.delete label.stackedinline_delete:aft
   position: absolute;
   top: 0;
   left: 0;
-  background-position: 0 -114px;
+  background-position: 0 -142px;
   height: 14px;
   width: 14px;
 }
-/* line 1482, ../sass/screen.sass */
+/* line 1506, ../sass/screen.sass */
 fieldset.module div.inline-related h3 span.delete label.stackedinline_delete:hover, div.inline-group div.inline-related h3 span.delete label.stackedinline_delete:hover {
   color: #f9910c;
 }
@@ -2598,11 +2710,11 @@ fieldset.module div.inline-related h3 span.delete label.stackedinline_delete:hov
   position: absolute;
   top: 0;
   left: 0;
-  background-position: 0 -170px;
+  background-position: 0 -212px;
   height: 14px;
   width: 14px;
 }
-/* line 1485, ../sass/screen.sass */
+/* line 1509, ../sass/screen.sass */
 fieldset.module div.inline-related h3 span.delete label.undo_stackedinline_delete, div.inline-group div.inline-related h3 span.delete label.undo_stackedinline_delete {
   color: white;
   margin: 0 10px 0 0;
@@ -2617,7 +2729,7 @@ fieldset.module div.inline-related h3 span.delete label.undo_stackedinline_delet
   height: 15px;
   width: 13px;
 }
-/* line 1489, ../sass/screen.sass */
+/* line 1513, ../sass/screen.sass */
 fieldset.module div.inline-related h3 span.delete label.undo_stackedinline_delete:hover, div.inline-group div.inline-related h3 span.delete label.undo_stackedinline_delete:hover {
   color: white;
 }
@@ -2631,11 +2743,11 @@ fieldset.module div.inline-related h3 span.delete label.undo_stackedinline_delet
   height: 15px;
   width: 13px;
 }
-/* line 1492, ../sass/screen.sass */
+/* line 1516, ../sass/screen.sass */
 fieldset.module div.inline-related h3 span.delete label.hidden, div.inline-group div.inline-related h3 span.delete label.hidden {
   display: none;
 }
-/* line 1495, ../sass/screen.sass */
+/* line 1519, ../sass/screen.sass */
 fieldset.module div.inline-related h3 a.inline-deletelink, div.inline-group div.inline-related h3 a.inline-deletelink {
   text-indent: 0;
   padding: 0 0 0 20px;
@@ -2652,7 +2764,7 @@ fieldset.module div.inline-related h3 a.inline-deletelink:after, div.inline-grou
   position: absolute;
   top: 15px;
   left: 0;
-  background-position: 0 -114px;
+  background-position: 0 -142px;
   height: 14px;
   width: 14px;
 }
@@ -2662,11 +2774,11 @@ fieldset.module div.inline-related h3 a.inline-deletelink:hover:after, div.inlin
   position: absolute;
   top: 15px;
   left: 0;
-  background-position: 0 -170px;
+  background-position: 0 -212px;
   height: 14px;
   width: 14px;
 }
-/* line 1511, ../sass/screen.sass */
+/* line 1535, ../sass/screen.sass */
 fieldset.module div.add-row, div.inline-group div.add-row {
   border-bottom: none;
   border-top: 1px solid #efefef;
@@ -2675,7 +2787,7 @@ fieldset.module div.add-row, div.inline-group div.add-row {
   margin: 0 0 40px 0;
   *zoom: 1;
 }
-/* line 22, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
+/* line 22, ../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
 fieldset.module div.add-row:after, div.inline-group div.add-row:after {
   content: "\0020";
   display: block;
@@ -2684,7 +2796,7 @@ fieldset.module div.add-row:after, div.inline-group div.add-row:after {
   overflow: hidden;
   visibility: hidden;
 }
-/* line 1518, ../sass/screen.sass */
+/* line 1542, ../sass/screen.sass */
 fieldset.module div.add-row a, div.inline-group div.add-row a {
   height: 40px;
   line-height: 40px;
@@ -2707,26 +2819,26 @@ fieldset.module div.add-row a:after, div.inline-group div.add-row a:after {
   position: absolute;
   top: 13px;
   left: 8px;
-  background-position: 0 -420px;
+  background-position: 0 -504px;
   height: 14px;
   width: 14px;
 }
-/* line 1523, ../sass/screen.sass */
+/* line 1547, ../sass/screen.sass */
 fieldset.module div.add-row a:hover, div.inline-group div.add-row a:hover {
   background-color: #006fbb;
   color: white;
 }
-/* line 1531, ../sass/screen.sass */
+/* line 1555, ../sass/screen.sass */
 fieldset.module div.tabular table, div.inline-group div.tabular table {
   margin: 20px 0 40px 170px;
   width: 790px !important;
   border: none;
 }
-/* line 1535, ../sass/screen.sass */
+/* line 1559, ../sass/screen.sass */
 fieldset.module div.tabular table thead, div.inline-group div.tabular table thead {
   border: none;
 }
-/* line 1537, ../sass/screen.sass */
+/* line 1561, ../sass/screen.sass */
 fieldset.module div.tabular table thead th, div.inline-group div.tabular table thead th {
   padding: 3px 25px;
   border: none;
@@ -2739,15 +2851,15 @@ fieldset.module div.tabular table thead th, div.inline-group div.tabular table t
   height: 40px;
   line-height: 40px;
 }
-/* line 1549, ../sass/screen.sass */
+/* line 1573, ../sass/screen.sass */
 fieldset.module div.tabular table tbody tr.has_original td, div.inline-group div.tabular table tbody tr.has_original td {
   padding-top: 20px !important;
 }
-/* line 1551, ../sass/screen.sass */
+/* line 1575, ../sass/screen.sass */
 fieldset.module div.tabular table tbody td.original, div.inline-group div.tabular table tbody td.original {
   position: relative;
 }
-/* line 1553, ../sass/screen.sass */
+/* line 1577, ../sass/screen.sass */
 fieldset.module div.tabular table tbody td.original p, div.inline-group div.tabular table tbody td.original p {
   top: -10px;
   left: 20px;
@@ -2755,19 +2867,19 @@ fieldset.module div.tabular table tbody td.original p, div.inline-group div.tabu
   overflow: visible;
   width: 300px;
 }
-/* line 1559, ../sass/screen.sass */
+/* line 1583, ../sass/screen.sass */
 fieldset.module div.tabular table tbody tr, div.inline-group div.tabular table tbody tr {
   border-bottom: 1px solid #efefef;
 }
-/* line 1561, ../sass/screen.sass */
+/* line 1585, ../sass/screen.sass */
 fieldset.module div.tabular table tbody tr.row2, div.inline-group div.tabular table tbody tr.row2 {
   background: transparent;
 }
-/* line 1563, ../sass/screen.sass */
+/* line 1587, ../sass/screen.sass */
 fieldset.module div.tabular table tbody tr:last-child, div.inline-group div.tabular table tbody tr:last-child {
   border-bottom: none;
 }
-/* line 1565, ../sass/screen.sass */
+/* line 1589, ../sass/screen.sass */
 fieldset.module div.tabular table tbody tr td, div.inline-group div.tabular table tbody tr td {
   padding: 3px 25px;
   font-size: 14px;
@@ -2776,7 +2888,7 @@ fieldset.module div.tabular table tbody tr td, div.inline-group div.tabular tabl
   height: 40px;
   line-height: 40px;
 }
-/* line 1572, ../sass/screen.sass */
+/* line 1596, ../sass/screen.sass */
 fieldset.module div.tabular table tbody tr td input, div.inline-group div.tabular table tbody tr td input {
   height: 24px;
   background: #f6f6f6;
@@ -2790,7 +2902,7 @@ fieldset.module div.tabular table tbody tr td input, div.inline-group div.tabula
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   width: auto;
 }
-/* line 1575, ../sass/screen.sass */
+/* line 1599, ../sass/screen.sass */
 fieldset.module div.tabular table tbody tr td button, div.inline-group div.tabular table tbody tr td button {
   width: 200px;
   color: white;
@@ -2810,7 +2922,7 @@ fieldset.module div.tabular table tbody tr td button, div.inline-group div.tabul
   background-color: #006fbb;
   cursor: pointer;
 }
-/* line 1581, ../sass/screen.sass */
+/* line 1605, ../sass/screen.sass */
 fieldset.module div.tabular table tbody tr td.link button, div.inline-group div.tabular table tbody tr td.link button {
   font-weight: bold;
   color: #747474;
@@ -2822,16 +2934,16 @@ fieldset.module div.tabular table tbody tr td.link button:after, div.inline-grou
   position: absolute;
   top: 0;
   left: 0;
-  background-position: 0 -500px;
+  background-position: 0 -584px;
   height: 14px;
   width: 14px;
 }
-/* line 1589, ../sass/screen.sass */
+/* line 1613, ../sass/screen.sass */
 fieldset.module div.tabular table tbody tr td.delete, div.inline-group div.tabular table tbody tr td.delete {
   padding: 0 10px 0 0;
   text-align: right;
 }
-/* line 1592, ../sass/screen.sass */
+/* line 1616, ../sass/screen.sass */
 fieldset.module div.tabular table tbody tr td.delete a.inline-deletelink, div.inline-group div.tabular table tbody tr td.delete a.inline-deletelink {
   text-indent: 0;
   padding: 0 0 0 20px;
@@ -2846,7 +2958,7 @@ fieldset.module div.tabular table tbody tr td.delete a.inline-deletelink:after, 
   position: absolute;
   top: 12px;
   left: 0;
-  background-position: 0 -114px;
+  background-position: 0 -142px;
   height: 14px;
   width: 14px;
 }
@@ -2856,15 +2968,15 @@ fieldset.module div.tabular table tbody tr td.delete a.inline-deletelink:hover:a
   position: absolute;
   top: 12px;
   left: 0;
-  background-position: 0 -170px;
+  background-position: 0 -212px;
   height: 14px;
   width: 14px;
 }
-/* line 1602, ../sass/screen.sass */
+/* line 1626, ../sass/screen.sass */
 fieldset.module div.tabular table tbody tr td.delete input[type="checkbox"], div.inline-group div.tabular table tbody tr td.delete input[type="checkbox"] {
   display: none;
 }
-/* line 1604, ../sass/screen.sass */
+/* line 1628, ../sass/screen.sass */
 fieldset.module div.tabular table tbody tr td.delete label, div.inline-group div.tabular table tbody tr td.delete label {
   cursor: pointer;
   font-weight: bold !important;
@@ -2873,7 +2985,7 @@ fieldset.module div.tabular table tbody tr td.delete label, div.inline-group div
   padding-left: 20px;
   margin-top: -4px;
 }
-/* line 1611, ../sass/screen.sass */
+/* line 1635, ../sass/screen.sass */
 fieldset.module div.tabular table tbody tr td.delete label.tabularinline_delete, div.inline-group div.tabular table tbody tr td.delete label.tabularinline_delete {
   color: #747474 !important;
 }
@@ -2883,11 +2995,11 @@ fieldset.module div.tabular table tbody tr td.delete label.tabularinline_delete:
   position: absolute;
   top: 1px;
   left: 0;
-  background-position: 0 -114px;
+  background-position: 0 -142px;
   height: 14px;
   width: 14px;
 }
-/* line 1614, ../sass/screen.sass */
+/* line 1638, ../sass/screen.sass */
 fieldset.module div.tabular table tbody tr td.delete label.tabularinline_delete:hover, div.inline-group div.tabular table tbody tr td.delete label.tabularinline_delete:hover {
   color: #f9910c !important;
 }
@@ -2897,11 +3009,11 @@ fieldset.module div.tabular table tbody tr td.delete label.tabularinline_delete:
   position: absolute;
   top: 1px;
   left: 0;
-  background-position: 0 -170px;
+  background-position: 0 -212px;
   height: 14px;
   width: 14px;
 }
-/* line 1617, ../sass/screen.sass */
+/* line 1641, ../sass/screen.sass */
 fieldset.module div.tabular table tbody tr td.delete label.undo_tabularinline_delete, div.inline-group div.tabular table tbody tr td.delete label.undo_tabularinline_delete {
   color: white !important;
 }
@@ -2915,7 +3027,7 @@ fieldset.module div.tabular table tbody tr td.delete label.undo_tabularinline_de
   height: 15px;
   width: 13px;
 }
-/* line 1620, ../sass/screen.sass */
+/* line 1644, ../sass/screen.sass */
 fieldset.module div.tabular table tbody tr td.delete label.undo_tabularinline_delete:hover, div.inline-group div.tabular table tbody tr td.delete label.undo_tabularinline_delete:hover {
   color: white !important;
 }
@@ -2929,19 +3041,19 @@ fieldset.module div.tabular table tbody tr td.delete label.undo_tabularinline_de
   height: 15px;
   width: 13px;
 }
-/* line 1623, ../sass/screen.sass */
+/* line 1647, ../sass/screen.sass */
 fieldset.module div.tabular table tbody tr td.delete label.hidden, div.inline-group div.tabular table tbody tr td.delete label.hidden {
   display: none;
 }
-/* line 1626, ../sass/screen.sass */
+/* line 1650, ../sass/screen.sass */
 fieldset.module div.tabular table tbody tr.tobe_removed, div.inline-group div.tabular table tbody tr.tobe_removed {
   background: #f9910c;
 }
-/* line 1628, ../sass/screen.sass */
+/* line 1652, ../sass/screen.sass */
 fieldset.module div.tabular table tbody tr.tobe_removed input, fieldset.module div.tabular table tbody tr.tobe_removed select, fieldset.module div.tabular table tbody tr.tobe_removed p, div.inline-group div.tabular table tbody tr.tobe_removed input, div.inline-group div.tabular table tbody tr.tobe_removed select, div.inline-group div.tabular table tbody tr.tobe_removed p {
   display: none;
 }
-/* line 1634, ../sass/screen.sass */
+/* line 1658, ../sass/screen.sass */
 fieldset.module div.tabular table tbody tr.add-row td, div.inline-group div.tabular table tbody tr.add-row td {
   border-top: 1px solid #efefef;
   background: white;
@@ -2949,7 +3061,7 @@ fieldset.module div.tabular table tbody tr.add-row td, div.inline-group div.tabu
   margin-bottom: 40px;
   *zoom: 1;
 }
-/* line 22, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
+/* line 22, ../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
 fieldset.module div.tabular table tbody tr.add-row td:after, div.inline-group div.tabular table tbody tr.add-row td:after {
   content: "\0020";
   display: block;
@@ -2958,7 +3070,7 @@ fieldset.module div.tabular table tbody tr.add-row td:after, div.inline-group di
   overflow: hidden;
   visibility: hidden;
 }
-/* line 1640, ../sass/screen.sass */
+/* line 1664, ../sass/screen.sass */
 fieldset.module div.tabular table tbody tr.add-row td a, div.inline-group div.tabular table tbody tr.add-row td a {
   height: 40px;
   line-height: 40px;
@@ -2981,21 +3093,21 @@ fieldset.module div.tabular table tbody tr.add-row td a:after, div.inline-group 
   position: absolute;
   top: 13px;
   left: 8px;
-  background-position: 0 -420px;
+  background-position: 0 -504px;
   height: 14px;
   width: 14px;
 }
-/* line 1645, ../sass/screen.sass */
+/* line 1669, ../sass/screen.sass */
 fieldset.module div.tabular table tbody tr.add-row td a:hover, div.inline-group div.tabular table tbody tr.add-row td a:hover {
   background-color: #006fbb;
   color: white;
 }
 
-/* line 1652, ../sass/screen.sass */
+/* line 1676, ../sass/screen.sass */
 table#change-history {
   width: 100%;
 }
-/* line 1655, ../sass/screen.sass */
+/* line 1679, ../sass/screen.sass */
 table#change-history thead th {
   height: 40px;
   line-height: 40px;
@@ -3005,60 +3117,60 @@ table#change-history thead th {
   border: none;
   padding: 3px 25px;
 }
-/* line 1663, ../sass/screen.sass */
+/* line 1687, ../sass/screen.sass */
 table#change-history thead th:first-child {
   width: 350px;
 }
-/* line 1666, ../sass/screen.sass */
+/* line 1690, ../sass/screen.sass */
 table#change-history tbody tr {
   border-bottom: 1px solid #cdcdcd;
 }
-/* line 1668, ../sass/screen.sass */
+/* line 1692, ../sass/screen.sass */
 table#change-history tbody tr td, table#change-history tbody tr th {
   padding: 10px 25px;
   vertical-align: top;
 }
-/* line 1671, ../sass/screen.sass */
+/* line 1695, ../sass/screen.sass */
 table#change-history tbody tr th {
   color: #006fbb;
 }
 
-/* line 1679, ../sass/screen.sass */
+/* line 1703, ../sass/screen.sass */
 p.datetime input {
   width: 75px;
   margin: 0 8px 8px 8px;
 }
-/* line 1682, ../sass/screen.sass */
+/* line 1706, ../sass/screen.sass */
 p.datetime input:first-child {
   margin-left: 11px;
 }
-/* line 1685, ../sass/screen.sass */
+/* line 1709, ../sass/screen.sass */
 p.datetime span.datetimeshortcuts a:first-child {
   font-size: 14px;
   color: #006fbb;
   margin-right: 5px;
 }
-/* line 1689, ../sass/screen.sass */
+/* line 1713, ../sass/screen.sass */
 p.datetime span.datetimeshortcuts a:first-child:hover {
   color: #f9910c;
 }
-/* line 1691, ../sass/screen.sass */
+/* line 1715, ../sass/screen.sass */
 p.datetime span.datetimeshortcuts a:last-child {
   display: inline-block;
   margin-left: 5px;
 }
-/* line 1694, ../sass/screen.sass */
+/* line 1718, ../sass/screen.sass */
 p.datetime span.datetimeshortcuts a:last-child img {
   margin-top: -3px;
 }
 
-/* line 1698, ../sass/screen.sass */
+/* line 1722, ../sass/screen.sass */
 div.clockbox, div.calendarbox {
   box-shadow: #434343 0 0 5px 0;
   border: none !important;
   margin: 22px 0 0 15px;
 }
-/* line 1702, ../sass/screen.sass */
+/* line 1726, ../sass/screen.sass */
 div.clockbox:before, div.calendarbox:before {
   content: "";
   position: absolute;
@@ -3070,7 +3182,7 @@ div.clockbox:before, div.calendarbox:before {
   border-top: 18px solid transparent;
   border-bottom: 18px solid transparent;
 }
-/* line 1712, ../sass/screen.sass */
+/* line 1736, ../sass/screen.sass */
 div.clockbox h2, div.calendarbox h2 {
   background: #006fbb;
   color: white;
@@ -3078,54 +3190,54 @@ div.clockbox h2, div.calendarbox h2 {
   font-size: 14px;
   border: none;
 }
-/* line 1718, ../sass/screen.sass */
+/* line 1742, ../sass/screen.sass */
 div.clockbox ul.timelist li, div.calendarbox ul.timelist li {
   border-bottom: 1px solid #f6f6f6;
 }
-/* line 1720, ../sass/screen.sass */
+/* line 1744, ../sass/screen.sass */
 div.clockbox ul.timelist li:last-child, div.calendarbox ul.timelist li:last-child {
   border-bottom: none;
 }
-/* line 1722, ../sass/screen.sass */
+/* line 1746, ../sass/screen.sass */
 div.clockbox ul.timelist li a, div.calendarbox ul.timelist li a {
   padding: 5px 0;
 }
-/* line 1724, ../sass/screen.sass */
+/* line 1748, ../sass/screen.sass */
 div.clockbox ul.timelist li a:hover, div.calendarbox ul.timelist li a:hover {
   background: #f9910c;
   color: white;
 }
-/* line 1727, ../sass/screen.sass */
+/* line 1751, ../sass/screen.sass */
 div.clockbox p.calendar-cancel, div.calendarbox p.calendar-cancel {
   border: none;
   font-size: 14px;
   background: #747474;
 }
-/* line 1731, ../sass/screen.sass */
+/* line 1755, ../sass/screen.sass */
 div.clockbox p.calendar-cancel a, div.calendarbox p.calendar-cancel a {
   color: white;
   padding: 5px 0;
 }
-/* line 1734, ../sass/screen.sass */
+/* line 1758, ../sass/screen.sass */
 div.clockbox p.calendar-cancel a:hover, div.calendarbox p.calendar-cancel a:hover {
   background: #f9910c;
 }
-/* line 1736, ../sass/screen.sass */
+/* line 1760, ../sass/screen.sass */
 div.clockbox table, div.calendarbox table {
   width: 100%;
 }
-/* line 1738, ../sass/screen.sass */
+/* line 1762, ../sass/screen.sass */
 div.clockbox .calendarnav-previous, div.clockbox .calendarnav-next, div.calendarbox .calendarnav-previous, div.calendarbox .calendarnav-next {
   background: #006fbb;
   height: 34px;
   line-height: 34px;
 }
-/* line 1742, ../sass/screen.sass */
+/* line 1766, ../sass/screen.sass */
 div.clockbox .calendarnav-previous:hover, div.clockbox .calendarnav-next:hover, div.calendarbox .calendarnav-previous:hover, div.calendarbox .calendarnav-next:hover {
   background: #003366;
   color: white;
 }
-/* line 1745, ../sass/screen.sass */
+/* line 1769, ../sass/screen.sass */
 div.clockbox caption, div.calendarbox caption {
   background: #006fbb;
   font-size: 14px;
@@ -3135,26 +3247,26 @@ div.clockbox caption, div.calendarbox caption {
   padding: 3px 0;
   width: 100%;
 }
-/* line 1754, ../sass/screen.sass */
+/* line 1778, ../sass/screen.sass */
 div.clockbox table td.today a, div.calendarbox table td.today a {
   background: #ed8d1f;
   color: white;
 }
-/* line 1757, ../sass/screen.sass */
+/* line 1781, ../sass/screen.sass */
 div.clockbox table td a:hover, div.calendarbox table td a:hover {
   background: #006fbb;
 }
 
-/* line 1764, ../sass/screen.sass */
+/* line 1788, ../sass/screen.sass */
 .ui-dialog fieldset {
   border-radius: 5px;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
-/* line 1767, ../sass/screen.sass */
+/* line 1791, ../sass/screen.sass */
 .ui-dialog fieldset p.help {
   margin-left: 87px;
 }
-/* line 1769, ../sass/screen.sass */
+/* line 1793, ../sass/screen.sass */
 .ui-dialog fieldset button {
   background: none;
   height: 28px;
@@ -3175,7 +3287,7 @@ div.clockbox table td a:hover, div.calendarbox table td a:hover {
   box-shadow: #55a6eb 0 1px 0 0 inset;
   cursor: pointer;
 }
-/* line 1788, ../sass/screen.sass */
+/* line 1812, ../sass/screen.sass */
 .ui-dialog fieldset button:hover {
   background: #208cea;
   background-image: -webkit-linear-gradient(top, #4da5f2, #208cea);
@@ -3184,7 +3296,7 @@ div.clockbox table td a:hover, div.calendarbox table td a:hover {
   background-image: -ms-linear-gradient(top, #4da5f2, #208cea);
   box-shadow: #79baf2 0 1px 0 0 inset;
 }
-/* line 1795, ../sass/screen.sass */
+/* line 1819, ../sass/screen.sass */
 .ui-dialog fieldset button:active {
   background: #116bb9;
   background-image: -webkit-linear-gradient(top, #116bb9, #208cea);
@@ -3192,18 +3304,18 @@ div.clockbox table td a:hover, div.calendarbox table td a:hover {
   background-image: -o-linear-gradient(top, #116bb9, #208cea);
   background-image: -ms-linear-gradient(top, #116bb9, #208cea);
 }
-/* line 1802, ../sass/screen.sass */
+/* line 1826, ../sass/screen.sass */
 .ui-dialog fieldset div.advanced {
   background: #efefef;
   border-top: 1px solid #cccccc;
   margin: 0;
   padding: 5px 10px 5px 18px;
 }
-/* line 1807, ../sass/screen.sass */
+/* line 1831, ../sass/screen.sass */
 .ui-dialog fieldset div.field-is_active {
   border-top: 1px solid #cccccc;
 }
-/* line 1809, ../sass/screen.sass */
+/* line 1833, ../sass/screen.sass */
 .ui-dialog fieldset div.advanced a {
   display: inline-block;
   margin: 5px 0;
@@ -3224,7 +3336,7 @@ div.clockbox table td a:hover, div.calendarbox table td a:hover {
   cursor: pointer;
   cursor: pointer;
 }
-/* line 1828, ../sass/screen.sass */
+/* line 1852, ../sass/screen.sass */
 .ui-dialog fieldset div.advanced a:hover {
   background: #7b7b7c;
   background-image: -webkit-linear-gradient(top, #b4b4b4, #909090);
@@ -3232,7 +3344,7 @@ div.clockbox table td a:hover, div.calendarbox table td a:hover {
   background-image: -o-linear-gradient(top, #b4b4b4, #909090);
   background-image: -ms-linear-gradient(top, #b4b4b4, #909090);
 }
-/* line 1834, ../sass/screen.sass */
+/* line 1858, ../sass/screen.sass */
 .ui-dialog fieldset div.advanced a:active {
   background: #969595;
   background-image: -webkit-linear-gradient(top, #969595, #ababab);
@@ -3241,31 +3353,31 @@ div.clockbox table td a:hover, div.calendarbox table td a:hover {
   background-image: -ms-linear-gradient(top, #969595, #ababab);
 }
 
-/* line 1845, ../sass/screen.sass */
+/* line 1869, ../sass/screen.sass */
 #menuitem_set-group {
   margin: 0;
   border: 1px solid #c5c5c5;
 }
-/* line 1849, ../sass/screen.sass */
+/* line 1873, ../sass/screen.sass */
 #menuitem_set-group li.inline-related {
   cursor: move;
 }
-/* line 1851, ../sass/screen.sass */
+/* line 1875, ../sass/screen.sass */
 #menuitem_set-group li li.inline-related {
   background: url(images/icon_nested_arrow.png) left top no-repeat transparent;
 }
-/* line 1853, ../sass/screen.sass */
+/* line 1877, ../sass/screen.sass */
 #menuitem_set-group li.inline-related fieldset {
   background: #fcfcfc;
   width: 100%;
   padding: 0 10px 0 10px;
   margin: 5px 0 0 -10px;
 }
-/* line 1858, ../sass/screen.sass */
+/* line 1882, ../sass/screen.sass */
 #menuitem_set-group li:nth-child(even) {
   background: #f6f6f6;
 }
-/* line 1860, ../sass/screen.sass */
+/* line 1884, ../sass/screen.sass */
 #menuitem_set-group li div {
   border: none;
   margin: 0;
@@ -3275,22 +3387,22 @@ div.clockbox table td a:hover, div.calendarbox table td a:hover {
   list-style: none;
   position: relative;
 }
-/* line 1868, ../sass/screen.sass */
+/* line 1892, ../sass/screen.sass */
 #menuitem_set-group li li div {
   border-top: 1px dashed #c5c5c5;
   background: transparent;
 }
-/* line 1872, ../sass/screen.sass */
+/* line 1896, ../sass/screen.sass */
 #menuitem_set-group li div.form-row {
   border-top: none;
   padding: 0;
   background: transparent;
 }
-/* line 1876, ../sass/screen.sass */
+/* line 1900, ../sass/screen.sass */
 #menuitem_set-group li div.object_id div {
   min-height: 29px !important;
 }
-/* line 1878, ../sass/screen.sass */
+/* line 1902, ../sass/screen.sass */
 #menuitem_set-group li div.object_id div button {
   background: none;
   height: 28px;
@@ -3310,7 +3422,7 @@ div.clockbox table td a:hover, div.calendarbox table td a:hover {
   background-image: -ms-linear-gradient(top, #208cea, #116bb9);
   box-shadow: #55a6eb 0 1px 0 0 inset;
 }
-/* line 1896, ../sass/screen.sass */
+/* line 1920, ../sass/screen.sass */
 #menuitem_set-group li div.object_id div button:hover {
   background: #208cea;
   background-image: -webkit-linear-gradient(top, #4da5f2, #208cea);
@@ -3319,7 +3431,7 @@ div.clockbox table td a:hover, div.calendarbox table td a:hover {
   background-image: -ms-linear-gradient(top, #4da5f2, #208cea);
   box-shadow: #79baf2 0 1px 0 0 inset;
 }
-/* line 1903, ../sass/screen.sass */
+/* line 1927, ../sass/screen.sass */
 #menuitem_set-group li div.object_id div button:active {
   background: #116bb9;
   background-image: -webkit-linear-gradient(top, #116bb9, #208cea);
@@ -3327,12 +3439,12 @@ div.clockbox table td a:hover, div.calendarbox table td a:hover {
   background-image: -o-linear-gradient(top, #116bb9, #208cea);
   background-image: -ms-linear-gradient(top, #116bb9, #208cea);
 }
-/* line 1909, ../sass/screen.sass */
+/* line 1933, ../sass/screen.sass */
 #menuitem_set-group li div.form-row div {
   border-top: 1px solid #c5c5c5;
   padding: 10px;
 }
-/* line 1912, ../sass/screen.sass */
+/* line 1936, ../sass/screen.sass */
 #menuitem_set-group li h4 {
   text-shadow: none;
   margin: 0;
@@ -3340,72 +3452,53 @@ div.clockbox table td a:hover, div.calendarbox table td a:hover {
   background: transparent;
   border: none;
 }
-/* line 1918, ../sass/screen.sass */
+/* line 1942, ../sass/screen.sass */
 #menuitem_set-group li h4 span.inline_label {
   color: #434343;
   font-size: 16px;
   margin-right: 5px;
   text-transform: none;
 }
-/* line 1923, ../sass/screen.sass */
+/* line 1947, ../sass/screen.sass */
 #menuitem_set-group li li h4 span.inline_label {
   font-size: 14px;
   text-transform: none;
   font-weight: normal;
 }
-/* line 1929, ../sass/screen.sass */
+/* line 1953, ../sass/screen.sass */
 #menuitem_set-group li h4 span.delete input {
   vertical-align: middle;
 }
-/* line 1932, ../sass/screen.sass */
+/* line 1956, ../sass/screen.sass */
 #menuitem_set-group li h4 span.detail a:link, #menuitem_set-group li h4 span.detail a:visited {
   opacity: 1;
   color: #ed8d1f;
   font-weight: bold;
   text-transform: uppercase;
 }
-/* line 1938, ../sass/screen.sass */
+/* line 1962, ../sass/screen.sass */
 #menuitem_set-group li h4 a:link, #menuitem_set-group li h4 a:visited {
   text-transform: none;
   font-weight: normal;
   color: #666666;
   opacity: 0.15;
 }
-/* line 1943, ../sass/screen.sass */
+/* line 1967, ../sass/screen.sass */
 #menuitem_set-group li h4 span.delete {
   text-transform: none;
   font-weight: normal;
   color: #666666;
   opacity: 0.15;
 }
-/* line 1949, ../sass/screen.sass */
+/* line 1973, ../sass/screen.sass */
 #menuitem_set-group div:hover h4 a, #menuitem_set-group div:hover h4 span.delete {
   opacity: 1;
 }
-/* line 1952, ../sass/screen.sass */
+/* line 1976, ../sass/screen.sass */
 #menuitem_set-group li h4 a:hover {
   color: #ed8d1f;
 }
-/* line 1954, ../sass/screen.sass */
+/* line 1978, ../sass/screen.sass */
 #menuitem_set-group li h4 span.delete {
   margin-right: 10px;
-}
-
-/* line 1982, ../sass/screen.sass */
-footer {
-  width: 960px;
-  margin: 0 auto;
-}
-/* line 1985, ../sass/screen.sass */
-footer p {
-  height: 24px;
-  width: 121px;
-  margin: 0 auto;
-  text-indent: -9999px;
-}
-/* line 1990, ../sass/screen.sass */
-footer p a {
-  display: block;
-  padding: 15px;
-  background: url(images/footer_csky.png) center no-repeat;
 }
