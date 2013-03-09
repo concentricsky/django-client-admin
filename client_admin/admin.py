@@ -5,11 +5,12 @@ from client_admin.widgets import ThumbnailImageWidget, AdminURLFieldWidget
 from django.conf import settings
 from django.conf.urls.defaults import patterns, url
 from django.contrib import admin
-from django.contrib.admin import widgets, helpers
+from django.contrib.admin import helpers
 from django.contrib.admin.templatetags.admin_static import static
 from django.contrib.admin.util import unquote
 from django.contrib.contenttypes import generic
 from django.core.urlresolvers import reverse
+from django.core.exceptions import PermissionDenied
 from django.db import transaction
 from django.db.models import ImageField, ManyToManyField, FieldDoesNotExist, URLField
 from django.forms.formsets import all_valid
@@ -20,14 +21,10 @@ from django.utils.html import escape
 from django.utils.translation import ugettext as _
 from django.views.decorators.csrf import csrf_protect
 
-from functools import update_wrapper, partial
-
 csrf_protect_m = method_decorator(csrf_protect)
 
 JS_PATH = getattr(settings, 'GENERICADMIN_JS', 'client_admin/js/')
 
-
-from django.contrib.admin.helpers import AdminReadonlyField, AdminField
 
 
 # class GroupedAdminForm(helpers.AdminForm):
@@ -131,6 +128,7 @@ class RecursiveInlinesModelAdmin(admin.ModelAdmin):
 
     def wrap_recursive_inline_formsets(self, request, inline, formset):
         media = None
+
         def get_media(extra_media):
             if media:
                 return media + extra_media
@@ -141,7 +139,6 @@ class RecursiveInlinesModelAdmin(admin.ModelAdmin):
             wrapped_recursive_formsets = []
             if hasattr(form, 'recursive_formsets') and hasattr(inline, 'get_inline_instances'):
                 for recursive_inline, recursive_formset in zip(inline.get_inline_instances(request), form.recursive_formsets):
-                    instance = form.instance if form.instance.pk else None
                     fieldsets = list(recursive_inline.get_fieldsets(request))
                     readonly = list(recursive_inline.get_readonly_fields(request))
                     prepopulated = dict(recursive_inline.get_prepopulated_fields(request))
@@ -233,7 +230,8 @@ class RecursiveInlinesModelAdmin(admin.ModelAdmin):
                 if hasattr(inline, 'inlines'):
                     self.add_recursive_inline_formsets(request, inline, formset)
 
-        adminForm = helpers.AdminForm(form, list(self.get_fieldsets(request)),
+        adminForm = helpers.AdminForm(form, list(
+            self.get_fieldsets(request)),
             self.get_prepopulated_fields(request),
             self.get_readonly_fields(request),
             model_admin=self)
@@ -244,8 +242,9 @@ class RecursiveInlinesModelAdmin(admin.ModelAdmin):
             fieldsets = list(inline.get_fieldsets(request))
             readonly = list(inline.get_readonly_fields(request))
             prepopulated = dict(inline.get_prepopulated_fields(request))
-            inline_admin_formset = helpers.InlineAdminFormSet(inline, formset,
-                fieldsets, prepopulated, readonly, model_admin=self)
+            inline_admin_formset = helpers.InlineAdminFormSet(
+                inline, formset, fieldsets, prepopulated,
+                readonly, model_admin=self)
             inline_admin_formsets.append(inline_admin_formset)
             media = media + inline_admin_formset.media
             if hasattr(inline, 'inlines'):
@@ -281,9 +280,9 @@ class RecursiveInlinesModelAdmin(admin.ModelAdmin):
             raise Http404(_('%(name)s object with primary key %(key)r does not exist.') % {'name': force_unicode(opts.verbose_name), 'key': escape(object_id)})
 
         if request.method == 'POST' and "_saveasnew" in request.POST:
-            return self.add_view(request, form_url=reverse('admin:%s_%s_add' %
-                                    (opts.app_label, opts.module_name),
-                                    current_app=self.admin_site.name))
+            return self.add_view(request, form_url=reverse(
+                'admin:%s_%s_add' % (opts.app_label, opts.module_name),
+                current_app=self.admin_site.name))
 
         ModelForm = self.get_form(request, obj)
         formsets = []
@@ -331,7 +330,8 @@ class RecursiveInlinesModelAdmin(admin.ModelAdmin):
                 if hasattr(inline, 'inlines') and hasattr(self, 'add_recursive_inline_formsets'):
                     self.add_recursive_inline_formsets(request, inline, formset)
 
-        adminForm = helpers.AdminForm(form, self.get_fieldsets(request, obj),
+        adminForm = helpers.AdminForm(
+            form, self.get_fieldsets(request, obj),
             self.get_prepopulated_fields(request, obj),
             self.get_readonly_fields(request, obj),
             model_admin=self)
@@ -342,8 +342,9 @@ class RecursiveInlinesModelAdmin(admin.ModelAdmin):
             fieldsets = list(inline.get_fieldsets(request, obj))
             readonly = list(inline.get_readonly_fields(request, obj))
             prepopulated = dict(inline.get_prepopulated_fields(request, obj))
-            inline_admin_formset = helpers.InlineAdminFormSet(inline, formset,
-                fieldsets, prepopulated, readonly, model_admin=self)
+            inline_admin_formset = helpers.InlineAdminFormSet(
+                inline, formset, fieldsets, prepopulated,
+                readonly, model_admin=self)
             inline_admin_formsets.append(inline_admin_formset)
             media = media + inline_admin_formset.media
             if hasattr(inline, 'inlines'):
@@ -365,7 +366,7 @@ class RecursiveInlinesModelAdmin(admin.ModelAdmin):
 
 
 class ReverseInlinesModelAdmin(admin.ModelAdmin):
-    
+
     def get_inline_instances(self, request):
         inline_instances = super(ReverseInlinesModelAdmin, self).get_inline_instances(request)
         for inline_class in self.inverse_inlines:
