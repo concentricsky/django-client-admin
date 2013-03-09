@@ -26,15 +26,13 @@ csrf_protect_m = method_decorator(csrf_protect)
 JS_PATH = getattr(settings, 'GENERICADMIN_JS', 'client_admin/js/')
 
 
-
 ## Recursive Inlines!
 ## inspired in part by https://code.djangoproject.com/ticket/9025
-
-class BaseRecursiveInline(object):
+class BaseRecursiveInlineMixin(object):
     inlines = []
     extra = 0
 
-    def get_inline_instances(self, request):
+    def get_inline_instances(self, request, obj=None):
         for inline_class in self.inlines:
             inline = inline_class(self.model, self.admin_site)
             if request:
@@ -47,12 +45,8 @@ class BaseRecursiveInline(object):
             yield inline
 
 
-
 class RecursiveInlinesModelAdmin(admin.ModelAdmin):
     grouped_fields = []
-
-    class Media:
-        pass
 
     def __init__(self, model, admin_site):
         media = list(getattr(self.Media, 'js', ()))
@@ -156,7 +150,7 @@ class RecursiveInlinesModelAdmin(admin.ModelAdmin):
                                   save_as_new="_saveasnew" in request.POST,
                                   prefix=prefix, queryset=inline.queryset(request))
                 formsets.append(formset)
-                if getattr(inline, 'inlines', None) and inline.inlines:
+                if hasattr(inline, 'inlines') and inline.inlines:
                     self.add_recursive_inline_formsets(request, inline, formset)
             if self.all_valid(formsets) and form_validated:
                 self.save_model(request, new_object, form, False)
@@ -322,20 +316,21 @@ class RecursiveInlinesModelAdmin(admin.ModelAdmin):
         return self.render_change_form(request, context, change=True, obj=obj, form_url=form_url)
 
 
-class ReverseInlinesModelAdmin(admin.ModelAdmin):
+class ReverseInlinesModelAdminMixin(object):
 
-    def get_inline_instances(self, request):
-        inline_instances = super(ReverseInlinesModelAdmin, self).get_inline_instances(request)
-        for inline_class in self.inverse_inlines:
-            inline = inline_class(self.model, self.admin_site)
-            if request:
-                if not (inline.has_add_permission(request) or
-                        inline.has_change_permission(request) or
-                        inline.has_delete_permission(request)):
-                    continue
-                if not inline.has_add_permission(request):
-                    inline.max_num = 0
-            inline_instances.append(inline)
+    def get_inline_instances(self, request, obj=None):
+        inline_instances = super(ReverseInlinesModelAdminMixin, self).get_inline_instances(request)
+        if hasattr(self, 'inverse_inlines'):
+            for inline_class in self.inverse_inlines:
+                inline = inline_class(self.model, self.admin_site)
+                if request:
+                    if not (inline.has_add_permission(request) or
+                            inline.has_change_permission(request) or
+                            inline.has_delete_permission(request)):
+                        continue
+                    if not inline.has_add_permission(request):
+                        inline.max_num = 0
+                inline_instances.append(inline)
         return inline_instances
 
 
@@ -399,32 +394,35 @@ class ImageWidgetMixin(object):
     }
 
 
-class GenericAdminModelAdmin(GenericModelAdminMixin, admin.ModelAdmin):
-    # Model admin for generic relations.
+class BaseClientAdminMixin(GenericModelAdminMixin, ImageWidgetMixin, URLFieldMixin):
     pass
 
 
-class GenericTabularInline(GenericModelAdminMixin, generic.GenericTabularInline):
+class GenericTabularInline(BaseClientAdminMixin, GenericModelAdminMixin, generic.GenericTabularInline):
     # Model admin for generic tabular inlines.
     pass
 
 
-class GenericStackedInline(GenericModelAdminMixin, generic.GenericStackedInline):
+class GenericStackedInline(BaseClientAdminMixin, GenericModelAdminMixin, generic.GenericStackedInline):
+    template = 'admin/edit_inline/grouped.html'
+
+
+class GenericGroupedInline(BaseClientAdminMixin, GenericModelAdminMixin, generic.GenericStackedInline):
     # Model admin for generic stacked inlines.
     pass
 
 
-class StackedRecursiveInline(BaseRecursiveInline, admin.StackedInline):
+class StackedInline(BaseRecursiveInlineMixin, BaseClientAdminMixin, admin.StackedInline):
     pass
 
 
-class TabularRecursiveInline(BaseRecursiveInline, admin.TabularInline):
+class TabularInline(BaseRecursiveInlineMixin, BaseClientAdminMixin, admin.TabularInline):
     pass
 
 
-class GroupedFieldInline(StackedRecursiveInline):
+class GroupedInline(StackedInline):
     template = 'admin/edit_inline/grouped.html'
 
 
-class ClientModelAdmin(ImageWidgetMixin, GenericModelAdminMixin, admin.ModelAdmin):
+class ClientModelAdmin(ReverseInlinesModelAdminMixin, BaseClientAdminMixin, RecursiveInlinesModelAdmin):
     pass
