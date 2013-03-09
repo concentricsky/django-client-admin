@@ -56,7 +56,13 @@
             {% endfor %}
             {% endfor %}
             {% if inline_admin_formset.formset.can_delete %}
-            <td class="delete">{% if inline_admin_form.original or not forloop.last %}{{ inline_admin_form.deletion_field.field }}{% endif %}</td>
+            <td class="delete">
+              {% if inline_admin_form.original or not forloop.last %}
+                {{ inline_admin_form.deletion_field.field }}
+                <label for="id_{{ inline_admin_formset.formset.prefix }}-{{ forloop.counter0 }}-DELETE" class="tabularinline_delete">Delete</label>
+                <label for="id_{{ inline_admin_formset.formset.prefix }}-{{ forloop.counter0 }}-DELETE" class="undo_tabularinline_delete hidden">Undo Delete</label>
+              {% endif %}
+            </td>
             {% endif %}
             </tr>
             {% if inline_admin_form.form.inline_admin_formsets %}
