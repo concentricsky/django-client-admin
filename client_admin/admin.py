@@ -108,7 +108,7 @@ class RecursiveInlinesModelAdmin(admin.ModelAdmin):
         for formset in formsets:
             if formset.is_bound:
                 for form in formset:
-                    if hasattr(form, 'recursive_formsets'):
+                    if hasattr(form, 'recursive_formsets') and form.recursive_formsets:
                         if not self.all_valid(form.recursive_formsets):
                             return False
                         # gross gross gross
