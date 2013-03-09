@@ -27,41 +27,6 @@ JS_PATH = getattr(settings, 'GENERICADMIN_JS', 'client_admin/js/')
 
 
 
-# class GroupedAdminForm(helpers.AdminForm):
-#     def __iter__(self):
-#         for name, options in self.fieldsets:
-#             yield GroupedFieldset(self.form, name,
-#                 readonly_fields=self.readonly_fields,
-#                 model_admin=self.model_admin,
-#                 **options
-#             )
-
-
-# class GroupedFieldset(helpers.Fieldset):
-#     def __iter__(self):
-#         for field in self.fields:
-#             yield GroupedFieldline(self.form, field, self.readonly_fields, model_admin=self.model_admin)
-
-
-# class GroupedFieldline(helpers.Fieldline):
-#     def __iter__(self):
-#         for i, field in enumerate(self.fields):
-#             try:
-#                 grouped_fields = self.model_admin.grouped_fields
-#             except AttributeError:
-#                 grouped_fields = []
-#             if field in grouped_fields:
-#                 pass
-#             else:
-#                 if field in self.readonly_fields:
-#                     yield AdminReadonlyField(self.form, field, is_first=(i == 0),
-#                         model_admin=self.model_admin)
-#                 else:
-#                     yield AdminField(self.form, field, is_first=(i == 0))
-
-
-
-
 ## Recursive Inlines!
 ## inspired in part by https://code.djangoproject.com/ticket/9025
 
@@ -81,14 +46,6 @@ class BaseRecursiveInline(object):
                     inline.max_num = 0
             yield inline
 
-class StackedRecursiveInline(BaseRecursiveInline, admin.StackedInline):
-    template = 'admin/edit_inline/stacked.html'
-
-class TabularRecursiveInline(BaseRecursiveInline, admin.TabularInline):
-    template = 'admin/edit_inline/tabular.html'
-
-class GroupedFieldInline(admin.StackedInline):
-    template = 'admin/edit_inline/grouped.html'
 
 
 class RecursiveInlinesModelAdmin(admin.ModelAdmin):
@@ -455,6 +412,18 @@ class GenericTabularInline(GenericModelAdminMixin, generic.GenericTabularInline)
 class GenericStackedInline(GenericModelAdminMixin, generic.GenericStackedInline):
     # Model admin for generic stacked inlines.
     pass
+
+
+class StackedRecursiveInline(BaseRecursiveInline, admin.StackedInline):
+    pass
+
+
+class TabularRecursiveInline(BaseRecursiveInline, admin.TabularInline):
+    pass
+
+
+class GroupedFieldInline(StackedRecursiveInline):
+    template = 'admin/edit_inline/grouped.html'
 
 
 class ClientModelAdmin(ImageWidgetMixin, GenericModelAdminMixin, admin.ModelAdmin):
