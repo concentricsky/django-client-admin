@@ -85,18 +85,18 @@ class BaseRecursiveInline(object):
             yield inline
 
 class StackedRecursiveInline(BaseRecursiveInline, admin.StackedInline):
-    template = 'admin/edit_inline/stacked_recursive.html'
+    template = 'admin/edit_inline/stacked.html'
 
 class TabularRecursiveInline(BaseRecursiveInline, admin.TabularInline):
-    template = 'admin/edit_inline/tabular_recursive.html'
+    template = 'admin/edit_inline/tabular.html'
 
 class GroupedFieldInline(admin.StackedInline):
-    template = 'admin/edit_inline/grouped_field.html'
+    template = 'admin/edit_inline/grouped.html'
 
 
 class RecursiveInlinesModelAdmin(admin.ModelAdmin):
     grouped_fields = []
-    
+
     class Media:
         pass
 
