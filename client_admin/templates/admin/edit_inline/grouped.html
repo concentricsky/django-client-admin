@@ -1,110 +1,53 @@
 {% load i18n admin_static %}
 
+<fieldset class="module {{ fieldset.classes }}" id="{{ inline_admin_formset.formset.prefix }}-group">
+    <h2>{{ inline_admin_formset.opts.verbose_name_plural|title }}</h2>
+    {{ inline_admin_formset.formset.management_form }}
+    {{ inline_admin_formset.formset.non_form_errors }}
 
-<!--
-{% comment %}
+    <div class="form-row grouped{% if line.fields|length_is:'1' and line.errors %} errors{% endif %}{% for field in line %}{% if field.field.name %} field-{{ field.field.name }}{% endif %}{% endfor %}">
 
-{% for inline_admin_form in inline_admin_formset %}
-    <div class="inline-related{% if forloop.last %} empty-form last-related{% endif %}" id="{{ inline_admin_formset.formset.prefix }}-{% if not forloop.last %}{{ forloop.counter0 }}{% else %}empty{% endif %}">
-        <h3><b>{{ inline_admin_formset.opts.verbose_name|title }}:</b>&nbsp;
-            <span class="inline_label">{% if inline_admin_form.original %}{{ inline_admin_form.original }}{% else %}#{{ forloop.counter }}{% endif %}</span>
-            {% if inline_admin_form.show_url %}
-                <a href="{% url 'admin:view_on_site' inline_admin_form.original_content_type_id inline_admin_form.original.pk %}">{% trans "View on site" %}</a>
-            {% endif %}
-            {% if inline_admin_formset.formset.can_delete and inline_admin_form.original %}
-                <span class="delete">{{ inline_admin_form.deletion_field.field }} {{ inline_admin_form.deletion_field.label_tag }}</span>
-            {% endif %}
-        </h3>
-        {% if inline_admin_form.form.non_field_errors %}{{ inline_admin_form.form.non_field_errors }}{% endif %}
-        {% for fieldset in inline_admin_form %}
-            {% include "admin/includes/fieldset.html" %}
-        {% endfor %}
-        {% if inline_admin_form.has_auto_field %}{{ inline_admin_form.pk_field.field }}{% endif %}
-        {{ inline_admin_form.fk_field.field }}
-    </div>
-{% endfor %}
-
-
-{% for inline_admin_form in inline_admin_formset %}
-    <div class="form-row{% if line.fields|length_is:'1' and line.errors %} errors{% endif %}{% for field in line %}{% if field.field.name %} field-{{ field.field.name }}{% endif %}{% endfor %}">
-        {% if line.fields|length_is:'1' %}{{ line.errors }}{% endif %}
-        {% for field in line %}
-            <div{% if not line.fields|length_is:'1' %} class="field-box{% if field.field.name %} field-{{ field.field.name }}{% endif %}{% if not field.is_readonly and field.errors %} errors{% endif %}"{% endif %}>
-                {% if not line.fields|length_is:'1' and not field.is_readonly %}{{ field.errors }}{% endif %}
-                {% if field.is_checkbox %}
-                    {{ field.field }}{{ field.label_tag }}
-                {% else %}
-                    {{ field.label_tag }}
-                    {% if field.is_readonly %}
-                        <p>{{ field.contents|linebreaksbr }}</p>
-                    {% else %}
-                        {{ field.field }}
-                    {% endif %}
-                {% endif %}
-                {% if field.field.help_text %}
-                    <p class="help">{{ field.field.help_text|safe }}</p>
-                {% endif %}
-            </div>
-        {% endfor %}
-    </div>
-{% endfor %}
-
-{% endcomment %}
--->
-
-    <fieldset class="module {{ fieldset.classes }}" id="{{ inline_admin_formset.formset.prefix }}-group">
-        <h2>{{ inline_admin_formset.opts.verbose_name_plural|title }}</h2>
-        {{ inline_admin_formset.formset.management_form }}
-        {{ inline_admin_formset.formset.non_form_errors }}
-
-        <div class="form-row grouped{% if line.fields|length_is:'1' and line.errors %} errors{% endif %}{% for field in line %}{% if field.field.name %} field-{{ field.field.name }}{% endif %}{% endfor %}">
-
-            {% for inline_admin_form in inline_admin_formset %}
-                <ul class="inline-related{% if forloop.last %} empty-form last-related{% endif %}" id="{{ inline_admin_formset.formset.prefix }}-{% if not forloop.last %}{{ forloop.counter0 }}{% else %}empty{% endif %}">
-                    {% if inline_admin_form.form.non_field_errors %}{{ inline_admin_form.form.non_field_errors }}{% endif %}
-                    {% for fieldset in inline_admin_form %}
-                            {% for line in fieldset %}
-                                {% if line.fields|length_is:'1' %}{{ line.errors }}{% endif %}
-                                {% for field in line %}
-                                    <li class="field-box{% if field.field.name %} field-{{ field.field.name }}{% endif %}{% if not field.is_readonly and field.errors %} errors{% endif %}">
-                                        {% if not line.fields|length_is:'1' and not field.is_readonly %}{{ field.errors }}{% endif %}
-                                        {% if field.is_checkbox %}
-                                            {{ field.field }}{{ field.label_tag }}
+        {% for inline_admin_form in inline_admin_formset %}
+            <ul class="inline-related{% if forloop.last %} empty-form last-related{% endif %}" id="{{ inline_admin_formset.formset.prefix }}-{% if not forloop.last %}{{ forloop.counter0 }}{% else %}empty{% endif %}">
+                {% if inline_admin_form.form.non_field_errors %}{{ inline_admin_form.form.non_field_errors }}{% endif %}
+                {% for fieldset in inline_admin_form %}
+                        {% for line in fieldset %}
+                            {% if line.fields|length_is:'1' %}{{ line.errors }}{% endif %}
+                            {% for field in line %}
+                                <li class="field-box{% if field.field.name %} field-{{ field.field.name }}{% endif %}{% if not field.is_readonly and field.errors %} errors{% endif %}">
+                                    {% if not line.fields|length_is:'1' and not field.is_readonly %}{{ field.errors }}{% endif %}
+                                    {% if field.is_checkbox %}
+                                        {{ field.field }}{{ field.label_tag }}
+                                    {% else %}
+                                        {% if field.is_readonly %}
+                                            <p>{{ field.contents|linebreaksbr }}</p>
                                         {% else %}
-                                            {% if field.is_readonly %}
-                                                <p>{{ field.contents|linebreaksbr }}</p>
-                                            {% else %}
-                                                {{ field.field }}
-                                            {% endif %}
+                                            {{ field.field }}
                                         {% endif %}
-                                        {% if field.field.help_text %}
-                                            <p class="help">{{ field.field.help_text|safe }}</p>
-                                        {% endif %}
-                                    </li>
-                                {% endfor %}
+                                    {% endif %}
+                                    {% if field.field.help_text %}
+                                        <p class="help">{{ field.field.help_text|safe }}</p>
+                                    {% endif %}
+                                </li>
                             {% endfor %}
+                        {% endfor %}
 
-                            {% if inline_admin_formset.formset.can_delete and inline_admin_form.original %}
-                                <div class="field-box delete">
-                                    {{ inline_admin_form.deletion_field.field }} {{ inline_admin_form.deletion_field.label_tag }}
-                                </div>
-                            {% endif %}
+                        {% if inline_admin_formset.formset.can_delete and inline_admin_form.original %}
+                            <span class="delete">{{ inline_admin_form.deletion_field.field }}
+                                <label for="id_{{ inline_admin_formset.formset.prefix }}-{{ forloop.counter0 }}-DELETE" class="stackedinline_delete">{{ inline_admin_form.deletion_field.label_tag }}</label>
+                                <label for="id_{{ inline_admin_formset.formset.prefix }}-{{ forloop.counter0 }}-DELETE" class="undo_stackedinline_delete hidden">Undo {{ inline_admin_form.deletion_field.label_tag }}</label>
+                            </span>
+                        {% endif %}
 
+                {% endfor %}
 
-                    {% endfor %}
+                {% if inline_admin_form.has_auto_field %}{{ inline_admin_form.pk_field.field }}{% endif %}
+                {{ inline_admin_form.fk_field.field }}
+            </ul>
+        {% endfor %}
 
-
-
-                    {% if inline_admin_form.has_auto_field %}{{ inline_admin_form.pk_field.field }}{% endif %}
-                    {{ inline_admin_form.fk_field.field }}
-                </ul>
-            {% endfor %}
-
-        </div>
-    </fieldset>
-
-
-
+    </div>
+</fieldset>
 
 <script type="text/javascript">
 (function($) {
@@ -112,7 +55,7 @@
     prefix: '{{ inline_admin_formset.formset.prefix }}',
     adminStaticPrefix: '{% static "admin/" %}',
     deleteText: "{% trans "Remove" %}",
-    addText: "{% blocktrans with verbose_name=inline_admin_formset.opts.verbose_name|title %}Add another {{ verbose_name }}{% endblocktrans %}"
+    addText: "{% trans "Add" %}"
   });
 })(django.jQuery);
 </script>
