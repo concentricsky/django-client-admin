@@ -36,8 +36,8 @@
                             <span class="delete">
                                 {% if inline_admin_form.original or not forloop.last %}
                                     {{ inline_admin_form.deletion_field.field }}
-                                    <label for="id_{{ inline_admin_formset.formset.prefix }}-{{ forloop.counter0 }}-DELETE" class="groupedinline_delete">Delete</label>
-                                    <label for="id_{{ inline_admin_formset.formset.prefix }}-{{ forloop.counter0 }}-DELETE" class="undo_groupedinline_delete hidden">Undo Delete</label>
+                                    <label for="id_{{ inline_admin_formset.formset.prefix }}-{{ forloop.counter0 }}-DELETE" class="groupedinline_delete">Delete</label><!-- 
+                                    <label for="id_{{ inline_admin_formset.formset.prefix }}-{{ forloop.counter0 }}-DELETE" class="undo_groupedinline_delete hidden">Undo Delete</label> -->
                                 {% endif %}
                             </span>
                         {% endif %}
