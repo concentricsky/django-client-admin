@@ -2837,6 +2837,8 @@ fieldset.module div.add-row a:hover, div.inline-group div.add-row a:hover {
 }
 /* line 1561, ../sass/screen.sass */
 fieldset.module div.tabular table, div.inline-group div.tabular table {
+  margin: 20px 0 40px 170px;
+  width: 790px !important;
   border: none;
 }
 /* line 1565, ../sass/screen.sass */
