@@ -552,6 +552,10 @@ header
         text-align: left
         margin: 0
         border-bottom: 1px solid #efefef
+        &:first-child
+          padding-right: 0
+          margin-right: 0
+          border-right: none
         &:last-child
           margin: 0
         a
@@ -1554,9 +1558,7 @@ fieldset.module, div.inline-group
   // Tabular Inlines
   //  - - - - - - - - - - - - - - -
   div.tabular
-    table    
-      margin: 20px 0 40px 170px
-      width: 790px !important
+    table
       border: none 
       thead 
         border: none

@@ -5,11 +5,12 @@ from client_admin.widgets import ThumbnailImageWidget, AdminURLFieldWidget
 from django.conf import settings
 from django.conf.urls.defaults import patterns, url
 from django.contrib import admin
-from django.contrib.admin import widgets, helpers
+from django.contrib.admin import helpers
 from django.contrib.admin.templatetags.admin_static import static
 from django.contrib.admin.util import unquote
 from django.contrib.contenttypes import generic
 from django.core.urlresolvers import reverse
+from django.core.exceptions import PermissionDenied
 from django.db import transaction
 from django.db.models import ImageField, ManyToManyField, FieldDoesNotExist, URLField
 from django.forms.formsets import all_valid
@@ -20,59 +21,28 @@ from django.utils.html import escape
 from django.utils.translation import ugettext as _
 from django.views.decorators.csrf import csrf_protect
 
-from functools import update_wrapper, partial
-
 csrf_protect_m = method_decorator(csrf_protect)
 
 JS_PATH = getattr(settings, 'GENERICADMIN_JS', 'client_admin/js/')
 
 
-from django.contrib.admin.helpers import AdminReadonlyField, AdminField
+class EmptyVersionAdmin(object):
+    pass
 
-
-# class GroupedAdminForm(helpers.AdminForm):
-#     def __iter__(self):
-#         for name, options in self.fieldsets:
-#             yield GroupedFieldset(self.form, name,
-#                 readonly_fields=self.readonly_fields,
-#                 model_admin=self.model_admin,
-#                 **options
-#             )
-
-
-# class GroupedFieldset(helpers.Fieldset):
-#     def __iter__(self):
-#         for field in self.fields:
-#             yield GroupedFieldline(self.form, field, self.readonly_fields, model_admin=self.model_admin)
-
-
-# class GroupedFieldline(helpers.Fieldline):
-#     def __iter__(self):
-#         for i, field in enumerate(self.fields):
-#             try:
-#                 grouped_fields = self.model_admin.grouped_fields
-#             except AttributeError:
-#                 grouped_fields = []
-#             if field in grouped_fields:
-#                 pass
-#             else:
-#                 if field in self.readonly_fields:
-#                     yield AdminReadonlyField(self.form, field, is_first=(i == 0),
-#                         model_admin=self.model_admin)
-#                 else:
-#                     yield AdminField(self.form, field, is_first=(i == 0))
-
-
+try:
+    import reversion
+    VersionAdmin = reversion.VersionAdmin
+except:
+    VersionAdmin = EmptyVersionAdmin
 
 
 ## Recursive Inlines!
 ## inspired in part by https://code.djangoproject.com/ticket/9025
-
-class BaseRecursiveInline(object):
+class BaseRecursiveInlineMixin(object):
     inlines = []
     extra = 0
 
-    def get_inline_instances(self, request):
+    def get_inline_instances(self, request, obj=None):
         for inline_class in self.inlines:
             inline = inline_class(self.model, self.admin_site)
             if request:
@@ -84,21 +54,9 @@ class BaseRecursiveInline(object):
                     inline.max_num = 0
             yield inline
 
-class StackedRecursiveInline(BaseRecursiveInline, admin.StackedInline):
-    template = 'admin/edit_inline/stacked_recursive.html'
-
-class TabularRecursiveInline(BaseRecursiveInline, admin.TabularInline):
-    template = 'admin/edit_inline/tabular_recursive.html'
-
-class GroupedFieldInline(admin.StackedInline):
-    template = 'admin/edit_inline/grouped_field.html'
-
 
 class RecursiveInlinesModelAdmin(admin.ModelAdmin):
     grouped_fields = []
-    
-    class Media:
-        pass
 
     def __init__(self, model, admin_site):
         media = list(getattr(self.Media, 'js', ()))
@@ -131,6 +89,7 @@ class RecursiveInlinesModelAdmin(admin.ModelAdmin):
 
     def wrap_recursive_inline_formsets(self, request, inline, formset):
         media = None
+
         def get_media(extra_media):
             if media:
                 return media + extra_media
@@ -141,7 +100,6 @@ class RecursiveInlinesModelAdmin(admin.ModelAdmin):
             wrapped_recursive_formsets = []
             if hasattr(form, 'recursive_formsets') and hasattr(inline, 'get_inline_instances'):
                 for recursive_inline, recursive_formset in zip(inline.get_inline_instances(request), form.recursive_formsets):
-                    instance = form.instance if form.instance.pk else None
                     fieldsets = list(recursive_inline.get_fieldsets(request))
                     readonly = list(recursive_inline.get_readonly_fields(request))
                     prepopulated = dict(recursive_inline.get_prepopulated_fields(request))
@@ -160,7 +118,7 @@ class RecursiveInlinesModelAdmin(admin.ModelAdmin):
         for formset in formsets:
             if formset.is_bound:
                 for form in formset:
-                    if hasattr(form, 'recursive_formsets'):
+                    if hasattr(form, 'recursive_formsets') and form.recursive_formsets:
                         if not self.all_valid(form.recursive_formsets):
                             return False
                         # gross gross gross
@@ -202,7 +160,7 @@ class RecursiveInlinesModelAdmin(admin.ModelAdmin):
                                   save_as_new="_saveasnew" in request.POST,
                                   prefix=prefix, queryset=inline.queryset(request))
                 formsets.append(formset)
-                if getattr(inline, 'inlines', None) and inline.inlines:
+                if hasattr(inline, 'inlines') and inline.inlines:
                     self.add_recursive_inline_formsets(request, inline, formset)
             if self.all_valid(formsets) and form_validated:
                 self.save_model(request, new_object, form, False)
@@ -233,7 +191,8 @@ class RecursiveInlinesModelAdmin(admin.ModelAdmin):
                 if hasattr(inline, 'inlines'):
                     self.add_recursive_inline_formsets(request, inline, formset)
 
-        adminForm = helpers.AdminForm(form, list(self.get_fieldsets(request)),
+        adminForm = helpers.AdminForm(form, list(
+            self.get_fieldsets(request)),
             self.get_prepopulated_fields(request),
             self.get_readonly_fields(request),
             model_admin=self)
@@ -244,8 +203,9 @@ class RecursiveInlinesModelAdmin(admin.ModelAdmin):
             fieldsets = list(inline.get_fieldsets(request))
             readonly = list(inline.get_readonly_fields(request))
             prepopulated = dict(inline.get_prepopulated_fields(request))
-            inline_admin_formset = helpers.InlineAdminFormSet(inline, formset,
-                fieldsets, prepopulated, readonly, model_admin=self)
+            inline_admin_formset = helpers.InlineAdminFormSet(
+                inline, formset, fieldsets, prepopulated,
+                readonly, model_admin=self)
             inline_admin_formsets.append(inline_admin_formset)
             media = media + inline_admin_formset.media
             if hasattr(inline, 'inlines'):
@@ -281,9 +241,9 @@ class RecursiveInlinesModelAdmin(admin.ModelAdmin):
             raise Http404(_('%(name)s object with primary key %(key)r does not exist.') % {'name': force_unicode(opts.verbose_name), 'key': escape(object_id)})
 
         if request.method == 'POST' and "_saveasnew" in request.POST:
-            return self.add_view(request, form_url=reverse('admin:%s_%s_add' %
-                                    (opts.app_label, opts.module_name),
-                                    current_app=self.admin_site.name))
+            return self.add_view(request, form_url=reverse(
+                'admin:%s_%s_add' % (opts.app_label, opts.module_name),
+                current_app=self.admin_site.name))
 
         ModelForm = self.get_form(request, obj)
         formsets = []
@@ -331,7 +291,8 @@ class RecursiveInlinesModelAdmin(admin.ModelAdmin):
                 if hasattr(inline, 'inlines') and hasattr(self, 'add_recursive_inline_formsets'):
                     self.add_recursive_inline_formsets(request, inline, formset)
 
-        adminForm = helpers.AdminForm(form, self.get_fieldsets(request, obj),
+        adminForm = helpers.AdminForm(
+            form, self.get_fieldsets(request, obj),
             self.get_prepopulated_fields(request, obj),
             self.get_readonly_fields(request, obj),
             model_admin=self)
@@ -342,8 +303,9 @@ class RecursiveInlinesModelAdmin(admin.ModelAdmin):
             fieldsets = list(inline.get_fieldsets(request, obj))
             readonly = list(inline.get_readonly_fields(request, obj))
             prepopulated = dict(inline.get_prepopulated_fields(request, obj))
-            inline_admin_formset = helpers.InlineAdminFormSet(inline, formset,
-                fieldsets, prepopulated, readonly, model_admin=self)
+            inline_admin_formset = helpers.InlineAdminFormSet(
+                inline, formset, fieldsets, prepopulated,
+                readonly, model_admin=self)
             inline_admin_formsets.append(inline_admin_formset)
             media = media + inline_admin_formset.media
             if hasattr(inline, 'inlines'):
@@ -364,48 +326,53 @@ class RecursiveInlinesModelAdmin(admin.ModelAdmin):
         return self.render_change_form(request, context, change=True, obj=obj, form_url=form_url)
 
 
-class ReverseInlinesModelAdmin(admin.ModelAdmin):
-    
-    def get_inline_instances(self, request):
-        inline_instances = super(ReverseInlinesModelAdmin, self).get_inline_instances(request)
-        for inline_class in self.inverse_inlines:
-            inline = inline_class(self.model, self.admin_site)
-            if request:
-                if not (inline.has_add_permission(request) or
-                        inline.has_change_permission(request) or
-                        inline.has_delete_permission(request)):
-                    continue
-                if not inline.has_add_permission(request):
-                    inline.max_num = 0
-            inline_instances.append(inline)
+class ReverseInlinesModelAdminMixin(object):
+
+    def get_inline_instances(self, request, obj=None):
+        inline_instances = super(ReverseInlinesModelAdminMixin, self).get_inline_instances(request)
+        if hasattr(self, 'inverse_inlines'):
+            for inline_class in self.inverse_inlines:
+                inline = inline_class(self.model, self.admin_site)
+                if request:
+                    if not (inline.has_add_permission(request) or
+                            inline.has_change_permission(request) or
+                            inline.has_delete_permission(request)):
+                        continue
+                    if not inline.has_add_permission(request):
+                        inline.max_num = 0
+                inline_instances.append(inline)
         return inline_instances
 
 
-# ## BaseGenericModelAdmin
-class BaseGenericModelAdmin(object):
+# ## GenericModelAdminMixin
+class GenericModelAdminMixin(object):
 
     class Media:
         js = ()
 
     content_type_lookups = {}
-    
+
     def __init__(self, model, admin_site):
         media = list(getattr(self.Media, 'js', ()))
         media.append(JS_PATH + 'genericadmin.js')
         self.Media.js = tuple(media)
-        super(BaseGenericModelAdmin, self).__init__(model, admin_site)
+        super(GenericModelAdminMixin, self).__init__(model, admin_site)
 
     def get_urls(self):
-        base_urls = super(BaseGenericModelAdmin, self).get_urls()
+        base_urls = super(GenericModelAdminMixin, self).get_urls()
         opts = self.get_generic_relation_options()
-        custom_urls = patterns('',
+        custom_urls = patterns(
+            '',
             url(r'^obj/$', self.admin_site.admin_view(generic_lookup), name='admin_genericadmin_obj_lookup'),
-            url(r'^get-generic-rel-list/$', self.admin_site.admin_view(get_generic_rel_list), kwargs=opts, 
+            url(
+                r'^get-generic-rel-list/$',
+                self.admin_site.admin_view(get_generic_rel_list),
+                kwargs=opts,
                 name='admin_genericadmin_rel_list'),
         )
         return custom_urls + base_urls
 
-    # Return a dictionary of keywords that are fed to the get_generic_rel_list view 
+    # Return a dictionary of keywords that are fed to the get_generic_rel_list view
     def get_generic_relation_options(self):
         return {'url_params': self.content_type_lookups,
                 'blacklist': self.get_blacklisted_relations(),
@@ -424,38 +391,6 @@ class BaseGenericModelAdmin(object):
             return ()
 
 
-class GenericAdminModelAdmin(BaseGenericModelAdmin, admin.ModelAdmin):
-    # Model admin for generic relations.
-    pass
-
-
-class GenericTabularInline(BaseGenericModelAdmin, generic.GenericTabularInline):
-    # Model admin for generic tabular inlines.
-    pass
-
-
-class GenericStackedInline(BaseGenericModelAdmin, generic.GenericStackedInline):
-    # Model admin for generic stacked inlines.
-    pass
-
-
-class ReverseInlinesModelAdmin(admin.ModelAdmin):
-    
-    def get_inline_instances(self, request):
-        inline_instances = super(ReverseInlinesModelAdmin, self).get_inline_instances(request)
-        for inline_class in self.inverse_inlines:
-            inline = inline_class(self.model, self.admin_site)
-            if request:
-                if not (inline.has_add_permission(request) or
-                        inline.has_change_permission(request) or
-                        inline.has_delete_permission(request)):
-                    continue
-                if not inline.has_add_permission(request):
-                    inline.max_num = 0
-            inline_instances.append(inline)
-        return inline_instances
-
-
 class URLFieldMixin(object):
     formfield_overrides = {
         URLField: {'widget': AdminURLFieldWidget},
@@ -469,5 +404,35 @@ class ImageWidgetMixin(object):
     }
 
 
-class ClientModelAdmin(ImageWidgetMixin, admin.ModelAdmin):
+class BaseClientAdminMixin(GenericModelAdminMixin, ImageWidgetMixin, URLFieldMixin):
+    pass
+
+
+class GenericTabularInline(BaseClientAdminMixin, GenericModelAdminMixin, generic.GenericTabularInline):
+    # Model admin for generic tabular inlines.
+    pass
+
+
+class GenericStackedInline(BaseClientAdminMixin, GenericModelAdminMixin, generic.GenericStackedInline):
+    template = 'admin/edit_inline/grouped.html'
+
+
+class GenericGroupedInline(BaseClientAdminMixin, GenericModelAdminMixin, generic.GenericStackedInline):
+    # Model admin for generic stacked inlines.
+    pass
+
+
+class StackedInline(BaseRecursiveInlineMixin, BaseClientAdminMixin, admin.StackedInline):
+    pass
+
+
+class TabularInline(BaseRecursiveInlineMixin, BaseClientAdminMixin, admin.TabularInline):
+    pass
+
+
+class GroupedInline(StackedInline):
+    template = 'admin/edit_inline/grouped.html'
+
+
+class ClientModelAdmin(VersionAdmin, ReverseInlinesModelAdminMixin, BaseClientAdminMixin, RecursiveInlinesModelAdmin):
     pass

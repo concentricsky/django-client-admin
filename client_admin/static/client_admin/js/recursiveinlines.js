@@ -355,7 +355,7 @@
             prefix : options.prefix,
             addText : options.addText,
             formCssClass : "dynamic-" + options.prefix,
-            deleteCssClass : "inline-deletelinkzz",
+            deleteCssClass : "inline-deletelink",
             deleteText : options.deleteText,
             emptyCssClass : "empty-form",
             removed : alternatingRows,
