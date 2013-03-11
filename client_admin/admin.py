@@ -405,7 +405,7 @@ class ImageWidgetMixin(object):
 
 
 class BaseClientAdminMixin(GenericModelAdminMixin, ImageWidgetMixin, URLFieldMixin):
-    pass
+    formfield_overrides = dict(ImageWidgetMixin.formfield_overrides.items() + URLFieldMixin.formfield_overrides.items())
 
 
 class GenericTabularInline(BaseClientAdminMixin, GenericModelAdminMixin, generic.GenericTabularInline):
