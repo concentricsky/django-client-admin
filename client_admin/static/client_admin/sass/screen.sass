@@ -1593,7 +1593,7 @@ fieldset.module, div.inline-group
           &:last-child
             border-bottom: none
           td 
-            padding: 3px 25px
+            padding: 15px 25px 3px 
             font-size: 14px
             color: $body
             font-family: $body-font
@@ -1602,6 +1602,9 @@ fieldset.module, div.inline-group
             input
               +input()
               width: auto
+            textarea
+              +textarea()
+              max-width: 380px
             button
               +button()
 
