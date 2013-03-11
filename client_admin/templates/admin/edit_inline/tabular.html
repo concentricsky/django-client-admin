@@ -14,7 +14,7 @@
             </th>
         {% endif %}
         {% endfor %}
-        {% if inline_admin_formset.formset.can_delete %}<th>{% trans "Delete?" %}</th>{% endif %}
+        <th><!-- Delete --></th>
         </tr></thead>
 
         <tbody>
@@ -26,7 +26,6 @@
                 id="{{ inline_admin_formset.formset.prefix }}-{% if not forloop.last %}{{ forloop.counter0 }}{% else %}empty{% endif %}">
             <td class="original">
             {% if inline_admin_form.original or inline_admin_form.show_url %}<p>
-            {% if inline_admin_form.original %} {{ inline_admin_form.original }}{% endif %}
             {% if inline_admin_form.show_url %}<a href="{% url 'admin:view_on_site' inline_admin_form.original_content_type_id inline_admin_form.original.pk %}">{% trans "View on site" %}</a>{% endif %}
                 </p>{% endif %}
             {% if inline_admin_form.has_auto_field %}{{ inline_admin_form.pk_field.field }}{% endif %}
