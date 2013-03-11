@@ -1677,6 +1677,92 @@ fieldset.module, div.inline-group
                 color: #fff
 
 
+  // Grouped Inlines
+  // - - - - - - - - - -
+  div.form-row.grouped
+    margin-left: 165px !important
+    padding: 0 !important
+    +legacy-pie-clearfix
+    ul
+      float: left
+      padding: 5px
+      width: 386px
+      min-height: 32px
+      margin: 0 1px 15px 0
+      +legacy-pie-clearfix
+      li
+        float: left
+        select
+          width: 134px
+          margin-top: 7px
+        input
+          height: 24px
+          background: #f6f6f6
+          border: 1px solid #cdcdcd
+          +box-shadow(0 2px 0 #e6e6e6 inset)
+          padding: 3px 8px
+          color: $body
+          font-size: 14px
+          font-family: $body-font
+          width: 170px
+        &.field-number, &.field-url
+          margin-right: 0px
+      span.delete
+        margin: 5px
+        float: right
+        input
+          display: none
+        label
+          display: block
+          height: 14px
+          width: 14px
+          color: #fff !important
+          position: relative
+          cursor: pointer
+          +sprite-icon(icon_delete, $vertical: 2px)
+          &:hover
+            +sprite-icon(icon_delete_orange, $vertical: 2px)
+          &.hidden
+            display: none
+        &.tobe_removed label
+          +sprite-icon(icon_undo_white, $vertical: 2px)
+          color: $secondary !important
+
+      &.tobe_removed
+        background: $secondary
+        input, select, p
+          display: none
+
+      a.inline-deletelink
+        +sprite-icon(icon_delete, $vertical: 2px)
+        padding: 0 0 0 18px
+        text-indent: -9999px
+        height: 14px
+        width: 14px 
+        display: block
+        position: relative
+        margin: -4px 0 0 5px
+        background: none
+        &:hover
+          +sprite-icon(icon_delete_orange, $vertical: 2px)
+          color: $secondary
+
+    div.add-row
+      clear: both
+      .add-row
+        border-top: none
+        border-bottom: none
+        float: left
+        min-width: 20%
+      .inline-related
+        position: inherit
+        float: left
+        display: block
+      select
+        height: 22px
+        margin: 3px 0
+
+
 // History Table
 //  - - - - - - - - - - - - - - -
 table#change-history
