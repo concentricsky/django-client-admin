@@ -26,6 +26,16 @@ csrf_protect_m = method_decorator(csrf_protect)
 JS_PATH = getattr(settings, 'GENERICADMIN_JS', 'client_admin/js/')
 
 
+class EmptyVersionAdmin(object):
+    pass
+
+try:
+    import reversion
+    VersionAdmin = reversion.VersionAdmin
+except:
+    VersionAdmin = EmptyVersionAdmin
+
+
 ## Recursive Inlines!
 ## inspired in part by https://code.djangoproject.com/ticket/9025
 class BaseRecursiveInlineMixin(object):
@@ -424,5 +434,5 @@ class GroupedInline(StackedInline):
     template = 'admin/edit_inline/grouped.html'
 
 
-class ClientModelAdmin(ReverseInlinesModelAdminMixin, BaseClientAdminMixin, RecursiveInlinesModelAdmin):
+class ClientModelAdmin(VersionAdmin, ReverseInlinesModelAdminMixin, BaseClientAdminMixin, RecursiveInlinesModelAdmin):
     pass
