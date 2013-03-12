@@ -1144,6 +1144,13 @@ body.change-list
       font-weight: bold
       border: none
       background: transparent
+      position: relative
+      input[type="submit"]
+        width: auto
+        height: auto
+        padding: 10px
+        font-size: 14px
+        margin: 5px 0 0 0
 
 
 
@@ -1821,6 +1828,9 @@ a.add-another
   position: relative
   padding: 0 0 0 18px
   margin: 0 0 0 3px 
+  height: 14px 
+  width: 14px
+  display: inline-block
   +sprite-icon(icon_add, $vertical: 2px)
   &:hover
     +sprite-icon(icon_add_orange, $vertical: 2px)
@@ -1890,100 +1900,127 @@ div.clockbox, div.calendarbox
       background: $primary
 
 
-// Need to do
+
 // Sitemap Modal
 //  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 .ui-dialog fieldset
-  border-radius: 5px
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif
-  p.help
-    margin-left: 87px
+  border-radius: 0px
+  font-family: $body-font
+  background: #fff
+  label
+    width: 90px !important
+  input
+    width: 230px
+  div.checkbox_container
+    margin-left: 105px !important
+    input[type="checkbox"]
+      width: auto
+  div.field_container strong
+    font-size: 14px
+    color: $body
+    font-weight: bold
+    font-family: $body-font
   button
-    background: none
-    height: 28px
-    line-height: 10px
-    border: 1px solid #185488
-    border-radius: 15px
-    padding: 8px 13px
     color: #fff
-    text-shadow: -1px -1px #185488
-    text-transform: uppercase
-    font-size: 12px
-    font-weight: normal
-    background: #0f74cb
-    background-image: -webkit-linear-gradient(top, #208cea, #116bb9)
-    background-image: -moz-linear-gradient(top, #208cea, #116bb9)
-    background-image: -o-linear-gradient(top, #208cea, #116bb9)
-    background-image: -ms-linear-gradient(top, #208cea, #116bb9)
-    box-shadow: #55a6eb 0 1px 0 0 inset
+    font-family: $body-font
+    font-weight: bold
+    font-size: 14px
+    border: none
+    border-top: 2px solid #024f84
+    padding: 10px
+    background-color: $primary
     cursor: pointer
-    &:hover
-      background: #208cea
-      background-image: -webkit-linear-gradient(top, #4da5f2, #208cea)
-      background-image: -moz-linear-gradient(top, #4da5f2, #208cea)
-      background-image: -o-linear-gradient(top, #4da5f2, #208cea)
-      background-image: -ms-linear-gradient(top, #4da5f2, #208cea)
-      box-shadow: #79baf2 0 1px 0 0 inset
-    &:active
-      background: #116bb9
-      background-image: -webkit-linear-gradient(top, #116bb9, #208cea)
-      background-image: -moz-linear-gradient(top, #116bb9, #208cea)
-      background-image: -o-linear-gradient(top, #116bb9, #208cea)
-      background-image: -ms-linear-gradient(top, #116bb9, #208cea)
+    &:hover, &:active
+      background: #024f84
   div
     &.advanced
-      background: #efefef
+      background: #fff
       border-top: 1px solid #CCC
       margin: 0
       padding: 5px 10px 5px 18px
     &.field-is_active
-      border-top: 1px solid #ccc
+      border: none
     &.advanced a
       display: inline-block
-      margin: 5px 0
-      height: 28px
-      line-height: 26px
-      border: 1px solid #6d6d6d
-      border-radius: 15px
-      padding: 3px 13px 0
-      color: white
-      text-shadow: -1px -1px #6d6d6d
-      font-weight: normal
-      background: #ababab
-      background-image: -webkit-linear-gradient(top, #ababab, #969595)
-      background-image: -moz-linear-gradient(top, #ababab, #969595)
-      background-image: -o-linear-gradient(top, #ababab, #969595)
-      background-image: -ms-linear-gradient(top, #ababab, #969595)
-      box-shadow: #bababa 0 1px 0 0 inset
+      margin: 8px 0
+      padding: 0 0 0 18px 
+      color: $body
+      font-weight: bold
       cursor: pointer
-      cursor: pointer
+      position: relative
+      +sprite-icon(icon_add, $vertical: 4px)
       &:hover
-        background: #7b7b7c
-        background-image: -webkit-linear-gradient(top, #b4b4b4, #909090)
-        background-image: -moz-linear-gradient(top, #b4b4b4, #909090)
-        background-image: -o-linear-gradient(top, #b4b4b4, #909090)
-        background-image: -ms-linear-gradient(top, #b4b4b4, #909090)
-      &:active
-        background: #969595
-        background-image: -webkit-linear-gradient(top, #969595, #ababab)
-        background-image: -moz-linear-gradient(top, #969595, #ababab)
-        background-image: -o-linear-gradient(top, #969595, #ababab)
-        background-image: -ms-linear-gradient(top, #969595, #ababab)
+        color: $secondary
+        +sprite-icon(icon_add_orange, $vertical: 4px)
 
 
-// Need to do
+
 // Menu Edit Screen
 //  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 #menuitem_set-group
-  margin: 0
-  border: 1px solid #c5c5c5
+  margin: 20px 0 0 0
+  border: 1px solid #cdcdcd
+  border-top: none
   li
+    +legacy-pie-clearfix
+    h3
+      margin: 0
+      padding: 0
+      > a
+        color: #cdcdcd
+        font-weight: normal
+        position: relative
+        padding: 0 0 0 18px
+        margin-left: 10px
+        +sprite-icon(icon_view_onsite_light, $vertical: 2px)
+        &:hover
+          color: $secondary
+          +sprite-icon(icon_view_onsite_orange, $vertical: 2px)
+      span.detail a
+        color: $primary
+        margin-left: 10px
+        &:hover
+          color: $secondary
+      span.delete
+        input
+          display: none
+        label
+          +sprite-icon(icon_delete, $vertical: 2px)
+          background-image: none
+          padding: 0 0 0 18px
+          display: inline-block
+          color: $body !important
+          font-weight: bold !important
+          font-size: 14px !important
+          position: relative
+          cursor: pointer
+          &:hover
+            +sprite-icon(icon_delete_orange, $vertical: 2px)
+            color: $secondary !important
+          &.hidden
+            display: none
+          &.undo_stackedinline_delete
+            color: #fff !important
+            +sprite-icon(icon_undo_white, $vertical: 2px)
+    &.tobe_removed
+      background: $secondary !important
+      h3 
+        span.inline_label
+          color: #fff
+          text-decoration: line-through
+        > a
+          display: none
+        span.detail a
+          display: none
+
+
+
     &.inline-related
       cursor: move
     li.inline-related
-      background: url(images/icon_nested_arrow.png) left top no-repeat transparent
+      background: url(images/icon_nested_arrow.png) left 3px no-repeat transparent
     &.inline-related fieldset
-      background: #fcfcfc
+      background: #f6f6f6
       width: 100%
       padding: 0 10px 0 10px
       margin: 5px 0 0 -10px
@@ -1993,12 +2030,12 @@ div.clockbox, div.calendarbox
       border: none
       margin: 0
       line-height: 19px
-      border-top: 1px solid #c5c5c5
+      border-top: 1px solid #cdcdcd
       padding: 9px 10px 9px 18px
       list-style: none
       position: relative
     li div
-      border-top: 1px dashed #c5c5c5
+      border-top: 1px dashed #cdcdcd
       background: transparent
     div
       &.form-row
@@ -2007,120 +2044,34 @@ div.clockbox, div.calendarbox
         background: transparent
       &.object_id div
         min-height: 29px !important
-        button
-          background: none
-          height: 28px
-          line-height: 10px
-          border: 1px solid #185488
-          border-radius: 15px
-          padding: 8px 13px
-          color: #fff
-          text-shadow: -1px -1px #185488
-          text-transform: uppercase
-          font-size: 12px
-          font-weight: normal
-          background: #0f74cb
-          background-image: -webkit-linear-gradient(top, #208cea, #116bb9)
-          background-image: -moz-linear-gradient(top, #208cea, #116bb9)
-          background-image: -o-linear-gradient(top, #208cea, #116bb9)
-          background-image: -ms-linear-gradient(top, #208cea, #116bb9)
-          box-shadow: #55a6eb 0 1px 0 0 inset
-          &:hover
-            background: #208cea
-            background-image: -webkit-linear-gradient(top, #4da5f2, #208cea)
-            background-image: -moz-linear-gradient(top, #4da5f2, #208cea)
-            background-image: -o-linear-gradient(top, #4da5f2, #208cea)
-            background-image: -ms-linear-gradient(top, #4da5f2, #208cea)
-            box-shadow: #79baf2 0 1px 0 0 inset
-          &:active
-            background: #116bb9
-            background-image: -webkit-linear-gradient(top, #116bb9, #208cea)
-            background-image: -moz-linear-gradient(top, #116bb9, #208cea)
-            background-image: -o-linear-gradient(top, #116bb9, #208cea)
-            background-image: -ms-linear-gradient(top, #116bb9, #208cea)
-      &.form-row div
-        border-top: 1px solid #c5c5c5
-        padding: 10px
-    h4
-      text-shadow: none
-      margin: 0
-      padding: 0
-      background: transparent
-      border: none
-      span.inline_label
-        color: #434343
-        font-size: 16px
-        margin-right: 5px
-        text-transform: none
-    li h4 span.inline_label
+        // button
+        //   background: none
+        //   height: 28px
+        //   line-height: 10px
+        //   border: 1px solid #185488
+        //   border-radius: 15px
+        //   padding: 8px 13px
+        //   color: #fff
+        //   text-shadow: -1px -1px #185488
+        //   text-transform: uppercase
+        //   font-size: 12px
+        //   font-weight: normal
+        //   background: purple
+        //   &:hover
+        //     background: green
+  div.add-row
+    border: 1px solid #272727
+    padding: 10px 15px
+    margin: 0 -1px -1px -1px
+    background: #272727
+    a
+      color: #fff
+      background: none
       font-size: 14px
-      text-transform: none
-      font-weight: normal
-    h4
-      span
-        &.delete input
-          vertical-align: middle
-        &.detail a
-          &:link, &:visited
-            opacity: 1
-            color: #ed8d1f
-            font-weight: bold
-            text-transform: uppercase
-      a
-        &:link, &:visited
-          text-transform: none
-          font-weight: normal
-          color: #666
-          opacity: .15
-      span.delete
-        text-transform: none
-        font-weight: normal
-        color: #666
-        opacity: .15
-  div:hover h4
-    a, span.delete
-      opacity: 1
-  li h4
-    a:hover
-      color: #ed8d1f
-    span.delete
-      margin-right: 10px
-  
-
-// Admin Tables
-//  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-
-// .dashboard #content-main .module
-//   margin-bottom: 0
-//   border-top-left-radius: 5px
-//   -webkit-border-top-left-radius: 5px
-//   -moz-border-radius-topleft: 5px
-//   border-top-right-radius: 5px
-//   -webkit-border-top-right-radius: 5px
-//   -moz-border-radius-topright: 5px
-//   border: none
-
-
-// .addlink:hover, .changelink:hover
-//   background-position: 0 0
-
-// a
-//   &.addlink:hover, &.changelink:hover
-//     color: #ed8d1f
-
-// Footer
-//  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-
-// footer
-//   width: 960px
-//   margin: 0 auto
-//   p
-//     height: 24px
-//     width: 121px
-//     margin: 0 auto
-//     text-indent: -9999px
-//     a
-//       display: block
-//       padding: 15px
-//       background: url(images/footer_csky.png) center no-repeat
-
+      border: none
+      padding: 0 0 0 18px
+      position: relative
+      +sprite-icon(icon_add_white, $vertical: 2px)
+      &:hover
+        color: $secondary
+        +sprite-icon(icon_add_orange, $vertical: 2px)
