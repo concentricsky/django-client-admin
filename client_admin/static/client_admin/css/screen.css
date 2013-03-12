@@ -64,7 +64,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 }
 
 /* line 394, icons/*.png */
-.icons-sprite, a.deletelink:after, a.deletelink:link:after, a.deletelink:visited:after, a.deletelink:hover:after, a.deletelink:link:hover:after, a.deletelink:visited:hover:after, p.errornote:after, ul.errorlist li:after, header nav ul li.user-tools > a:after, header nav ul li.user-tools:visited:after, header nav ul li.user-tools > a:hover:after, header nav ul li.user-tools:visited:hover:after, #page_header #bookmark-form #bookmark-button:after, #page_header #bookmark-form #bookmark-button.bookmarked:after, #page_header #bookmark-form #bookmark-button:hover:after, #admin_content ul.object-tools li a.historylink:after, #admin_content ul.object-tools li a.historylink:link:after, #admin_content ul.object-tools li a.historylink:visited:after, #admin_content ul.object-tools li a.historylink:hover:after, #admin_content ul.object-tools li a.historylink:link:hover:after, #admin_content ul.object-tools li a.historylink:visited:hover:after, #admin_content ul.object-tools li a.viewsitelink:after, #admin_content ul.object-tools li a.viewsitelink:link:after, #admin_content ul.object-tools li a.viewsitelink:visited:after, #admin_content ul.object-tools li a.viewsitelink:hover:after, #admin_content ul.object-tools li a.viewsitelink:link:hover:after, #admin_content ul.object-tools li a.viewsitelink:visited:hover:after, #admin_content ul.object-tools li a.addlink:after, #admin_content ul.object-tools li a.addlink:link:after, #admin_content ul.object-tools li a.addlink:visited:after, #admin_content ul.object-tools li a.addlink:hover:after, #admin_content ul.object-tools li a.addlink:link:hover:after, #admin_content ul.object-tools li a.addlink:visited:hover:after, #admin_content ul.object-tools li a.recoverlink:after, #admin_content ul.object-tools li a.recoverlink:link:after, #admin_content ul.object-tools li a.recoverlink:visited:after, #admin_content ul.object-tools li a.recoverlink:hover:after, #admin_content ul.object-tools li a.recoverlink:link:hover:after, #admin_content ul.object-tools li a.recoverlink:visited:hover:after, #admin_content ul.object-tools li#dashboard-panel > a:after, #admin_content ul.object-tools li#dashboard-panel > a:hover:after, #admin_content ul.object-tools li#dashboard-panel:hover > a:after, div div.dashboard-module span.changelink:after, div div.dashboard-module span.addlink:after, div div.dashboard-module span.listlink:after, div div.dashboard-module span.deletelink:after, div div.dashboard-module h3 a.close-icon:after, div div.dashboard-module h3 a.close-icon:hover:after, div div.dashboard-module h3 a.toggle-icon:after, div div.dashboard-module h3 a.toggle-icon:hover:after, div div.dashboard-module h3 a.toggle-icon.collapsed:after, div div.dashboard-module h3 a.toggle-icon.collapsed:hover:after, div div.dashboard-module div.dashboard-module-content li ul.list-options li a.changelink:after, div div.dashboard-module div.dashboard-module-content li ul.list-options li a.addlink:after, div div.dashboard-module div.dashboard-module-content li ul.list-options li a.listlink:after, div div.dashboard-module div.dashboard-module-content li ul.list-options li a.changelink:hover:after, div div.dashboard-module div.dashboard-module-content li ul.list-options li a.addlink:hover:after, div div.dashboard-module div.dashboard-module-content li ul.list-options li a.listlink:hover:after, div div.dashboard-module#module_1 div.dashboard-module-content ul li.first ul.list-options li a.changelink:after, div div.dashboard-module#module_1 div.dashboard-module-content ul li.first ul.list-options li a.changelink:hover:after, div div.dashboard-module.snippets ul li.listmeta a:after, div div.dashboard-module.snippets ul li.listmeta a:hover:after, body.app_index #content-main table tbody tr td a.addlink:after, body.app_index #content-main table tbody tr td a.addlink:hover:after, body.app_index #content-main table tbody tr td a.changelink:after, body.app_index #content-main table tbody tr td a.changelink:hover:after, body.change-list #changelist div.results table#result_list thead th.sorted div.sortoptions a.sortremove:after, body.change-list #changelist div.results table#result_list thead th.sorted div.sortoptions a.ascending:after, body.change-list #changelist div.results table#result_list thead th.sorted div.sortoptions a.descending:after, .button.default:after, input[type="submit"].default:after, fieldset.module div.form-row div.field_container div.imageupload-widget a.file_upload_button:after, div.inline-group div.form-row div.field_container div.imageupload-widget a.file_upload_button:after, fieldset.module div.form-row div.field_container div.imageupload-widget span.clearable-file-input label:after, div.inline-group div.form-row div.field_container div.imageupload-widget span.clearable-file-input label:after, fieldset.module div.form-row div.field_container div.imageupload-widget span.clearable-file-input label:hover:after, div.inline-group div.form-row div.field_container div.imageupload-widget span.clearable-file-input label:hover:after, fieldset.module div.form-row div.field_container div.imageupload-widget span.clearable-file-input label.hidden:after, div.inline-group div.form-row div.field_container div.imageupload-widget span.clearable-file-input label.hidden:after, fieldset.module div.form-row div.field_container p.help span:after, fieldset.module div.form-row div.field_container .help span:after, div.inline-group div.form-row div.field_container p.help span:after, div.inline-group div.form-row div.field_container .help span:after, fieldset.module div.inline-related h3 span.delete label.stackedinline_delete:after, div.inline-group div.inline-related h3 span.delete label.stackedinline_delete:after, fieldset.module div.inline-related h3 span.delete label.stackedinline_delete:hover:after, div.inline-group div.inline-related h3 span.delete label.stackedinline_delete:hover:after, fieldset.module div.inline-related h3 span.delete label.undo_stackedinline_delete:after, div.inline-group div.inline-related h3 span.delete label.undo_stackedinline_delete:after, fieldset.module div.inline-related h3 span.delete label.undo_stackedinline_delete:hover:after, div.inline-group div.inline-related h3 span.delete label.undo_stackedinline_delete:hover:after, fieldset.module div.inline-related h3 a.inline-deletelink:after, div.inline-group div.inline-related h3 a.inline-deletelink:after, fieldset.module div.inline-related h3 a.inline-deletelink:hover:after, div.inline-group div.inline-related h3 a.inline-deletelink:hover:after, fieldset.module div.add-row a:after, div.inline-group div.add-row a:after, fieldset.module div.tabular table tbody tr td.link button:after, div.inline-group div.tabular table tbody tr td.link button:after, fieldset.module div.tabular table tbody tr td.delete a.inline-deletelink:after, div.inline-group div.tabular table tbody tr td.delete a.inline-deletelink:after, fieldset.module div.tabular table tbody tr td.delete a.inline-deletelink:hover:after, div.inline-group div.tabular table tbody tr td.delete a.inline-deletelink:hover:after, fieldset.module div.tabular table tbody tr td.delete label.tabularinline_delete:after, div.inline-group div.tabular table tbody tr td.delete label.tabularinline_delete:after, fieldset.module div.tabular table tbody tr td.delete label.tabularinline_delete:hover:after, div.inline-group div.tabular table tbody tr td.delete label.tabularinline_delete:hover:after, fieldset.module div.tabular table tbody tr td.delete label.undo_tabularinline_delete:after, div.inline-group div.tabular table tbody tr td.delete label.undo_tabularinline_delete:after, fieldset.module div.tabular table tbody tr td.delete label.undo_tabularinline_delete:hover:after, div.inline-group div.tabular table tbody tr td.delete label.undo_tabularinline_delete:hover:after, fieldset.module div.tabular table tbody tr.add-row td a:after, div.inline-group div.tabular table tbody tr.add-row td a:after, fieldset.module div.form-row.grouped ul span.delete label:after, div.inline-group div.form-row.grouped ul span.delete label:after, fieldset.module div.form-row.grouped ul span.delete label:hover:after, div.inline-group div.form-row.grouped ul span.delete label:hover:after, fieldset.module div.form-row.grouped ul span.delete.tobe_removed label:after, div.inline-group div.form-row.grouped ul span.delete.tobe_removed label:after, fieldset.module div.form-row.grouped ul a.inline-deletelink:after, div.inline-group div.form-row.grouped ul a.inline-deletelink:after, fieldset.module div.form-row.grouped ul a.inline-deletelink:hover:after, div.inline-group div.form-row.grouped ul a.inline-deletelink:hover:after {
+.icons-sprite, a.deletelink:after, a.deletelink:link:after, a.deletelink:visited:after, a.deletelink:hover:after, a.deletelink:link:hover:after, a.deletelink:visited:hover:after, p.errornote:after, ul.errorlist li:after, header nav ul li.user-tools > a:after, header nav ul li.user-tools:visited:after, header nav ul li.user-tools > a:hover:after, header nav ul li.user-tools:visited:hover:after, #page_header #bookmark-form #bookmark-button:after, #page_header #bookmark-form #bookmark-button.bookmarked:after, #page_header #bookmark-form #bookmark-button:hover:after, #admin_content ul.object-tools li a.historylink:after, #admin_content ul.object-tools li a.historylink:link:after, #admin_content ul.object-tools li a.historylink:visited:after, #admin_content ul.object-tools li a.historylink:hover:after, #admin_content ul.object-tools li a.historylink:link:hover:after, #admin_content ul.object-tools li a.historylink:visited:hover:after, #admin_content ul.object-tools li a.viewsitelink:after, #admin_content ul.object-tools li a.viewsitelink:link:after, #admin_content ul.object-tools li a.viewsitelink:visited:after, #admin_content ul.object-tools li a.viewsitelink:hover:after, #admin_content ul.object-tools li a.viewsitelink:link:hover:after, #admin_content ul.object-tools li a.viewsitelink:visited:hover:after, #admin_content ul.object-tools li a.addlink:after, #admin_content ul.object-tools li a.addlink:link:after, #admin_content ul.object-tools li a.addlink:visited:after, #admin_content ul.object-tools li a.addlink:hover:after, #admin_content ul.object-tools li a.addlink:link:hover:after, #admin_content ul.object-tools li a.addlink:visited:hover:after, #admin_content ul.object-tools li a.recoverlink:after, #admin_content ul.object-tools li a.recoverlink:link:after, #admin_content ul.object-tools li a.recoverlink:visited:after, #admin_content ul.object-tools li a.recoverlink:hover:after, #admin_content ul.object-tools li a.recoverlink:link:hover:after, #admin_content ul.object-tools li a.recoverlink:visited:hover:after, #admin_content ul.object-tools li#dashboard-panel > a:after, #admin_content ul.object-tools li#dashboard-panel > a:hover:after, #admin_content ul.object-tools li#dashboard-panel:hover > a:after, div div.dashboard-module span.changelink:after, div div.dashboard-module span.addlink:after, div div.dashboard-module span.listlink:after, div div.dashboard-module span.deletelink:after, div div.dashboard-module h3 a.close-icon:after, div div.dashboard-module h3 a.close-icon:hover:after, div div.dashboard-module h3 a.toggle-icon:after, div div.dashboard-module h3 a.toggle-icon:hover:after, div div.dashboard-module h3 a.toggle-icon.collapsed:after, div div.dashboard-module h3 a.toggle-icon.collapsed:hover:after, div div.dashboard-module div.dashboard-module-content li ul.list-options li a.changelink:after, div div.dashboard-module div.dashboard-module-content li ul.list-options li a.addlink:after, div div.dashboard-module div.dashboard-module-content li ul.list-options li a.listlink:after, div div.dashboard-module div.dashboard-module-content li ul.list-options li a.changelink:hover:after, div div.dashboard-module div.dashboard-module-content li ul.list-options li a.addlink:hover:after, div div.dashboard-module div.dashboard-module-content li ul.list-options li a.listlink:hover:after, div div.dashboard-module#module_1 div.dashboard-module-content ul li.first ul.list-options li a.changelink:after, div div.dashboard-module#module_1 div.dashboard-module-content ul li.first ul.list-options li a.changelink:hover:after, div div.dashboard-module.snippets ul li.listmeta a:after, div div.dashboard-module.snippets ul li.listmeta a:hover:after, body.app_index #content-main table tbody tr td a.addlink:after, body.app_index #content-main table tbody tr td a.addlink:hover:after, body.app_index #content-main table tbody tr td a.changelink:after, body.app_index #content-main table tbody tr td a.changelink:hover:after, body.change-list #changelist div.results table#result_list thead th.sorted div.sortoptions a.sortremove:after, body.change-list #changelist div.results table#result_list thead th.sorted div.sortoptions a.ascending:after, body.change-list #changelist div.results table#result_list thead th.sorted div.sortoptions a.descending:after, .button.default:after, input[type="submit"].default:after, fieldset.module div.form-row div.field_container div.imageupload-widget a.file_upload_button:after, div.inline-group div.form-row div.field_container div.imageupload-widget a.file_upload_button:after, fieldset.module div.form-row div.field_container div.imageupload-widget span.clearable-file-input label:after, div.inline-group div.form-row div.field_container div.imageupload-widget span.clearable-file-input label:after, fieldset.module div.form-row div.field_container div.imageupload-widget span.clearable-file-input label:hover:after, div.inline-group div.form-row div.field_container div.imageupload-widget span.clearable-file-input label:hover:after, fieldset.module div.form-row div.field_container div.imageupload-widget span.clearable-file-input label.hidden:after, div.inline-group div.form-row div.field_container div.imageupload-widget span.clearable-file-input label.hidden:after, fieldset.module div.form-row div.field_container p.help span:after, fieldset.module div.form-row div.field_container .help span:after, div.inline-group div.form-row div.field_container p.help span:after, div.inline-group div.form-row div.field_container .help span:after, fieldset.module div.inline-related h3 span.delete label.stackedinline_delete:after, div.inline-group div.inline-related h3 span.delete label.stackedinline_delete:after, fieldset.module div.inline-related h3 span.delete label.stackedinline_delete:hover:after, div.inline-group div.inline-related h3 span.delete label.stackedinline_delete:hover:after, fieldset.module div.inline-related h3 span.delete label.undo_stackedinline_delete:after, div.inline-group div.inline-related h3 span.delete label.undo_stackedinline_delete:after, fieldset.module div.inline-related h3 span.delete label.undo_stackedinline_delete:hover:after, div.inline-group div.inline-related h3 span.delete label.undo_stackedinline_delete:hover:after, fieldset.module div.inline-related h3 a.inline-deletelink:after, div.inline-group div.inline-related h3 a.inline-deletelink:after, fieldset.module div.inline-related h3 a.inline-deletelink:hover:after, div.inline-group div.inline-related h3 a.inline-deletelink:hover:after, fieldset.module div.add-row a:after, div.inline-group div.add-row a:after, fieldset.module div.tabular table tbody tr td.link button:after, div.inline-group div.tabular table tbody tr td.link button:after, fieldset.module div.tabular table tbody tr td.delete a.inline-deletelink:after, div.inline-group div.tabular table tbody tr td.delete a.inline-deletelink:after, fieldset.module div.tabular table tbody tr td.delete a.inline-deletelink:hover:after, div.inline-group div.tabular table tbody tr td.delete a.inline-deletelink:hover:after, fieldset.module div.tabular table tbody tr td.delete label.tabularinline_delete:after, div.inline-group div.tabular table tbody tr td.delete label.tabularinline_delete:after, fieldset.module div.tabular table tbody tr td.delete label.tabularinline_delete:hover:after, div.inline-group div.tabular table tbody tr td.delete label.tabularinline_delete:hover:after, fieldset.module div.tabular table tbody tr td.delete label.undo_tabularinline_delete:after, div.inline-group div.tabular table tbody tr td.delete label.undo_tabularinline_delete:after, fieldset.module div.tabular table tbody tr td.delete label.undo_tabularinline_delete:hover:after, div.inline-group div.tabular table tbody tr td.delete label.undo_tabularinline_delete:hover:after, fieldset.module div.tabular table tbody tr.add-row td a:after, div.inline-group div.tabular table tbody tr.add-row td a:after, fieldset.module div.form-row.grouped ul span.delete label:after, div.inline-group div.form-row.grouped ul span.delete label:after, fieldset.module div.form-row.grouped ul span.delete label:hover:after, div.inline-group div.form-row.grouped ul span.delete label:hover:after, fieldset.module div.form-row.grouped ul span.delete.tobe_removed label:after, div.inline-group div.form-row.grouped ul span.delete.tobe_removed label:after, fieldset.module div.form-row.grouped ul a.inline-deletelink:after, div.inline-group div.form-row.grouped ul a.inline-deletelink:after, fieldset.module div.form-row.grouped ul a.inline-deletelink:hover:after, div.inline-group div.form-row.grouped ul a.inline-deletelink:hover:after, a.add-another:after, a.add-another:hover:after {
   background: url('images/icons-s855e362bc6.png') no-repeat;
 }
 
@@ -2923,7 +2923,7 @@ fieldset.module div.tabular table tbody tr td textarea, div.inline-group div.tab
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   height: 100px;
   resize: vertical;
-  max-width: 380px;
+  max-width: 344px;
 }
 /* line 1608, ../sass/screen.sass */
 fieldset.module div.tabular table tbody tr td button, div.inline-group div.tabular table tbody tr td button {
@@ -3073,7 +3073,7 @@ fieldset.module div.tabular table tbody tr.tobe_removed, div.inline-group div.ta
   background: #f9910c;
 }
 /* line 1661, ../sass/screen.sass */
-fieldset.module div.tabular table tbody tr.tobe_removed input, fieldset.module div.tabular table tbody tr.tobe_removed select, fieldset.module div.tabular table tbody tr.tobe_removed p, div.inline-group div.tabular table tbody tr.tobe_removed input, div.inline-group div.tabular table tbody tr.tobe_removed select, div.inline-group div.tabular table tbody tr.tobe_removed p {
+fieldset.module div.tabular table tbody tr.tobe_removed input, fieldset.module div.tabular table tbody tr.tobe_removed select, fieldset.module div.tabular table tbody tr.tobe_removed p, fieldset.module div.tabular table tbody tr.tobe_removed textarea, fieldset.module div.tabular table tbody tr.tobe_removed a, div.inline-group div.tabular table tbody tr.tobe_removed input, div.inline-group div.tabular table tbody tr.tobe_removed select, div.inline-group div.tabular table tbody tr.tobe_removed p, div.inline-group div.tabular table tbody tr.tobe_removed textarea, div.inline-group div.tabular table tbody tr.tobe_removed a {
   display: none;
 }
 /* line 1667, ../sass/screen.sass */
@@ -3369,12 +3369,44 @@ p.datetime span.datetimeshortcuts a:last-child img {
 }
 
 /* line 1817, ../sass/screen.sass */
+a.add-another {
+  text-indent: -9999px;
+  position: relative;
+  padding: 0 0 0 18px;
+  margin: 0 0 0 3px;
+}
+/* line 29, ../sass/partials/_base.sass */
+a.add-another:after {
+  content: "";
+  position: absolute;
+  top: 2px;
+  left: 0;
+  background-position: 0 -584px;
+  height: 14px;
+  width: 14px;
+}
+/* line 29, ../sass/partials/_base.sass */
+a.add-another:hover:after {
+  content: "";
+  position: absolute;
+  top: 2px;
+  left: 0;
+  background-position: 0 -570px;
+  height: 14px;
+  width: 14px;
+}
+/* line 1825, ../sass/screen.sass */
+a.add-another img {
+  display: none;
+}
+
+/* line 1828, ../sass/screen.sass */
 div.clockbox, div.calendarbox {
   box-shadow: #434343 0 0 5px 0;
   border: none !important;
   margin: 22px 0 0 15px;
 }
-/* line 1821, ../sass/screen.sass */
+/* line 1832, ../sass/screen.sass */
 div.clockbox:before, div.calendarbox:before {
   content: "";
   position: absolute;
@@ -3386,7 +3418,7 @@ div.clockbox:before, div.calendarbox:before {
   border-top: 18px solid transparent;
   border-bottom: 18px solid transparent;
 }
-/* line 1831, ../sass/screen.sass */
+/* line 1842, ../sass/screen.sass */
 div.clockbox h2, div.calendarbox h2 {
   background: #006fbb;
   color: white;
@@ -3394,54 +3426,54 @@ div.clockbox h2, div.calendarbox h2 {
   font-size: 14px;
   border: none;
 }
-/* line 1837, ../sass/screen.sass */
+/* line 1848, ../sass/screen.sass */
 div.clockbox ul.timelist li, div.calendarbox ul.timelist li {
   border-bottom: 1px solid #f6f6f6;
 }
-/* line 1839, ../sass/screen.sass */
+/* line 1850, ../sass/screen.sass */
 div.clockbox ul.timelist li:last-child, div.calendarbox ul.timelist li:last-child {
   border-bottom: none;
 }
-/* line 1841, ../sass/screen.sass */
+/* line 1852, ../sass/screen.sass */
 div.clockbox ul.timelist li a, div.calendarbox ul.timelist li a {
   padding: 5px 0;
 }
-/* line 1843, ../sass/screen.sass */
+/* line 1854, ../sass/screen.sass */
 div.clockbox ul.timelist li a:hover, div.calendarbox ul.timelist li a:hover {
   background: #f9910c;
   color: white;
 }
-/* line 1846, ../sass/screen.sass */
+/* line 1857, ../sass/screen.sass */
 div.clockbox p.calendar-cancel, div.calendarbox p.calendar-cancel {
   border: none;
   font-size: 14px;
   background: #747474;
 }
-/* line 1850, ../sass/screen.sass */
+/* line 1861, ../sass/screen.sass */
 div.clockbox p.calendar-cancel a, div.calendarbox p.calendar-cancel a {
   color: white;
   padding: 5px 0;
 }
-/* line 1853, ../sass/screen.sass */
+/* line 1864, ../sass/screen.sass */
 div.clockbox p.calendar-cancel a:hover, div.calendarbox p.calendar-cancel a:hover {
   background: #f9910c;
 }
-/* line 1855, ../sass/screen.sass */
+/* line 1866, ../sass/screen.sass */
 div.clockbox table, div.calendarbox table {
   width: 100%;
 }
-/* line 1857, ../sass/screen.sass */
+/* line 1868, ../sass/screen.sass */
 div.clockbox .calendarnav-previous, div.clockbox .calendarnav-next, div.calendarbox .calendarnav-previous, div.calendarbox .calendarnav-next {
   background: #006fbb;
   height: 34px;
   line-height: 34px;
 }
-/* line 1861, ../sass/screen.sass */
+/* line 1872, ../sass/screen.sass */
 div.clockbox .calendarnav-previous:hover, div.clockbox .calendarnav-next:hover, div.calendarbox .calendarnav-previous:hover, div.calendarbox .calendarnav-next:hover {
   background: #003366;
   color: white;
 }
-/* line 1864, ../sass/screen.sass */
+/* line 1875, ../sass/screen.sass */
 div.clockbox caption, div.calendarbox caption {
   background: #006fbb;
   font-size: 14px;
@@ -3451,26 +3483,26 @@ div.clockbox caption, div.calendarbox caption {
   padding: 3px 0;
   width: 100%;
 }
-/* line 1873, ../sass/screen.sass */
+/* line 1884, ../sass/screen.sass */
 div.clockbox table td.today a, div.calendarbox table td.today a {
   background: #ed8d1f;
   color: white;
 }
-/* line 1876, ../sass/screen.sass */
+/* line 1887, ../sass/screen.sass */
 div.clockbox table td a:hover, div.calendarbox table td a:hover {
   background: #006fbb;
 }
 
-/* line 1883, ../sass/screen.sass */
+/* line 1894, ../sass/screen.sass */
 .ui-dialog fieldset {
   border-radius: 5px;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
-/* line 1886, ../sass/screen.sass */
+/* line 1897, ../sass/screen.sass */
 .ui-dialog fieldset p.help {
   margin-left: 87px;
 }
-/* line 1888, ../sass/screen.sass */
+/* line 1899, ../sass/screen.sass */
 .ui-dialog fieldset button {
   background: none;
   height: 28px;
@@ -3491,7 +3523,7 @@ div.clockbox table td a:hover, div.calendarbox table td a:hover {
   box-shadow: #55a6eb 0 1px 0 0 inset;
   cursor: pointer;
 }
-/* line 1907, ../sass/screen.sass */
+/* line 1918, ../sass/screen.sass */
 .ui-dialog fieldset button:hover {
   background: #208cea;
   background-image: -webkit-linear-gradient(top, #4da5f2, #208cea);
@@ -3500,7 +3532,7 @@ div.clockbox table td a:hover, div.calendarbox table td a:hover {
   background-image: -ms-linear-gradient(top, #4da5f2, #208cea);
   box-shadow: #79baf2 0 1px 0 0 inset;
 }
-/* line 1914, ../sass/screen.sass */
+/* line 1925, ../sass/screen.sass */
 .ui-dialog fieldset button:active {
   background: #116bb9;
   background-image: -webkit-linear-gradient(top, #116bb9, #208cea);
@@ -3508,18 +3540,18 @@ div.clockbox table td a:hover, div.calendarbox table td a:hover {
   background-image: -o-linear-gradient(top, #116bb9, #208cea);
   background-image: -ms-linear-gradient(top, #116bb9, #208cea);
 }
-/* line 1921, ../sass/screen.sass */
+/* line 1932, ../sass/screen.sass */
 .ui-dialog fieldset div.advanced {
   background: #efefef;
   border-top: 1px solid #cccccc;
   margin: 0;
   padding: 5px 10px 5px 18px;
 }
-/* line 1926, ../sass/screen.sass */
+/* line 1937, ../sass/screen.sass */
 .ui-dialog fieldset div.field-is_active {
   border-top: 1px solid #cccccc;
 }
-/* line 1928, ../sass/screen.sass */
+/* line 1939, ../sass/screen.sass */
 .ui-dialog fieldset div.advanced a {
   display: inline-block;
   margin: 5px 0;
@@ -3540,7 +3572,7 @@ div.clockbox table td a:hover, div.calendarbox table td a:hover {
   cursor: pointer;
   cursor: pointer;
 }
-/* line 1947, ../sass/screen.sass */
+/* line 1958, ../sass/screen.sass */
 .ui-dialog fieldset div.advanced a:hover {
   background: #7b7b7c;
   background-image: -webkit-linear-gradient(top, #b4b4b4, #909090);
@@ -3548,7 +3580,7 @@ div.clockbox table td a:hover, div.calendarbox table td a:hover {
   background-image: -o-linear-gradient(top, #b4b4b4, #909090);
   background-image: -ms-linear-gradient(top, #b4b4b4, #909090);
 }
-/* line 1953, ../sass/screen.sass */
+/* line 1964, ../sass/screen.sass */
 .ui-dialog fieldset div.advanced a:active {
   background: #969595;
   background-image: -webkit-linear-gradient(top, #969595, #ababab);
@@ -3557,31 +3589,31 @@ div.clockbox table td a:hover, div.calendarbox table td a:hover {
   background-image: -ms-linear-gradient(top, #969595, #ababab);
 }
 
-/* line 1964, ../sass/screen.sass */
+/* line 1975, ../sass/screen.sass */
 #menuitem_set-group {
   margin: 0;
   border: 1px solid #c5c5c5;
 }
-/* line 1968, ../sass/screen.sass */
+/* line 1979, ../sass/screen.sass */
 #menuitem_set-group li.inline-related {
   cursor: move;
 }
-/* line 1970, ../sass/screen.sass */
+/* line 1981, ../sass/screen.sass */
 #menuitem_set-group li li.inline-related {
   background: url(images/icon_nested_arrow.png) left top no-repeat transparent;
 }
-/* line 1972, ../sass/screen.sass */
+/* line 1983, ../sass/screen.sass */
 #menuitem_set-group li.inline-related fieldset {
   background: #fcfcfc;
   width: 100%;
   padding: 0 10px 0 10px;
   margin: 5px 0 0 -10px;
 }
-/* line 1977, ../sass/screen.sass */
+/* line 1988, ../sass/screen.sass */
 #menuitem_set-group li:nth-child(even) {
   background: #f6f6f6;
 }
-/* line 1979, ../sass/screen.sass */
+/* line 1990, ../sass/screen.sass */
 #menuitem_set-group li div {
   border: none;
   margin: 0;
@@ -3591,22 +3623,22 @@ div.clockbox table td a:hover, div.calendarbox table td a:hover {
   list-style: none;
   position: relative;
 }
-/* line 1987, ../sass/screen.sass */
+/* line 1998, ../sass/screen.sass */
 #menuitem_set-group li li div {
   border-top: 1px dashed #c5c5c5;
   background: transparent;
 }
-/* line 1991, ../sass/screen.sass */
+/* line 2002, ../sass/screen.sass */
 #menuitem_set-group li div.form-row {
   border-top: none;
   padding: 0;
   background: transparent;
 }
-/* line 1995, ../sass/screen.sass */
+/* line 2006, ../sass/screen.sass */
 #menuitem_set-group li div.object_id div {
   min-height: 29px !important;
 }
-/* line 1997, ../sass/screen.sass */
+/* line 2008, ../sass/screen.sass */
 #menuitem_set-group li div.object_id div button {
   background: none;
   height: 28px;
@@ -3626,7 +3658,7 @@ div.clockbox table td a:hover, div.calendarbox table td a:hover {
   background-image: -ms-linear-gradient(top, #208cea, #116bb9);
   box-shadow: #55a6eb 0 1px 0 0 inset;
 }
-/* line 2015, ../sass/screen.sass */
+/* line 2026, ../sass/screen.sass */
 #menuitem_set-group li div.object_id div button:hover {
   background: #208cea;
   background-image: -webkit-linear-gradient(top, #4da5f2, #208cea);
@@ -3635,7 +3667,7 @@ div.clockbox table td a:hover, div.calendarbox table td a:hover {
   background-image: -ms-linear-gradient(top, #4da5f2, #208cea);
   box-shadow: #79baf2 0 1px 0 0 inset;
 }
-/* line 2022, ../sass/screen.sass */
+/* line 2033, ../sass/screen.sass */
 #menuitem_set-group li div.object_id div button:active {
   background: #116bb9;
   background-image: -webkit-linear-gradient(top, #116bb9, #208cea);
@@ -3643,12 +3675,12 @@ div.clockbox table td a:hover, div.calendarbox table td a:hover {
   background-image: -o-linear-gradient(top, #116bb9, #208cea);
   background-image: -ms-linear-gradient(top, #116bb9, #208cea);
 }
-/* line 2028, ../sass/screen.sass */
+/* line 2039, ../sass/screen.sass */
 #menuitem_set-group li div.form-row div {
   border-top: 1px solid #c5c5c5;
   padding: 10px;
 }
-/* line 2031, ../sass/screen.sass */
+/* line 2042, ../sass/screen.sass */
 #menuitem_set-group li h4 {
   text-shadow: none;
   margin: 0;
@@ -3656,53 +3688,53 @@ div.clockbox table td a:hover, div.calendarbox table td a:hover {
   background: transparent;
   border: none;
 }
-/* line 2037, ../sass/screen.sass */
+/* line 2048, ../sass/screen.sass */
 #menuitem_set-group li h4 span.inline_label {
   color: #434343;
   font-size: 16px;
   margin-right: 5px;
   text-transform: none;
 }
-/* line 2042, ../sass/screen.sass */
+/* line 2053, ../sass/screen.sass */
 #menuitem_set-group li li h4 span.inline_label {
   font-size: 14px;
   text-transform: none;
   font-weight: normal;
 }
-/* line 2048, ../sass/screen.sass */
+/* line 2059, ../sass/screen.sass */
 #menuitem_set-group li h4 span.delete input {
   vertical-align: middle;
 }
-/* line 2051, ../sass/screen.sass */
+/* line 2062, ../sass/screen.sass */
 #menuitem_set-group li h4 span.detail a:link, #menuitem_set-group li h4 span.detail a:visited {
   opacity: 1;
   color: #ed8d1f;
   font-weight: bold;
   text-transform: uppercase;
 }
-/* line 2057, ../sass/screen.sass */
+/* line 2068, ../sass/screen.sass */
 #menuitem_set-group li h4 a:link, #menuitem_set-group li h4 a:visited {
   text-transform: none;
   font-weight: normal;
   color: #666666;
   opacity: 0.15;
 }
-/* line 2062, ../sass/screen.sass */
+/* line 2073, ../sass/screen.sass */
 #menuitem_set-group li h4 span.delete {
   text-transform: none;
   font-weight: normal;
   color: #666666;
   opacity: 0.15;
 }
-/* line 2068, ../sass/screen.sass */
+/* line 2079, ../sass/screen.sass */
 #menuitem_set-group div:hover h4 a, #menuitem_set-group div:hover h4 span.delete {
   opacity: 1;
 }
-/* line 2071, ../sass/screen.sass */
+/* line 2082, ../sass/screen.sass */
 #menuitem_set-group li h4 a:hover {
   color: #ed8d1f;
 }
-/* line 2073, ../sass/screen.sass */
+/* line 2084, ../sass/screen.sass */
 #menuitem_set-group li h4 span.delete {
   margin-right: 10px;
 }

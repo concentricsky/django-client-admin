@@ -1604,7 +1604,7 @@ fieldset.module, div.inline-group
               width: auto
             textarea
               +textarea()
-              max-width: 380px
+              max-width: 344px
             button
               +button()
 
@@ -1658,7 +1658,7 @@ fieldset.module, div.inline-group
                   
           &.tobe_removed
             background: $secondary
-            input, select, p
+            input, select, p, textarea, a
               display: none
 
 
@@ -1813,6 +1813,17 @@ p.datetime
       img
         margin-top: -3px
 
+
+a.add-another
+  text-indent: -9999px
+  position: relative
+  padding: 0 0 0 18px
+  margin: 0 0 0 3px 
+  +sprite-icon(icon_add, $vertical: 2px)
+  &:hover
+    +sprite-icon(icon_add_orange, $vertical: 2px)
+  img
+    display: none
 
 div.clockbox, div.calendarbox
   box-shadow: #434343 0 0 5px 0
