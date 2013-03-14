@@ -3250,10 +3250,14 @@ fieldset.module div.form-row.grouped ul.tobe_removed, div.inline-group div.form-
   background: #f9910c;
 }
 /* line 1738, ../sass/screen.sass */
-fieldset.module div.form-row.grouped ul.tobe_removed input, fieldset.module div.form-row.grouped ul.tobe_removed select, fieldset.module div.form-row.grouped ul.tobe_removed p, div.inline-group div.form-row.grouped ul.tobe_removed input, div.inline-group div.form-row.grouped ul.tobe_removed select, div.inline-group div.form-row.grouped ul.tobe_removed p {
-  display: none;
+fieldset.module div.form-row.grouped ul.tobe_removed input, fieldset.module div.form-row.grouped ul.tobe_removed select, fieldset.module div.form-row.grouped ul.tobe_removed p, fieldset.module div.form-row.grouped ul.tobe_removed strong, fieldset.module div.form-row.grouped ul.tobe_removed li a.related-lookup, div.inline-group div.form-row.grouped ul.tobe_removed input, div.inline-group div.form-row.grouped ul.tobe_removed select, div.inline-group div.form-row.grouped ul.tobe_removed p, div.inline-group div.form-row.grouped ul.tobe_removed strong, div.inline-group div.form-row.grouped ul.tobe_removed li a.related-lookup {
+  display: none !important;
 }
-/* line 1741, ../sass/screen.sass */
+/* line 1740, ../sass/screen.sass */
+fieldset.module div.form-row.grouped ul.tobe_removed span.delete, div.inline-group div.form-row.grouped ul.tobe_removed span.delete {
+  float: right !important;
+}
+/* line 1744, ../sass/screen.sass */
 fieldset.module div.form-row.grouped ul a.inline-deletelink, div.inline-group div.form-row.grouped ul a.inline-deletelink {
   padding: 0 0 0 18px;
   text-indent: -9999px;
@@ -3274,7 +3278,7 @@ fieldset.module div.form-row.grouped ul a.inline-deletelink:after, div.inline-gr
   height: 14px;
   width: 14px;
 }
-/* line 1751, ../sass/screen.sass */
+/* line 1754, ../sass/screen.sass */
 fieldset.module div.form-row.grouped ul a.inline-deletelink:hover, div.inline-group div.form-row.grouped ul a.inline-deletelink:hover {
   color: #f9910c;
 }
@@ -3288,34 +3292,34 @@ fieldset.module div.form-row.grouped ul a.inline-deletelink:hover:after, div.inl
   height: 14px;
   width: 14px;
 }
-/* line 1755, ../sass/screen.sass */
+/* line 1758, ../sass/screen.sass */
 fieldset.module div.form-row.grouped div.add-row, div.inline-group div.form-row.grouped div.add-row {
   clear: both;
 }
-/* line 1757, ../sass/screen.sass */
+/* line 1760, ../sass/screen.sass */
 fieldset.module div.form-row.grouped div.add-row .add-row, div.inline-group div.form-row.grouped div.add-row .add-row {
   border-top: none;
   border-bottom: none;
   float: left;
   min-width: 20%;
 }
-/* line 1762, ../sass/screen.sass */
+/* line 1765, ../sass/screen.sass */
 fieldset.module div.form-row.grouped div.add-row .inline-related, div.inline-group div.form-row.grouped div.add-row .inline-related {
   position: inherit;
   float: left;
   display: block;
 }
-/* line 1766, ../sass/screen.sass */
+/* line 1769, ../sass/screen.sass */
 fieldset.module div.form-row.grouped div.add-row select, div.inline-group div.form-row.grouped div.add-row select {
   height: 22px;
   margin: 3px 0;
 }
 
-/* line 1773, ../sass/screen.sass */
+/* line 1776, ../sass/screen.sass */
 table#change-history {
   width: 100%;
 }
-/* line 1776, ../sass/screen.sass */
+/* line 1779, ../sass/screen.sass */
 table#change-history thead th {
   height: 40px;
   line-height: 40px;
@@ -3325,54 +3329,54 @@ table#change-history thead th {
   border: none;
   padding: 3px 25px;
 }
-/* line 1784, ../sass/screen.sass */
+/* line 1787, ../sass/screen.sass */
 table#change-history thead th:first-child {
   width: 350px;
 }
-/* line 1787, ../sass/screen.sass */
+/* line 1790, ../sass/screen.sass */
 table#change-history tbody tr {
   border-bottom: 1px solid #cdcdcd;
 }
-/* line 1789, ../sass/screen.sass */
+/* line 1792, ../sass/screen.sass */
 table#change-history tbody tr td, table#change-history tbody tr th {
   padding: 10px 25px;
   vertical-align: top;
 }
-/* line 1792, ../sass/screen.sass */
+/* line 1795, ../sass/screen.sass */
 table#change-history tbody tr th {
   color: #006fbb;
 }
 
-/* line 1800, ../sass/screen.sass */
+/* line 1803, ../sass/screen.sass */
 p.datetime input {
   width: 75px;
   margin: 0 8px 8px 8px;
 }
-/* line 1803, ../sass/screen.sass */
+/* line 1806, ../sass/screen.sass */
 p.datetime input:first-child {
   margin-left: 11px;
 }
-/* line 1806, ../sass/screen.sass */
+/* line 1809, ../sass/screen.sass */
 p.datetime span.datetimeshortcuts a:first-child {
   font-size: 14px;
   color: #006fbb;
   margin-right: 5px;
 }
-/* line 1810, ../sass/screen.sass */
+/* line 1813, ../sass/screen.sass */
 p.datetime span.datetimeshortcuts a:first-child:hover {
   color: #f9910c;
 }
-/* line 1812, ../sass/screen.sass */
+/* line 1815, ../sass/screen.sass */
 p.datetime span.datetimeshortcuts a:last-child {
   display: inline-block;
   margin-left: 5px;
 }
-/* line 1815, ../sass/screen.sass */
+/* line 1818, ../sass/screen.sass */
 p.datetime span.datetimeshortcuts a:last-child img {
   margin-top: -3px;
 }
 
-/* line 1819, ../sass/screen.sass */
+/* line 1822, ../sass/screen.sass */
 a.add-another {
   text-indent: -9999px;
   position: relative;
@@ -3399,18 +3403,18 @@ a.add-another:hover:after {
   height: 14px;
   width: 14px;
 }
-/* line 1827, ../sass/screen.sass */
+/* line 1830, ../sass/screen.sass */
 a.add-another img {
   display: none;
 }
 
-/* line 1830, ../sass/screen.sass */
+/* line 1833, ../sass/screen.sass */
 div.clockbox, div.calendarbox {
   box-shadow: #434343 0 0 5px 0;
   border: none !important;
   margin: 22px 0 0 15px;
 }
-/* line 1834, ../sass/screen.sass */
+/* line 1837, ../sass/screen.sass */
 div.clockbox:before, div.calendarbox:before {
   content: "";
   position: absolute;
@@ -3422,7 +3426,7 @@ div.clockbox:before, div.calendarbox:before {
   border-top: 18px solid transparent;
   border-bottom: 18px solid transparent;
 }
-/* line 1844, ../sass/screen.sass */
+/* line 1847, ../sass/screen.sass */
 div.clockbox h2, div.calendarbox h2 {
   background: #006fbb;
   color: white;
@@ -3430,54 +3434,54 @@ div.clockbox h2, div.calendarbox h2 {
   font-size: 14px;
   border: none;
 }
-/* line 1850, ../sass/screen.sass */
+/* line 1853, ../sass/screen.sass */
 div.clockbox ul.timelist li, div.calendarbox ul.timelist li {
   border-bottom: 1px solid #f6f6f6;
 }
-/* line 1852, ../sass/screen.sass */
+/* line 1855, ../sass/screen.sass */
 div.clockbox ul.timelist li:last-child, div.calendarbox ul.timelist li:last-child {
   border-bottom: none;
 }
-/* line 1854, ../sass/screen.sass */
+/* line 1857, ../sass/screen.sass */
 div.clockbox ul.timelist li a, div.calendarbox ul.timelist li a {
   padding: 5px 0;
 }
-/* line 1856, ../sass/screen.sass */
+/* line 1859, ../sass/screen.sass */
 div.clockbox ul.timelist li a:hover, div.calendarbox ul.timelist li a:hover {
   background: #f9910c;
   color: white;
 }
-/* line 1859, ../sass/screen.sass */
+/* line 1862, ../sass/screen.sass */
 div.clockbox p.calendar-cancel, div.calendarbox p.calendar-cancel {
   border: none;
   font-size: 14px;
   background: #747474;
 }
-/* line 1863, ../sass/screen.sass */
+/* line 1866, ../sass/screen.sass */
 div.clockbox p.calendar-cancel a, div.calendarbox p.calendar-cancel a {
   color: white;
   padding: 5px 0;
 }
-/* line 1866, ../sass/screen.sass */
+/* line 1869, ../sass/screen.sass */
 div.clockbox p.calendar-cancel a:hover, div.calendarbox p.calendar-cancel a:hover {
   background: #f9910c;
 }
-/* line 1868, ../sass/screen.sass */
+/* line 1871, ../sass/screen.sass */
 div.clockbox table, div.calendarbox table {
   width: 100%;
 }
-/* line 1870, ../sass/screen.sass */
+/* line 1873, ../sass/screen.sass */
 div.clockbox .calendarnav-previous, div.clockbox .calendarnav-next, div.calendarbox .calendarnav-previous, div.calendarbox .calendarnav-next {
   background: #006fbb;
   height: 34px;
   line-height: 34px;
 }
-/* line 1874, ../sass/screen.sass */
+/* line 1877, ../sass/screen.sass */
 div.clockbox .calendarnav-previous:hover, div.clockbox .calendarnav-next:hover, div.calendarbox .calendarnav-previous:hover, div.calendarbox .calendarnav-next:hover {
   background: #003366;
   color: white;
 }
-/* line 1877, ../sass/screen.sass */
+/* line 1880, ../sass/screen.sass */
 div.clockbox caption, div.calendarbox caption {
   background: #006fbb;
   font-size: 14px;
@@ -3487,26 +3491,26 @@ div.clockbox caption, div.calendarbox caption {
   padding: 3px 0;
   width: 100%;
 }
-/* line 1886, ../sass/screen.sass */
+/* line 1889, ../sass/screen.sass */
 div.clockbox table td.today a, div.calendarbox table td.today a {
   background: #ed8d1f;
   color: white;
 }
-/* line 1889, ../sass/screen.sass */
+/* line 1892, ../sass/screen.sass */
 div.clockbox table td a:hover, div.calendarbox table td a:hover {
   background: #006fbb;
 }
 
-/* line 1896, ../sass/screen.sass */
+/* line 1899, ../sass/screen.sass */
 .ui-dialog fieldset {
   border-radius: 5px;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
-/* line 1899, ../sass/screen.sass */
+/* line 1902, ../sass/screen.sass */
 .ui-dialog fieldset p.help {
   margin-left: 87px;
 }
-/* line 1901, ../sass/screen.sass */
+/* line 1904, ../sass/screen.sass */
 .ui-dialog fieldset button {
   background: none;
   height: 28px;
@@ -3527,7 +3531,7 @@ div.clockbox table td a:hover, div.calendarbox table td a:hover {
   box-shadow: #55a6eb 0 1px 0 0 inset;
   cursor: pointer;
 }
-/* line 1920, ../sass/screen.sass */
+/* line 1923, ../sass/screen.sass */
 .ui-dialog fieldset button:hover {
   background: #208cea;
   background-image: -webkit-linear-gradient(top, #4da5f2, #208cea);
@@ -3536,7 +3540,7 @@ div.clockbox table td a:hover, div.calendarbox table td a:hover {
   background-image: -ms-linear-gradient(top, #4da5f2, #208cea);
   box-shadow: #79baf2 0 1px 0 0 inset;
 }
-/* line 1927, ../sass/screen.sass */
+/* line 1930, ../sass/screen.sass */
 .ui-dialog fieldset button:active {
   background: #116bb9;
   background-image: -webkit-linear-gradient(top, #116bb9, #208cea);
@@ -3544,18 +3548,18 @@ div.clockbox table td a:hover, div.calendarbox table td a:hover {
   background-image: -o-linear-gradient(top, #116bb9, #208cea);
   background-image: -ms-linear-gradient(top, #116bb9, #208cea);
 }
-/* line 1934, ../sass/screen.sass */
+/* line 1937, ../sass/screen.sass */
 .ui-dialog fieldset div.advanced {
   background: #efefef;
   border-top: 1px solid #cccccc;
   margin: 0;
   padding: 5px 10px 5px 18px;
 }
-/* line 1939, ../sass/screen.sass */
+/* line 1942, ../sass/screen.sass */
 .ui-dialog fieldset div.field-is_active {
   border-top: 1px solid #cccccc;
 }
-/* line 1941, ../sass/screen.sass */
+/* line 1944, ../sass/screen.sass */
 .ui-dialog fieldset div.advanced a {
   display: inline-block;
   margin: 5px 0;
@@ -3576,7 +3580,7 @@ div.clockbox table td a:hover, div.calendarbox table td a:hover {
   cursor: pointer;
   cursor: pointer;
 }
-/* line 1960, ../sass/screen.sass */
+/* line 1963, ../sass/screen.sass */
 .ui-dialog fieldset div.advanced a:hover {
   background: #7b7b7c;
   background-image: -webkit-linear-gradient(top, #b4b4b4, #909090);
@@ -3584,7 +3588,7 @@ div.clockbox table td a:hover, div.calendarbox table td a:hover {
   background-image: -o-linear-gradient(top, #b4b4b4, #909090);
   background-image: -ms-linear-gradient(top, #b4b4b4, #909090);
 }
-/* line 1966, ../sass/screen.sass */
+/* line 1969, ../sass/screen.sass */
 .ui-dialog fieldset div.advanced a:active {
   background: #969595;
   background-image: -webkit-linear-gradient(top, #969595, #ababab);
@@ -3593,31 +3597,31 @@ div.clockbox table td a:hover, div.calendarbox table td a:hover {
   background-image: -ms-linear-gradient(top, #969595, #ababab);
 }
 
-/* line 1977, ../sass/screen.sass */
+/* line 1980, ../sass/screen.sass */
 #menuitem_set-group {
   margin: 0;
   border: 1px solid #c5c5c5;
 }
-/* line 1981, ../sass/screen.sass */
+/* line 1984, ../sass/screen.sass */
 #menuitem_set-group li.inline-related {
   cursor: move;
 }
-/* line 1983, ../sass/screen.sass */
+/* line 1986, ../sass/screen.sass */
 #menuitem_set-group li li.inline-related {
   background: url(images/icon_nested_arrow.png) left top no-repeat transparent;
 }
-/* line 1985, ../sass/screen.sass */
+/* line 1988, ../sass/screen.sass */
 #menuitem_set-group li.inline-related fieldset {
   background: #fcfcfc;
   width: 100%;
   padding: 0 10px 0 10px;
   margin: 5px 0 0 -10px;
 }
-/* line 1990, ../sass/screen.sass */
+/* line 1993, ../sass/screen.sass */
 #menuitem_set-group li:nth-child(even) {
   background: #f6f6f6;
 }
-/* line 1992, ../sass/screen.sass */
+/* line 1995, ../sass/screen.sass */
 #menuitem_set-group li div {
   border: none;
   margin: 0;
@@ -3627,22 +3631,22 @@ div.clockbox table td a:hover, div.calendarbox table td a:hover {
   list-style: none;
   position: relative;
 }
-/* line 2000, ../sass/screen.sass */
+/* line 2003, ../sass/screen.sass */
 #menuitem_set-group li li div {
   border-top: 1px dashed #c5c5c5;
   background: transparent;
 }
-/* line 2004, ../sass/screen.sass */
+/* line 2007, ../sass/screen.sass */
 #menuitem_set-group li div.form-row {
   border-top: none;
   padding: 0;
   background: transparent;
 }
-/* line 2008, ../sass/screen.sass */
+/* line 2011, ../sass/screen.sass */
 #menuitem_set-group li div.object_id div {
   min-height: 29px !important;
 }
-/* line 2010, ../sass/screen.sass */
+/* line 2013, ../sass/screen.sass */
 #menuitem_set-group li div.object_id div button {
   background: none;
   height: 28px;
@@ -3662,7 +3666,7 @@ div.clockbox table td a:hover, div.calendarbox table td a:hover {
   background-image: -ms-linear-gradient(top, #208cea, #116bb9);
   box-shadow: #55a6eb 0 1px 0 0 inset;
 }
-/* line 2028, ../sass/screen.sass */
+/* line 2031, ../sass/screen.sass */
 #menuitem_set-group li div.object_id div button:hover {
   background: #208cea;
   background-image: -webkit-linear-gradient(top, #4da5f2, #208cea);
@@ -3671,7 +3675,7 @@ div.clockbox table td a:hover, div.calendarbox table td a:hover {
   background-image: -ms-linear-gradient(top, #4da5f2, #208cea);
   box-shadow: #79baf2 0 1px 0 0 inset;
 }
-/* line 2035, ../sass/screen.sass */
+/* line 2038, ../sass/screen.sass */
 #menuitem_set-group li div.object_id div button:active {
   background: #116bb9;
   background-image: -webkit-linear-gradient(top, #116bb9, #208cea);
@@ -3679,12 +3683,12 @@ div.clockbox table td a:hover, div.calendarbox table td a:hover {
   background-image: -o-linear-gradient(top, #116bb9, #208cea);
   background-image: -ms-linear-gradient(top, #116bb9, #208cea);
 }
-/* line 2041, ../sass/screen.sass */
+/* line 2044, ../sass/screen.sass */
 #menuitem_set-group li div.form-row div {
   border-top: 1px solid #c5c5c5;
   padding: 10px;
 }
-/* line 2044, ../sass/screen.sass */
+/* line 2047, ../sass/screen.sass */
 #menuitem_set-group li h4 {
   text-shadow: none;
   margin: 0;
@@ -3692,53 +3696,53 @@ div.clockbox table td a:hover, div.calendarbox table td a:hover {
   background: transparent;
   border: none;
 }
-/* line 2050, ../sass/screen.sass */
+/* line 2053, ../sass/screen.sass */
 #menuitem_set-group li h4 span.inline_label {
   color: #434343;
   font-size: 16px;
   margin-right: 5px;
   text-transform: none;
 }
-/* line 2055, ../sass/screen.sass */
+/* line 2058, ../sass/screen.sass */
 #menuitem_set-group li li h4 span.inline_label {
   font-size: 14px;
   text-transform: none;
   font-weight: normal;
 }
-/* line 2061, ../sass/screen.sass */
+/* line 2064, ../sass/screen.sass */
 #menuitem_set-group li h4 span.delete input {
   vertical-align: middle;
 }
-/* line 2064, ../sass/screen.sass */
+/* line 2067, ../sass/screen.sass */
 #menuitem_set-group li h4 span.detail a:link, #menuitem_set-group li h4 span.detail a:visited {
   opacity: 1;
   color: #ed8d1f;
   font-weight: bold;
   text-transform: uppercase;
 }
-/* line 2070, ../sass/screen.sass */
+/* line 2073, ../sass/screen.sass */
 #menuitem_set-group li h4 a:link, #menuitem_set-group li h4 a:visited {
   text-transform: none;
   font-weight: normal;
   color: #666666;
   opacity: 0.15;
 }
-/* line 2075, ../sass/screen.sass */
+/* line 2078, ../sass/screen.sass */
 #menuitem_set-group li h4 span.delete {
   text-transform: none;
   font-weight: normal;
   color: #666666;
   opacity: 0.15;
 }
-/* line 2081, ../sass/screen.sass */
+/* line 2084, ../sass/screen.sass */
 #menuitem_set-group div:hover h4 a, #menuitem_set-group div:hover h4 span.delete {
   opacity: 1;
 }
-/* line 2084, ../sass/screen.sass */
+/* line 2087, ../sass/screen.sass */
 #menuitem_set-group li h4 a:hover {
   color: #ed8d1f;
 }
-/* line 2086, ../sass/screen.sass */
+/* line 2089, ../sass/screen.sass */
 #menuitem_set-group li h4 span.delete {
   margin-right: 10px;
 }

@@ -1735,8 +1735,11 @@ fieldset.module, div.inline-group
 
       &.tobe_removed
         background: $secondary
-        input, select, p
-          display: none
+        input, select, p, strong, li a.related-lookup
+          display: none !important
+        span.delete
+          float: right !important
+
 
       a.inline-deletelink
         +sprite-icon(icon_delete, $vertical: 2px)
