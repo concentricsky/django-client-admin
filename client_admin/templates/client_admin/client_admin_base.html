@@ -202,6 +202,12 @@
             //     $(this).siblings("span.toggleswitch").removeClass("tobe_removed");
             // })
 
+            $("ul#menuitem_set-group li span.delete input[type='checkbox']").click(function(){
+                $(this).siblings("label.inline").toggleClass("hidden");
+                $(this).siblings("label.undo_stackedinline_delete").toggleClass("hidden");
+                $(this).parents("li.inline-related").first().toggleClass("tobe_removed");
+            })
+            
             $("div.inline-related h3 input[type='checkbox']").click(function(){
                 $(this).siblings("label.stackedinline_delete").toggleClass("hidden");
                 $(this).siblings("label.undo_stackedinline_delete").toggleClass("hidden");
