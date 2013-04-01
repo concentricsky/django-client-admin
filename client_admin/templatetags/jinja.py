@@ -10,7 +10,6 @@ register.simple_tag(block_super)
 
 @register.tag(name="extends_jinja")
 def do_extends_jinja(parser, token):
-    #import pdb; pdb.set_trace()
     try:
         # split_contents() knows not to split quoted strings.
         tag_name, format_string = token.split_contents()
