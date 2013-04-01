@@ -3827,3 +3827,18 @@ div.clockbox table td a:hover, div.calendarbox table td a:hover {
   height: 14px;
   width: 14px;
 }
+
+/* line 2087, ../sass/screen.sass */
+#revision_container {
+  width: 960px;
+  margin: 0 auto;
+  background: #006fbb;
+}
+/* line 2091, ../sass/screen.sass */
+#revision_container p {
+  font-size: 23px;
+  font-weight: bold;
+  color: white;
+  padding: 10px;
+  margin-bottom: 30px;
+}
