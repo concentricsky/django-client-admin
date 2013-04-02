@@ -82,6 +82,7 @@
     <script type="text/javascript" src="{{ STATIC_URL }}{{ js }}"></script>
     {% endfor %}{% endif %}
     <script type="text/javascript">
+        // just use the namespaced jQuery as the regular one
         var jQuery = django.jQuery;
     </script>
 {#    <script type="text/javascript" src="{{ STATIC_URL }}client_admin/js/jquery/jquery.collapsed_stacked_inlines.js"></script>#}
@@ -92,12 +93,12 @@
     <script type="text/javascript" src="{{ STATIC_URL }}client_admin/js/jquery/jquery.cookie.min.js"></script>
     <script type="text/javascript" src="{{ STATIC_URL }}client_admin/js/jquery/jquery.dashboard.js"></script>
     <script type="text/javascript" src="{{ STATIC_URL }}client_admin/js/jquery/jquery.ui.nestedSortable.js"></script>
+    <script type="text/javascript" src="{{ STATIC_URL }}client_admin/js/bootstrap.file-input.js"></script>
     <script type="text/javascript" src="{{ STATIC_URL }}client_admin/js/watch.min.js"></script>
     <script type="text/javascript" src="{{ STATIC_URL }}client_admin/js/client_admin.js"></script>
     <script type="text/javascript" src="{{ STATIC_URL }}client_admin/js/dashboard.js"></script>
     <script type="text/javascript" src="{{ STATIC_URL }}client_admin/js/menu.js"></script>
-    <!--<script src="http://code.jquery.com/ui/1.10.0/jquery-ui.js"></script>-->
-    
+
     <script type="text/javascript">
 
         reset_order_fields = function(){
