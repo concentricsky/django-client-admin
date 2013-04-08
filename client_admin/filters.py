@@ -28,12 +28,6 @@ class LookupFilter(RelatedFieldListFilter):
                 'query_string': '?',
                 'display': 'Remove filter',
             }
-        else:
-            yield {
-                'selected': not self.lookup_val,
-                'query_string': '?',
-                'display': 'All',
-            }
 
 
 class SelectFilter(ChoicesFieldListFilter):
