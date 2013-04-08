@@ -41,7 +41,7 @@
 {% endblock %}
 <form {% if has_file_field %}enctype="multipart/form-data" {% endif %}action="{{ form_url }}" method="post" id="{{ opts.module_name }}_form" class="change_form">{% csrf_token %}{% block form_top %}{% endblock %}
 
-{% if save_on_top %}{% block submit_buttons_top %}{% submit_row %}{% endblock %}{% endif %}
+{% block submit_buttons_top %}{% submit_row %}{% endblock %}
 <div class="form_submit_container">
 {% if is_popup %}<input type="hidden" name="_popup" value="1" />{% endif %}
 {% if errors %}
@@ -66,8 +66,6 @@
 {% endblock %}
 
 {% block after_related_objects %}{% endblock %}
-
-<!-- {% block submit_buttons_bottom %}{% submit_row %}{% endblock %} -->
 
 {% if adminform and add %}
    <script type="text/javascript">document.getElementById("{{ adminform.first_field.id_for_label }}").focus();</script>

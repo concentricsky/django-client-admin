@@ -13,11 +13,6 @@ class LookupFilter(RelatedFieldListFilter):
             'query_string': cl.get_query_string({self.lookup_kwarg: "PLACEHOLDER"}),
             'filter_name': self.field.rel.to._meta.module_name,
         }
-        yield {
-            'selected': not self.lookup_val,
-            'query_string': '?',
-            'display': 'All',
-        }
         for pk_val, val in self.lookup_choices:
             if self.lookup_val == smart_text(pk_val):
                 yield {
@@ -27,6 +22,12 @@ class LookupFilter(RelatedFieldListFilter):
                     }, [self.lookup_kwarg_isnull]),
                     'display': val,
                 }
+        if self.lookup_val:
+            yield {
+                'selected': not self.lookup_val,
+                'query_string': '?',
+                'display': 'Remove filter',
+            }
 
 
 class SelectFilter(ChoicesFieldListFilter):

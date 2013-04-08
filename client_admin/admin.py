@@ -3,7 +3,7 @@ from client_admin.views import generic_lookup, get_generic_rel_list
 from client_admin.widgets import ThumbnailImageWidget, AdminURLFieldWidget
 
 from django.conf import settings
-from django.conf.urls.defaults import patterns, url
+from django.conf.urls import patterns, url
 from django.contrib import admin
 from django.contrib.admin import helpers
 from django.contrib.admin.templatetags.admin_static import static
