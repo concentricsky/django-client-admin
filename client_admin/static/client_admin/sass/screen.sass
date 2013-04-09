@@ -102,13 +102,13 @@ ul.errorlist
     padding: 0 0 0 20px 
     color: #e72d2e
     font-weight: bold
-    background-color: transparent
+    background-color: transparent !important
     margin: 0 0 3px 0
     position: relative
     +sprite-icon(icon_error, $vertical: 4px, $horizontal: 0px)
 
 .form-row.errors
-  background-color: #ffe6e6
+  background-color: transparent
 
 .login div#admin_content 
   margin-top: 15px
@@ -300,7 +300,7 @@ header
               padding: 10px
               font-size: 12px
               color: #272727
-              text-transform: capitalize
+              text-transform: none
               text-indent: 0
               &:hover, &:active
                 background: #efefef
@@ -938,6 +938,15 @@ body.change-list
       background: #fff 
       position: relative
       z-index: 150
+      a.related-lookup
+        color: $body-secondary
+        position: relative
+        padding-left: 18px
+        +sprite-icon(icon_search_light, $vertical: 2px)
+        &:hover
+          color: $body
+          +sprite-icon(icon_search, $vertical: 2px)
+
 
       // Search
       // - - - - - - - - - - - 
@@ -993,19 +1002,39 @@ body.change-list
         color: $secondary
       ul
         margin-bottom: 10px
+        margin-left: 0
+        position: relative
         li
           font-size: 12px
           font-weight: bold
-          margin: 0
-          padding: 0
+          margin: 0 0 8px 0
+          line-height: 1.2em
           &.selected
             border: none
+            margin-top: 5px
+            padding: 5px
+            background: #f6f6f6
             a
-              color: $body !important
+              color: $primary !important
+              display: block
+              padding-right: 20px
           a
             color: $body-secondary
             &:hover
               color: $body
+          &:last-child
+            position: absolute
+            height: 14px
+            width: 14px
+            margin: 3px 3px 0 0 
+            text-indent: -9999px
+            top: 29px
+            right: 0
+            a
+              display: block
+              background: url(images/icons/icon_delete.png)
+              height: 14px
+              width: 14px
       select
         width: 100%
         margin-bottom: 15px

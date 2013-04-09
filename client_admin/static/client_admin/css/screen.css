@@ -63,9 +63,9 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   display: block;
 }
 
-/* line 402, icons/*.png */
-.icons-sprite, a.deletelink:after, a.deletelink:link:after, a.deletelink:visited:after, a.deletelink:hover:after, a.deletelink:link:hover:after, a.deletelink:visited:hover:after, p.errornote:after, ul.errorlist li:after, header nav ul li.user-tools > a:after, header nav ul li.user-tools:visited:after, header nav ul li.user-tools > a:hover:after, header nav ul li.user-tools:visited:hover:after, #page_header #bookmark-form #bookmark-button:after, #page_header #bookmark-form #bookmark-button.bookmarked:after, #page_header #bookmark-form #bookmark-button:hover:after, #admin_content ul.object-tools li a.historylink:after, #admin_content ul.object-tools li a.historylink:link:after, #admin_content ul.object-tools li a.historylink:visited:after, #admin_content ul.object-tools li a.historylink:hover:after, #admin_content ul.object-tools li a.historylink:link:hover:after, #admin_content ul.object-tools li a.historylink:visited:hover:after, #admin_content ul.object-tools li a.viewsitelink:after, #admin_content ul.object-tools li a.viewsitelink:link:after, #admin_content ul.object-tools li a.viewsitelink:visited:after, #admin_content ul.object-tools li a.viewsitelink:hover:after, #admin_content ul.object-tools li a.viewsitelink:link:hover:after, #admin_content ul.object-tools li a.viewsitelink:visited:hover:after, #admin_content ul.object-tools li a.addlink:after, #admin_content ul.object-tools li a.addlink:link:after, #admin_content ul.object-tools li a.addlink:visited:after, #admin_content ul.object-tools li a.addlink:hover:after, #admin_content ul.object-tools li a.addlink:link:hover:after, #admin_content ul.object-tools li a.addlink:visited:hover:after, #admin_content ul.object-tools li a.recoverlink:after, #admin_content ul.object-tools li a.recoverlink:link:after, #admin_content ul.object-tools li a.recoverlink:visited:after, #admin_content ul.object-tools li a.recoverlink:hover:after, #admin_content ul.object-tools li a.recoverlink:link:hover:after, #admin_content ul.object-tools li a.recoverlink:visited:hover:after, #admin_content ul.object-tools li#dashboard-panel > a:after, #admin_content ul.object-tools li#dashboard-panel > a:hover:after, #admin_content ul.object-tools li#dashboard-panel:hover > a:after, div div.dashboard-module span.changelink:after, div div.dashboard-module span.addlink:after, div div.dashboard-module span.listlink:after, div div.dashboard-module span.deletelink:after, div div.dashboard-module h3 a.close-icon:after, div div.dashboard-module h3 a.close-icon:hover:after, div div.dashboard-module h3 a.toggle-icon:after, div div.dashboard-module h3 a.toggle-icon:hover:after, div div.dashboard-module h3 a.toggle-icon.collapsed:after, div div.dashboard-module h3 a.toggle-icon.collapsed:hover:after, div div.dashboard-module div.dashboard-module-content li ul.list-options li a.changelink:after, div div.dashboard-module div.dashboard-module-content li ul.list-options li a.addlink:after, div div.dashboard-module div.dashboard-module-content li ul.list-options li a.listlink:after, div div.dashboard-module div.dashboard-module-content li ul.list-options li a.changelink:hover:after, div div.dashboard-module div.dashboard-module-content li ul.list-options li a.addlink:hover:after, div div.dashboard-module div.dashboard-module-content li ul.list-options li a.listlink:hover:after, div div.dashboard-module#module_1 div.dashboard-module-content ul li.first ul.list-options li a.changelink:after, div div.dashboard-module#module_1 div.dashboard-module-content ul li.first ul.list-options li a.changelink:hover:after, div div.dashboard-module.snippets ul li.listmeta a:after, div div.dashboard-module.snippets ul li.listmeta a:hover:after, body.app_index #content-main table tbody tr td a.addlink:after, body.app_index #content-main table tbody tr td a.addlink:hover:after, body.app_index #content-main table tbody tr td a.changelink:after, body.app_index #content-main table tbody tr td a.changelink:hover:after, body.change-list #changelist div.results table#result_list thead th.sorted div.sortoptions a.sortremove:after, body.change-list #changelist div.results table#result_list thead th.sorted div.sortoptions a.ascending:after, body.change-list #changelist div.results table#result_list thead th.sorted div.sortoptions a.descending:after, .button.default:after, input[type="submit"].default:after, fieldset.module div.form-row div.field_container div.imageupload-widget a.file_upload_button:after, div.inline-group div.form-row div.field_container div.imageupload-widget a.file_upload_button:after, fieldset.module div.form-row div.field_container div.imageupload-widget span.clearable-file-input label:after, div.inline-group div.form-row div.field_container div.imageupload-widget span.clearable-file-input label:after, fieldset.module div.form-row div.field_container div.imageupload-widget span.clearable-file-input label:hover:after, div.inline-group div.form-row div.field_container div.imageupload-widget span.clearable-file-input label:hover:after, fieldset.module div.form-row div.field_container div.imageupload-widget span.clearable-file-input label.hidden:after, div.inline-group div.form-row div.field_container div.imageupload-widget span.clearable-file-input label.hidden:after, fieldset.module div.form-row div.field_container p.help span:after, fieldset.module div.form-row div.field_container .help span:after, div.inline-group div.form-row div.field_container p.help span:after, div.inline-group div.form-row div.field_container .help span:after, fieldset.module div.inline-related h3 span.delete label.stackedinline_delete:after, div.inline-group div.inline-related h3 span.delete label.stackedinline_delete:after, fieldset.module div.inline-related h3 span.delete label.stackedinline_delete:hover:after, div.inline-group div.inline-related h3 span.delete label.stackedinline_delete:hover:after, fieldset.module div.inline-related h3 span.delete label.undo_stackedinline_delete:after, div.inline-group div.inline-related h3 span.delete label.undo_stackedinline_delete:after, fieldset.module div.inline-related h3 span.delete label.undo_stackedinline_delete:hover:after, div.inline-group div.inline-related h3 span.delete label.undo_stackedinline_delete:hover:after, fieldset.module div.inline-related h3 a.inline-deletelink:after, div.inline-group div.inline-related h3 a.inline-deletelink:after, fieldset.module div.inline-related h3 a.inline-deletelink:hover:after, div.inline-group div.inline-related h3 a.inline-deletelink:hover:after, fieldset.module div.add-row a:after, div.inline-group div.add-row a:after, fieldset.module div.tabular table tbody tr td.link button:after, div.inline-group div.tabular table tbody tr td.link button:after, fieldset.module div.tabular table tbody tr td.delete a.inline-deletelink:after, div.inline-group div.tabular table tbody tr td.delete a.inline-deletelink:after, fieldset.module div.tabular table tbody tr td.delete a.inline-deletelink:hover:after, div.inline-group div.tabular table tbody tr td.delete a.inline-deletelink:hover:after, fieldset.module div.tabular table tbody tr td.delete label.tabularinline_delete:after, div.inline-group div.tabular table tbody tr td.delete label.tabularinline_delete:after, fieldset.module div.tabular table tbody tr td.delete label.tabularinline_delete:hover:after, div.inline-group div.tabular table tbody tr td.delete label.tabularinline_delete:hover:after, fieldset.module div.tabular table tbody tr td.delete label.undo_tabularinline_delete:after, div.inline-group div.tabular table tbody tr td.delete label.undo_tabularinline_delete:after, fieldset.module div.tabular table tbody tr td.delete label.undo_tabularinline_delete:hover:after, div.inline-group div.tabular table tbody tr td.delete label.undo_tabularinline_delete:hover:after, fieldset.module div.tabular table tbody tr.add-row td a:after, div.inline-group div.tabular table tbody tr.add-row td a:after, fieldset.module div.form-row.grouped ul span.delete label:after, div.inline-group div.form-row.grouped ul span.delete label:after, fieldset.module div.form-row.grouped ul span.delete label:hover:after, div.inline-group div.form-row.grouped ul span.delete label:hover:after, fieldset.module div.form-row.grouped ul span.delete.tobe_removed label:after, div.inline-group div.form-row.grouped ul span.delete.tobe_removed label:after, fieldset.module div.form-row.grouped ul a.inline-deletelink:after, div.inline-group div.form-row.grouped ul a.inline-deletelink:after, fieldset.module div.form-row.grouped ul a.inline-deletelink:hover:after, div.inline-group div.form-row.grouped ul a.inline-deletelink:hover:after, a.add-another:after, a.add-another:hover:after, .ui-dialog fieldset div.advanced a:after, .ui-dialog fieldset div.advanced a:hover:after, #menuitem_set-group li h3 > a:after, #menuitem_set-group li h3 > a:hover:after, #menuitem_set-group li h3 span.delete label:after, #menuitem_set-group li h3 span.delete label:hover:after, #menuitem_set-group li h3 span.delete label.undo_stackedinline_delete:after, #menuitem_set-group div.add-row a:after, #menuitem_set-group div.add-row a:hover:after {
-  background: url('images/icons-se390b91fc8.png') no-repeat;
+/* line 418, icons/*.png */
+.icons-sprite, a.deletelink:after, a.deletelink:link:after, a.deletelink:visited:after, a.deletelink:hover:after, a.deletelink:link:hover:after, a.deletelink:visited:hover:after, p.errornote:after, ul.errorlist li:after, header nav ul li.user-tools > a:after, header nav ul li.user-tools:visited:after, header nav ul li.user-tools > a:hover:after, header nav ul li.user-tools:visited:hover:after, #page_header #bookmark-form #bookmark-button:after, #page_header #bookmark-form #bookmark-button.bookmarked:after, #page_header #bookmark-form #bookmark-button:hover:after, #admin_content ul.object-tools li a.historylink:after, #admin_content ul.object-tools li a.historylink:link:after, #admin_content ul.object-tools li a.historylink:visited:after, #admin_content ul.object-tools li a.historylink:hover:after, #admin_content ul.object-tools li a.historylink:link:hover:after, #admin_content ul.object-tools li a.historylink:visited:hover:after, #admin_content ul.object-tools li a.viewsitelink:after, #admin_content ul.object-tools li a.viewsitelink:link:after, #admin_content ul.object-tools li a.viewsitelink:visited:after, #admin_content ul.object-tools li a.viewsitelink:hover:after, #admin_content ul.object-tools li a.viewsitelink:link:hover:after, #admin_content ul.object-tools li a.viewsitelink:visited:hover:after, #admin_content ul.object-tools li a.addlink:after, #admin_content ul.object-tools li a.addlink:link:after, #admin_content ul.object-tools li a.addlink:visited:after, #admin_content ul.object-tools li a.addlink:hover:after, #admin_content ul.object-tools li a.addlink:link:hover:after, #admin_content ul.object-tools li a.addlink:visited:hover:after, #admin_content ul.object-tools li a.recoverlink:after, #admin_content ul.object-tools li a.recoverlink:link:after, #admin_content ul.object-tools li a.recoverlink:visited:after, #admin_content ul.object-tools li a.recoverlink:hover:after, #admin_content ul.object-tools li a.recoverlink:link:hover:after, #admin_content ul.object-tools li a.recoverlink:visited:hover:after, #admin_content ul.object-tools li#dashboard-panel > a:after, #admin_content ul.object-tools li#dashboard-panel > a:hover:after, #admin_content ul.object-tools li#dashboard-panel:hover > a:after, div div.dashboard-module span.changelink:after, div div.dashboard-module span.addlink:after, div div.dashboard-module span.listlink:after, div div.dashboard-module span.deletelink:after, div div.dashboard-module h3 a.close-icon:after, div div.dashboard-module h3 a.close-icon:hover:after, div div.dashboard-module h3 a.toggle-icon:after, div div.dashboard-module h3 a.toggle-icon:hover:after, div div.dashboard-module h3 a.toggle-icon.collapsed:after, div div.dashboard-module h3 a.toggle-icon.collapsed:hover:after, div div.dashboard-module div.dashboard-module-content li ul.list-options li a.changelink:after, div div.dashboard-module div.dashboard-module-content li ul.list-options li a.addlink:after, div div.dashboard-module div.dashboard-module-content li ul.list-options li a.listlink:after, div div.dashboard-module div.dashboard-module-content li ul.list-options li a.changelink:hover:after, div div.dashboard-module div.dashboard-module-content li ul.list-options li a.addlink:hover:after, div div.dashboard-module div.dashboard-module-content li ul.list-options li a.listlink:hover:after, div div.dashboard-module#module_1 div.dashboard-module-content ul li.first ul.list-options li a.changelink:after, div div.dashboard-module#module_1 div.dashboard-module-content ul li.first ul.list-options li a.changelink:hover:after, div div.dashboard-module.snippets ul li.listmeta a:after, div div.dashboard-module.snippets ul li.listmeta a:hover:after, body.app_index #content-main table tbody tr td a.addlink:after, body.app_index #content-main table tbody tr td a.addlink:hover:after, body.app_index #content-main table tbody tr td a.changelink:after, body.app_index #content-main table tbody tr td a.changelink:hover:after, body.change-list #changelist div#changelist-filter a.related-lookup:after, body.change-list #changelist div#changelist-filter a.related-lookup:hover:after, body.change-list #changelist div.results table#result_list thead th.sorted div.sortoptions a.sortremove:after, body.change-list #changelist div.results table#result_list thead th.sorted div.sortoptions a.ascending:after, body.change-list #changelist div.results table#result_list thead th.sorted div.sortoptions a.descending:after, .button.default:after, input[type="submit"].default:after, fieldset.module div.form-row div.field_container div.imageupload-widget a.file_upload_button:after, div.inline-group div.form-row div.field_container div.imageupload-widget a.file_upload_button:after, fieldset.module div.form-row div.field_container div.imageupload-widget span.clearable-file-input label:after, div.inline-group div.form-row div.field_container div.imageupload-widget span.clearable-file-input label:after, fieldset.module div.form-row div.field_container div.imageupload-widget span.clearable-file-input label:hover:after, div.inline-group div.form-row div.field_container div.imageupload-widget span.clearable-file-input label:hover:after, fieldset.module div.form-row div.field_container div.imageupload-widget span.clearable-file-input label.hidden:after, div.inline-group div.form-row div.field_container div.imageupload-widget span.clearable-file-input label.hidden:after, fieldset.module div.form-row div.field_container p.help span:after, fieldset.module div.form-row div.field_container .help span:after, div.inline-group div.form-row div.field_container p.help span:after, div.inline-group div.form-row div.field_container .help span:after, fieldset.module div.inline-related h3 span.delete label.stackedinline_delete:after, div.inline-group div.inline-related h3 span.delete label.stackedinline_delete:after, fieldset.module div.inline-related h3 span.delete label.stackedinline_delete:hover:after, div.inline-group div.inline-related h3 span.delete label.stackedinline_delete:hover:after, fieldset.module div.inline-related h3 span.delete label.undo_stackedinline_delete:after, div.inline-group div.inline-related h3 span.delete label.undo_stackedinline_delete:after, fieldset.module div.inline-related h3 span.delete label.undo_stackedinline_delete:hover:after, div.inline-group div.inline-related h3 span.delete label.undo_stackedinline_delete:hover:after, fieldset.module div.inline-related h3 a.inline-deletelink:after, div.inline-group div.inline-related h3 a.inline-deletelink:after, fieldset.module div.inline-related h3 a.inline-deletelink:hover:after, div.inline-group div.inline-related h3 a.inline-deletelink:hover:after, fieldset.module div.add-row a:after, div.inline-group div.add-row a:after, fieldset.module div.tabular table tbody tr td.link button:after, div.inline-group div.tabular table tbody tr td.link button:after, fieldset.module div.tabular table tbody tr td.delete a.inline-deletelink:after, div.inline-group div.tabular table tbody tr td.delete a.inline-deletelink:after, fieldset.module div.tabular table tbody tr td.delete a.inline-deletelink:hover:after, div.inline-group div.tabular table tbody tr td.delete a.inline-deletelink:hover:after, fieldset.module div.tabular table tbody tr td.delete label.tabularinline_delete:after, div.inline-group div.tabular table tbody tr td.delete label.tabularinline_delete:after, fieldset.module div.tabular table tbody tr td.delete label.tabularinline_delete:hover:after, div.inline-group div.tabular table tbody tr td.delete label.tabularinline_delete:hover:after, fieldset.module div.tabular table tbody tr td.delete label.undo_tabularinline_delete:after, div.inline-group div.tabular table tbody tr td.delete label.undo_tabularinline_delete:after, fieldset.module div.tabular table tbody tr td.delete label.undo_tabularinline_delete:hover:after, div.inline-group div.tabular table tbody tr td.delete label.undo_tabularinline_delete:hover:after, fieldset.module div.tabular table tbody tr.add-row td a:after, div.inline-group div.tabular table tbody tr.add-row td a:after, fieldset.module div.form-row.grouped ul span.delete label:after, div.inline-group div.form-row.grouped ul span.delete label:after, fieldset.module div.form-row.grouped ul span.delete label:hover:after, div.inline-group div.form-row.grouped ul span.delete label:hover:after, fieldset.module div.form-row.grouped ul span.delete.tobe_removed label:after, div.inline-group div.form-row.grouped ul span.delete.tobe_removed label:after, fieldset.module div.form-row.grouped ul a.inline-deletelink:after, div.inline-group div.form-row.grouped ul a.inline-deletelink:after, fieldset.module div.form-row.grouped ul a.inline-deletelink:hover:after, div.inline-group div.form-row.grouped ul a.inline-deletelink:hover:after, a.add-another:after, a.add-another:hover:after, .ui-dialog fieldset div.advanced a:after, .ui-dialog fieldset div.advanced a:hover:after, #menuitem_set-group li h3 > a:after, #menuitem_set-group li h3 > a:hover:after, #menuitem_set-group li h3 span.delete label:after, #menuitem_set-group li h3 span.delete label:hover:after, #menuitem_set-group li h3 span.delete label.undo_stackedinline_delete:after, #menuitem_set-group div.add-row a:after, #menuitem_set-group div.add-row a:hover:after {
+  background: url('images/icons-s49c8b75c99.png') no-repeat;
 }
 
 /* line 7, ../sass/screen.sass */
@@ -154,7 +154,7 @@ a.deletelink:after, a.deletelink:link:after, a.deletelink:visited:after {
   position: absolute;
   top: 21px;
   left: -2px;
-  background-position: 0 -142px;
+  background-position: 0 -170px;
   height: 14px;
   width: 14px;
 }
@@ -168,7 +168,7 @@ a.deletelink:hover:after, a.deletelink:link:hover:after, a.deletelink:visited:ho
   position: absolute;
   top: 21px;
   left: -2px;
-  background-position: 0 -198px;
+  background-position: 0 -226px;
   height: 14px;
   width: 14px;
 }
@@ -190,7 +190,7 @@ p.errornote:after {
   position: absolute;
   top: 9px;
   left: 8px;
-  background-position: 0 -354px;
+  background-position: 0 -382px;
   height: 14px;
   width: 14px;
 }
@@ -207,7 +207,7 @@ ul.errorlist li {
   padding: 0 0 0 20px;
   color: #e72d2e;
   font-weight: bold;
-  background-color: transparent;
+  background-color: transparent !important;
   margin: 0 0 3px 0;
   position: relative;
 }
@@ -217,14 +217,14 @@ ul.errorlist li:after {
   position: absolute;
   top: 4px;
   left: 0px;
-  background-position: 0 -156px;
+  background-position: 0 -184px;
   height: 14px;
   width: 14px;
 }
 
 /* line 110, ../sass/screen.sass */
 .form-row.errors {
-  background-color: #ffe6e6;
+  background-color: transparent;
 }
 
 /* line 113, ../sass/screen.sass */
@@ -477,7 +477,7 @@ header nav ul li.user-tools > a:after, header nav ul li.user-tools:visited:after
   position: absolute;
   top: 19px;
   left: 12px;
-  background-position: 0 -325px;
+  background-position: 0 -353px;
   height: 17px;
   width: 20px;
 }
@@ -487,7 +487,7 @@ header nav ul li.user-tools > a:hover:after, header nav ul li.user-tools:visited
   position: absolute;
   top: 19px;
   left: 12px;
-  background-position: 0 -256px;
+  background-position: 0 -284px;
   height: 17px;
   width: 20px;
 }
@@ -540,7 +540,7 @@ header nav ul li:hover ul li a, header nav ul li:hover ul li a:link, header nav 
   padding: 10px;
   font-size: 12px;
   color: #272727;
-  text-transform: capitalize;
+  text-transform: none;
   text-indent: 0;
 }
 /* line 305, ../sass/screen.sass */
@@ -681,7 +681,7 @@ header nav ul li:hover ul li:hover ul {
   position: absolute;
   top: 0;
   left: 0;
-  background-position: 0 -342px;
+  background-position: 0 -370px;
   height: 12px;
   width: 14px;
 }
@@ -695,7 +695,7 @@ header nav ul li:hover ul li:hover ul {
   position: absolute;
   top: 0;
   left: 0;
-  background-position: 0 -301px;
+  background-position: 0 -329px;
   height: 12px;
   width: 14px;
 }
@@ -709,7 +709,7 @@ header nav ul li:hover ul li:hover ul {
   position: absolute;
   top: 0;
   left: 0;
-  background-position: 0 -313px;
+  background-position: 0 -341px;
   height: 12px;
   width: 14px;
 }
@@ -836,7 +836,7 @@ header nav ul li:hover ul li:hover ul {
   position: absolute;
   top: 0;
   left: 0;
-  background-position: 0 -273px;
+  background-position: 0 -301px;
   height: 14px;
   width: 14px;
 }
@@ -850,7 +850,7 @@ header nav ul li:hover ul li:hover ul {
   position: absolute;
   top: 0;
   left: 0;
-  background-position: 0 -287px;
+  background-position: 0 -315px;
   height: 14px;
   width: 14px;
 }
@@ -860,7 +860,7 @@ header nav ul li:hover ul li:hover ul {
   position: absolute;
   top: 1px;
   left: 0;
-  background-position: 0 -544px;
+  background-position: 0 -572px;
   height: 12px;
   width: 14px;
 }
@@ -874,7 +874,7 @@ header nav ul li:hover ul li:hover ul {
   position: absolute;
   top: 1px;
   left: 0;
-  background-position: 0 -556px;
+  background-position: 0 -584px;
   height: 12px;
   width: 14px;
 }
@@ -884,7 +884,7 @@ header nav ul li:hover ul li:hover ul {
   position: absolute;
   top: 0;
   left: 0;
-  background-position: 0 -596px;
+  background-position: 0 -624px;
   height: 14px;
   width: 14px;
 }
@@ -898,7 +898,7 @@ header nav ul li:hover ul li:hover ul {
   position: absolute;
   top: 0;
   left: 0;
-  background-position: 0 -582px;
+  background-position: 0 -610px;
   height: 14px;
   width: 14px;
 }
@@ -908,7 +908,7 @@ header nav ul li:hover ul li:hover ul {
   position: absolute;
   top: 0;
   left: 0;
-  background-position: 0 -86px;
+  background-position: 0 -114px;
   height: 14px;
   width: 14px;
 }
@@ -922,7 +922,7 @@ header nav ul li:hover ul li:hover ul {
   position: absolute;
   top: 0;
   left: 0;
-  background-position: 0 -100px;
+  background-position: 0 -128px;
   height: 14px;
   width: 14px;
 }
@@ -932,7 +932,7 @@ header nav ul li:hover ul li:hover ul {
   position: absolute;
   top: 0;
   left: 0;
-  background-position: 0 -184px;
+  background-position: 0 -212px;
   height: 14px;
   width: 14px;
 }
@@ -946,7 +946,7 @@ header nav ul li:hover ul li:hover ul {
   position: absolute;
   top: 0;
   left: 0;
-  background-position: 0 -226px;
+  background-position: 0 -254px;
   height: 14px;
   width: 14px;
 }
@@ -960,7 +960,7 @@ header nav ul li:hover ul li:hover ul {
   position: absolute;
   top: 0;
   left: 0;
-  background-position: 0 -226px;
+  background-position: 0 -254px;
   height: 14px;
   width: 14px;
 }
@@ -1110,7 +1110,7 @@ div div.dashboard-module span.changelink:after {
   position: absolute;
   top: 1px;
   left: 0;
-  background-position: 0 -382px;
+  background-position: 0 -410px;
   height: 14px;
   width: 14px;
 }
@@ -1125,7 +1125,7 @@ div div.dashboard-module span.addlink:after {
   position: absolute;
   top: 1px;
   left: 0;
-  background-position: 0 -582px;
+  background-position: 0 -610px;
   height: 14px;
   width: 14px;
 }
@@ -1140,7 +1140,7 @@ div div.dashboard-module span.listlink:after {
   position: absolute;
   top: 2px;
   left: 0;
-  background-position: 0 -438px;
+  background-position: 0 -466px;
   height: 14px;
   width: 14px;
 }
@@ -1155,7 +1155,7 @@ div div.dashboard-module span.deletelink:after {
   position: absolute;
   top: 2px;
   left: 0;
-  background-position: 0 -212px;
+  background-position: 0 -240px;
   height: 14px;
   width: 14px;
 }
@@ -1190,7 +1190,7 @@ div div.dashboard-module h3 a.close-icon:after {
   position: absolute;
   top: 0;
   left: 0;
-  background-position: 0 -480px;
+  background-position: 0 -508px;
   height: 14px;
   width: 14px;
 }
@@ -1200,7 +1200,7 @@ div div.dashboard-module h3 a.close-icon:hover:after {
   position: absolute;
   top: 0;
   left: 0;
-  background-position: 0 -212px;
+  background-position: 0 -240px;
   height: 14px;
   width: 14px;
 }
@@ -1218,7 +1218,7 @@ div div.dashboard-module h3 a.toggle-icon:after {
   position: absolute;
   top: 0;
   left: 0;
-  background-position: 0 -624px;
+  background-position: 0 -652px;
   height: 14px;
   width: 14px;
 }
@@ -1228,7 +1228,7 @@ div div.dashboard-module h3 a.toggle-icon:hover:after {
   position: absolute;
   top: 0;
   left: 0;
-  background-position: 0 -610px;
+  background-position: 0 -638px;
   height: 14px;
   width: 14px;
 }
@@ -1238,7 +1238,7 @@ div div.dashboard-module h3 a.toggle-icon.collapsed:after {
   position: absolute;
   top: 0;
   left: 0;
-  background-position: 0 -516px;
+  background-position: 0 -544px;
   height: 14px;
   width: 14px;
 }
@@ -1248,7 +1248,7 @@ div div.dashboard-module h3 a.toggle-icon.collapsed:hover:after {
   position: absolute;
   top: 0;
   left: 0;
-  background-position: 0 -582px;
+  background-position: 0 -610px;
   height: 14px;
   width: 14px;
 }
@@ -1327,7 +1327,7 @@ div div.dashboard-module div.dashboard-module-content li ul.list-options li a.ch
   position: absolute;
   top: 1px;
   left: 0;
-  background-position: 0 -128px;
+  background-position: 0 -156px;
   height: 14px;
   width: 14px;
 }
@@ -1341,7 +1341,7 @@ div div.dashboard-module div.dashboard-module-content li ul.list-options li a.ad
   position: absolute;
   top: 1px;
   left: 0;
-  background-position: 0 -596px;
+  background-position: 0 -624px;
   height: 14px;
   width: 14px;
 }
@@ -1355,7 +1355,7 @@ div div.dashboard-module div.dashboard-module-content li ul.list-options li a.li
   position: absolute;
   top: 2px;
   left: 0;
-  background-position: 0 -424px;
+  background-position: 0 -452px;
   height: 14px;
   width: 14px;
 }
@@ -1369,7 +1369,7 @@ div div.dashboard-module div.dashboard-module-content li ul.list-options li a:ho
   position: absolute;
   top: 1px;
   left: 0;
-  background-position: 0 -382px;
+  background-position: 0 -410px;
   height: 14px;
   width: 14px;
 }
@@ -1379,7 +1379,7 @@ div div.dashboard-module div.dashboard-module-content li ul.list-options li a:ho
   position: absolute;
   top: 1px;
   left: 0;
-  background-position: 0 -582px;
+  background-position: 0 -610px;
   height: 14px;
   width: 14px;
 }
@@ -1389,7 +1389,7 @@ div div.dashboard-module div.dashboard-module-content li ul.list-options li a:ho
   position: absolute;
   top: 2px;
   left: 0;
-  background-position: 0 -438px;
+  background-position: 0 -466px;
   height: 14px;
   width: 14px;
 }
@@ -1447,7 +1447,7 @@ div div.dashboard-module#module_1 div.dashboard-module-content ul li.first ul.li
   position: absolute;
   top: 1px;
   left: 0;
-  background-position: 0 -452px;
+  background-position: 0 -480px;
   height: 14px;
   width: 14px;
 }
@@ -1465,7 +1465,7 @@ div div.dashboard-module#module_1 div.dashboard-module-content ul li.first ul.li
   position: absolute;
   top: 1px;
   left: 0;
-  background-position: 0 -382px;
+  background-position: 0 -410px;
   height: 14px;
   width: 14px;
 }
@@ -1546,7 +1546,7 @@ div div.dashboard-module.snippets ul li.listmeta a:after {
   position: absolute;
   top: 1px;
   left: 0;
-  background-position: 0 -452px;
+  background-position: 0 -480px;
   height: 14px;
   width: 14px;
 }
@@ -1560,7 +1560,7 @@ div div.dashboard-module.snippets ul li.listmeta a:hover:after {
   position: absolute;
   top: 1px;
   left: 0;
-  background-position: 0 -382px;
+  background-position: 0 -410px;
   height: 14px;
   width: 14px;
 }
@@ -1619,7 +1619,7 @@ body.app_index #content-main table tbody tr td a.addlink:after {
   position: absolute;
   top: 2px;
   left: 0;
-  background-position: 0 -596px;
+  background-position: 0 -624px;
   height: 14px;
   width: 14px;
 }
@@ -1633,7 +1633,7 @@ body.app_index #content-main table tbody tr td a.addlink:hover:after {
   position: absolute;
   top: 2px;
   left: 0;
-  background-position: 0 -582px;
+  background-position: 0 -610px;
   height: 14px;
   width: 14px;
 }
@@ -1643,7 +1643,7 @@ body.app_index #content-main table tbody tr td a.changelink:after {
   position: absolute;
   top: 2px;
   left: 0;
-  background-position: 0 -128px;
+  background-position: 0 -156px;
   height: 14px;
   width: 14px;
 }
@@ -1657,7 +1657,7 @@ body.app_index #content-main table tbody tr td a.changelink:hover:after {
   position: absolute;
   top: 2px;
   left: 0;
-  background-position: 0 -382px;
+  background-position: 0 -410px;
   height: 14px;
   width: 14px;
 }
@@ -1699,7 +1699,37 @@ body.change-list #changelist div#changelist-filter {
   position: relative;
   z-index: 150;
 }
-/* line 944, ../sass/screen.sass */
+/* line 941, ../sass/screen.sass */
+body.change-list #changelist div#changelist-filter a.related-lookup {
+  color: #b4b4b4;
+  position: relative;
+  padding-left: 18px;
+}
+/* line 29, ../sass/partials/_base.sass */
+body.change-list #changelist div#changelist-filter a.related-lookup:after {
+  content: "";
+  position: absolute;
+  top: 2px;
+  left: 0;
+  background-position: 0 -72px;
+  height: 14px;
+  width: 14px;
+}
+/* line 946, ../sass/screen.sass */
+body.change-list #changelist div#changelist-filter a.related-lookup:hover {
+  color: #747474;
+}
+/* line 29, ../sass/partials/_base.sass */
+body.change-list #changelist div#changelist-filter a.related-lookup:hover:after {
+  content: "";
+  position: absolute;
+  top: 2px;
+  left: 0;
+  background-position: 0 -58px;
+  height: 14px;
+  width: 14px;
+}
+/* line 953, ../sass/screen.sass */
 body.change-list #changelist div#changelist-filter #toolbar {
   background: white !important;
   border: none;
@@ -1708,11 +1738,11 @@ body.change-list #changelist div#changelist-filter #toolbar {
   margin: 0 0 10px 0 !important;
   position: relative;
 }
-/* line 951, ../sass/screen.sass */
+/* line 960, ../sass/screen.sass */
 body.change-list #changelist div#changelist-filter #toolbar label {
   display: none;
 }
-/* line 954, ../sass/screen.sass */
+/* line 963, ../sass/screen.sass */
 body.change-list #changelist div#changelist-filter #toolbar form #searchbar {
   height: 24px;
   background: #f6f6f6;
@@ -1728,11 +1758,11 @@ body.change-list #changelist div#changelist-filter #toolbar form #searchbar {
   height: 33px;
   padding: 3px 25px 3px 6px;
 }
-/* line 959, ../sass/screen.sass */
+/* line 968, ../sass/screen.sass */
 body.change-list #changelist div#changelist-filter #toolbar form #searchbar:focus {
   outline: none;
 }
-/* line 961, ../sass/screen.sass */
+/* line 970, ../sass/screen.sass */
 body.change-list #changelist div#changelist-filter #toolbar form input[type="submit"] {
   background: url(images/icons/icon_search_orange.png) no-repeat;
   height: 14px;
@@ -1744,22 +1774,22 @@ body.change-list #changelist div#changelist-filter #toolbar form input[type="sub
   text-indent: -9999px;
   cursor: pointer;
 }
-/* line 971, ../sass/screen.sass */
+/* line 980, ../sass/screen.sass */
 body.change-list #changelist div#changelist-filter #toolbar form span.small {
   width: 160px;
   color: #747474 !important;
   text-transform: uppercase;
   font-size: 10px;
 }
-/* line 976, ../sass/screen.sass */
+/* line 985, ../sass/screen.sass */
 body.change-list #changelist div#changelist-filter #toolbar form span.small a {
   color: #747474;
 }
-/* line 978, ../sass/screen.sass */
+/* line 987, ../sass/screen.sass */
 body.change-list #changelist div#changelist-filter #toolbar form span.small a:hover {
   color: #f9910c;
 }
-/* line 984, ../sass/screen.sass */
+/* line 993, ../sass/screen.sass */
 body.change-list #changelist div#changelist-filter h2 {
   background: none;
   font-size: 24px;
@@ -1769,47 +1799,71 @@ body.change-list #changelist div#changelist-filter h2 {
   height: auto !important;
   text-transform: uppercase;
 }
-/* line 992, ../sass/screen.sass */
+/* line 1001, ../sass/screen.sass */
 body.change-list #changelist div#changelist-filter h3 {
   color: #f9910c;
 }
-/* line 994, ../sass/screen.sass */
+/* line 1003, ../sass/screen.sass */
 body.change-list #changelist div#changelist-filter ul {
   margin-bottom: 10px;
+  margin-left: 0;
+  position: relative;
 }
-/* line 996, ../sass/screen.sass */
+/* line 1007, ../sass/screen.sass */
 body.change-list #changelist div#changelist-filter ul li {
   font-size: 12px;
   font-weight: bold;
-  margin: 0;
-  padding: 0;
+  margin: 0 0 8px 0;
+  line-height: 1.2em;
 }
-/* line 1001, ../sass/screen.sass */
+/* line 1012, ../sass/screen.sass */
 body.change-list #changelist div#changelist-filter ul li.selected {
   border: none;
+  margin-top: 5px;
+  padding: 5px;
+  background: #f6f6f6;
 }
-/* line 1003, ../sass/screen.sass */
+/* line 1017, ../sass/screen.sass */
 body.change-list #changelist div#changelist-filter ul li.selected a {
-  color: #747474 !important;
+  color: #006fbb !important;
+  display: block;
+  padding-right: 20px;
 }
-/* line 1005, ../sass/screen.sass */
+/* line 1021, ../sass/screen.sass */
 body.change-list #changelist div#changelist-filter ul li a {
   color: #b4b4b4;
 }
-/* line 1007, ../sass/screen.sass */
+/* line 1023, ../sass/screen.sass */
 body.change-list #changelist div#changelist-filter ul li a:hover {
   color: #747474;
 }
-/* line 1009, ../sass/screen.sass */
+/* line 1025, ../sass/screen.sass */
+body.change-list #changelist div#changelist-filter ul li:last-child {
+  position: absolute;
+  height: 14px;
+  width: 14px;
+  margin: 3px 3px 0 0;
+  text-indent: -9999px;
+  top: 29px;
+  right: 0;
+}
+/* line 1033, ../sass/screen.sass */
+body.change-list #changelist div#changelist-filter ul li:last-child a {
+  display: block;
+  background: url(images/icons/icon_delete.png);
+  height: 14px;
+  width: 14px;
+}
+/* line 1038, ../sass/screen.sass */
 body.change-list #changelist div#changelist-filter select {
   width: 100%;
   margin-bottom: 15px;
 }
-/* line 1016, ../sass/screen.sass */
+/* line 1045, ../sass/screen.sass */
 body.change-list #changelist form#changelist-form {
   background: white;
 }
-/* line 1022, ../sass/screen.sass */
+/* line 1051, ../sass/screen.sass */
 body.change-list #changelist div.actions {
   font-size: 14px;
   line-height: 40px;
@@ -1822,7 +1876,7 @@ body.change-list #changelist div.actions {
   background: #006fbb;
   margin-right: 0 !important;
 }
-/* line 1033, ../sass/screen.sass */
+/* line 1062, ../sass/screen.sass */
 body.change-list #changelist div.actions label {
   position: absolute;
   text-transform: uppercase;
@@ -1831,17 +1885,17 @@ body.change-list #changelist div.actions label {
   color: white;
   font-weight: bold;
 }
-/* line 1040, ../sass/screen.sass */
+/* line 1069, ../sass/screen.sass */
 body.change-list #changelist div.actions label select {
   width: 145px;
   border: none;
   margin: -2px 0 0 5px;
 }
-/* line 1044, ../sass/screen.sass */
+/* line 1073, ../sass/screen.sass */
 body.change-list #changelist div.actions label select:focus {
   outline: none;
 }
-/* line 1046, ../sass/screen.sass */
+/* line 1075, ../sass/screen.sass */
 body.change-list #changelist div.actions button {
   margin: 16px 0 0 230px;
   padding: 0px 3px;
@@ -1853,21 +1907,21 @@ body.change-list #changelist div.actions button {
   border: none;
   cursor: pointer;
 }
-/* line 1056, ../sass/screen.sass */
+/* line 1085, ../sass/screen.sass */
 body.change-list #changelist div.actions button:hover {
   color: #f9910c;
 }
-/* line 1058, ../sass/screen.sass */
+/* line 1087, ../sass/screen.sass */
 body.change-list #changelist div.actions span.action-counter {
   color: white;
   text-transform: uppercase;
   font-size: 10px;
 }
-/* line 1067, ../sass/screen.sass */
+/* line 1096, ../sass/screen.sass */
 body.change-list #changelist div.results table#result_list {
   border-bottom: 1px solid #dfdfdf;
 }
-/* line 1073, ../sass/screen.sass */
+/* line 1102, ../sass/screen.sass */
 body.change-list #changelist div.results table#result_list thead th {
   border: 1px solid #434343;
   border-top: 2px solid #434343;
@@ -1887,23 +1941,23 @@ body.change-list #changelist div.results table#result_list thead th:after {
   overflow: hidden;
   visibility: hidden;
 }
-/* line 1082, ../sass/screen.sass */
+/* line 1111, ../sass/screen.sass */
 body.change-list #changelist div.results table#result_list thead th a {
   color: white;
 }
-/* line 1084, ../sass/screen.sass */
+/* line 1113, ../sass/screen.sass */
 body.change-list #changelist div.results table#result_list thead th a:hover {
   color: #434343;
 }
-/* line 1086, ../sass/screen.sass */
+/* line 1115, ../sass/screen.sass */
 body.change-list #changelist div.results table#result_list thead th.sorted {
   background: #434343;
 }
-/* line 1088, ../sass/screen.sass */
+/* line 1117, ../sass/screen.sass */
 body.change-list #changelist div.results table#result_list thead th.sorted div.text a {
   color: white;
 }
-/* line 1090, ../sass/screen.sass */
+/* line 1119, ../sass/screen.sass */
 body.change-list #changelist div.results table#result_list thead th.sorted div.sortoptions {
   float: right;
   text-align: right;
@@ -1918,13 +1972,13 @@ body.change-list #changelist div.results table#result_list thead th.sorted div.s
   overflow: hidden;
   visibility: hidden;
 }
-/* line 1094, ../sass/screen.sass */
+/* line 1123, ../sass/screen.sass */
 body.change-list #changelist div.results table#result_list thead th.sorted div.sortoptions span.sortpriority {
   float: left;
   display: block;
   font-size: 10px;
 }
-/* line 1098, ../sass/screen.sass */
+/* line 1127, ../sass/screen.sass */
 body.change-list #changelist div.results table#result_list thead th.sorted div.sortoptions a {
   display: block;
   height: 10px;
@@ -1933,7 +1987,7 @@ body.change-list #changelist div.results table#result_list thead th.sorted div.s
   margin: 4px 0 0 2px;
   position: relative;
 }
-/* line 1105, ../sass/screen.sass */
+/* line 1134, ../sass/screen.sass */
 body.change-list #changelist div.results table#result_list thead th.sorted div.sortoptions a.sortremove {
   height: 15px;
   width: 15px;
@@ -1947,7 +2001,7 @@ body.change-list #changelist div.results table#result_list thead th.sorted div.s
   position: absolute;
   top: 0;
   left: 0;
-  background-position: 0 -494px;
+  background-position: 0 -522px;
   height: 10px;
   width: 10px;
 }
@@ -1957,7 +2011,7 @@ body.change-list #changelist div.results table#result_list thead th.sorted div.s
   position: absolute;
   top: 0;
   left: 0;
-  background-position: 0 -466px;
+  background-position: 0 -494px;
   height: 14px;
   width: 14px;
 }
@@ -1967,45 +2021,45 @@ body.change-list #changelist div.results table#result_list thead th.sorted div.s
   position: absolute;
   top: 0;
   left: 0;
-  background-position: 0 -530px;
+  background-position: 0 -558px;
   height: 14px;
   width: 14px;
 }
-/* line 1116, ../sass/screen.sass */
+/* line 1145, ../sass/screen.sass */
 body.change-list #changelist div.results table#result_list thead th.sorted:hover div.sortoptions a.sortremove {
   display: block;
 }
-/* line 1122, ../sass/screen.sass */
+/* line 1151, ../sass/screen.sass */
 body.change-list #changelist div.results table#result_list tbody {
   background: white;
 }
-/* line 1124, ../sass/screen.sass */
+/* line 1153, ../sass/screen.sass */
 body.change-list #changelist div.results table#result_list tbody tr {
   border-bottom: 1px solid #cdcdcd;
 }
-/* line 1126, ../sass/screen.sass */
+/* line 1155, ../sass/screen.sass */
 body.change-list #changelist div.results table#result_list tbody tr.row1 {
   background: #f6f6f6;
 }
-/* line 1128, ../sass/screen.sass */
+/* line 1157, ../sass/screen.sass */
 body.change-list #changelist div.results table#result_list tbody tr.selected {
   background: rgba(249, 145, 12, 0.15);
 }
-/* line 1130, ../sass/screen.sass */
+/* line 1159, ../sass/screen.sass */
 body.change-list #changelist div.results table#result_list tbody td, body.change-list #changelist div.results table#result_list tbody th {
   padding: 7px;
   border: 1px solid #cdcdcd;
   border-bottom: none;
 }
-/* line 1134, ../sass/screen.sass */
+/* line 1163, ../sass/screen.sass */
 body.change-list #changelist div.results table#result_list tbody td a, body.change-list #changelist div.results table#result_list tbody th a {
   color: #006fbb;
 }
-/* line 1136, ../sass/screen.sass */
+/* line 1165, ../sass/screen.sass */
 body.change-list #changelist div.results table#result_list tbody td a:hover, body.change-list #changelist div.results table#result_list tbody th a:hover {
   color: #f9910c;
 }
-/* line 1142, ../sass/screen.sass */
+/* line 1171, ../sass/screen.sass */
 body.change-list #changelist p.paginator {
   font-size: 14px;
   font-weight: bold;
@@ -2013,7 +2067,7 @@ body.change-list #changelist p.paginator {
   background: transparent;
   position: relative;
 }
-/* line 1148, ../sass/screen.sass */
+/* line 1177, ../sass/screen.sass */
 body.change-list #changelist p.paginator input[type="submit"] {
   width: auto;
   height: auto;
@@ -2022,25 +2076,25 @@ body.change-list #changelist p.paginator input[type="submit"] {
   margin: 5px 0 0 0;
 }
 
-/* line 1161, ../sass/screen.sass */
+/* line 1190, ../sass/screen.sass */
 body.delete_confirmation div#admin_content h2 {
   font-size: 23px;
   color: #747474;
 }
-/* line 1164, ../sass/screen.sass */
+/* line 1193, ../sass/screen.sass */
 body.delete_confirmation div#admin_content a {
   color: #006fbb;
 }
-/* line 1166, ../sass/screen.sass */
+/* line 1195, ../sass/screen.sass */
 body.delete_confirmation div#admin_content a:hover {
   color: #f9910c;
 }
-/* line 1168, ../sass/screen.sass */
+/* line 1197, ../sass/screen.sass */
 body.delete_confirmation div#admin_content form {
   padding: 0;
   margin-top: 15px;
 }
-/* line 1171, ../sass/screen.sass */
+/* line 1200, ../sass/screen.sass */
 body.delete_confirmation div#admin_content form input[type="submit"] {
   width: 200px;
   color: white;
@@ -2067,49 +2121,49 @@ body.delete_confirmation div#admin_content form input[type="submit"] {
   border-top: none;
   font-size: 14px;
 }
-/* line 1180, ../sass/screen.sass */
+/* line 1209, ../sass/screen.sass */
 body.delete_confirmation div#admin_content form input[type="submit"]:hover {
   background-color: #f9910c;
 }
 
-/* line 1187, ../sass/screen.sass */
+/* line 1216, ../sass/screen.sass */
 body.change-form {
   width: 100%;
   padding-bottom: 30px;
 }
-/* line 1190, ../sass/screen.sass */
+/* line 1219, ../sass/screen.sass */
 body.change-form #content_container {
   width: 100%;
   margin: 0 auto;
 }
-/* line 1193, ../sass/screen.sass */
+/* line 1222, ../sass/screen.sass */
 body.change-form #content_container #page_header {
   width: 960px;
   margin: 80px auto 25px;
 }
-/* line 1196, ../sass/screen.sass */
+/* line 1225, ../sass/screen.sass */
 body.change-form #content_container #admin_content {
   width: 100%;
 }
-/* line 1199, ../sass/screen.sass */
+/* line 1228, ../sass/screen.sass */
 body.change-form #content_container #admin_content #content-main div.content-main-container {
   width: 960px;
   margin: 0 auto;
   position: relative;
 }
-/* line 1203, ../sass/screen.sass */
+/* line 1232, ../sass/screen.sass */
 body.change-form #content_container #admin_content #content-main form.change_form {
   background: white;
 }
-/* line 1205, ../sass/screen.sass */
+/* line 1234, ../sass/screen.sass */
 body.change-form #content_container #admin_content #content-main .object-tools {
   top: -53px;
 }
-/* line 1211, ../sass/screen.sass */
+/* line 1240, ../sass/screen.sass */
 body.change-form #content_container #admin_content .submit-row-placeholder {
   height: 58px;
 }
-/* line 1213, ../sass/screen.sass */
+/* line 1242, ../sass/screen.sass */
 body.change-form #content_container #admin_content .submit-row {
   background: #e1e1e1;
   border: none;
@@ -2125,7 +2179,7 @@ body.change-form #content_container #admin_content .submit-row {
   position: relative;
   z-index: 250;
 }
-/* line 1227, ../sass/screen.sass */
+/* line 1256, ../sass/screen.sass */
 body.change-form #content_container #admin_content .submit-row .submit_container {
   width: 960px;
   position: relative;
@@ -2141,7 +2195,7 @@ body.change-form #content_container #admin_content .submit-row .submit_container
   overflow: hidden;
   visibility: hidden;
 }
-/* line 1232, ../sass/screen.sass */
+/* line 1261, ../sass/screen.sass */
 body.change-form #content_container #admin_content .submit-row .submit_container input[name="_addanother"] {
   height: 57px;
   line-height: 57px;
@@ -2160,12 +2214,12 @@ body.change-form #content_container #admin_content .submit-row .submit_container
   position: relative;
   background: url(images/icons/icon_add.png) center left no-repeat transparent;
 }
-/* line 1235, ../sass/screen.sass */
+/* line 1264, ../sass/screen.sass */
 body.change-form #content_container #admin_content .submit-row .submit_container input[name="_addanother"]:hover, body.change-form #content_container #admin_content .submit-row .submit_container input[name="_addanother"]:active {
   color: #006fbb;
   background: url(images/icons/icon_add_blue.png) center left no-repeat transparent;
 }
-/* line 1238, ../sass/screen.sass */
+/* line 1267, ../sass/screen.sass */
 body.change-form #content_container #admin_content .submit-row .submit_container input[name="_continue"] {
   height: 57px;
   line-height: 57px;
@@ -2184,30 +2238,30 @@ body.change-form #content_container #admin_content .submit-row .submit_container
   position: relative;
   background: url(images/icons/icon_edit.png) center left no-repeat transparent;
 }
-/* line 1241, ../sass/screen.sass */
+/* line 1270, ../sass/screen.sass */
 body.change-form #content_container #admin_content .submit-row .submit_container input[name="_continue"]:hover, body.change-form #content_container #admin_content .submit-row .submit_container input[name="_continue"]:active {
   color: #006fbb;
   background: url(images/icons/icon_edit_blue.png) center left no-repeat transparent;
 }
-/* line 1244, ../sass/screen.sass */
+/* line 1273, ../sass/screen.sass */
 body.change-form #content_container #admin_content .submit-row .submit_container p.deletelink-box {
   margin: 0 0 0 0;
 }
-/* line 1246, ../sass/screen.sass */
+/* line 1275, ../sass/screen.sass */
 body.change-form #content_container #admin_content .submit-row .submit_container p.deletelink-box a.deletelink {
   padding: 0 0 0 16px;
 }
-/* line 1248, ../sass/screen.sass */
+/* line 1277, ../sass/screen.sass */
 body.change-form #content_container #admin_content .form_submit_container {
   width: 960px;
   margin: 0 auto;
 }
-/* line 1251, ../sass/screen.sass */
+/* line 1280, ../sass/screen.sass */
 body.change-form #content_container #admin_content .form_submit_container h3.change_password_help {
   margin: 20px 0;
 }
 
-/* line 1258, ../sass/screen.sass */
+/* line 1287, ../sass/screen.sass */
 .button.default, input[type="submit"].default {
   width: 200px;
   color: white;
@@ -2234,21 +2288,21 @@ body.change-form #content_container #admin_content .form_submit_container h3.cha
   position: absolute;
   top: 0;
   left: 0;
-  background-position: 0 -596px;
+  background-position: 0 -624px;
   height: 14px;
   width: 14px;
 }
-/* line 1262, ../sass/screen.sass */
+/* line 1291, ../sass/screen.sass */
 .button.default.change_password, input[type="submit"].default.change_password {
   width: 250px;
 }
-/* line 1264, ../sass/screen.sass */
+/* line 1293, ../sass/screen.sass */
 .button.default:hover, input[type="submit"].default:hover {
   color: white;
   background: #024f84;
 }
 
-/* line 1272, ../sass/screen.sass */
+/* line 1301, ../sass/screen.sass */
 fieldset.module, div.inline-group {
   border: none !important;
   margin: 5px 0;
@@ -2264,7 +2318,7 @@ fieldset.module:after, div.inline-group:after {
   overflow: hidden;
   visibility: hidden;
 }
-/* line 1277, ../sass/screen.sass */
+/* line 1306, ../sass/screen.sass */
 fieldset.module h2, div.inline-group h2 {
   font-size: 23px;
   color: #f9910c;
@@ -2272,22 +2326,22 @@ fieldset.module h2, div.inline-group h2 {
   border-top: 2px solid #cdcdcd;
   padding: 5px 0 5px 10px;
 }
-/* line 1283, ../sass/screen.sass */
+/* line 1312, ../sass/screen.sass */
 fieldset.module h2 a.collapse-toggle, div.inline-group h2 a.collapse-toggle {
   height: 16px;
   width: 16px;
   text-indent: -9999px;
   display: inline-block !important;
 }
-/* line 1288, ../sass/screen.sass */
+/* line 1317, ../sass/screen.sass */
 fieldset.module.collapse a.collapse-toggle, div.inline-group.collapse a.collapse-toggle {
   background: url(images/icon_show_hide.png) 0 -16px no-repeat;
 }
-/* line 1290, ../sass/screen.sass */
+/* line 1319, ../sass/screen.sass */
 fieldset.module.collapsed a.collapse-toggle, div.inline-group.collapsed a.collapse-toggle {
   background: url(images/icon_show_hide.png) 0 0 no-repeat;
 }
-/* line 1296, ../sass/screen.sass */
+/* line 1325, ../sass/screen.sass */
 fieldset.module div.form-row, div.inline-group div.form-row {
   padding: 5px 25px 15px 25px;
   margin: 10px 0;
@@ -2304,15 +2358,15 @@ fieldset.module div.form-row:after, div.inline-group div.form-row:after {
   overflow: hidden;
   visibility: hidden;
 }
-/* line 1302, ../sass/screen.sass */
+/* line 1331, ../sass/screen.sass */
 fieldset.module div.form-row:first-child, div.inline-group div.form-row:first-child {
   margin-top: 20px;
 }
-/* line 1304, ../sass/screen.sass */
+/* line 1333, ../sass/screen.sass */
 fieldset.module div.form-row:last-child, div.inline-group div.form-row:last-child {
   border-bottom: none;
 }
-/* line 1310, ../sass/screen.sass */
+/* line 1339, ../sass/screen.sass */
 fieldset.module div.form-row label, div.inline-group div.form-row label {
   font-size: 14px;
   padding: 0;
@@ -2321,23 +2375,23 @@ fieldset.module div.form-row label, div.inline-group div.form-row label {
   text-align: right;
   color: #006fbb !important;
 }
-/* line 1312, ../sass/screen.sass */
+/* line 1341, ../sass/screen.sass */
 fieldset.module div.form-row div.field_container, div.inline-group div.form-row div.field_container {
   float: left;
 }
-/* line 1314, ../sass/screen.sass */
+/* line 1343, ../sass/screen.sass */
 fieldset.module div.form-row div.field_container:first-child, div.inline-group div.form-row div.field_container:first-child {
   min-width: 280px;
 }
-/* line 1320, ../sass/screen.sass */
+/* line 1349, ../sass/screen.sass */
 fieldset.module div.form-row div.field_container.hidden a.imageupload-thumbcontainer, div.inline-group div.form-row div.field_container.hidden a.imageupload-thumbcontainer {
   display: none;
 }
-/* line 1322, ../sass/screen.sass */
+/* line 1351, ../sass/screen.sass */
 fieldset.module div.form-row div.field_container.hidden img.imageupload-thumbnail-hidden, div.inline-group div.form-row div.field_container.hidden img.imageupload-thumbnail-hidden {
   display: inline-block;
 }
-/* line 1325, ../sass/screen.sass */
+/* line 1354, ../sass/screen.sass */
 fieldset.module div.form-row div.field_container p, fieldset.module div.form-row div.field_container ul, div.inline-group div.form-row div.field_container p, div.inline-group div.form-row div.field_container ul {
   padding: 0 !important;
   margin: 0 !important;
@@ -2345,7 +2399,7 @@ fieldset.module div.form-row div.field_container p, fieldset.module div.form-row
   font-size: 14px;
   color: #747474;
 }
-/* line 1331, ../sass/screen.sass */
+/* line 1360, ../sass/screen.sass */
 fieldset.module div.form-row div.field_container input, div.inline-group div.form-row div.field_container input {
   height: 24px;
   background: #f6f6f6;
@@ -2358,11 +2412,11 @@ fieldset.module div.form-row div.field_container input, div.inline-group div.for
   font-size: 14px;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
-/* line 1333, ../sass/screen.sass */
+/* line 1362, ../sass/screen.sass */
 fieldset.module div.form-row div.field_container input.vIntegerField, div.inline-group div.form-row div.field_container input.vIntegerField {
   width: 50px;
 }
-/* line 1335, ../sass/screen.sass */
+/* line 1364, ../sass/screen.sass */
 fieldset.module div.form-row div.field_container textarea, div.inline-group div.form-row div.field_container textarea {
   background: #f6f6f6;
   border: 1px solid #cdcdcd;
@@ -2377,16 +2431,16 @@ fieldset.module div.form-row div.field_container textarea, div.inline-group div.
   height: 100px;
   resize: vertical;
 }
-/* line 1337, ../sass/screen.sass */
+/* line 1366, ../sass/screen.sass */
 fieldset.module div.form-row div.field_container input[type="checkbox"], div.inline-group div.form-row div.field_container input[type="checkbox"] {
   margin-right: 10px;
 }
-/* line 1339, ../sass/screen.sass */
+/* line 1368, ../sass/screen.sass */
 fieldset.module div.form-row div.field_container input[type="file"], div.inline-group div.form-row div.field_container input[type="file"] {
   height: 20px;
   padding: 5px;
 }
-/* line 1345, ../sass/screen.sass */
+/* line 1374, ../sass/screen.sass */
 fieldset.module div.form-row div.field_container a.imageupload-thumbcontainer, div.inline-group div.form-row div.field_container a.imageupload-thumbcontainer {
   float: left;
   width: 150px;
@@ -2403,21 +2457,21 @@ fieldset.module div.form-row div.field_container a.imageupload-thumbcontainer:af
   overflow: hidden;
   visibility: hidden;
 }
-/* line 1351, ../sass/screen.sass */
+/* line 1380, ../sass/screen.sass */
 fieldset.module div.form-row div.field_container img.imageupload-thumbnail, fieldset.module div.form-row div.field_container img.imageupload-thumbnail-hidden, div.inline-group div.form-row div.field_container img.imageupload-thumbnail, div.inline-group div.form-row div.field_container img.imageupload-thumbnail-hidden {
   max-width: 150px;
   margin: 0 15px 10px 0;
   float: left;
 }
-/* line 1355, ../sass/screen.sass */
+/* line 1384, ../sass/screen.sass */
 fieldset.module div.form-row div.field_container img.imageupload-thumbnail-hidden, div.inline-group div.form-row div.field_container img.imageupload-thumbnail-hidden {
   display: none;
 }
-/* line 1357, ../sass/screen.sass */
+/* line 1386, ../sass/screen.sass */
 fieldset.module div.form-row div.field_container div.imageupload-widget, div.inline-group div.form-row div.field_container div.imageupload-widget {
   float: left;
 }
-/* line 1359, ../sass/screen.sass */
+/* line 1388, ../sass/screen.sass */
 fieldset.module div.form-row div.field_container div.imageupload-widget a.file_upload_button, div.inline-group div.form-row div.field_container div.imageupload-widget a.file_upload_button {
   width: 200px;
   color: white;
@@ -2453,15 +2507,15 @@ fieldset.module div.form-row div.field_container div.imageupload-widget a.file_u
   position: absolute;
   top: 9px;
   left: 10px;
-  background-position: 0 -240px;
+  background-position: 0 -268px;
   height: 16px;
   width: 16px;
 }
-/* line 1372, ../sass/screen.sass */
+/* line 1401, ../sass/screen.sass */
 fieldset.module div.form-row div.field_container div.imageupload-widget a.file_upload_button:hover, div.inline-group div.form-row div.field_container div.imageupload-widget a.file_upload_button:hover {
   background: #024f84;
 }
-/* line 1374, ../sass/screen.sass */
+/* line 1403, ../sass/screen.sass */
 fieldset.module div.form-row div.field_container div.imageupload-widget input[type="file"], div.inline-group div.form-row div.field_container div.imageupload-widget input[type="file"] {
   background: transparent;
   border: none;
@@ -2471,7 +2525,7 @@ fieldset.module div.form-row div.field_container div.imageupload-widget input[ty
   font-size: 12px;
   cursor: pointer;
 }
-/* line 1382, ../sass/screen.sass */
+/* line 1411, ../sass/screen.sass */
 fieldset.module div.form-row div.field_container div.imageupload-widget span.clearable-file-input, div.inline-group div.form-row div.field_container div.imageupload-widget span.clearable-file-input {
   display: block;
   *zoom: 1;
@@ -2485,13 +2539,13 @@ fieldset.module div.form-row div.field_container div.imageupload-widget span.cle
   overflow: hidden;
   visibility: hidden;
 }
-/* line 1385, ../sass/screen.sass */
+/* line 1414, ../sass/screen.sass */
 fieldset.module div.form-row div.field_container div.imageupload-widget span.clearable-file-input input[type="checkbox"], div.inline-group div.form-row div.field_container div.imageupload-widget span.clearable-file-input input[type="checkbox"] {
   cursor: pointer;
   margin-right: 5px;
   display: none;
 }
-/* line 1389, ../sass/screen.sass */
+/* line 1418, ../sass/screen.sass */
 fieldset.module div.form-row div.field_container div.imageupload-widget span.clearable-file-input label, div.inline-group div.form-row div.field_container div.imageupload-widget span.clearable-file-input label {
   cursor: pointer;
   margin-top: 2px;
@@ -2506,15 +2560,15 @@ fieldset.module div.form-row div.field_container div.imageupload-widget span.cle
   position: absolute;
   top: 2px;
   left: 0px;
-  background-position: 0 -142px;
+  background-position: 0 -170px;
   height: 14px;
   width: 14px;
 }
-/* line 1397, ../sass/screen.sass */
+/* line 1426, ../sass/screen.sass */
 fieldset.module div.form-row div.field_container div.imageupload-widget span.clearable-file-input label span, div.inline-group div.form-row div.field_container div.imageupload-widget span.clearable-file-input label span {
   display: none;
 }
-/* line 1399, ../sass/screen.sass */
+/* line 1428, ../sass/screen.sass */
 fieldset.module div.form-row div.field_container div.imageupload-widget span.clearable-file-input label:hover, div.inline-group div.form-row div.field_container div.imageupload-widget span.clearable-file-input label:hover {
   color: #f9910c !important;
 }
@@ -2524,11 +2578,11 @@ fieldset.module div.form-row div.field_container div.imageupload-widget span.cle
   position: absolute;
   top: 2px;
   left: 0px;
-  background-position: 0 -212px;
+  background-position: 0 -240px;
   height: 14px;
   width: 14px;
 }
-/* line 1402, ../sass/screen.sass */
+/* line 1431, ../sass/screen.sass */
 fieldset.module div.form-row div.field_container div.imageupload-widget span.clearable-file-input label.hidden, div.inline-group div.form-row div.field_container div.imageupload-widget span.clearable-file-input label.hidden {
   color: #f9910c !important;
 }
@@ -2542,18 +2596,18 @@ fieldset.module div.form-row div.field_container div.imageupload-widget span.cle
   height: 15px;
   width: 13px;
 }
-/* line 1405, ../sass/screen.sass */
+/* line 1434, ../sass/screen.sass */
 fieldset.module div.form-row div.field_container div.imageupload-widget span.clearable-file-input label.hidden span, div.inline-group div.form-row div.field_container div.imageupload-widget span.clearable-file-input label.hidden span {
   display: inline-block;
 }
-/* line 1412, ../sass/screen.sass */
+/* line 1441, ../sass/screen.sass */
 fieldset.module div.form-row div.field_container p.help, fieldset.module div.form-row div.field_container .help, div.inline-group div.form-row div.field_container p.help, div.inline-group div.form-row div.field_container .help {
   color: #999999;
   font-style: italic;
   font-size: 12px !important;
   margin-bottom: 10px !important;
 }
-/* line 1417, ../sass/screen.sass */
+/* line 1446, ../sass/screen.sass */
 fieldset.module div.form-row div.field_container p.help span, fieldset.module div.form-row div.field_container .help span, div.inline-group div.form-row div.field_container p.help span, div.inline-group div.form-row div.field_container .help span {
   background-color: #f6f6f6;
   padding: 5px 10px 5px 28px !important;
@@ -2565,11 +2619,11 @@ fieldset.module div.form-row div.field_container p.help span:after, fieldset.mod
   position: absolute;
   top: 5px;
   left: 5px;
-  background-position: 0 -114px;
+  background-position: 0 -142px;
   height: 14px;
   width: 14px;
 }
-/* line 1422, ../sass/screen.sass */
+/* line 1451, ../sass/screen.sass */
 fieldset.module div.form-row div.field_container p.help span:before, fieldset.module div.form-row div.field_container .help span:before, div.inline-group div.form-row div.field_container p.help span:before, div.inline-group div.form-row div.field_container .help span:before {
   content: "";
   position: absolute;
@@ -2581,11 +2635,11 @@ fieldset.module div.form-row div.field_container p.help span:before, fieldset.mo
   border-right: 12px solid #f6f6f6;
   border-bottom: 12px solid transparent;
 }
-/* line 1436, ../sass/screen.sass */
+/* line 1465, ../sass/screen.sass */
 fieldset.module div.form-row div.field_container div.chzn-container, div.inline-group div.form-row div.field_container div.chzn-container {
   left: 0;
 }
-/* line 1438, ../sass/screen.sass */
+/* line 1467, ../sass/screen.sass */
 fieldset.module div.form-row div.field_container div.chzn-container ul.chzn-choices, div.inline-group div.form-row div.field_container div.chzn-container ul.chzn-choices {
   height: 24px;
   background: #f6f6f6;
@@ -2598,7 +2652,7 @@ fieldset.module div.form-row div.field_container div.chzn-container ul.chzn-choi
   font-size: 14px;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
-/* line 1440, ../sass/screen.sass */
+/* line 1469, ../sass/screen.sass */
 fieldset.module div.form-row div.field_container div.chzn-container ul.chzn-choices li.search-choice, div.inline-group div.form-row div.field_container div.chzn-container ul.chzn-choices li.search-choice {
   background: white;
   border-radius: none !important;
@@ -2608,36 +2662,36 @@ fieldset.module div.form-row div.field_container div.chzn-container ul.chzn-choi
   padding: 4px 19px 4px 7px;
   border: 1px solid #cdcdcd;
 }
-/* line 1448, ../sass/screen.sass */
+/* line 1477, ../sass/screen.sass */
 fieldset.module div.form-row div.field_container div.chzn-container ul.chzn-choices li.search-field input, div.inline-group div.form-row div.field_container div.chzn-container ul.chzn-choices li.search-field input {
   height: 18px;
 }
-/* line 1450, ../sass/screen.sass */
+/* line 1479, ../sass/screen.sass */
 fieldset.module div.form-row div.field_container div.chzn-container div.chzn-drop, div.inline-group div.form-row div.field_container div.chzn-container div.chzn-drop {
   width: 200px !important;
   margin: 0 !important;
 }
-/* line 1453, ../sass/screen.sass */
+/* line 1482, ../sass/screen.sass */
 fieldset.module div.form-row div.field_container div.chzn-container div.chzn-drop ul.chzn-results li, div.inline-group div.form-row div.field_container div.chzn-container div.chzn-drop ul.chzn-results li {
   line-height: 14px !important;
 }
-/* line 1459, ../sass/screen.sass */
+/* line 1488, ../sass/screen.sass */
 fieldset.module div.form-row div.field_container span.cke_skin_kama, div.inline-group div.form-row div.field_container span.cke_skin_kama {
   margin-left: 0 !important;
 }
-/* line 1465, ../sass/screen.sass */
+/* line 1494, ../sass/screen.sass */
 fieldset.module div.form-row div.checkbox_container, div.inline-group div.form-row div.checkbox_container {
   margin-left: 140px;
 }
-/* line 1467, ../sass/screen.sass */
+/* line 1496, ../sass/screen.sass */
 fieldset.module div.form-row div.checkbox_container input[type="checkbox"], div.inline-group div.form-row div.checkbox_container input[type="checkbox"] {
   margin-right: 10px;
 }
-/* line 1469, ../sass/screen.sass */
+/* line 1498, ../sass/screen.sass */
 fieldset.module div.form-row div.checkbox_container label, div.inline-group div.form-row div.checkbox_container label {
   color: #747474 !important;
 }
-/* line 1475, ../sass/screen.sass */
+/* line 1504, ../sass/screen.sass */
 fieldset.module div.inline-related, div.inline-group div.inline-related {
   width: 100%;
   *zoom: 1;
@@ -2651,7 +2705,7 @@ fieldset.module div.inline-related:after, div.inline-group div.inline-related:af
   overflow: hidden;
   visibility: hidden;
 }
-/* line 1478, ../sass/screen.sass */
+/* line 1507, ../sass/screen.sass */
 fieldset.module div.inline-related h3, div.inline-group div.inline-related h3 {
   background: #f6f6f6;
   height: 44px;
@@ -2662,18 +2716,18 @@ fieldset.module div.inline-related h3, div.inline-group div.inline-related h3 {
   border-top: 2px solid white;
   color: #afafaf;
 }
-/* line 1487, ../sass/screen.sass */
+/* line 1516, ../sass/screen.sass */
 fieldset.module div.inline-related h3.tobe_removed, div.inline-group div.inline-related h3.tobe_removed {
   background: #f9910c;
   color: white;
   line-height: 44px;
   text-decoration: line-through;
 }
-/* line 1492, ../sass/screen.sass */
+/* line 1521, ../sass/screen.sass */
 fieldset.module div.inline-related h3.tobe_removed span.toggleswitch, div.inline-group div.inline-related h3.tobe_removed span.toggleswitch {
   display: none;
 }
-/* line 1494, ../sass/screen.sass */
+/* line 1523, ../sass/screen.sass */
 fieldset.module div.inline-related h3 span.toggleswitch, div.inline-group div.inline-related h3 span.toggleswitch {
   margin: 15px 10px 0 0;
   height: 16px;
@@ -2683,19 +2737,19 @@ fieldset.module div.inline-related h3 span.toggleswitch, div.inline-group div.in
   background: url(images/icon_show_hide.png) 0 -16px no-repeat;
   cursor: pointer;
 }
-/* line 1502, ../sass/screen.sass */
+/* line 1531, ../sass/screen.sass */
 fieldset.module div.inline-related h3 span.toggleswitch.hidden, div.inline-group div.inline-related h3 span.toggleswitch.hidden {
   background-position: 0 0;
 }
-/* line 1504, ../sass/screen.sass */
+/* line 1533, ../sass/screen.sass */
 fieldset.module div.inline-related h3 span.toggleswitch.tobe_removed, div.inline-group div.inline-related h3 span.toggleswitch.tobe_removed {
   display: none;
 }
-/* line 1507, ../sass/screen.sass */
+/* line 1536, ../sass/screen.sass */
 fieldset.module div.inline-related h3 span.delete input[type="checkbox"], div.inline-group div.inline-related h3 span.delete input[type="checkbox"] {
   display: none;
 }
-/* line 1509, ../sass/screen.sass */
+/* line 1538, ../sass/screen.sass */
 fieldset.module div.inline-related h3 span.delete label, div.inline-group div.inline-related h3 span.delete label {
   float: right;
   font-size: 14px !important;
@@ -2706,7 +2760,7 @@ fieldset.module div.inline-related h3 span.delete label, div.inline-group div.in
   cursor: pointer;
   position: relative;
 }
-/* line 1518, ../sass/screen.sass */
+/* line 1547, ../sass/screen.sass */
 fieldset.module div.inline-related h3 span.delete label.stackedinline_delete, div.inline-group div.inline-related h3 span.delete label.stackedinline_delete {
   color: #747474;
 }
@@ -2716,11 +2770,11 @@ fieldset.module div.inline-related h3 span.delete label.stackedinline_delete:aft
   position: absolute;
   top: 0;
   left: 0;
-  background-position: 0 -142px;
+  background-position: 0 -170px;
   height: 14px;
   width: 14px;
 }
-/* line 1521, ../sass/screen.sass */
+/* line 1550, ../sass/screen.sass */
 fieldset.module div.inline-related h3 span.delete label.stackedinline_delete:hover, div.inline-group div.inline-related h3 span.delete label.stackedinline_delete:hover {
   color: #f9910c;
 }
@@ -2730,11 +2784,11 @@ fieldset.module div.inline-related h3 span.delete label.stackedinline_delete:hov
   position: absolute;
   top: 0;
   left: 0;
-  background-position: 0 -212px;
+  background-position: 0 -240px;
   height: 14px;
   width: 14px;
 }
-/* line 1524, ../sass/screen.sass */
+/* line 1553, ../sass/screen.sass */
 fieldset.module div.inline-related h3 span.delete label.undo_stackedinline_delete, div.inline-group div.inline-related h3 span.delete label.undo_stackedinline_delete {
   color: white;
   margin: 0 10px 0 0;
@@ -2749,7 +2803,7 @@ fieldset.module div.inline-related h3 span.delete label.undo_stackedinline_delet
   height: 15px;
   width: 13px;
 }
-/* line 1528, ../sass/screen.sass */
+/* line 1557, ../sass/screen.sass */
 fieldset.module div.inline-related h3 span.delete label.undo_stackedinline_delete:hover, div.inline-group div.inline-related h3 span.delete label.undo_stackedinline_delete:hover {
   color: white;
 }
@@ -2763,11 +2817,11 @@ fieldset.module div.inline-related h3 span.delete label.undo_stackedinline_delet
   height: 15px;
   width: 13px;
 }
-/* line 1531, ../sass/screen.sass */
+/* line 1560, ../sass/screen.sass */
 fieldset.module div.inline-related h3 span.delete label.hidden, div.inline-group div.inline-related h3 span.delete label.hidden {
   display: none;
 }
-/* line 1534, ../sass/screen.sass */
+/* line 1563, ../sass/screen.sass */
 fieldset.module div.inline-related h3 a.inline-deletelink, div.inline-group div.inline-related h3 a.inline-deletelink {
   text-indent: 0;
   padding: 0 0 0 20px;
@@ -2784,7 +2838,7 @@ fieldset.module div.inline-related h3 a.inline-deletelink:after, div.inline-grou
   position: absolute;
   top: 15px;
   left: 0;
-  background-position: 0 -142px;
+  background-position: 0 -170px;
   height: 14px;
   width: 14px;
 }
@@ -2794,11 +2848,11 @@ fieldset.module div.inline-related h3 a.inline-deletelink:hover:after, div.inlin
   position: absolute;
   top: 15px;
   left: 0;
-  background-position: 0 -212px;
+  background-position: 0 -240px;
   height: 14px;
   width: 14px;
 }
-/* line 1550, ../sass/screen.sass */
+/* line 1579, ../sass/screen.sass */
 fieldset.module div.add-row, div.inline-group div.add-row {
   border-bottom: none;
   border-top: 1px solid #efefef;
@@ -2816,7 +2870,7 @@ fieldset.module div.add-row:after, div.inline-group div.add-row:after {
   overflow: hidden;
   visibility: hidden;
 }
-/* line 1557, ../sass/screen.sass */
+/* line 1586, ../sass/screen.sass */
 fieldset.module div.add-row a, div.inline-group div.add-row a {
   height: 40px;
   line-height: 40px;
@@ -2839,26 +2893,26 @@ fieldset.module div.add-row a:after, div.inline-group div.add-row a:after {
   position: absolute;
   top: 13px;
   left: 8px;
-  background-position: 0 -516px;
+  background-position: 0 -544px;
   height: 14px;
   width: 14px;
 }
-/* line 1562, ../sass/screen.sass */
+/* line 1591, ../sass/screen.sass */
 fieldset.module div.add-row a:hover, div.inline-group div.add-row a:hover {
   background-color: #006fbb;
   color: white;
 }
-/* line 1570, ../sass/screen.sass */
+/* line 1599, ../sass/screen.sass */
 fieldset.module div.tabular table, div.inline-group div.tabular table {
   margin: 20px 0 40px 170px;
   width: 790px !important;
   border: none;
 }
-/* line 1574, ../sass/screen.sass */
+/* line 1603, ../sass/screen.sass */
 fieldset.module div.tabular table thead, div.inline-group div.tabular table thead {
   border: none;
 }
-/* line 1576, ../sass/screen.sass */
+/* line 1605, ../sass/screen.sass */
 fieldset.module div.tabular table thead th, div.inline-group div.tabular table thead th {
   padding: 3px 25px;
   border: none;
@@ -2871,15 +2925,15 @@ fieldset.module div.tabular table thead th, div.inline-group div.tabular table t
   height: 40px;
   line-height: 40px;
 }
-/* line 1588, ../sass/screen.sass */
+/* line 1617, ../sass/screen.sass */
 fieldset.module div.tabular table tbody tr.has_original td, div.inline-group div.tabular table tbody tr.has_original td {
   padding-top: 20px !important;
 }
-/* line 1590, ../sass/screen.sass */
+/* line 1619, ../sass/screen.sass */
 fieldset.module div.tabular table tbody td.original, div.inline-group div.tabular table tbody td.original {
   position: relative;
 }
-/* line 1592, ../sass/screen.sass */
+/* line 1621, ../sass/screen.sass */
 fieldset.module div.tabular table tbody td.original p, div.inline-group div.tabular table tbody td.original p {
   top: -10px;
   left: 20px;
@@ -2887,19 +2941,19 @@ fieldset.module div.tabular table tbody td.original p, div.inline-group div.tabu
   overflow: visible;
   width: 300px;
 }
-/* line 1598, ../sass/screen.sass */
+/* line 1627, ../sass/screen.sass */
 fieldset.module div.tabular table tbody tr, div.inline-group div.tabular table tbody tr {
   border-bottom: 1px solid #efefef;
 }
-/* line 1600, ../sass/screen.sass */
+/* line 1629, ../sass/screen.sass */
 fieldset.module div.tabular table tbody tr.row2, div.inline-group div.tabular table tbody tr.row2 {
   background: transparent;
 }
-/* line 1602, ../sass/screen.sass */
+/* line 1631, ../sass/screen.sass */
 fieldset.module div.tabular table tbody tr:last-child, div.inline-group div.tabular table tbody tr:last-child {
   border-bottom: none;
 }
-/* line 1604, ../sass/screen.sass */
+/* line 1633, ../sass/screen.sass */
 fieldset.module div.tabular table tbody tr td, div.inline-group div.tabular table tbody tr td {
   padding: 15px 25px 3px;
   font-size: 14px;
@@ -2908,7 +2962,7 @@ fieldset.module div.tabular table tbody tr td, div.inline-group div.tabular tabl
   height: 40px;
   line-height: 40px;
 }
-/* line 1611, ../sass/screen.sass */
+/* line 1640, ../sass/screen.sass */
 fieldset.module div.tabular table tbody tr td input, div.inline-group div.tabular table tbody tr td input {
   height: 24px;
   background: #f6f6f6;
@@ -2922,7 +2976,7 @@ fieldset.module div.tabular table tbody tr td input, div.inline-group div.tabula
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   width: auto;
 }
-/* line 1614, ../sass/screen.sass */
+/* line 1643, ../sass/screen.sass */
 fieldset.module div.tabular table tbody tr td textarea, div.inline-group div.tabular table tbody tr td textarea {
   background: #f6f6f6;
   border: 1px solid #cdcdcd;
@@ -2938,7 +2992,7 @@ fieldset.module div.tabular table tbody tr td textarea, div.inline-group div.tab
   resize: vertical;
   max-width: 344px;
 }
-/* line 1617, ../sass/screen.sass */
+/* line 1646, ../sass/screen.sass */
 fieldset.module div.tabular table tbody tr td button, div.inline-group div.tabular table tbody tr td button {
   width: 200px;
   color: white;
@@ -2958,7 +3012,7 @@ fieldset.module div.tabular table tbody tr td button, div.inline-group div.tabul
   background-color: #006fbb;
   cursor: pointer;
 }
-/* line 1623, ../sass/screen.sass */
+/* line 1652, ../sass/screen.sass */
 fieldset.module div.tabular table tbody tr td.link button, div.inline-group div.tabular table tbody tr td.link button {
   font-weight: bold;
   color: #747474;
@@ -2970,16 +3024,16 @@ fieldset.module div.tabular table tbody tr td.link button:after, div.inline-grou
   position: absolute;
   top: 0;
   left: 0;
-  background-position: 0 -596px;
+  background-position: 0 -624px;
   height: 14px;
   width: 14px;
 }
-/* line 1631, ../sass/screen.sass */
+/* line 1660, ../sass/screen.sass */
 fieldset.module div.tabular table tbody tr td.delete, div.inline-group div.tabular table tbody tr td.delete {
   padding: 0 10px 0 0;
   text-align: right;
 }
-/* line 1634, ../sass/screen.sass */
+/* line 1663, ../sass/screen.sass */
 fieldset.module div.tabular table tbody tr td.delete a.inline-deletelink, div.inline-group div.tabular table tbody tr td.delete a.inline-deletelink {
   text-indent: 0;
   padding: 0 0 0 20px;
@@ -2994,7 +3048,7 @@ fieldset.module div.tabular table tbody tr td.delete a.inline-deletelink:after, 
   position: absolute;
   top: 12px;
   left: 0;
-  background-position: 0 -142px;
+  background-position: 0 -170px;
   height: 14px;
   width: 14px;
 }
@@ -3004,15 +3058,15 @@ fieldset.module div.tabular table tbody tr td.delete a.inline-deletelink:hover:a
   position: absolute;
   top: 12px;
   left: 0;
-  background-position: 0 -212px;
+  background-position: 0 -240px;
   height: 14px;
   width: 14px;
 }
-/* line 1644, ../sass/screen.sass */
+/* line 1673, ../sass/screen.sass */
 fieldset.module div.tabular table tbody tr td.delete input[type="checkbox"], div.inline-group div.tabular table tbody tr td.delete input[type="checkbox"] {
   display: none;
 }
-/* line 1646, ../sass/screen.sass */
+/* line 1675, ../sass/screen.sass */
 fieldset.module div.tabular table tbody tr td.delete label, div.inline-group div.tabular table tbody tr td.delete label {
   cursor: pointer;
   font-weight: bold !important;
@@ -3021,7 +3075,7 @@ fieldset.module div.tabular table tbody tr td.delete label, div.inline-group div
   padding-left: 20px;
   margin-top: -4px;
 }
-/* line 1653, ../sass/screen.sass */
+/* line 1682, ../sass/screen.sass */
 fieldset.module div.tabular table tbody tr td.delete label.tabularinline_delete, div.inline-group div.tabular table tbody tr td.delete label.tabularinline_delete {
   color: #747474 !important;
 }
@@ -3031,11 +3085,11 @@ fieldset.module div.tabular table tbody tr td.delete label.tabularinline_delete:
   position: absolute;
   top: 1px;
   left: 0;
-  background-position: 0 -142px;
+  background-position: 0 -170px;
   height: 14px;
   width: 14px;
 }
-/* line 1656, ../sass/screen.sass */
+/* line 1685, ../sass/screen.sass */
 fieldset.module div.tabular table tbody tr td.delete label.tabularinline_delete:hover, div.inline-group div.tabular table tbody tr td.delete label.tabularinline_delete:hover {
   color: #f9910c !important;
 }
@@ -3045,11 +3099,11 @@ fieldset.module div.tabular table tbody tr td.delete label.tabularinline_delete:
   position: absolute;
   top: 1px;
   left: 0;
-  background-position: 0 -212px;
+  background-position: 0 -240px;
   height: 14px;
   width: 14px;
 }
-/* line 1659, ../sass/screen.sass */
+/* line 1688, ../sass/screen.sass */
 fieldset.module div.tabular table tbody tr td.delete label.undo_tabularinline_delete, div.inline-group div.tabular table tbody tr td.delete label.undo_tabularinline_delete {
   color: white !important;
 }
@@ -3063,7 +3117,7 @@ fieldset.module div.tabular table tbody tr td.delete label.undo_tabularinline_de
   height: 15px;
   width: 13px;
 }
-/* line 1662, ../sass/screen.sass */
+/* line 1691, ../sass/screen.sass */
 fieldset.module div.tabular table tbody tr td.delete label.undo_tabularinline_delete:hover, div.inline-group div.tabular table tbody tr td.delete label.undo_tabularinline_delete:hover {
   color: white !important;
 }
@@ -3077,19 +3131,19 @@ fieldset.module div.tabular table tbody tr td.delete label.undo_tabularinline_de
   height: 15px;
   width: 13px;
 }
-/* line 1665, ../sass/screen.sass */
+/* line 1694, ../sass/screen.sass */
 fieldset.module div.tabular table tbody tr td.delete label.hidden, div.inline-group div.tabular table tbody tr td.delete label.hidden {
   display: none;
 }
-/* line 1668, ../sass/screen.sass */
+/* line 1697, ../sass/screen.sass */
 fieldset.module div.tabular table tbody tr.tobe_removed, div.inline-group div.tabular table tbody tr.tobe_removed {
   background: #f9910c;
 }
-/* line 1670, ../sass/screen.sass */
+/* line 1699, ../sass/screen.sass */
 fieldset.module div.tabular table tbody tr.tobe_removed input, fieldset.module div.tabular table tbody tr.tobe_removed select, fieldset.module div.tabular table tbody tr.tobe_removed p, fieldset.module div.tabular table tbody tr.tobe_removed textarea, fieldset.module div.tabular table tbody tr.tobe_removed a, div.inline-group div.tabular table tbody tr.tobe_removed input, div.inline-group div.tabular table tbody tr.tobe_removed select, div.inline-group div.tabular table tbody tr.tobe_removed p, div.inline-group div.tabular table tbody tr.tobe_removed textarea, div.inline-group div.tabular table tbody tr.tobe_removed a {
   display: none;
 }
-/* line 1676, ../sass/screen.sass */
+/* line 1705, ../sass/screen.sass */
 fieldset.module div.tabular table tbody tr.add-row td, div.inline-group div.tabular table tbody tr.add-row td {
   border-top: 1px solid #efefef;
   background: white;
@@ -3106,7 +3160,7 @@ fieldset.module div.tabular table tbody tr.add-row td:after, div.inline-group di
   overflow: hidden;
   visibility: hidden;
 }
-/* line 1682, ../sass/screen.sass */
+/* line 1711, ../sass/screen.sass */
 fieldset.module div.tabular table tbody tr.add-row td a, div.inline-group div.tabular table tbody tr.add-row td a {
   height: 40px;
   line-height: 40px;
@@ -3129,16 +3183,16 @@ fieldset.module div.tabular table tbody tr.add-row td a:after, div.inline-group 
   position: absolute;
   top: 13px;
   left: 8px;
-  background-position: 0 -516px;
+  background-position: 0 -544px;
   height: 14px;
   width: 14px;
 }
-/* line 1687, ../sass/screen.sass */
+/* line 1716, ../sass/screen.sass */
 fieldset.module div.tabular table tbody tr.add-row td a:hover, div.inline-group div.tabular table tbody tr.add-row td a:hover {
   background-color: #006fbb;
   color: white;
 }
-/* line 1694, ../sass/screen.sass */
+/* line 1723, ../sass/screen.sass */
 fieldset.module div.form-row.grouped, div.inline-group div.form-row.grouped {
   margin-left: 165px !important;
   padding: 0 !important;
@@ -3153,7 +3207,7 @@ fieldset.module div.form-row.grouped:after, div.inline-group div.form-row.groupe
   overflow: hidden;
   visibility: hidden;
 }
-/* line 1698, ../sass/screen.sass */
+/* line 1727, ../sass/screen.sass */
 fieldset.module div.form-row.grouped ul, div.inline-group div.form-row.grouped ul {
   float: left;
   padding: 5px;
@@ -3171,16 +3225,16 @@ fieldset.module div.form-row.grouped ul:after, div.inline-group div.form-row.gro
   overflow: hidden;
   visibility: hidden;
 }
-/* line 1705, ../sass/screen.sass */
+/* line 1734, ../sass/screen.sass */
 fieldset.module div.form-row.grouped ul li, div.inline-group div.form-row.grouped ul li {
   float: left;
 }
-/* line 1707, ../sass/screen.sass */
+/* line 1736, ../sass/screen.sass */
 fieldset.module div.form-row.grouped ul li select, div.inline-group div.form-row.grouped ul li select {
   width: 134px;
   margin-top: 7px;
 }
-/* line 1710, ../sass/screen.sass */
+/* line 1739, ../sass/screen.sass */
 fieldset.module div.form-row.grouped ul li input, div.inline-group div.form-row.grouped ul li input {
   height: 24px;
   background: #f6f6f6;
@@ -3194,20 +3248,20 @@ fieldset.module div.form-row.grouped ul li input, div.inline-group div.form-row.
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   width: 170px;
 }
-/* line 1720, ../sass/screen.sass */
+/* line 1749, ../sass/screen.sass */
 fieldset.module div.form-row.grouped ul li.field-number, fieldset.module div.form-row.grouped ul li.field-url, div.inline-group div.form-row.grouped ul li.field-number, div.inline-group div.form-row.grouped ul li.field-url {
   margin-right: 0px;
 }
-/* line 1722, ../sass/screen.sass */
+/* line 1751, ../sass/screen.sass */
 fieldset.module div.form-row.grouped ul span.delete, div.inline-group div.form-row.grouped ul span.delete {
   margin: 5px;
   float: right;
 }
-/* line 1725, ../sass/screen.sass */
+/* line 1754, ../sass/screen.sass */
 fieldset.module div.form-row.grouped ul span.delete input, div.inline-group div.form-row.grouped ul span.delete input {
   display: none;
 }
-/* line 1727, ../sass/screen.sass */
+/* line 1756, ../sass/screen.sass */
 fieldset.module div.form-row.grouped ul span.delete label, div.inline-group div.form-row.grouped ul span.delete label {
   display: block;
   height: 14px;
@@ -3222,7 +3276,7 @@ fieldset.module div.form-row.grouped ul span.delete label:after, div.inline-grou
   position: absolute;
   top: 2px;
   left: 0;
-  background-position: 0 -142px;
+  background-position: 0 -170px;
   height: 14px;
   width: 14px;
 }
@@ -3232,15 +3286,15 @@ fieldset.module div.form-row.grouped ul span.delete label:hover:after, div.inlin
   position: absolute;
   top: 2px;
   left: 0;
-  background-position: 0 -212px;
+  background-position: 0 -240px;
   height: 14px;
   width: 14px;
 }
-/* line 1737, ../sass/screen.sass */
+/* line 1766, ../sass/screen.sass */
 fieldset.module div.form-row.grouped ul span.delete label.hidden, div.inline-group div.form-row.grouped ul span.delete label.hidden {
   display: none;
 }
-/* line 1739, ../sass/screen.sass */
+/* line 1768, ../sass/screen.sass */
 fieldset.module div.form-row.grouped ul span.delete.tobe_removed label, div.inline-group div.form-row.grouped ul span.delete.tobe_removed label {
   color: #f9910c !important;
 }
@@ -3254,19 +3308,19 @@ fieldset.module div.form-row.grouped ul span.delete.tobe_removed label:after, di
   height: 15px;
   width: 13px;
 }
-/* line 1743, ../sass/screen.sass */
+/* line 1772, ../sass/screen.sass */
 fieldset.module div.form-row.grouped ul.tobe_removed, div.inline-group div.form-row.grouped ul.tobe_removed {
   background: #f9910c;
 }
-/* line 1745, ../sass/screen.sass */
+/* line 1774, ../sass/screen.sass */
 fieldset.module div.form-row.grouped ul.tobe_removed input, fieldset.module div.form-row.grouped ul.tobe_removed select, fieldset.module div.form-row.grouped ul.tobe_removed p, fieldset.module div.form-row.grouped ul.tobe_removed strong, fieldset.module div.form-row.grouped ul.tobe_removed li a.related-lookup, div.inline-group div.form-row.grouped ul.tobe_removed input, div.inline-group div.form-row.grouped ul.tobe_removed select, div.inline-group div.form-row.grouped ul.tobe_removed p, div.inline-group div.form-row.grouped ul.tobe_removed strong, div.inline-group div.form-row.grouped ul.tobe_removed li a.related-lookup {
   display: none !important;
 }
-/* line 1747, ../sass/screen.sass */
+/* line 1776, ../sass/screen.sass */
 fieldset.module div.form-row.grouped ul.tobe_removed span.delete, div.inline-group div.form-row.grouped ul.tobe_removed span.delete {
   float: right !important;
 }
-/* line 1751, ../sass/screen.sass */
+/* line 1780, ../sass/screen.sass */
 fieldset.module div.form-row.grouped ul a.inline-deletelink, div.inline-group div.form-row.grouped ul a.inline-deletelink {
   padding: 0 0 0 18px;
   text-indent: -9999px;
@@ -3283,11 +3337,11 @@ fieldset.module div.form-row.grouped ul a.inline-deletelink:after, div.inline-gr
   position: absolute;
   top: 2px;
   left: 0;
-  background-position: 0 -142px;
+  background-position: 0 -170px;
   height: 14px;
   width: 14px;
 }
-/* line 1761, ../sass/screen.sass */
+/* line 1790, ../sass/screen.sass */
 fieldset.module div.form-row.grouped ul a.inline-deletelink:hover, div.inline-group div.form-row.grouped ul a.inline-deletelink:hover {
   color: #f9910c;
 }
@@ -3297,38 +3351,38 @@ fieldset.module div.form-row.grouped ul a.inline-deletelink:hover:after, div.inl
   position: absolute;
   top: 2px;
   left: 0;
-  background-position: 0 -212px;
+  background-position: 0 -240px;
   height: 14px;
   width: 14px;
 }
-/* line 1765, ../sass/screen.sass */
+/* line 1794, ../sass/screen.sass */
 fieldset.module div.form-row.grouped div.add-row, div.inline-group div.form-row.grouped div.add-row {
   clear: both;
 }
-/* line 1767, ../sass/screen.sass */
+/* line 1796, ../sass/screen.sass */
 fieldset.module div.form-row.grouped div.add-row .add-row, div.inline-group div.form-row.grouped div.add-row .add-row {
   border-top: none;
   border-bottom: none;
   float: left;
   min-width: 20%;
 }
-/* line 1772, ../sass/screen.sass */
+/* line 1801, ../sass/screen.sass */
 fieldset.module div.form-row.grouped div.add-row .inline-related, div.inline-group div.form-row.grouped div.add-row .inline-related {
   position: inherit;
   float: left;
   display: block;
 }
-/* line 1776, ../sass/screen.sass */
+/* line 1805, ../sass/screen.sass */
 fieldset.module div.form-row.grouped div.add-row select, div.inline-group div.form-row.grouped div.add-row select {
   height: 22px;
   margin: 3px 0;
 }
 
-/* line 1783, ../sass/screen.sass */
+/* line 1812, ../sass/screen.sass */
 table#change-history {
   width: 100%;
 }
-/* line 1786, ../sass/screen.sass */
+/* line 1815, ../sass/screen.sass */
 table#change-history thead th {
   height: 40px;
   line-height: 40px;
@@ -3338,54 +3392,54 @@ table#change-history thead th {
   border: none;
   padding: 3px 25px;
 }
-/* line 1794, ../sass/screen.sass */
+/* line 1823, ../sass/screen.sass */
 table#change-history thead th:first-child {
   width: 350px;
 }
-/* line 1797, ../sass/screen.sass */
+/* line 1826, ../sass/screen.sass */
 table#change-history tbody tr {
   border-bottom: 1px solid #cdcdcd;
 }
-/* line 1799, ../sass/screen.sass */
+/* line 1828, ../sass/screen.sass */
 table#change-history tbody tr td, table#change-history tbody tr th {
   padding: 10px 25px;
   vertical-align: top;
 }
-/* line 1802, ../sass/screen.sass */
+/* line 1831, ../sass/screen.sass */
 table#change-history tbody tr th {
   color: #006fbb;
 }
 
-/* line 1810, ../sass/screen.sass */
+/* line 1839, ../sass/screen.sass */
 p.datetime input {
   width: 75px;
   margin: 0 8px 8px 8px;
 }
-/* line 1813, ../sass/screen.sass */
+/* line 1842, ../sass/screen.sass */
 p.datetime input:first-child {
   margin-left: 11px;
 }
-/* line 1816, ../sass/screen.sass */
+/* line 1845, ../sass/screen.sass */
 p.datetime span.datetimeshortcuts a:first-child {
   font-size: 14px;
   color: #006fbb;
   margin-right: 5px;
 }
-/* line 1820, ../sass/screen.sass */
+/* line 1849, ../sass/screen.sass */
 p.datetime span.datetimeshortcuts a:first-child:hover {
   color: #f9910c;
 }
-/* line 1822, ../sass/screen.sass */
+/* line 1851, ../sass/screen.sass */
 p.datetime span.datetimeshortcuts a:last-child {
   display: inline-block;
   margin-left: 5px;
 }
-/* line 1825, ../sass/screen.sass */
+/* line 1854, ../sass/screen.sass */
 p.datetime span.datetimeshortcuts a:last-child img {
   margin-top: -3px;
 }
 
-/* line 1829, ../sass/screen.sass */
+/* line 1858, ../sass/screen.sass */
 a.add-another {
   text-indent: -9999px;
   position: relative;
@@ -3401,7 +3455,7 @@ a.add-another:after {
   position: absolute;
   top: 2px;
   left: 0;
-  background-position: 0 -596px;
+  background-position: 0 -624px;
   height: 14px;
   width: 14px;
 }
@@ -3411,22 +3465,22 @@ a.add-another:hover:after {
   position: absolute;
   top: 2px;
   left: 0;
-  background-position: 0 -582px;
+  background-position: 0 -610px;
   height: 14px;
   width: 14px;
 }
-/* line 1840, ../sass/screen.sass */
+/* line 1869, ../sass/screen.sass */
 a.add-another img {
   display: none;
 }
 
-/* line 1843, ../sass/screen.sass */
+/* line 1872, ../sass/screen.sass */
 div.clockbox, div.calendarbox {
   box-shadow: #434343 0 0 5px 0;
   border: none !important;
   margin: 22px 0 0 15px;
 }
-/* line 1847, ../sass/screen.sass */
+/* line 1876, ../sass/screen.sass */
 div.clockbox:before, div.calendarbox:before {
   content: "";
   position: absolute;
@@ -3438,7 +3492,7 @@ div.clockbox:before, div.calendarbox:before {
   border-top: 18px solid transparent;
   border-bottom: 18px solid transparent;
 }
-/* line 1857, ../sass/screen.sass */
+/* line 1886, ../sass/screen.sass */
 div.clockbox h2, div.calendarbox h2 {
   background: #006fbb;
   color: white;
@@ -3446,54 +3500,54 @@ div.clockbox h2, div.calendarbox h2 {
   font-size: 14px;
   border: none;
 }
-/* line 1863, ../sass/screen.sass */
+/* line 1892, ../sass/screen.sass */
 div.clockbox ul.timelist li, div.calendarbox ul.timelist li {
   border-bottom: 1px solid #f6f6f6;
 }
-/* line 1865, ../sass/screen.sass */
+/* line 1894, ../sass/screen.sass */
 div.clockbox ul.timelist li:last-child, div.calendarbox ul.timelist li:last-child {
   border-bottom: none;
 }
-/* line 1867, ../sass/screen.sass */
+/* line 1896, ../sass/screen.sass */
 div.clockbox ul.timelist li a, div.calendarbox ul.timelist li a {
   padding: 5px 0;
 }
-/* line 1869, ../sass/screen.sass */
+/* line 1898, ../sass/screen.sass */
 div.clockbox ul.timelist li a:hover, div.calendarbox ul.timelist li a:hover {
   background: #f9910c;
   color: white;
 }
-/* line 1872, ../sass/screen.sass */
+/* line 1901, ../sass/screen.sass */
 div.clockbox p.calendar-cancel, div.calendarbox p.calendar-cancel {
   border: none;
   font-size: 14px;
   background: #747474;
 }
-/* line 1876, ../sass/screen.sass */
+/* line 1905, ../sass/screen.sass */
 div.clockbox p.calendar-cancel a, div.calendarbox p.calendar-cancel a {
   color: white;
   padding: 5px 0;
 }
-/* line 1879, ../sass/screen.sass */
+/* line 1908, ../sass/screen.sass */
 div.clockbox p.calendar-cancel a:hover, div.calendarbox p.calendar-cancel a:hover {
   background: #f9910c;
 }
-/* line 1881, ../sass/screen.sass */
+/* line 1910, ../sass/screen.sass */
 div.clockbox table, div.calendarbox table {
   width: 100%;
 }
-/* line 1883, ../sass/screen.sass */
+/* line 1912, ../sass/screen.sass */
 div.clockbox .calendarnav-previous, div.clockbox .calendarnav-next, div.calendarbox .calendarnav-previous, div.calendarbox .calendarnav-next {
   background: #006fbb;
   height: 34px;
   line-height: 34px;
 }
-/* line 1887, ../sass/screen.sass */
+/* line 1916, ../sass/screen.sass */
 div.clockbox .calendarnav-previous:hover, div.clockbox .calendarnav-next:hover, div.calendarbox .calendarnav-previous:hover, div.calendarbox .calendarnav-next:hover {
   background: #003366;
   color: white;
 }
-/* line 1890, ../sass/screen.sass */
+/* line 1919, ../sass/screen.sass */
 div.clockbox caption, div.calendarbox caption {
   background: #006fbb;
   font-size: 14px;
@@ -3503,46 +3557,46 @@ div.clockbox caption, div.calendarbox caption {
   padding: 3px 0;
   width: 100%;
 }
-/* line 1899, ../sass/screen.sass */
+/* line 1928, ../sass/screen.sass */
 div.clockbox table td.today a, div.calendarbox table td.today a {
   background: #ed8d1f;
   color: white;
 }
-/* line 1902, ../sass/screen.sass */
+/* line 1931, ../sass/screen.sass */
 div.clockbox table td a:hover, div.calendarbox table td a:hover {
   background: #006fbb;
 }
 
-/* line 1909, ../sass/screen.sass */
+/* line 1938, ../sass/screen.sass */
 .ui-dialog fieldset {
   border-radius: 0px;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   background: white;
 }
-/* line 1913, ../sass/screen.sass */
+/* line 1942, ../sass/screen.sass */
 .ui-dialog fieldset label {
   width: 90px !important;
 }
-/* line 1915, ../sass/screen.sass */
+/* line 1944, ../sass/screen.sass */
 .ui-dialog fieldset input {
   width: 230px;
 }
-/* line 1917, ../sass/screen.sass */
+/* line 1946, ../sass/screen.sass */
 .ui-dialog fieldset div.checkbox_container {
   margin-left: 105px !important;
 }
-/* line 1919, ../sass/screen.sass */
+/* line 1948, ../sass/screen.sass */
 .ui-dialog fieldset div.checkbox_container input[type="checkbox"] {
   width: auto;
 }
-/* line 1921, ../sass/screen.sass */
+/* line 1950, ../sass/screen.sass */
 .ui-dialog fieldset div.field_container strong {
   font-size: 14px;
   color: #747474;
   font-weight: bold;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
-/* line 1926, ../sass/screen.sass */
+/* line 1955, ../sass/screen.sass */
 .ui-dialog fieldset button {
   color: white;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -3554,22 +3608,22 @@ div.clockbox table td a:hover, div.calendarbox table td a:hover {
   background-color: #006fbb;
   cursor: pointer;
 }
-/* line 1936, ../sass/screen.sass */
+/* line 1965, ../sass/screen.sass */
 .ui-dialog fieldset button:hover, .ui-dialog fieldset button:active {
   background: #024f84;
 }
-/* line 1939, ../sass/screen.sass */
+/* line 1968, ../sass/screen.sass */
 .ui-dialog fieldset div.advanced {
   background: white;
   border-top: 1px solid #cccccc;
   margin: 0;
   padding: 5px 10px 5px 18px;
 }
-/* line 1944, ../sass/screen.sass */
+/* line 1973, ../sass/screen.sass */
 .ui-dialog fieldset div.field-is_active {
   border: none;
 }
-/* line 1946, ../sass/screen.sass */
+/* line 1975, ../sass/screen.sass */
 .ui-dialog fieldset div.advanced a {
   display: inline-block;
   margin: 8px 0;
@@ -3585,11 +3639,11 @@ div.clockbox table td a:hover, div.calendarbox table td a:hover {
   position: absolute;
   top: 4px;
   left: 0;
-  background-position: 0 -596px;
+  background-position: 0 -624px;
   height: 14px;
   width: 14px;
 }
-/* line 1955, ../sass/screen.sass */
+/* line 1984, ../sass/screen.sass */
 .ui-dialog fieldset div.advanced a:hover {
   color: #f9910c;
 }
@@ -3599,18 +3653,18 @@ div.clockbox table td a:hover, div.calendarbox table td a:hover {
   position: absolute;
   top: 4px;
   left: 0;
-  background-position: 0 -582px;
+  background-position: 0 -610px;
   height: 14px;
   width: 14px;
 }
 
-/* line 1963, ../sass/screen.sass */
+/* line 1992, ../sass/screen.sass */
 #menuitem_set-group {
   margin: 20px 0 0 0;
   border: 1px solid #cdcdcd;
   border-top: none;
 }
-/* line 1967, ../sass/screen.sass */
+/* line 1996, ../sass/screen.sass */
 #menuitem_set-group li {
   *zoom: 1;
 }
@@ -3623,12 +3677,12 @@ div.clockbox table td a:hover, div.calendarbox table td a:hover {
   overflow: hidden;
   visibility: hidden;
 }
-/* line 1969, ../sass/screen.sass */
+/* line 1998, ../sass/screen.sass */
 #menuitem_set-group li h3 {
   margin: 0;
   padding: 0;
 }
-/* line 1972, ../sass/screen.sass */
+/* line 2001, ../sass/screen.sass */
 #menuitem_set-group li h3 > a {
   color: #cdcdcd;
   font-weight: normal;
@@ -3642,11 +3696,11 @@ div.clockbox table td a:hover, div.calendarbox table td a:hover {
   position: absolute;
   top: 2px;
   left: 0;
-  background-position: 0 -504px;
+  background-position: 0 -532px;
   height: 12px;
   width: 14px;
 }
-/* line 1979, ../sass/screen.sass */
+/* line 2008, ../sass/screen.sass */
 #menuitem_set-group li h3 > a:hover {
   color: #f9910c;
 }
@@ -3656,24 +3710,24 @@ div.clockbox table td a:hover, div.calendarbox table td a:hover {
   position: absolute;
   top: 2px;
   left: 0;
-  background-position: 0 -556px;
+  background-position: 0 -584px;
   height: 12px;
   width: 14px;
 }
-/* line 1982, ../sass/screen.sass */
+/* line 2011, ../sass/screen.sass */
 #menuitem_set-group li h3 span.detail a {
   color: #006fbb;
   margin-left: 10px;
 }
-/* line 1985, ../sass/screen.sass */
+/* line 2014, ../sass/screen.sass */
 #menuitem_set-group li h3 span.detail a:hover {
   color: #f9910c;
 }
-/* line 1988, ../sass/screen.sass */
+/* line 2017, ../sass/screen.sass */
 #menuitem_set-group li h3 span.delete input {
   display: none;
 }
-/* line 1990, ../sass/screen.sass */
+/* line 2019, ../sass/screen.sass */
 #menuitem_set-group li h3 span.delete label {
   background-image: none;
   padding: 0 0 0 18px;
@@ -3690,11 +3744,11 @@ div.clockbox table td a:hover, div.calendarbox table td a:hover {
   position: absolute;
   top: 2px;
   left: 0;
-  background-position: 0 -142px;
+  background-position: 0 -170px;
   height: 14px;
   width: 14px;
 }
-/* line 2000, ../sass/screen.sass */
+/* line 2029, ../sass/screen.sass */
 #menuitem_set-group li h3 span.delete label:hover {
   color: #f9910c !important;
 }
@@ -3704,15 +3758,15 @@ div.clockbox table td a:hover, div.calendarbox table td a:hover {
   position: absolute;
   top: 2px;
   left: 0;
-  background-position: 0 -212px;
+  background-position: 0 -240px;
   height: 14px;
   width: 14px;
 }
-/* line 2003, ../sass/screen.sass */
+/* line 2032, ../sass/screen.sass */
 #menuitem_set-group li h3 span.delete label.hidden {
   display: none;
 }
-/* line 2005, ../sass/screen.sass */
+/* line 2034, ../sass/screen.sass */
 #menuitem_set-group li h3 span.delete label.undo_stackedinline_delete {
   color: white !important;
 }
@@ -3726,43 +3780,43 @@ div.clockbox table td a:hover, div.calendarbox table td a:hover {
   height: 15px;
   width: 13px;
 }
-/* line 2008, ../sass/screen.sass */
+/* line 2037, ../sass/screen.sass */
 #menuitem_set-group li.tobe_removed {
   background: #f9910c !important;
 }
-/* line 2011, ../sass/screen.sass */
+/* line 2040, ../sass/screen.sass */
 #menuitem_set-group li.tobe_removed h3 span.inline_label {
   color: white;
   text-decoration: line-through;
 }
-/* line 2014, ../sass/screen.sass */
+/* line 2043, ../sass/screen.sass */
 #menuitem_set-group li.tobe_removed h3 > a {
   display: none;
 }
-/* line 2016, ../sass/screen.sass */
+/* line 2045, ../sass/screen.sass */
 #menuitem_set-group li.tobe_removed h3 span.detail a {
   display: none;
 }
-/* line 2021, ../sass/screen.sass */
+/* line 2050, ../sass/screen.sass */
 #menuitem_set-group li.inline-related {
   cursor: move;
 }
-/* line 2023, ../sass/screen.sass */
+/* line 2052, ../sass/screen.sass */
 #menuitem_set-group li li.inline-related {
   background: url(images/icon_nested_arrow.png) left 3px no-repeat transparent;
 }
-/* line 2025, ../sass/screen.sass */
+/* line 2054, ../sass/screen.sass */
 #menuitem_set-group li.inline-related fieldset {
   background: #f6f6f6;
   width: 100%;
   padding: 0 10px 0 10px;
   margin: 5px 0 0 -10px;
 }
-/* line 2030, ../sass/screen.sass */
+/* line 2059, ../sass/screen.sass */
 #menuitem_set-group li:nth-child(even) {
   background: #f6f6f6;
 }
-/* line 2032, ../sass/screen.sass */
+/* line 2061, ../sass/screen.sass */
 #menuitem_set-group li div {
   border: none;
   margin: 0;
@@ -3772,29 +3826,29 @@ div.clockbox table td a:hover, div.calendarbox table td a:hover {
   list-style: none;
   position: relative;
 }
-/* line 2040, ../sass/screen.sass */
+/* line 2069, ../sass/screen.sass */
 #menuitem_set-group li li div {
   border-top: 1px dashed #cdcdcd;
   background: transparent;
 }
-/* line 2044, ../sass/screen.sass */
+/* line 2073, ../sass/screen.sass */
 #menuitem_set-group li div.form-row {
   border-top: none;
   padding: 0;
   background: transparent;
 }
-/* line 2048, ../sass/screen.sass */
+/* line 2077, ../sass/screen.sass */
 #menuitem_set-group li div.object_id div {
   min-height: 29px !important;
 }
-/* line 2065, ../sass/screen.sass */
+/* line 2094, ../sass/screen.sass */
 #menuitem_set-group div.add-row {
   border: 1px solid #272727;
   padding: 10px 15px;
   margin: 0 -1px -1px -1px;
   background: #272727;
 }
-/* line 2070, ../sass/screen.sass */
+/* line 2099, ../sass/screen.sass */
 #menuitem_set-group div.add-row a {
   color: white;
   background: none;
@@ -3809,11 +3863,11 @@ div.clockbox table td a:hover, div.calendarbox table td a:hover {
   position: absolute;
   top: 2px;
   left: 0;
-  background-position: 0 -516px;
+  background-position: 0 -544px;
   height: 14px;
   width: 14px;
 }
-/* line 2078, ../sass/screen.sass */
+/* line 2107, ../sass/screen.sass */
 #menuitem_set-group div.add-row a:hover {
   color: #f9910c;
 }
@@ -3823,18 +3877,18 @@ div.clockbox table td a:hover, div.calendarbox table td a:hover {
   position: absolute;
   top: 2px;
   left: 0;
-  background-position: 0 -582px;
+  background-position: 0 -610px;
   height: 14px;
   width: 14px;
 }
 
-/* line 2087, ../sass/screen.sass */
+/* line 2116, ../sass/screen.sass */
 #revision_container {
   width: 960px;
   margin: 0 auto;
   background: #006fbb;
 }
-/* line 2091, ../sass/screen.sass */
+/* line 2120, ../sass/screen.sass */
 #revision_container p {
   font-size: 23px;
   font-weight: bold;
