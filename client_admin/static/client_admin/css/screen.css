@@ -3883,13 +3883,13 @@ div.clockbox table td a:hover, div.calendarbox table td a:hover {
 }
 
 /* line 2116, ../sass/screen.sass */
-#revision_container {
+.message-container {
   width: 960px;
   margin: 0 auto;
   background: #006fbb;
 }
 /* line 2120, ../sass/screen.sass */
-#revision_container p {
+.message-container p {
   font-size: 23px;
   font-weight: bold;
   color: white;
