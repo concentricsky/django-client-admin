@@ -37,8 +37,8 @@
     {% endblock %}
   </ul>
 {% endif %}{% endif %}
-</div>
 {% endblock %}
+</div>
 <form {% if has_file_field %}enctype="multipart/form-data" {% endif %}action="{{ form_url }}" method="post" id="{{ opts.module_name }}_form" class="change_form">{% csrf_token %}{% block form_top %}{% endblock %}
 
 {% block submit_buttons_top %}{% submit_row %}{% endblock %}
