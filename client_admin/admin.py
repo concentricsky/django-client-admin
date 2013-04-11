@@ -413,16 +413,25 @@ class GenericTabularInline(BaseClientAdminMixin, GenericModelAdminMixin, generic
     pass
 
 
-class GenericStackedInline(BaseClientAdminMixin, GenericModelAdminMixin, generic.GenericStackedInline):
+class StackedInlineMixin(object):
+    collapse = False
+
+    def get_formset(self, request, obj=None, **kwargs):
+        FormSet = super(StackedInlineMixin, self).get_formset(request, obj, **kwargs)
+        FormSet.collapse = self.collapse
+        return FormSet
+
+
+class GenericStackedInline(StackedInlineMixin, BaseClientAdminMixin, GenericModelAdminMixin, generic.GenericStackedInline):
     template = 'admin/edit_inline/grouped.html'
 
 
-class GenericGroupedInline(BaseClientAdminMixin, GenericModelAdminMixin, generic.GenericStackedInline):
+class GenericGroupedInline(StackedInlineMixin, BaseClientAdminMixin, GenericModelAdminMixin, generic.GenericStackedInline):
     # Model admin for generic stacked inlines.
     pass
 
 
-class StackedInline(BaseRecursiveInlineMixin, BaseClientAdminMixin, admin.StackedInline):
+class StackedInline(StackedInlineMixin, BaseRecursiveInlineMixin, BaseClientAdminMixin, admin.StackedInline):
     pass
 
 
