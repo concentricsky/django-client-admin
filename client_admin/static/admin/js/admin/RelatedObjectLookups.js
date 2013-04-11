@@ -27,6 +27,10 @@ function windowname_to_id(text) {
     return text;
 }
 
+function id_to_unicode(text) {
+    return 'unicode_'+text;
+}
+
 function showRelatedObjectLookupPopup(triggeringLink) {
     var name = triggeringLink.id.replace(/^lookup_/, '');
     name = id_to_windowname(name);
@@ -41,13 +45,16 @@ function showRelatedObjectLookupPopup(triggeringLink) {
     return false;
 }
 
-function dismissRelatedLookupPopup(win, chosenId) {
+function dismissRelatedLookupPopup(win, chosenId, chosenString) {
     var name = windowname_to_id(win.name);
     var elem = document.getElementById(name);
+    var unicode_elem = document.getElementById(id_to_unicode(name));
     if (elem.className.indexOf('vManyToManyRawIdAdminField') != -1 && elem.value) {
         elem.value += ',' + chosenId;
+        unicode_elem.innerText += ', ' + chosenString;
     } else {
-        document.getElementById(name).value = chosenId;
+        elem.value = chosenId;
+        unicode_elem.innerText = chosenString;
     }
     win.close();
 }

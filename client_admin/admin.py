@@ -1,13 +1,15 @@
 # # Client Admin admin classes
 from client_admin.views import generic_lookup, get_generic_rel_list
-from client_admin.widgets import ThumbnailImageWidget, AdminURLFieldWidget
+from client_admin.widgets import ThumbnailImageWidget, AdminURLFieldWidget, UnicodeForeignKeyRawIdWidget
 
 from django.conf import settings
 from django.conf.urls import patterns, url
 from django.contrib import admin
 from django.contrib.admin import helpers
+from django.contrib.admin.options import get_ul_class
 from django.contrib.admin.templatetags.admin_static import static
 from django.contrib.admin.util import unquote
+from django.contrib.admin.widgets import AdminRadioSelect
 from django.contrib.contenttypes import generic
 from django.core.urlresolvers import reverse
 from django.core.exceptions import PermissionDenied
@@ -404,7 +406,23 @@ class ImageWidgetMixin(object):
     }
 
 
-class BaseClientAdminMixin(GenericModelAdminMixin, ImageWidgetMixin, URLFieldMixin):
+class UnicodeForeignKeyRawIdWidgetMixin(object):
+    def formfield_for_foreignkey(self, db_field, request=None, **kwargs):
+        """
+        Get a form Field for a ForeignKey.
+        """
+        db = kwargs.get('using')
+        if db_field.name in self.raw_id_fields:
+            kwargs['widget'] = UnicodeForeignKeyRawIdWidget(db_field.rel, self.admin_site, using=db)
+        elif db_field.name in self.radio_fields:
+            kwargs['widget'] = AdminRadioSelect(attrs={
+                'class': get_ul_class(self.radio_fields[db_field.name]),
+            })
+            kwargs['empty_label'] = db_field.blank and _('None') or None
+        return db_field.formfield(**kwargs)
+
+
+class BaseClientAdminMixin(UnicodeForeignKeyRawIdWidgetMixin, GenericModelAdminMixin, ImageWidgetMixin, URLFieldMixin):
     formfield_overrides = dict(ImageWidgetMixin.formfield_overrides.items() + URLFieldMixin.formfield_overrides.items())
 
 
