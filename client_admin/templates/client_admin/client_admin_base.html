@@ -187,7 +187,7 @@
                 $(this).toggleClass("hidden");
                 $(this).parents("div.inline-related").children("fieldset.module.aligned").slideToggle();
             });
-            $('div.inline-group.start-collapsed div.inline-related h3 > span.toggleswitch').trigger('click');
+            $('div.inline-group.start-collapsed div.inline-related:not(".empty-form") h3 > span.toggleswitch').trigger('click');
 
             // $("div.inline-related h3 > span.deleteinline").click(function(){
             //     $(this).addClass("hidden");
