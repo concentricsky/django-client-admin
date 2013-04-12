@@ -70,15 +70,17 @@
         </p>
         {{ cl.formset.non_form_errors }}
     {% endif %}
-    <div class="module{% if cl.has_filters %} filtered{% endif %}" id="changelist">
+    <div class="module{% if cl.has_filters or cl.search_fields %} filtered{% endif %}" id="changelist">
       {% block date_hierarchy %}{% date_hierarchy cl %}{% endblock %}
 
       {% block filters %}
-        {% if cl.has_filters %}
+        {% if cl.has_filters or cl.search_fields %}
           <div id="changelist-filter">
             {% block search %}{% search_form cl %}{% endblock %}
-            <h2>{% trans 'Filter' %}</h2>
-            {% for spec in cl.filter_specs %}{% admin_list_filter cl spec %}{% endfor %}
+            {% if cl.has_filters %}
+              <h2>{% trans 'Filter' %}</h2>
+              {% for spec in cl.filter_specs %}{% admin_list_filter cl spec %}{% endfor %}
+            {% endif %}
           </div>
         {% endif %}
       {% endblock %}

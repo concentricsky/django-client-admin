@@ -3956,14 +3956,14 @@ div.clockbox table td a:hover, div.calendarbox table td a:hover {
   width: 14px;
 }
 
-/* line 2139, ../sass/screen.sass */
-#revision_container {
+/* line 2116, ../sass/screen.sass */
+.message-container {
   width: 960px;
   margin: 0 auto;
   background: #006fbb;
 }
-/* line 2143, ../sass/screen.sass */
-#revision_container p {
+/* line 2120, ../sass/screen.sass */
+.message-container p {
   font-size: 23px;
   font-weight: bold;
   color: white;

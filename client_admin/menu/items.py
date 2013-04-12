@@ -283,6 +283,7 @@ class ModelList(MenuItem, AppListElementMixin):
         documentation from :class:`~client_admin.menu.items.MenuItem` class.
         """
         items = self._visible_models(context['request'])
+        items.sort(key=lambda x: x[0]._meta.verbose_name_plural)
         for model, perms in items:
             if not perms['change']:
                 continue
