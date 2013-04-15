@@ -1,4 +1,7 @@
-from django.conf.urls.defaults import patterns, url
+try:
+    from django.conf.urls import patterns, url, include
+except ImportError:
+    from django.conf.urls.defaults import patterns, url, include
 
 urlpatterns = patterns('client_admin.menu.views',
     url(r'^add_bookmark/$', 'add_bookmark', name='client-admin-menu-add-bookmark'),

@@ -1,5 +1,8 @@
 from django.conf import settings
-from django.conf.urls.defaults import patterns, url, include
+try:
+    from django.conf.urls import patterns, url, include
+except ImportError:
+    from django.conf.urls.defaults import patterns, url, include
 from client_admin import views as client_admin_views
 
 urls = []
