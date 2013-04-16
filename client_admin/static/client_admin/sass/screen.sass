@@ -244,6 +244,27 @@ header
           color: $secondary
 
        
+        // Bookmarks tab
+        // - - - - - - - - - - - - -
+        &.bookmark
+          width: 47px
+          height: 59px
+          padding: 0
+          position: relative
+          > a, &:visited
+            text-indent: -9999px
+            padding: 0
+            position: relative
+            +sprite-icon(icon_bookmark_white, $vertical: 19px, $horizontal: 12px)
+            &:hover
+              +sprite-icon(icon_bookmark_orange, $vertical: 19px, $horizontal: 12px)
+          &.disabled > a, &.disabled > a:visited
+            +sprite-icon(icon_bookmark_disabled, $vertical: 19px, $horizontal: 12px)
+            &:hover
+              +sprite-icon(icon_bookmark_disabled, $vertical: 19px, $horizontal: 12px)
+
+
+
         // My account tab
         // - - - - - - - - - - - - -
         &.user-tools
@@ -387,24 +408,26 @@ header
     margin-top: 16px
     #bookmark-button
       border: none
-      padding-left: 20px
+      padding-left: 24px
       line-height: 0
       height: 13px
       font-family: $body-font
-      font-weight: bold
       color: $body
-      font-size: 14px
+      font-size: 12px
       text-transform: lowercase
       cursor: pointer
       position: relative
-      +sprite-icon(icon_favorite)
+      +sprite-icon(icon_favorite_add, $vertical: -4px)
       background-color: transparent
-      &.bookmarked
-        color: $body
-        +sprite-icon(icon_favorite_blue)
       &:hover
         color: $secondary
-        +sprite-icon(icon_favorite_orange)
+        +sprite-icon(icon_favorite_add_hover, $vertical: -4px)
+      &.bookmarked
+        color: $body
+        +sprite-icon(icon_favorite_remove, $vertical: -4px)
+        &:hover
+          color: $secondary
+          +sprite-icon(icon_favorite_remove_hover, $vertical: -4px)
 
  
   // Breadcrumbs
