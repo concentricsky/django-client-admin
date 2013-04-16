@@ -47,14 +47,6 @@ class Dashboard(object):
         self.children = self.children or []
 
     def init_with_context(self, context):
-        # append a sitemap that matches the top level menu
-        self.children.append(modules.Sitemap(_('Sitemap')))
-        # append a list of text snippets
-        self.children.append(modules.TextSnippets(
-            _('Text Snippets') 
-            , 10
-            , css_classes=('snippets',)
-        ))
         # append an app list module for "Applications"
         self.children.append(modules.AppList(
             _('Applications'),
