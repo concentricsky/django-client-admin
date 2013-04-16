@@ -25,6 +25,17 @@ from forms import DashboardPreferencesForm, BookmarkForm
 from models import DashboardPreferences, Bookmark
 
 
+# Decorator
+def admin_login_required(view_func):
+
+    @wraps(view_func)
+    def _checklogin(request, *args, **kwargs):
+        from django.contrib import admin
+        return admin.site.admin_view(view_func)(request, *args, **kwargs)
+    return _checklogin
+
+
+@admin_login_required
 def get_obj(content_type_id, object_id):
     obj_dict = {
         'content_type_id': content_type_id,
@@ -48,6 +59,7 @@ def get_obj(content_type_id, object_id):
     return obj_dict
 
 
+@admin_login_required
 def generic_lookup(request):
     if request.method == 'GET':
         objects = []
@@ -62,6 +74,7 @@ def generic_lookup(request):
         return HttpResponseNotAllowed(['GET'])
 
 
+@admin_login_required
 def get_generic_rel_list(request, blacklist=(), whitelist=(), url_params={}):
     if request.method == 'GET':
         obj_dict = {}
@@ -86,16 +99,6 @@ def get_generic_rel_list(request, blacklist=(), whitelist=(), url_params={}):
         return response
     else:
         return HttpResponseNotAllowed(['GET'])
-
-
-# Decorator
-def admin_login_required(view_func):
-
-    @wraps(view_func)
-    def _checklogin(request, *args, **kwargs):
-        from django.contrib import admin
-        return admin.site.admin_view(view_func)(request, *args, **kwargs)
-    return _checklogin
 
 
 @admin_login_required
