@@ -8,9 +8,9 @@ from django.utils.text import capfirst
 from django.core.urlresolvers import reverse
 from django.contrib.contenttypes.models import ContentType
 from django.utils.translation import ugettext_lazy as _
-from django.utils.itercompat import is_iterable
 
 from client_admin.utils import *
+
 
 class DashboardModule(object):
     """
@@ -767,6 +767,7 @@ try:
 except ImportError:
     pass
 
+
 class TextSnippets(DashboardModule):
     """
     Module that lists text snippets from SkyCMS.
@@ -775,7 +776,6 @@ class TextSnippets(DashboardModule):
     title = _('Text Snippets')
     template = 'client_admin/dashboard/modules/text_snippets.html'
     limit = 10
-
 
     def _get_admin_object_change_url(self, obj, context):
         """

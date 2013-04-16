@@ -5,7 +5,7 @@ from django.conf import settings
 from django.core.urlresolvers import reverse
 from django.utils.translation import ugettext_lazy as _
 
-from client_admin.menu import items
+from client_admin import items
 
 
 class Menu(object):

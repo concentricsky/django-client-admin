@@ -8,7 +8,7 @@ from django.utils.translation import ugettext_lazy as _
 from django.core.urlresolvers import reverse
 from django.contrib.contenttypes.models import ContentType
 
-from client_admin.dashboard import modules
+from client_admin import modules
 from client_admin.utils import uniquify
 
 
