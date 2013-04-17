@@ -131,10 +131,8 @@ class UnicodeForeignKeyRawIdWidget(ForeignKeyRawIdWidget):
                 attrs['class'] = 'vForeignKeyRawIdAdminField' # The JavaScript code looks for this hook.
             # TODO: "lookup_id_" is hard-coded here. This should instead use
             # the correct API to determine the ID dynamically.
-            extra.append('<a href="%s%s" class="related-lookup" id="lookup_id_%s" onclick="return showRelatedObjectLookupPopup(this);"> '
-                            % (related_url, url, name))
-            extra.append('<img src="%s" width="16" height="16" alt="%s" /></a>'
-                            % (static('admin/img/selector-search.gif'), _('Lookup')))
+            extra.append('<a href="%s%s" class="related-lookup" id="lookup_id_%s" onclick="return showRelatedObjectLookupPopup(this);">%s</a>'
+                            % (related_url, url, name, 'Find'))
         output = [self.label_for_value(value, name), super(ForeignKeyRawIdWidget, self).render(name, value, attrs)] + extra
         return mark_safe(''.join(output))
 
@@ -142,6 +140,6 @@ class UnicodeForeignKeyRawIdWidget(ForeignKeyRawIdWidget):
         key = self.rel.get_related_field().name
         try:
             obj = self.rel.to._default_manager.using(self.db).get(**{key: value})
-            return '<a href="%s" target="_blank" id="unicode_id_%s">%s</a>' % (get_admin_object_change_url(obj), name, escape(Truncator(obj).words(14, truncate='...')))
+            return '<a href="%s" target="_blank" class="related_link" id="unicode_id_%s">%s</a>' % (get_admin_object_change_url(obj), name, escape(Truncator(obj).words(14, truncate='...')))
         except (ValueError, self.rel.to.DoesNotExist):
             return '<a target="_blank" id="unicode_id_%s"></a>' % name
