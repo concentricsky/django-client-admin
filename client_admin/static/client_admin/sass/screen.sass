@@ -509,25 +509,29 @@ header
         color: $body
         font-weight: bold
         background-position: 0 0
-        padding: 0 0 10px 20px 
+        padding: 0 0 10px 0
         position: relative
         &.historylink
           +sprite-icon(icon_history)
+          padding: 0 0 10px 20px
           &:hover
             +sprite-icon(icon_history_orange)
             color: $secondary
         &.viewsitelink
           +sprite-icon(icon_view_onsite, $vertical: 1px)
+          padding: 0 0 10px 20px
           &:hover
             +sprite-icon(icon_view_onsite_orange, $vertical: 1px)
             color: $secondary
         &.addlink
           +sprite-icon(icon_add)
+          padding: 0 0 10px 20px
           &:hover
             +sprite-icon(icon_add_orange)
             color: $secondary
         &.recoverlink
           +sprite-icon(icon_recover)
+          padding: 0 0 10px 20px
           &:hover
             +sprite-icon(icon_recover_orange)
             color: $secondary
@@ -537,6 +541,7 @@ header
       //  - - - - - - - - - - - - - - -
       &#dashboard-panel > a
         +sprite-icon(icon_view_additional)
+        padding: 0 0 10px 20px
         &:hover
           +sprite-icon(icon_view_additional_orange)
           color: $secondary
@@ -1363,8 +1368,39 @@ fieldset.module, div.inline-group
       +label()
     div.field_container
       float: left
+      +legacy-pie-clearfix
       &:first-child
         min-width: 280px
+
+
+      // RAW ID Selector
+      //  - - - - - - - - - - - - - - -
+      a.related_link
+        font-size: 14px
+        color: $body
+        &:hover
+          color: $secondary
+      input.vForeignKeyRawIdAdminField
+        display: none
+      a.related-lookup
+        +button()
+        position: relative
+        font-size: 14px
+        height: 34px
+        line-height: 34px
+        margin: -5px 10px 10px 0
+        padding: 0 12px 0 36px
+        width: 30px
+        top: 0
+        left: 0
+        display: inline-block
+        float: left
+        +sprite-icon(icon_search_white, $vertical: 9px, $horizontal: 10px)
+        &:hover
+          background: #024f84
+        img
+          display: none
+
 
       // Image Widget Remove Current Image
       //  - - - - - - - - - - - - - - -
