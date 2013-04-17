@@ -10,20 +10,20 @@ var init_dashboard = function(id, columns, preferences, url) {
     });
     jQuery(".group-tabs").tabs();
     jQuery(".group-accordion").accordion({header: '.group-accordion-header'});
-    
+
     $ = jQuery;
 
-    $(".activity-types a").click(function(){
+    $(".activity-types a").click(function(e){
         $(".activity-types a").removeClass('active');
-        $(this).addClass('active')
+        $(this).addClass('active');
         var filter = $(this).attr('data-filter');
-        var items = $(this).parent().siblings()
+        var items = $(this).parent().siblings();
         items.each(function(i){
             var visible = (filter == 'mine' && $(this).hasClass('mine') )
                 ||  (filter == 'others' && !$(this).hasClass('mine') )
-                ||  (filter == 'all' && i < 10)
-            $(this).toggle(visible)
+                ||  (filter == 'all' && i < 10);
+            $(this).toggle(visible);
         });
-
-    })
+        e.preventDefault();
+    });
 };
