@@ -2,32 +2,50 @@ from functools import wraps
 
 try:
     import json
-except ImportError: 
+except ImportError:
     import simplejson as json
-    
-from django.http import HttpResponse, HttpResponseNotAllowed
-from django.core import serializers
-from django.contrib.contenttypes.models import ContentType
-from django.contrib.admin.widgets import url_params_from_lookup_dict
-from django.template.response import TemplateResponse
-from django.views.generic import TemplateView
-from django.utils.translation import ugettext as _
+
 from django.contrib import admin
-from django.contrib.admin.views.decorators import staff_member_required
+from django.contrib.admin.widgets import url_params_from_lookup_dict
+from django.contrib.auth.decorators import login_required
+from django.contrib.contenttypes.models import ContentType
+from django.http import HttpResponse, HttpResponseNotAllowed, HttpResponseRedirect
+from django.shortcuts import get_object_or_404
+from django.template.response import TemplateResponse
+from django.utils.translation import ugettext as _
 from django.utils.safestring import mark_safe
 from django.utils.text import capfirst
 
+try:
+    from django.views.decorators.csrf import csrf_exempt
+except ImportError:
+    from django.contrib.csrf.middleware import csrf_exempt
 
+from forms import DashboardPreferencesForm, BookmarkForm
+from models import DashboardPreferences, Bookmark
+
+
+# Decorator
+def admin_login_required(view_func):
+
+    @wraps(view_func)
+    def _checklogin(request, *args, **kwargs):
+        from django.contrib import admin
+        return admin.site.admin_view(view_func)(request, *args, **kwargs)
+    return _checklogin
+
+
+@admin_login_required
 def get_obj(content_type_id, object_id):
     obj_dict = {
         'content_type_id': content_type_id,
         'object_id': object_id,
     }
-    
+
     content_type = ContentType.objects.get(pk=content_type_id)
-    
+
     obj_dict["content_type_text"] = unicode(content_type)
-    
+
     try:
         obj = content_type.get_object_for_this_type(pk=object_id)
         obj_dict["object_text"] = unicode(obj)
@@ -41,13 +59,14 @@ def get_obj(content_type_id, object_id):
     return obj_dict
 
 
+@admin_login_required
 def generic_lookup(request):
     if request.method == 'GET':
         objects = []
-        if request.GET.has_key('content_type') and request.GET.has_key('object_id'):
+        if 'content_type' in request.GET and 'object_id' in request.GET:
             obj = get_obj(request.GET['content_type'], request.GET['object_id'])
             objects.append(obj)
-        
+
         response = HttpResponse(mimetype='application/json')
         json.dump(objects, response, ensure_ascii=False)
         return response
@@ -55,12 +74,13 @@ def generic_lookup(request):
         return HttpResponseNotAllowed(['GET'])
 
 
+@admin_login_required
 def get_generic_rel_list(request, blacklist=(), whitelist=(), url_params={}):
     if request.method == 'GET':
         obj_dict = {}
         for c in ContentType.objects.all().order_by('id'):
             val = u'%s/%s' % (c.app_label, c.model)
-            
+
             params = url_params.get('%s.%s' % (c.app_label, c.model), {})
             params = url_params_from_lookup_dict(params)
             if 'whitelist' in request.GET:
@@ -81,21 +101,10 @@ def get_generic_rel_list(request, blacklist=(), whitelist=(), url_params={}):
         return HttpResponseNotAllowed(['GET'])
 
 
-# Decorator
-def admin_login_required(view_func):
-
-    @wraps(view_func)
-    def _checklogin(request, *args, **kwargs):
-        from django.contrib import admin
-        return admin.site.admin_view(view_func)(request, *args, **kwargs)
-    return _checklogin
-
-
 @admin_login_required
 def dashboard(request):
-
     """
-    Displays the main dashboard page, which shows a sitemap 
+    Displays the main dashboard page, which shows a sitemap
     matching the main site menu and lists all of the installed
     apps that have been registered in this site.
     """
@@ -139,4 +148,117 @@ def dashboard(request):
         'app_list': app_list,
     }
     return TemplateResponse(request, 'client_admin/dashboard/dashboard.html', context=context)
-    # return TemplateView.as_view(request, 'client_admin/dashboard/dashboard.html', extra_context=context)
+
+
+@login_required
+@csrf_exempt
+def set_preferences(request, dashboard_id):
+    """
+    This view serves and validates a preferences form.
+    """
+    try:
+        preferences = DashboardPreferences.objects.get(
+            user=request.user,
+            dashboard_id=dashboard_id
+        )
+    except DashboardPreferences.DoesNotExist:
+        preferences = None
+    if request.method == "POST":
+        form = DashboardPreferencesForm(
+            user=request.user,
+            dashboard_id=dashboard_id,
+            data=request.POST,
+            instance=preferences
+        )
+        if form.is_valid():
+            preferences = form.save()
+            if request.is_ajax():
+                return HttpResponse('true')
+            request.user.message_set.create(message='Preferences saved')
+        elif request.is_ajax():
+            return HttpResponse('false')
+    else:
+        form = DashboardPreferencesForm(
+            user=request.user,
+            dashboard_id=dashboard_id,
+            instance=preferences
+        )
+    return TemplateResponse(request, 'client_admin/dashboard/preferences_form.html', context={
+        'form': form,
+    })
+
+
+@login_required
+@csrf_exempt
+def add_bookmark(request):
+    """
+    This view serves and validates a bookmark form.
+    If requested via ajax it also returns the drop bookmark form to replace the
+    add bookmark form.
+    """
+    if request.method == "POST":
+        form = BookmarkForm(user=request.user, data=request.POST)
+        if form.is_valid():
+            bookmark = form.save()
+            if not request.is_ajax():
+                request.user.message_set.create(message='Bookmark added')
+                if request.POST.get('next'):
+                    return HttpResponseRedirect(request.POST.get('next'))
+                return HttpResponse('Added')
+            return TemplateResponse(request, 'client_admin/menu/remove_bookmark_form.html', context={
+                'bookmark': bookmark,
+                'url': bookmark.url,
+            })
+    else:
+        form = BookmarkForm(user=request.user)
+    return TemplateResponse(request, 'client_admin/menu/form.html', context={
+        'form': form,
+        'title': 'Add Bookmark',
+    })
+
+
+@login_required
+@csrf_exempt
+def edit_bookmark(request, id):
+    bookmark = get_object_or_404(Bookmark, id=id)
+    if request.method == "POST":
+        form = BookmarkForm(user=request.user, data=request.POST, instance=bookmark)
+        if form.is_valid():
+            form.save()
+            if not request.is_ajax():
+                request.user.message_set.create(message='Bookmark updated')
+                if request.POST.get('next'):
+                    return HttpResponseRedirect(request.POST.get('next'))
+            return HttpResponse('Saved')
+    else:
+        form = BookmarkForm(user=request.user, instance=bookmark)
+    return TemplateResponse(request, 'client_admin/menu/form.html', context={
+        'form': form,
+        'title': 'Edit Bookmark',
+    })
+
+
+@login_required
+@csrf_exempt
+def remove_bookmark(request, id):
+    """
+    This view deletes a bookmark.
+    If requested via ajax it also returns the add bookmark form to replace the
+    drop bookmark form.
+    """
+    bookmark = get_object_or_404(Bookmark, id=id)
+    if request.method == "POST":
+        bookmark.delete()
+        if not request.is_ajax():
+            request.user.message_set.create(message='Bookmark removed')
+            if request.POST.get('next'):
+                return HttpResponseRedirect(request.POST.get('next'))
+            return HttpResponse('Deleted')
+        return TemplateResponse(request, 'client_admin/menu/add_bookmark_form.html', context={
+            'url': request.POST.get('next'),
+            'title': '**title**'  # This gets replaced on the javascript side
+        })
+    return TemplateResponse(request, 'client_admin/menu/delete_confirm.html', context={
+        'bookmark': bookmark,
+        'title': 'Delete Bookmark',
+    })

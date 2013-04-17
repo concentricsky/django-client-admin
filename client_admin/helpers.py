@@ -1,10 +1,10 @@
 import math
 import jingo
 import jinja2
-from client_admin.menu import items, Menu
-from client_admin.menu.models import Bookmark
-from client_admin.dashboard.dashboards import Dashboard
-from client_admin.dashboard.models import DashboardPreferences
+from client_admin.items import Bookmarks
+from client_admin.models import DashboardPreferences, Bookmark
+from client_admin.menus import Menu
+from client_admin.dashboards import Dashboard
 from django.utils.importlib import import_module
 from django.conf import settings
 from django import template
@@ -19,16 +19,16 @@ def check_permission(request, mode_name, app_label, model_name):
     '''
     p = '%s.%s_%s' % (app_label, mode_name, model_name)
     return request.user.is_active and request.user.has_perm(p)
-    
+
 
 @jingo.register.function
 @jinja2.contextfunction
 def edit_link(context, obj, label='Edit'):
- 
+
     # Check if `model_object` is a model-instance
     if not isinstance(obj, Model):
         raise template.TemplateSyntaxError, "'%s' argument must be a model-instance" % obj
- 
+
     app_label = obj._meta.app_label
     model_name = obj._meta.module_name
     edit_link = reverse('admin:%s_%s_change' % (app_label, model_name), args=(obj.id,))
@@ -66,7 +66,7 @@ def get_generic_relation_list(request):
 def get_menu(context):
     if not context['request'].user.is_staff:
         return [None, None, None]
-        
+
     # - an instance of the menu
     menu_cls = getattr(settings, 'CLIENT_ADMIN_MENU', None)
     if menu_cls:
@@ -78,11 +78,11 @@ def get_menu(context):
             menu = Menu()
     else:
         menu = Menu()
-    
+
     menu.init_with_context(context)
     has_bookmark_item = False
     bookmark = None
-    if len([c for c in menu.children if isinstance(c, items.Bookmarks)]) > 0:
+    if len([c for c in menu.children if isinstance(c, Bookmarks)]) > 0:
         # - if the user has any bookmarks
         has_bookmark_item = True
         url = context['request'].get_full_path()
@@ -100,7 +100,7 @@ def get_menu(context):
 #
 #       {% set dashboard, dashboard_preferences, split_at, has_disabled_modules = get_current_dashboard() %}
 #
-# This helper receives context from a Jinja2 template and returns: 
+# This helper receives context from a Jinja2 template and returns:
 
 @jingo.register.function
 @jinja2.contextfunction
@@ -111,7 +111,6 @@ def get_current_dashboard(context):
     if not context['request'].user.is_staff:
         return [None, None, None, None]
     # - an instance of the dashboard
-
 
     dashboard_cls = getattr(settings, 'CLIENT_ADMIN_DASHBOARD', None)
     if dashboard_cls:
@@ -142,5 +141,9 @@ def get_current_dashboard(context):
         ).save()
     # - where the modules should be split for a two-column view
     # - which modules have been disabled
-    return [ dashboard, preferences, math.ceil(float(len(dashboard.children))/float(dashboard.columns)), len([m for m in dashboard.children \
-                                if not m.enabled]) > 0]
+    return [
+        dashboard,
+        preferences,
+        math.ceil(float(len(dashboard.children))/float(dashboard.columns)),
+        len([m for m in dashboard.children if not m.enabled]) > 0
+    ]

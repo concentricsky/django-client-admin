@@ -1,4 +1,3 @@
-from django.core.urlresolvers import reverse
 from django.contrib import admin
 from django.utils.safestring import mark_safe
 from django.utils.text import capfirst
@@ -174,10 +173,9 @@ class AppList(MenuItem, AppListElementMixin):
         """
         self.models = list(kwargs.pop('models', []))
         self.exclude = list(kwargs.pop('exclude', []))
-        self.include_list = kwargs.pop('include_list', []) # deprecated
-        self.exclude_list = kwargs.pop('exclude_list', []) # deprecated
+        self.include_list = kwargs.pop('include_list', [])  # deprecated
+        self.exclude_list = kwargs.pop('exclude_list', [])  # deprecated
         super(AppList, self).__init__(title, **kwargs)
-
 
     def init_with_context(self, context):
         """
@@ -272,8 +270,8 @@ class ModelList(MenuItem, AppListElementMixin):
         """
         self.models = list(models or [])
         self.exclude = list(exclude or [])
-        self.include_list = kwargs.pop('include_list', []) # deprecated
-        self.exclude_list = kwargs.pop('exclude_list', []) # deprecated
+        self.include_list = kwargs.pop('include_list', [])  # deprecated
+        self.exclude_list = kwargs.pop('exclude_list', [])  # deprecated
 
         super(ModelList, self).__init__(title, **kwargs)
 
@@ -339,7 +337,7 @@ class Bookmarks(MenuItem, AppListElementMixin):
         Please refer to the :meth:`~client_admin.menu.items.MenuItem.init_with_context`
         documentation from :class:`~client_admin.menu.items.MenuItem` class.
         """
-        from client_admin.menu.models import Bookmark
+        from client_admin.models import Bookmark
 
         for b in Bookmark.objects.filter(user=context['request'].user):
             self.children.append(MenuItem(mark_safe(b.title), b.url))
@@ -352,5 +350,3 @@ class Bookmarks(MenuItem, AppListElementMixin):
         A bookmark menu item is never considered as active, the real item is.
         """
         return False
-
-

@@ -274,11 +274,11 @@
                 });
             };
 
-            $submitrow = $('div.submit-row')
-
-            $('body.change-form header').followTo($submitrow.offset().top-$submitrow.height()-2);
-            $('div.submit-row').followAt($submitrow.offset().top);
-
+            $submitrow = $('div.submit-row');
+            if ($submitrow.length > 0) {
+                $('body.change-form header').followTo($submitrow.offset().top-$submitrow.height()-2);
+                $('div.submit-row').followAt($submitrow.offset().top);
+            }
         });
     </script>
 

@@ -8,7 +8,7 @@ from django.utils.translation import ugettext_lazy as _
 from django.core.urlresolvers import reverse
 from django.contrib.contenttypes.models import ContentType
 
-from client_admin.dashboard import modules
+from client_admin import modules
 from client_admin.utils import uniquify
 
 
@@ -47,14 +47,6 @@ class Dashboard(object):
         self.children = self.children or []
 
     def init_with_context(self, context):
-        # append a sitemap that matches the top level menu
-        self.children.append(modules.Sitemap(_('Sitemap')))
-        # append a list of text snippets
-        self.children.append(modules.TextSnippets(
-            _('Text Snippets') 
-            , 10
-            , css_classes=('snippets',)
-        ))
         # append an app list module for "Applications"
         self.children.append(modules.AppList(
             _('Applications'),

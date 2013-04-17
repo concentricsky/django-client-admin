@@ -8,9 +8,9 @@ from django.utils.text import capfirst
 from django.core.urlresolvers import reverse
 from django.contrib.contenttypes.models import ContentType
 from django.utils.translation import ugettext_lazy as _
-from django.utils.itercompat import is_iterable
 
 from client_admin.utils import *
+
 
 class DashboardModule(object):
     """
@@ -317,8 +317,8 @@ class AppList(DashboardModule, AppListElementMixin):
     def __init__(self, title=None, **kwargs):
         self.models = list(kwargs.pop('models', []))
         self.exclude = list(kwargs.pop('exclude', []))
-        self.include_list = kwargs.pop('include_list', []) # deprecated
-        self.exclude_list = kwargs.pop('exclude_list', []) # deprecated
+        self.include_list = kwargs.pop('include_list', [])  # deprecated
+        self.exclude_list = kwargs.pop('exclude_list', [])  # deprecated
         super(AppList, self).__init__(title, **kwargs)
 
     def init_with_context(self, context):
@@ -401,8 +401,8 @@ class ModelList(DashboardModule, AppListElementMixin):
     def __init__(self, title=None, models=None, exclude=None, **kwargs):
         self.models = list(models or [])
         self.exclude = list(exclude or [])
-        self.include_list = kwargs.pop('include_list', []) # deprecated
-        self.exclude_list = kwargs.pop('exclude_list', []) # deprecated
+        self.include_list = kwargs.pop('include_list', [])  # deprecated
+        self.exclude_list = kwargs.pop('exclude_list', [])  # deprecated
         super(ModelList, self).__init__(title, **kwargs)
 
     def init_with_context(self, context):
@@ -600,11 +600,8 @@ class Feed(DashboardModule):
 
 
 class Sitemap(DashboardModule, AppListElementMixin):
-    #template = 'client_admin/dashboard/modules/model_list.html'
-    #template = 'client_admin/dashboard/modules/model_list_new.html'
     template = 'client_admin/dashboard/modules/sitemap.html'
     admin_site = None
-
 
     def _get_admin_object_change_url(self, model, obj, context):
         """
@@ -613,7 +610,7 @@ class Sitemap(DashboardModule, AppListElementMixin):
         app_label = model._meta.app_label
         return reverse('admin:%s_%s_change' % (app_label,
                                                 model.__name__.lower()), args=(obj.id,))
-    
+
     def _sitemap_child(self, item_class, item_id, child_query, context, title=None):
         item_dict = {}
         item = None
@@ -678,13 +675,12 @@ class Sitemap(DashboardModule, AppListElementMixin):
 
         self.admin_site = admin.site
         sitemap_dict = getattr(settings, 'CLIENT_ADMIN_SITEMAP', ({
-                'MODEL': 'structure.menu',
-                'ID': '1',
-                'CHILDREN': 'items',
-            },
-        ))
+            'MODEL': 'structure.menu',
+            'ID': '1',
+            'CHILDREN': 'items',
+        },))
         for item_dict in sitemap_dict:
-            app_label, class_name  = item_dict.get('MODEL', '').split('.')
+            app_label, class_name = item_dict.get('MODEL', '').split('.')
             item_class = get_model(app_label, class_name)
             item_id = item_dict.get('ID', None)
             child_query = item_dict.get('CHILDREN', None)
@@ -714,8 +710,6 @@ class AllRecentActions(DashboardModule):
             return
         from django.db.models import Q
         from django.contrib.admin.models import LogEntry
-
-        request = context['request']
 
         def get_qset(list):
             qset = None
@@ -752,73 +746,10 @@ class AllRecentActions(DashboardModule):
         if LogEntry._meta.ordering:
             order = LogEntry._meta.ordering[0]
             if order[0] == '-':
-                self.children.sort(key=lambda x:getattr(x, order[1:]))
+                self.children.sort(key=lambda x: getattr(x, order[1:]))
                 self.children.reverse()
             else:
-                self.children.sort(key=lambda x:getattr(x, order))
+                self.children.sort(key=lambda x: getattr(x, order))
         if not len(self.children):
             self.pre_content = _('No recent actions.')
-        self._initialized = True
-
-TextSnippetClass = None
-try:
-    from skycms.structure.models import TextSnippet
-    TextSnippetClass = TextSnippet
-except ImportError:
-    pass
-
-class TextSnippets(DashboardModule):
-    """
-    Module that lists text snippets from SkyCMS.
-    As well as the :class:`~skycms.structure.models.TextSnippet`.
-    """
-    title = _('Text Snippets')
-    template = 'client_admin/dashboard/modules/text_snippets.html'
-    limit = 10
-
-
-    def _get_admin_object_change_url(self, obj, context):
-        """
-        Returns the admin object change url.
-        """
-        if TextSnippetClass:
-            app_label = TextSnippetClass._meta.app_label
-            return reverse('admin:%s_%s_change' % (app_label,
-                                                TextSnippetClass.__name__.lower()), args=(obj.id,))
-        return None
-
-    def __init__(self, title=None, limit=10, **kwargs):
-        kwargs.update({'limit': limit})
-        super(TextSnippets, self).__init__(title, **kwargs)
-
-    def init_with_context(self, context):
-        if self._initialized:
-            return
-        request = context['request']
-
-        if TextSnippetClass:
-            try:
-                qs = TextSnippetClass.objects.order_by('-updated_at')[:5]
-            except IndexError:
-                qs = []
-        else:
-            qs = []
-
-        self.children = []
-        perms = []
-        if TextSnippetClass:
-            model_admin = admin.site._registry[TextSnippetClass]
-            if model_admin:
-                perms = model_admin.get_model_perms(context['request'])
-
-        for item in qs:
-            item_dict = {'item': item}
-            if perms['change']:
-                item_dict['change_url'] = get_admin_object_change_url(item)
-            self.children.append(item_dict)
-
-        if not len(self.children):
-            self.pre_content = _('No text snippets.')
-        if TextSnippetClass:
-            self.edit_list_url = get_admin_change_url(TextSnippetClass)
         self._initialized = True
