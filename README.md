@@ -8,28 +8,29 @@ Client Admin enhances Django Admin. Much of the code started as
 
 - Provides a new style for the Django Admin interface.
 
-- Provides a dashboard with draggable widgets
+- Provides a dashboard with draggable widgets.
 
-- Creates a menu persistent on all admin pages
+- Creates a menu persistent on all admin pages.
 
-- Provides a system of admin bookmarks that allow users to quickly star favorite pages and have them available from the menu
+- Provides a system of admin bookmarks that allow users to quickly star favorite pages and have them available from the menu.
 
-- Provides a ModelAdmin class to inherit from that improves default widgets and settings
-
-- Provides nested inline formsets for ModelAdmin classes
+- Provides a ClientModelAdmin class to inherit from that improves default widgets and settings.
 
 - Provides an additional inline type, Grouped, that acts much like a Stacked inline but floats each field group instead of clearing them.
 
-## Additional features:
+- Allows admin templates to extend Jinja2 templates. Assuming certain blocks are present 
+in your template, this means the admin interface could inherit a header and footer from the front-end templates.
 
-- Creates a sitemap module for the dashboard.
+
+## Additional features provided by the ClientModelAdmin:
+
+- Provides nested inline formsets for ModelAdmin classes.
+
+- Adds an advanced search form to change list views.
 
 - Provides an improved generic-foreignkey widget.
 
 - Provides an improved Raw ID foreignkey widget that displays unicode instead of the object's pk.
-
-- Allows admin templates to extend Jinja2 templates. Assuming certain blocks are present 
-in your template, this means the admin interface could inherit a header and footer from the front-end templates.
 
 - Includes revision history and deleted object recovery via django-reversion
 
@@ -95,18 +96,16 @@ To access media files, you should use the staticfiles contrib application introd
 - Override the large logo on the login screen
 
 
-
 ## Dashboard widgets
 
 
 ### Sitemap
 
-By default, Client Admin will look for a menu from Sky CMS with an id of 1.
-
+The sitemap module  allows listing models in a hierarchy similar to a front-end site menu. This allows admin users to find content in the same logical place that a front-end user would see. By default, Client Admin will look for a menu from Sky CMS with an id of 1 to build the hierarchy. This code will eventually be pulled out of Client Admin and included in skycms.
 
 ### Recent Activity
 
-The Recent Activity module lists all activity registered to the 
+The Recent Activity module lists all activity registered to the admin.
 
 ### Quick Links
 
@@ -117,19 +116,41 @@ Basic Django admin allows for a model to be edited inline with a related model, 
 
 ### Example
 
-    class AwardInline(admin.StackedInline):
-        model = Award
+
     
     class ChapterInline(admin.TabularInline):
         model = Chapter
     
-    class BookInline(client_admin.StackedRecursiveInline):
+    class BookInline(client_admin.StackedInline):
         model = Book
         inlines = [ChapterInline]
     
     class AuthorAdmin(client_admin.RecursiveInlinesModelAdmin):
         model = Author
         inlines = [BookInline, AwardInline]
+
+By default `RecursiveInlinesModelAdmin` is inherited by `ClientModelAdmin`. This example is only to demonstrate how to use the class on its own. Normally, only `ClientModelAdmin` and the inline classes from Client Admin would be used.
+
+
+## Advanced Search
+
+If search fields are provided to a ClientModelAdmin class, they will automatically be included in an advanced search form that gets appended to the change list template but hidden by default. A link will be added just below the normal search form in the sidebar to expand the advanced search form. All search fields will be listed, including properties of foreignkey and many-to-many fields. The form field labels are automatically generated for related fields as `model field` but can be overridden using a property on the admin class of `advanced_search_titles`.
+
+### Example
+
+    class AwardInline(admin.StackedInline):
+        model = Award
+
+    class BookInline(StackedInline):
+        model = Book
+    
+    class AuthorAdmin(client_admin.RecursiveInlinesModelAdmin):
+        model = Author
+        search_fields = ('name', 'book_set__title', 'award_set__name')
+        advanced_search_titles = {
+            'book_set__title': 'Titles',
+            'award_set__name': 'Awards'
+        }
 
 
 ## Best Practices
