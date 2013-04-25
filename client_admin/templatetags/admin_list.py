@@ -358,25 +358,42 @@ def date_hierarchy(cl):
                 } for year in years]
             }
 
+
 @register.inclusion_tag('admin/search_form.html')
-def search_form(cl):
+def search_form(cl, advanced_search_form=None):
     """
     Displays a search form for searching the list.
     """
     return {
         'cl': cl,
         'show_result_count': cl.result_count != cl.full_result_count,
-        'search_var': SEARCH_VAR
+        'search_var': SEARCH_VAR,
+        'advanced_search_form': advanced_search_form
     }
+
+
+@register.inclusion_tag('admin/advanced_search_form.html')
+def adv_search_form(cl, form):
+    """
+    Displays an advanced search form for searching the list.
+    """
+    return {
+        'cl': cl,
+        'show_result_count': cl.result_count != cl.full_result_count,
+        'search_var': SEARCH_VAR,
+        'form': form
+    }
+
 
 @register.simple_tag
 def admin_list_filter(cl, spec):
     tpl = get_template(spec.template)
     return tpl.render(Context({
         'title': spec.title,
-        'choices' : list(spec.choices(cl)),
+        'choices': list(spec.choices(cl)),
         'spec': spec,
     }))
+
 
 @register.inclusion_tag('admin/actions.html', takes_context=True)
 def admin_actions(context):

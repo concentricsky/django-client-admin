@@ -50,6 +50,9 @@
 {% block coltype %}flex{% endblock %}
 
 {% block content %}
+  {% if advanced_search_form %}
+    {% adv_search_form cl advanced_search_form %}
+  {% endif %}
   <div id="content-main">
     {% block object-tools %}
       {% if has_add_permission %}
@@ -76,7 +79,7 @@
       {% block filters %}
         {% if cl.has_filters or cl.search_fields %}
           <div id="changelist-filter">
-            {% block search %}{% search_form cl %}{% endblock %}
+            {% block search %}{% search_form cl advanced_search_form %}{% endblock %}
             {% if cl.has_filters %}
               <h2>{% trans 'Filter' %}</h2>
               {% for spec in cl.filter_specs %}{% admin_list_filter cl spec %}{% endfor %}
