@@ -138,10 +138,14 @@ ul.errorlist
 
   // Login Form
   // - - - - - - - - - - - - -
+  h3.forgot_password
+    margin-top: 15px
   #login-form
     margin: 25px auto 0
     width: 400px
-    div.form-row
+    &.forgot_password_form
+      margin: 40px 0 0 0
+    div.form-row, p
       +legacy-pie-clearfix
       label
         +label()
@@ -155,7 +159,8 @@ ul.errorlist
         margin-bottom: 10px
     div.submit-row
       position: relative
-      padding: 0
+      text-align: right
+      padding: 5px 127px 0 0
       input[type="submit"]
         +button()
         width: 100px
@@ -166,7 +171,11 @@ ul.errorlist
         font-size: 14px
         &:hover
           background-color: $secondary
-  
+        &.forgot_password_submit
+          width: 240px
+      a.reset_password_link 
+        font-weight: normal 
+        font-size: 12px 
 
 body.logged_out div#admin_content
   h2
@@ -1714,6 +1723,37 @@ fieldset.module, div.inline-group
                 position: relative
                 +sprite-icon(icon_add)
 
+            
+            // Tabular Organization Column
+            // - - - - - - - - - - - - - - -
+            &.field-organization
+              a.related_link
+                font-size: 14px
+                color: $body
+                &:hover
+                  color: $secondary
+              input.vForeignKeyRawIdAdminField
+                display: none
+              a.related-lookup
+                +button()
+                position: relative
+                font-size: 14px
+                height: 34px
+                line-height: 34px
+                margin: -5px 10px 10px 0
+                padding: 0 12px 0 36px
+                width: 30px
+                top: 0
+                left: 0
+                display: inline-block
+                float: left
+                +sprite-icon(icon_search_white, $vertical: 9px, $horizontal: 10px)
+                &:hover
+                  background: #024f84
+                img
+                  display: none
+
+
             // Tabular Delete Column  
             // - - - - - - - - - - - - - - -
             &.delete
@@ -2182,54 +2222,3 @@ div.clockbox, div.calendarbox
     color: #fff
     padding: 10px
     margin-bottom: 30px
-
-
-
-// Advanced Search
-// - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
-#changelist-advanced-search
-  margin: 0 160px 20px 0
-  +legacy-pie-clearfix
-  position: relative
-  li
-    width: 46%
-    float: left
-    margin-bottom: 10px
-    label
-      display: inline-block
-      font-size: 14px
-      padding: 0
-      width: 33%
-      margin-right: 2%
-      text-align: right
-      color: $primary !important
-    input 
-      height: 24px
-      width: 61%
-      background: #f6f6f6
-      border: 1px solid #cdcdcd
-      +box-shadow(0 2px 0 #e6e6e6 inset)
-      padding: 3px 1%
-      color: $body
-      font-size: 14px
-      font-family: $body-font
-  div.adv_search_button
-    position: absolute
-    top: 0
-    right: -165px
-    input
-      background: $primary
-      height: 41px
-      width: 148px
-      border: none
-      font-size: 23px
-      font-weight: bold
-      font-family: $body-font
-      color: #fff
-      cursor: pointer
-      &:hover
-        background: $secondary
-    span
-      display: block
-      font-size: 10px
-      text-transform: uppercase
