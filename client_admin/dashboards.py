@@ -83,6 +83,8 @@ class Dashboard(object):
             , css_classes=('activity',)
         ))
 
+        self.children.append(modules.MemcachedStatus())
+
 
     def get_id(self):
         """

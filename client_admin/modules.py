@@ -5,6 +5,7 @@ from django.contrib import admin
 from django.db.models import get_model
 from django.conf import settings
 from django.utils.text import capfirst
+from django.core.cache import get_cache
 from django.core.urlresolvers import reverse
 from django.contrib.contenttypes.models import ContentType
 from django.utils.translation import ugettext_lazy as _
@@ -753,3 +754,27 @@ class AllRecentActions(DashboardModule):
         if not len(self.children):
             self.pre_content = _('No recent actions.')
         self._initialized = True
+
+
+class MemcachedStatus(DashboardModule):
+    title = _('Memcached Status')
+    template = 'client_admin/dashboard/modules/memcache_status.html'
+
+    def init_with_context(self, context):
+        if self._initialized:
+            return
+
+        cache_stats = []
+        for cache_backend_nm, cache_backend_attrs in settings.CACHES.iteritems():
+            try:
+                cache_backend = get_cache(cache_backend_nm)
+                this_backend_stats = cache_backend._cache.get_stats()
+                # returns list of (name, stats) tuples
+                for server_name, server_stats in this_backend_stats:
+                    cache_stats.append(("%s: %s" % (
+                        cache_backend_nm, server_name), server_stats))
+            except AttributeError:  # this backend probably doesn't support that
+                continue
+        self.children = cache_stats
+        if not len(self.children):
+            self.pre_content = _('No memcached statuses.')
