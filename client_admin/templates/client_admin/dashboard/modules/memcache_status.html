@@ -53,7 +53,7 @@
         <table>
         <caption>
             <a href="#" class="section" onclick="
-                var elem = document.getElementById('cache{{ forloop.counter }}');
+                var elem = document.getElementById('cache{{ loop.index }}');
                 if(elem.style.display == 'none'){
                     elem.style.display = 'table-row-group';
                 }else{
@@ -69,7 +69,7 @@
             </div>
         </td></tr>
         </thead>
-        <tbody id="cache{{ forloop.counter }}" style="display: none;">
+        <tbody id="cache{{ loop.index }}" style="display: none;">
         <tr>
             <th>{{ _("Miss Ratio") }}</th>
             <td>
