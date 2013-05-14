@@ -89,7 +89,7 @@
         </tr>
         {# ----- Detailed Statistics ----- #}
         <tr><th class="cache_title" colspan="2">{{ _("Detailed Statistics:") }}</th></tr>
-        {% for k,v in server.1.items %}
+        {% for k,v in server.1.items() %}
         <tr><th>{{ k|prettyname }}</th><td>{{ v|prettyvalue(k) }}</td></tr>
         {% endfor %}
         </tbody>

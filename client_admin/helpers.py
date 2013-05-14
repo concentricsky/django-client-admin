@@ -215,10 +215,15 @@ class PrettyValue(object):
             size = '%.2fB' % bytes
         return size
 
-# from Django 1.5.1 django/template/defaulttags.py
-from django.template.defaulttags import widthratio as default_widthratio
-
 
 @jingo.register.function
-def widthratio(parser, token):
-    return default_widthratio(parser=parser, token=token)
+def widthratio(value, max_value, max_width):
+    try:
+        value = float(value)
+        max_value = float(max_value)
+        ratio = (value / max_value) * max_width
+    except ZeroDivisionError:
+        return '0'
+    except (ValueError, TypeError):
+        return ''
+    return str(int(round(ratio)))
