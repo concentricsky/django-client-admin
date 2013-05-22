@@ -35,7 +35,6 @@ def admin_login_required(view_func):
     return _checklogin
 
 
-@admin_login_required
 def get_obj(content_type_id, object_id):
     obj_dict = {
         'content_type_id': content_type_id,
