@@ -506,11 +506,11 @@ class GenericGroupedInline(StackedInlineMixin, BaseClientAdminMixin, GenericMode
     pass
 
 
-class StackedInline(StackedInlineMixin, BaseRecursiveInlineMixin, BaseClientAdminMixin, admin.StackedInline):
+class StackedInline(StackedInlineMixin, BaseRecursiveInlineMixin, BaseClientAdminMixin, generic.GenericStackedInline):
     pass
 
 
-class TabularInline(BaseRecursiveInlineMixin, BaseClientAdminMixin, admin.TabularInline):
+class TabularInline(BaseRecursiveInlineMixin, BaseClientAdminMixin, generic.GenericTabularInline):
     pass
 
 
