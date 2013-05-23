@@ -520,3 +520,12 @@ class GroupedInline(StackedInline):
 
 class ClientModelAdmin(VersionAdmin, ReverseInlinesModelAdminMixin, BaseClientAdminMixin, RecursiveInlinesModelAdmin):
     pass
+
+# deprecated
+class GenericAdminModelAdmin(ClientModelAdmin):
+    #raise DeprecationWarning('Use ClientModelAdmin instead')
+    pass
+
+# deprecated
+class BaseGenericModelAdmin(GenericModelAdminMixin):
+    pass
