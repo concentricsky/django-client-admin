@@ -1,7 +1,7 @@
 # Client Admin for Django
 
-Client Admin enhances Django Admin. Much of the code started as 
-[Admin Tools](https://bitbucket.org/izi/django-admin-tools/overview). The Admin Tools theming engine has been removed, and many features have been modified.
+Client Admin enhances Django Admin. It provides organization and features that make the interface more appropriate for clients. Some of the code started as 
+[Admin Tools](https://bitbucket.org/izi/django-admin-tools/overview), although the theming engine has been removed and many features have been added.
 
 
 ## What does it give you by default?
@@ -39,7 +39,7 @@ in your template, this means the admin interface could inherit a header and foot
 
 Client Admin 
 
-    pip install git+https://github.com/concentricsky/django-client-admin.git#egg=client_admin
+    pip install git+https://github.com/concentricsky/django-client-admin.git
 
 Include Client Admin in your settings.py. It should be listed before the django.contrib.admin module so that client_admin can override the default Django admin templates.
 
@@ -86,28 +86,32 @@ Import and inherit from ClientModelAdmin and Inline classes.
     ...
 
 
-To access media files, you should use the staticfiles contrib application introduced in Django 1.3.
-
-
 ### Customizations
 
-- Override the page logo
-
-- Override the large logo on the login screen
+Branding Client Admin for each project can be done by providing a replacement header menu logo. In the project's static folder, create a client_admin/images/h1_logo_bg.png that is 40px tall and no more than 400px wide.
 
 
 ## Dashboard widgets
 
+### App List
 
-### Sitemap
+The App List module shows a list of models with links to add objects or show the change-list view for the model. The list can be limited to either show or exclude certain apps or models. By default, two instances of App Lists are included on the dashboard, one showing all models that aren't part of the django.contrib app and one showing only those from django.contrib.
 
-The sitemap module  allows listing models in a hierarchy similar to a front-end site menu. This allows admin users to find content in the same logical place that a front-end user would see. By default, Client Admin will look for a menu from Sky CMS with an id of 1 to build the hierarchy. This code will eventually be pulled out of Client Admin and included in skycms.
+### Link List
+
+The Link List module displays a list of hrefs that can either be external urls or internal urls using the reverse() function.
+
+### Memcached Status
+
+If memcached is being used on the server, then this module displays detailed statistics from each memcached instance.
 
 ### Recent Activity
 
-The Recent Activity module lists all activity registered to the admin.
+The Recent Activity module lists all LogEntry objects, grouped by which user generated them. Normally, the LogEntry objects are only created from admin activity, but this can also be used to display activity generated from the front-end of the site if those views create LogEntry objects using the log_action() function.
 
-### Quick Links
+### Sitemap
+
+The sitemap module allows listing models in a hierarchy similar to a front-end site menu. This allows admin users to find content in the same logical place that a front-end user would see. By default, Client Admin will build the hierarchy based on a menu from Sky CMS, currently a private library. This code will eventually be pulled out of Client Admin and only included in Sky CMS.
 
 
 ## Recursive Inlines
@@ -115,7 +119,6 @@ The Recent Activity module lists all activity registered to the admin.
 Basic Django admin allows for a model to be edited inline with a related model, but it is limited to one level of nesting. Client Admin provides several classes that allow inlines to be nested recursively.
 
 ### Example
-
 
     
     class ChapterInline(admin.TabularInline):
@@ -134,7 +137,7 @@ By default `RecursiveInlinesModelAdmin` is inherited by `ClientModelAdmin`. This
 
 ## Advanced Search
 
-If search fields are provided to a ClientModelAdmin class, they will automatically be included in an advanced search form that gets appended to the change list template but hidden by default. A link will be added just below the normal search form in the sidebar to expand the advanced search form. All search fields will be listed, including properties of foreignkey and many-to-many fields. The form field labels are automatically generated for related fields as `model field` but can be overridden using a property on the admin class of `advanced_search_titles`.
+If search fields are provided to a ClientModelAdmin class, they will automatically be included in an advanced search form that gets appended to the change list template but hidden by default. A link will be added just below the normal search form in the sidebar to expand the advanced search form. All search fields will be listed, including properties of foreignkey and many-to-many fields. The form field labels are automatically generated for related fields as `<model> <field>` but can be overridden using a property on the admin class of `advanced_search_titles`.
 
 ### Example
 
@@ -165,18 +168,26 @@ If search fields are provided to a ClientModelAdmin class, they will automatical
 
     - The staff group should _not_ have access to:
 
-        - Deleting any structured content that would cascade delete. Instead, have them use the 'is_active' flag to remove content from the front end.
+        - Deleting any structured content that would cascade delete. Instead, have them use an 'is_active' flag to remove content from the front end.
 
         - Administration apps like Auth and Sites
 
 
 ## What's in the works?
 
-Client Admin wants to:
+Structure:
+
+- Responsive templates
+
+- All views re-written as class-based
+
+- Abstracting list views as reusable ModelTables
+
+Features:
 
 - Create a Jinja2 helper that would print the admin menu bar on front-end templates. This would most likely be inserted dynamically and position absolutely to maintain the existing front-end structure.
 
-- Create Jinja2 helpers that insert links to corresponding admin pages for content. Again, these would most likely be inserted dynamically and position absolutely to maintain the existing front-end structure.
+- Create Jinja2 helpers that insert links to corresponding admin pages for content displayed in front-end templates. Again, these would most likely be inserted dynamically and position absolutely to maintain the existing front-end structure.
 
 - Provide a modal interface to edit WYSIWYG fields (currently CKEditor) directly from the front end. 
 
