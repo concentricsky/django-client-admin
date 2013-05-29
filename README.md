@@ -45,8 +45,7 @@ Include Client Admin in your settings.py. It should be listed before the django.
 
     INSTALLED_APPS = [   
         'client_admin',
-        'client_admin.menu',
-        'client_admin.dashboard',
+
         ...
 
     ]
