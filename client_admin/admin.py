@@ -1,3 +1,17 @@
+# Copyright 2013 Concentric Sky, Inc.
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#   http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
 # # Client Admin admin classes
 from client_admin.views import generic_lookup, get_generic_rel_list
 from client_admin.widgets import ThumbnailImageWidget, AdminURLFieldWidget, UnicodeForeignKeyRawIdWidget
@@ -506,11 +520,11 @@ class GenericGroupedInline(StackedInlineMixin, BaseClientAdminMixin, GenericMode
     pass
 
 
-class StackedInline(StackedInlineMixin, BaseRecursiveInlineMixin, BaseClientAdminMixin, admin.StackedInline):
+class StackedInline(StackedInlineMixin, BaseRecursiveInlineMixin, BaseClientAdminMixin, generic.GenericStackedInline):
     pass
 
 
-class TabularInline(BaseRecursiveInlineMixin, BaseClientAdminMixin, admin.TabularInline):
+class TabularInline(BaseRecursiveInlineMixin, BaseClientAdminMixin, generic.GenericTabularInline):
     pass
 
 
@@ -519,4 +533,13 @@ class GroupedInline(StackedInline):
 
 
 class ClientModelAdmin(VersionAdmin, ReverseInlinesModelAdminMixin, BaseClientAdminMixin, RecursiveInlinesModelAdmin):
+    pass
+
+# deprecated
+class GenericAdminModelAdmin(ClientModelAdmin):
+    #raise DeprecationWarning('Use ClientModelAdmin instead')
+    pass
+
+# deprecated
+class BaseGenericModelAdmin(GenericModelAdminMixin):
     pass

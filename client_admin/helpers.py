@@ -1,3 +1,17 @@
+# Copyright 2013 Concentric Sky, Inc.
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#   http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
 import math
 import jingo
 import jinja2
@@ -11,6 +25,10 @@ from django import template
 from django.db.models import Model
 from django.contrib.contenttypes.models import ContentType
 from django.core.urlresolvers import reverse
+from django.core.cache import get_cache
+
+if get_cache.__module__.startswith('debug_toolbar'):
+    from debug_toolbar.panels.cache import base_get_cache as get_cache
 
 
 def check_permission(request, mode_name, app_label, model_name):
@@ -147,3 +165,79 @@ def get_current_dashboard(context):
         math.ceil(float(len(dashboard.children))/float(dashboard.columns)),
         len([m for m in dashboard.children if not m.enabled]) > 0
     ]
+
+
+@jingo.register.filter
+def prettyname(name):
+    return ' '.join([word.capitalize() for word in name.split('_')])
+
+
+@jingo.register.filter
+def prettyvalue(value, key):
+    return PrettyValue().format(key, value)
+
+
+class PrettyValue(object):
+    """
+    Helper class that reformats the value. Looks for a method named
+    ``format_<key>_value`` and returns that value. Returns the value
+    as is, if no format method is found.
+    """
+
+    def format(self, key, value):
+        try:
+            func = getattr(self, 'format_%s_value' % key.lower())
+            return func(value)
+        except AttributeError:
+            return value
+
+    def format_limit_maxbytes_value(self, value):
+        return "%s (%s)" % (value, self.human_bytes(value))
+
+    def format_bytes_read_value(self, value):
+        return "%s (%s)" % (value, self.human_bytes(value))
+
+    def format_bytes_written_value(self, value):
+        return "%s (%s)" % (value, self.human_bytes(value))
+
+    def format_uptime_value(self, value):
+        return self.fract_timestamp(int(value))
+
+    def format_time_value(self, value):
+        from datetime import datetime
+        return datetime.fromtimestamp(int(value)).strftime('%x %X')
+
+    def fract_timestamp(self, s):
+        years, s = divmod(s, 31556952)
+        min, s = divmod(s, 60)
+        h, min = divmod(min, 60)
+        d, h = divmod(h, 24)
+        return '%sy, %sd, %sh, %sm, %ss' % (years, d, h, min, s)
+
+    def human_bytes(self, bytes):
+        bytes = float(bytes)
+        if bytes >= 1073741824:
+            gigabytes = bytes / 1073741824
+            size = '%.2fGB' % gigabytes
+        elif bytes >= 1048576:
+            megabytes = bytes / 1048576
+            size = '%.2fMB' % megabytes
+        elif bytes >= 1024:
+            kilobytes = bytes / 1024
+            size = '%.2fKB' % kilobytes
+        else:
+            size = '%.2fB' % bytes
+        return size
+
+
+@jingo.register.function
+def widthratio(value, max_value, max_width):
+    try:
+        value = float(value)
+        max_value = float(max_value)
+        ratio = (value / max_value) * max_width
+    except ZeroDivisionError:
+        return '0'
+    except (ValueError, TypeError):
+        return ''
+    return str(int(round(ratio)))
