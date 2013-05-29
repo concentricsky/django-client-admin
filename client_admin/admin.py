@@ -106,6 +106,7 @@ class RecursiveInlinesModelAdmin(admin.ModelAdmin):
             wrapped_recursive_formsets = []
             if hasattr(form, 'recursive_formsets') and hasattr(inline, 'get_inline_instances'):
                 for recursive_inline, recursive_formset in zip(inline.get_inline_instances(request), form.recursive_formsets):
+                    instance = form.instance if form.instance.pk else None
                     fieldsets = list(recursive_inline.get_fieldsets(request))
                     readonly = list(recursive_inline.get_readonly_fields(request))
                     prepopulated = dict(recursive_inline.get_prepopulated_fields(request))
