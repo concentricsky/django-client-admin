@@ -497,11 +497,6 @@ class BaseClientAdminMixin(UnicodeForeignKeyRawIdWidgetMixin, GenericModelAdminM
     formfield_overrides = dict(ImageWidgetMixin.formfield_overrides.items() + URLFieldMixin.formfield_overrides.items())
 
 
-class GenericTabularInline(BaseClientAdminMixin, GenericModelAdminMixin, generic.GenericTabularInline):
-    # Model admin for generic tabular inlines.
-    pass
-
-
 class StackedInlineMixin(object):
     collapse = False
 
@@ -512,19 +507,24 @@ class StackedInlineMixin(object):
 
 
 class GenericStackedInline(StackedInlineMixin, BaseClientAdminMixin, GenericModelAdminMixin, generic.GenericStackedInline):
-    template = 'admin/edit_inline/grouped.html'
+    pass
 
 
 class GenericGroupedInline(StackedInlineMixin, BaseClientAdminMixin, GenericModelAdminMixin, generic.GenericStackedInline):
     # Model admin for generic stacked inlines.
+    template = 'admin/edit_inline/grouped.html'
+
+
+class StackedInline(StackedInlineMixin, BaseRecursiveInlineMixin, BaseClientAdminMixin, admin.StackedInline):
     pass
 
 
-class StackedInline(StackedInlineMixin, BaseRecursiveInlineMixin, BaseClientAdminMixin, generic.GenericStackedInline):
+class TabularInline(BaseRecursiveInlineMixin, BaseClientAdminMixin, admin.TabularInline):
     pass
 
 
-class TabularInline(BaseRecursiveInlineMixin, BaseClientAdminMixin, generic.GenericTabularInline):
+class GenericTabularInline(BaseRecursiveInlineMixin, BaseClientAdminMixin, GenericModelAdminMixin, generic.GenericTabularInline):
+    # Model admin for generic tabular inlines.
     pass
 
 
