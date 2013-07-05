@@ -42,7 +42,6 @@ class Menu(object):
 
         self.children += [
             items.MenuItem(_('Dashboard'), reverse('admin:index')),
-            items.Bookmarks(),
             items.AppList(
                 _('Content'),
                 exclude=('django.contrib.*',)
@@ -51,6 +50,7 @@ class Menu(object):
                 _('Administration'),
                 models=('django.contrib.*',)
             ),
+            items.Bookmarks(),
             items.MenuItem(
                 _('Account'),
                 css_classes=('user-tools',),
