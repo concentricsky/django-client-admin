@@ -515,11 +515,11 @@ class GenericGroupedInline(StackedInlineMixin, BaseClientAdminMixin, GenericMode
     template = 'admin/edit_inline/grouped.html'
 
 
-class StackedInline(StackedInlineMixin, BaseRecursiveInlineMixin, BaseClientAdminMixin, admin.StackedInline):
+class StackedInline(StackedInlineMixin, BaseRecursiveInlineMixin, BaseClientAdminMixin, GenericModelAdminMixin, admin.StackedInline):
     pass
 
 
-class TabularInline(BaseRecursiveInlineMixin, BaseClientAdminMixin, admin.TabularInline):
+class TabularInline(BaseRecursiveInlineMixin, BaseClientAdminMixin, GenericModelAdminMixin, admin.TabularInline):
     pass
 
 
