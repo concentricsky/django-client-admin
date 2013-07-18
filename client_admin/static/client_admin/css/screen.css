@@ -2861,6 +2861,12 @@ fieldset.module div.form-row div.field_container div.chzn-container div.chzn-dro
 fieldset.module div.form-row div.field_container span.cke_skin_kama, div.inline-group div.form-row div.field_container span.cke_skin_kama {
   margin-left: 0 !important;
 }
+
+/* Added to fix ckeditor box margins. Default is margin-left: 9em !important; */
+fieldset.module div.form-row div.field_container div.cke {
+  margin-left: 0 !important;
+}
+
 /* line 1562, ../sass/screen.sass */
 fieldset.module div.form-row div.checkbox_container, div.inline-group div.form-row div.checkbox_container {
   margin-left: 140px;
