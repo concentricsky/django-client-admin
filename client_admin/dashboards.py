@@ -20,7 +20,9 @@ from django.template.defaultfilters import slugify
 from django.utils.importlib import import_module
 from django.utils.translation import ugettext_lazy as _
 from django.core.urlresolvers import reverse
+from django.core.cache import get_cache
 from django.contrib.contenttypes.models import ContentType
+from django.conf import settings
 
 from client_admin import modules
 from client_admin.utils import uniquify
@@ -97,8 +99,18 @@ class Dashboard(object):
             , css_classes=('activity',)
         ))
 
-        self.children.append(modules.MemcachedStatus())
-
+        # append a Memcached Status module only if there are any statuses to display
+        cache_display = False
+        for cache_backend_nm, cache_backend_attrs in settings.CACHES.iteritems():
+            try:
+                cache_backend = get_cache(cache_backend_nm)
+                this_backend_stats = cache_backend._cache.get_stats()
+                if this_backend_stats:
+                    cache_display = True
+            except AttributeError:  # this backend probably doesn't support that
+                continue
+        if cache_display:
+            self.children.append(modules.MemcachedStatus())
 
     def get_id(self):
         """
