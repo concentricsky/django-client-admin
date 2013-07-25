@@ -1884,6 +1884,89 @@ body.change-list #changelist div#changelist-filter #toolbar form input[type="sub
   text-indent: -9999px;
   cursor: pointer;
 }
+
+/**/
+/*From APN apn_admin.css for advanced search styles*/
+/**/
+
+/* line 184, ../sass/apn_admin.sass */
+#changelist-advanced-search {
+  margin: 0 160px 20px 0;
+  *zoom: 1;
+  position: relative;
+}
+/* line 22, ../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
+#changelist-advanced-search:after {
+  content: "\0020";
+  display: block;
+  height: 0;
+  clear: both;
+  overflow: hidden;
+  visibility: hidden;
+}
+/* line 188, ../sass/apn_admin.sass */
+#changelist-advanced-search li {
+  width: 46%;
+  float: left;
+  margin-bottom: 10px;
+}
+/* line 192, ../sass/apn_admin.sass */
+#changelist-advanced-search li label {
+  display: inline-block;
+  font-size: 14px;
+  padding: 0;
+  width: 33%;
+  margin-right: 2%;
+  text-align: right;
+  color: #006fbb !important;
+}
+/* line 200, ../sass/apn_admin.sass */
+#changelist-advanced-search li input {
+  height: 24px;
+  width: 61%;
+  background: #f6f6f6;
+  border: 1px solid #cdcdcd;
+  -webkit-box-shadow: 0 2px 0 #e6e6e6 inset;
+  -moz-box-shadow: 0 2px 0 #e6e6e6 inset;
+  box-shadow: 0 2px 0 #e6e6e6 inset;
+  padding: 3px 1%;
+  color: #747474;
+  font-size: 14px;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+/* line 210, ../sass/apn_admin.sass */
+#changelist-advanced-search div.adv_search_button {
+  position: absolute;
+  top: 0;
+  right: -165px;
+}
+/* line 214, ../sass/apn_admin.sass */
+#changelist-advanced-search div.adv_search_button input {
+  background: #006fbb;
+  height: 41px;
+  width: 148px;
+  border: none;
+  font-size: 23px;
+  font-weight: bold;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: white;
+  cursor: pointer;
+}
+/* line 224, ../sass/apn_admin.sass */
+#changelist-advanced-search div.adv_search_button input:hover {
+  background: #f9910c;
+}
+/* line 226, ../sass/apn_admin.sass */
+#changelist-advanced-search div.adv_search_button span {
+  display: block;
+  font-size: 10px;
+  text-transform: uppercase;
+}
+
+/**/
+/**/
+/**/
+
 /* line 1017, ../sass/screen.sass */
 body.change-list #changelist div#changelist-filter #toolbar form span.small {
   width: 160px;
@@ -2861,6 +2944,12 @@ fieldset.module div.form-row div.field_container div.chzn-container div.chzn-dro
 fieldset.module div.form-row div.field_container span.cke_skin_kama, div.inline-group div.form-row div.field_container span.cke_skin_kama {
   margin-left: 0 !important;
 }
+
+/* Added to fix ckeditor box margins. Default is margin-left: 9em !important; */
+fieldset.module div.form-row div.field_container div.cke {
+  margin-left: 0 !important;
+}
+
 /* line 1562, ../sass/screen.sass */
 fieldset.module div.form-row div.checkbox_container, div.inline-group div.form-row div.checkbox_container {
   margin-left: 140px;
