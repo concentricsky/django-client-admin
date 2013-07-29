@@ -204,19 +204,20 @@
             //     $(this).siblings("span.toggleswitch").removeClass("tobe_removed");
             // })
 
-            $("ul#menuitem_set-group li span.delete input[type='checkbox']").click(function(){
-                $(this).siblings("label.inline").toggleClass("hidden");
-                $(this).siblings("label.undo_stackedinline_delete").toggleClass("hidden");
-                $(this).parents("li.inline-related").first().toggleClass("tobe_removed");
-            })
-            
-            $("div.inline-related h3 input[type='checkbox']").click(function(){
+            // When delete button is clicked, give the container li the class tobe_removed
+            $("ul#menuitem_set-group > li.inline-related > ul > li.inline-related > div > h3 > span.delete > input[type='checkbox']").click(function(){
                 $(this).siblings("label.stackedinline_delete").toggleClass("hidden");
                 $(this).siblings("label.undo_stackedinline_delete").toggleClass("hidden");
-                $(this).parents("h3").toggleClass("tobe_removed");
-                $(this).parents("div.inline-related").children("fieldset.module.aligned").slideToggle();
+                $(this).parent().parent().parent().parent().toggleClass("tobe_removed");
             })
-            
+
+            // Headers
+            $("ul#menuitem_set-group > li.inline-related > div > h3 > span.delete > input[type='checkbox']").click(function(){
+                $(this).siblings("label.undo_stackedinline_delete").toggleClass("hidden");
+                $(this).parents("li.inline-related").toggleClass("tobe_removed");
+                $(this).parents("li.inline-related").find("label.stackedinline_delete").toggleClass("hidden")
+            })
+
             $("fieldset.module div.grouped input[type='checkbox']").click(function(){
                 $(this).parent("span.delete").toggleClass("tobe_removed");
                 $(this).parents("ul.inline-related").toggleClass("tobe_removed");
