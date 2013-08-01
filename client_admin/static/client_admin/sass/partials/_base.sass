@@ -1,0 +1,135 @@
+// Imports
+// ************************************************
+@import compass/reset
+@import compass/css3
+@import compass/utilities/general/clearfix
+@import compass/typography/lists/horizontal-list
+@import compass/typography/text/replacement
+@import compass/utilities/sprites
+
+
+// Variables
+// ************************************************
+$body-font: "Helvetica Neue", Helvetica, Arial, sans-serif
+
+
+// Colors
+// ******************
+$primary: #006fbb
+$secondary: #f9910c
+$body: #747474
+$body-secondary: #b4b4b4
+
+
+// Mixins
+// ************************************************
+@import "icons/*.png"
+
+@mixin sprite-icon($icon, $direction: left, $vertical: 0, $horizontal: 0)
+	&:after
+		content: ''
+		position: absolute
+		top: $vertical
+		@if $direction == left
+			left: $horizontal
+		@else
+			right: $horizontal
+		+icons-sprite($icon)
+		+sprite-dimensions($icons-sprites, $icon)
+
+
+@mixin action-bar()
+	+legacy-pie-clearfix
+	background: #e1e1e1
+	border: none
+	border-top: 2px solid #cdcdcd
+	height: 58px
+	width: 940px
+	line-height: 58px
+	display: block
+	margin-bottom: 0
+	padding: 0 10px
+	position: relative
+	overflow: visible
+
+@mixin button()
+	width: 200px
+	color: #fff
+	font-weight: bold
+	font-family: $body-font
+	font-size: 23px
+	height: 60px
+	border: none
+	border-top: 2px solid #024f84
+	margin: -2px 0 0 0
+	padding: 0 0 0 0
+	position: absolute
+	top: 0
+	right: 0
+	z-index: 100
+	float: none
+	background-color: $primary
+	cursor: pointer
+
+@mixin secondary-button()
+	height: 40px
+	line-height: 40px
+	padding: 0 10px 0 28px
+	margin: 0
+	display: inline-block
+	background: $body 
+	cursor: pointer
+	font-size: 14px
+	color: #fff
+	font-family: $body
+	border-top: none
+	float: right
+
+@mixin action-button($height: 16px, $lineheight: 8px, $paddingleft: 18px)
+	height: $height
+	line-height: $lineheight
+	padding: 0 0 0 $paddingleft
+	background: none
+	background-position: 0 0px
+	color: $body
+	font-weight: bold
+	font-family: $body-font
+	font-size: 14px
+	float: left
+	display: block
+	cursor: pointer
+	margin: 0 0 0 20px
+	border: none
+	position: relative
+
+@mixin label()
+	font-size: 14px
+	padding: 0
+	width: 120px
+	margin-right: 20px
+	text-align: right
+	color: $primary !important
+
+@mixin input()
+	height: 24px
+	background: #f6f6f6
+	border: 1px solid #cdcdcd
+	+box-shadow(0 2px 0 #e6e6e6 inset)
+	padding: 3px 10px
+	color: $body
+	font-size: 14px
+	font-family: $body-font
+
+@mixin textarea()
+	background: #f6f6f6
+	border: 1px solid #cdcdcd
+	+box-shadow(0 2px 0 #e6e6e6 inset)
+	padding: 10px
+	color: $body
+	font-size: 14px
+	line-height: 22px
+	font-family: $body-font
+	height: 100px
+	resize: vertical
+
+

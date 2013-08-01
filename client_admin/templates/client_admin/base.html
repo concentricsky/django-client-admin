@@ -18,8 +18,7 @@
 	{% block extrahead %}{% endblock %}
 	{% block blockbots %}{% endblock %}
 	
-	<link href="{{ STATIC_URL }}client_admin/css/style.css" media="screen, projection" rel="stylesheet" type="text/css" />
-	<link href="{{ STATIC_URL }}client_admin/css/menu.css" media="screen, projection" rel="stylesheet" type="text/css" />
+	<link href="{{ STATIC_URL }}client_admin/css/screen.css" media="screen, projection" rel="stylesheet" type="text/css" />
 	<script src="{{STATIC_URL}}client_admin/js/modernizr-2.5.3.min.js"></script>
 	<!--[if lte IE 8]>
 		<link rel="stylesheet" href="{{ STATIC_URL }}client_admin/css/ie.css" type="text/css" media="screen, projection"/>
@@ -30,8 +29,8 @@
 	
 	{% if not is_popup %}
 	<header>
-		<nav class="clear">
-			<h1><a href="{{url('admin:index')}}"{% if menu and menu.site_logo %} style="background-image:url({{menu.site_logo}})"{% endif %}>Client Admin</a></h1>
+		<nav>
+			<a id="client_logo" href="{{url('admin:index')}}"{% if menu and menu.site_logo %} style="background-image:url({{menu.site_logo}})"{% endif %}><img src="{{STATIC_URL}}client_admin/images/h1_logo_bg.png" alt="Image link for the client" /></a>
 			{% block nav_global %}{% endblock %}
 			<ul>
 				{% block secondary_nav %}{% endblock %}		
@@ -40,20 +39,20 @@
 	</header>
 	{% endif %}
 	
-	<div id="content_container" class="clear">
-		<div id="page_header" class="clear">
+	<div id="content_container">
+		<div id="page_header">
 			{% block pre_content %}{% endblock %}
 		</div>
-		<div id="admin_content" class="clear {% block admin_content_class %}{% endblock %}">
+		<div id="admin_content" class="{% block admin_content_class %}{% endblock %}">
 			{% block content %}{% endblock %}
 		</div>
 	</div>
 	
-	{% if not is_popup %}
+<!-- 	{% if not is_popup %}
 	<footer>
-		<p>Built by <a href="http://www.concentricsky.com" target="_blank">Concentric Sky</a>.</p>
+		<p>Built by <a href="http://concentricsky.com" target="_blank">Concentric Sky</a></p>
 	</footer>
-	{% endif %}
+	{% endif %} -->
 
 {% block scripts %}{% endblock %}
 

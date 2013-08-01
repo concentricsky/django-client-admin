@@ -388,31 +388,18 @@ button.ui-button::-moz-focus-inner { border: 0; padding: 0; } /* reset extra pad
 .ui-dialog { 
 	position: absolute; 
 	padding: .2em; 
-	width: 300px; 
+	width: 550px !important; 
 	overflow: hidden; 
-	border: 1px solid #7b7b7b !important;
-	border-bottom: 1px solid #555657 !important;
-	background-color: #bdbdbd !important;
-	border-top-left-radius: 5px;
-	-webkit-border-top-left-radius: 5px;
-	-moz-border-radius-topleft: 5px;
-	border-top-right-radius: 5px;
-	-webkit-border-top-right-radius: 5px;
-	-moz-border-radius-topright: 5px;
-	box-shadow: 0 1px 0 0 #ebebeb inset;
-	background-image: -webkit-linear-gradient(top, #c8c8c8, #afafaf) !important;
-	background-image: -moz-linear-gradient(top, #c8c8c8, #afafaf) !important;	
-	background-image: -o-linear-gradient(top, #c8c8c8, #afafaf) !important;
-	background-image: -ms-linear-gradient(top, #c8c8c8, #afafaf) !important;
+	border: 1px solid #cdcdcd !important;
+	background-color: #fff !important;
+	border-radius: 0px !important;
 }
 .ui-dialog .ui-dialog-titlebar { padding: .5em 1em .3em; position: relative; background: transparent; border: none; }
 .ui-dialog .ui-dialog-title { 
 	float: left; 
-	margin: .1em 16px .2em 0; 
-	color: #555555;
-	font-size: 19px;
-	text-transform: uppercase;
-	text-shadow: 1px 1px #dadada;
+	margin: 10px 0; 
+	color: #f9910c;
+	font-size: 37px;
 	border: none !important;
 	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 } 
@@ -420,11 +407,10 @@ button.ui-button::-moz-focus-inner { border: 0; padding: 0; } /* reset extra pad
 .ui-dialog .ui-dialog-titlebar-close span { 
 	display: block; 
 	margin: 1px; 
-	background: url(../images/icon_close.png) no-repeat 0 0 !important;
-	height: 20px;
-	width: 20px;
+	background: url(../images/icons/icon_delete.png) no-repeat !important;
+	height: 14px;
+	width: 14px;
 	text-indent: -9999px;
-	background-position: 0 0 !important;
 }
 .ui-dialog .ui-dialog-titlebar-close:hover, .ui-dialog .ui-dialog-titlebar-close:focus { 
 	padding: 1px; 
@@ -448,40 +434,31 @@ button.ui-button::-moz-focus-inner { border: 0; padding: 0; } /* reset extra pad
 	margin: 0 0 0 0; 
 	padding: 0 1em .5em .4em; }
 .ui-dialog .ui-dialog-buttonpane button { 
-	float: right; 
-	display: block;
-	margin-right: 0;
-	height: 28px;
-	line-height: 28px;
-	border: 1px solid #92642f;
-	border-radius: 15px;
-	padding: 0 13px;
-	color: white;
-	text-shadow: -1px -1px #92642f;
-	text-transform: uppercase;
-	font-size: 12px;
+	color: #fff;
+	font-weight: bold;
 	font-weight: normal;
-	background: #ed8d1f;
-	background-image: -webkit-linear-gradient(top, #ed8d1f, #d67709);
-	background-image: -moz-linear-gradient(top, #ed8d1f, #d67709);
-	background-image: -o-linear-gradient(top, #ed8d1f, #d67709);
-	background-image: -ms-linear-gradient(top, #ed8d1f, #d67709);
-	box-shadow: #f2a954 0 1px 0 0 inset;
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size: 23px;
+	border: none;
+	border-top: 2px solid #024f84;
+	padding: 10px 0;
+	width: 75px;
+	margin-right: 0;
+	float: right;
+	display: block;
+	background: #006fbb;
+	cursor: pointer;
+	border-radius: 0;
 }
-.ui-dialog .ui-dialog-buttonpane button:hover {
-	background: #208cea;
-	background-image: -webkit-linear-gradient(top, #f6a03b, #dd7f13);
-	background-image: -moz-linear-gradient(top, #f6a03b, #dd7f13);	
-	background-image: -o-linear-gradient(top, #f6a03b, #dd7f13);
-	background-image: -ms-linear-gradient(top, #f6a03b, #dd7f13);
-}
+.ui-dialog .ui-dialog-buttonpane button:hover,
 .ui-dialog .ui-dialog-buttonpane button:active {
-	background: #d67709;
-	background-image: -webkit-linear-gradient(top, #d67709, #ed8d1f);
-	background-image: -moz-linear-gradient(top, #d67709, #ed8d1f);
-	background-image: -o-linear-gradient(top, #d67709, #ed8d1f);
-	background-image: -ms-linear-gradient(top, #d67709, #ed8d1f);
-} 
+	background: #024f84;
+}
+
+.ui-button-text-only .ui-button-text {
+	padding: 0;
+}
+
 .ui-dialog .ui-resizable-se { width: 14px; height: 14px; right: 3px; bottom: 3px; }
 .ui-draggable .ui-dialog-titlebar { cursor: move; }
 /* Slider

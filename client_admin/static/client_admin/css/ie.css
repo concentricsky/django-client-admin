@@ -1,123 +1,105 @@
-/* todo: ie6 doesn't want the dashboard to take full width... */
-
+/* line 3, ../sass/ie.sass */
 html, body {
-    _overflow: auto;
-    _width: 100%;
+  _overflow: auto;
+  _width: 100%;
 }
 
-
-
-/* Universal Styles
-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -*/
-input[type="text"],
-input[type="password"] {
-	line-height: 23px;
+/* line 11, ../sass/ie.sass */
+input[type="text"], input[type="password"] {
+  line-height: 23px;
 }
 
-
-
-
-/* Header & Main Nav
-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -*/
-
-/* Account Menu
-- - - - - - - - - - - - - - - -*/
+/* line 21, ../sass/ie.sass */
 header nav ul li.user-tools {
-	width: 90px;
-	border-top: 1px solid #55a6eb;
-	border-bottom: 1px solid #062f53;
-	margin-top: -1px;
+  width: 90px;
+  border-top: 1px solid #55a6eb;
+  border-bottom: 1px solid #062f53;
+  margin-top: -1px;
 }
-header nav ul li.user-tools > a,
+/* line 26, ../sass/ie.sass */
+header nav ul li.user-tools > a {
+  text-indent: 0;
+  background: #0f74cb;
+  padding: 0 15px;
+}
+/* line 30, ../sass/ie.sass */
 header nav ul li.user-tools > a:visited {
-	text-indent: 0;
-	background: #0f74cb;
-	padding: 0 15px;
+  text-indent: 0;
+  background: #0f74cb;
+  padding: 0 15px;
 }
+/* line 34, ../sass/ie.sass */
 header nav ul li.user-tools > a:hover {
-	background: #208cea;
+  background: #208cea;
 }
-header nav ul li.user-tools span {
-	display: none;
+/* line 36, ../sass/ie.sass */
+header nav ul li.user-tools span, header nav ul li.user-tools.selected span {
+  display: none;
 }
-header nav ul li.user-tools.selected span {
-	display: none;
+/* line 38, ../sass/ie.sass */
+header nav ul ul ul, header nav ul li:hover ul ul {
+  right: 148px;
+  width: 148px;
 }
-
-
-/* 3rd Level Menu
-- - - - - - - - - - - - - - - -*/
-header nav ul ul ul,
-header nav ul li:hover ul ul {
-	right: 148px;
-	width: 148px;
-}
+/* line 41, ../sass/ie.sass */
 header nav ul ul ul li {
-	border-top: 1px solid #d7d7d7;
-	width: 125px;
+  border-top: 1px solid #d7d7d7;
+  width: 125px;
 }
-header nav ul ul ul li a:link, 
-header nav ul ul ul li a:visited {
-	display: block;
-	height: 100%;
-	width: 100%;
+/* line 45, ../sass/ie.sass */
+header nav ul ul ul li a:link, header nav ul ul ul li a:visited {
+  display: block;
+  height: 100%;
+  width: 100%;
 }
 
-
-
-
-/* Dashboard
-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -*/
+/* line 57, ../sass/ie.sass */
 div.dashboard-column {
-	width: 34% !important;
+  width: 34% !important;
 }
+/* line 59, ../sass/ie.sass */
 div.dashboard-placeholder {
-	background-color: #f7be7b;
+  background-color: #f7be7b;
 }
-div.dashboard-module h3 a.toggle-icon {
-	background: url(images/icon_toggle.png) 0 -22px no-repeat;
-	position: absolute;
-	top: 8px;
-	right: 40px;
-	text-indent: -9999px;
-	height: 22px;
-	width: 56px;
+/* line 61, ../sass/ie.sass */
+div.dashboard-module h2 a.toggle-icon {
+  background: url(images/icon_toggle.png) 0 -22px no-repeat;
+  position: absolute;
+  top: 8px;
+  right: 40px;
+  text-indent: -9999px;
+  height: 22px;
+  width: 56px;
 }
-div.dashboard-module h3 a.toggle-icon:hover {
-	background-position: 0 -67px;
+/* line 69, ../sass/ie.sass */
+div.dashboard-module h2 a.toggle-icon:hover {
+  background-position: 0 -67px;
 }
-div.dashboard-module h3 a.toggle-icon.collapsed {
-	background-position: 0 0;
+/* line 71, ../sass/ie.sass */
+div.dashboard-module h2 a.toggle-icon.collapsed {
+  background-position: 0 0;
 }
-div.dashboard-module h3 a.toggle-icon.collapsed:hover {
-	background-position: 0 -45px;
+/* line 73, ../sass/ie.sass */
+div.dashboard-module h2 a.toggle-icon.collapsed:hover {
+  background-position: 0 -45px;
 }
 
-
-
-/* Listing Action Bar
-- - - - - - - - - - - - - - - -*/
+/* line 81, ../sass/ie.sass */
 #changelist div.actions label {
-	top: 0;
-	left: 0;
+  top: 0;
+  left: 0;
 }
+/* line 84, ../sass/ie.sass */
 #changelist div.actions button {
-	display: block;
+  display: block;
 }
+/* line 86, ../sass/ie.sass */
 #changelist div.actions span.action-counter {
-	position: absolute;
-	top: 0;
-	left: 225px;
+  position: absolute;
+  top: 0;
+  left: 225px;
 }
-
-
-/* Listing Action Search Bar
-- - - - - - - - - - - - - - - -*/
+/* line 90, ../sass/ie.sass */
 #changelist #toolbar form #searchbar {
-	line-height: 23px;
+  line-height: 23px;
 }
-
-
-
-
-

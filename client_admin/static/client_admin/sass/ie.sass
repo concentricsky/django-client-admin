@@ -1,0 +1,94 @@
+// todo: ie6 doesn't want the dashboard to take full width...
+
+html, body
+  _overflow: auto
+  _width: 100%
+
+// Universal Styles
+//  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+input
+  &[type="text"], &[type="password"]
+    line-height: 23px
+
+// Header & Main Nav
+//  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+// Account Menu
+//  - - - - - - - - - - - - - - -
+
+header nav ul
+  li.user-tools
+    width: 90px
+    border-top: 1px solid #55a6eb
+    border-bottom: 1px solid #062f53
+    margin-top: -1px
+    > a
+      text-indent: 0
+      background: #0f74cb
+      padding: 0 15px
+      &:visited
+        text-indent: 0
+        background: #0f74cb
+        padding: 0 15px
+      &:hover
+        background: #208cea
+    span, &.selected span
+      display: none
+  ul ul, li:hover ul ul
+    right: 148px
+    width: 148px
+  ul ul li
+    border-top: 1px solid #d7d7d7
+    width: 125px
+    a
+      &:link, &:visited
+        display: block
+        height: 100%
+        width: 100%
+
+// 3rd Level Menu
+//  - - - - - - - - - - - - - - -
+
+// Dashboard
+//  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+div
+  &.dashboard-column
+    width: 34% !important
+  &.dashboard-placeholder
+    background-color: #f7be7b
+  &.dashboard-module h2 a.toggle-icon
+    background: url(images/icon_toggle.png) 0 -22px no-repeat
+    position: absolute
+    top: 8px
+    right: 40px
+    text-indent: -9999px
+    height: 22px
+    width: 56px
+    &:hover
+      background-position: 0 -67px
+    &.collapsed
+      background-position: 0 0
+      &:hover
+        background-position: 0 -45px
+
+// Listing Action Bar
+//  - - - - - - - - - - - - - - -
+
+#changelist
+  div.actions
+    label
+      top: 0
+      left: 0
+    button
+      display: block
+    span.action-counter
+      position: absolute
+      top: 0
+      left: 225px
+  #toolbar form #searchbar
+    line-height: 23px
+
+// Listing Action Search Bar
+//  - - - - - - - - - - - - - - -

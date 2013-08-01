@@ -1,1 +1,1 @@
-from client_admin.dashboard.dashboards import *
+# Kept for backwards compatibility
