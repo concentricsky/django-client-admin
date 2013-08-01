@@ -215,15 +215,7 @@
             $("ul#menuitem_set-group > li.inline-related > div > h3 > span.delete > input[type='checkbox']").click(function(){
                 $(this).siblings("label.undo_stackedinline_delete").toggleClass("hidden");
                 $(this).parents("li.inline-related").toggleClass("tobe_removed");
-                $(this).parents("li.inline-related").find("label.stackedinline_delete").toggleClass("hidden");
-            })
-
-            //Delete inline groups, hiding if shown, and staying hidden if hidden
-            $("div.inline-group > div.inline-related > h3 > span.delete > input[type='checkbox']").click(function(){
-                $(this).parents("h3").toggleClass("tobe_removed"); //Marks the h3 as to-be-removed
-                $(this).parents("h3").siblings("fieldset").css("display", "none"); //Sets the fieldset items block to no display
-                $(this).parent().find("label.stackedinline_delete").toggleClass("hidden"); //Toggles the delete label
-                $(this).parent().find("label.undo_stackedinline_delete").toggleClass("hidden"); //Toggles the undelete button
+                $(this).parents("li.inline-related").find("label.stackedinline_delete").toggleClass("hidden")
             })
 
             $("fieldset.module div.grouped input[type='checkbox']").click(function(){
