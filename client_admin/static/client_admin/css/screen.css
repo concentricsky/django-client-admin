@@ -4136,3 +4136,77 @@ div.clockbox table td a:hover, div.calendarbox table td a:hover {
   padding: 10px;
   margin-bottom: 30px;
 }
+
+/* line 2223, ../sass/screen.sass */
+#changelist-advanced-search {
+  margin: 0 160px 20px 0;
+  *zoom: 1;
+  position: relative;
+}
+/* line 22, ../../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
+#changelist-advanced-search:after {
+  content: "\0020";
+  display: block;
+  height: 0;
+  clear: both;
+  overflow: hidden;
+  visibility: hidden;
+}
+/* line 2227, ../sass/screen.sass */
+#changelist-advanced-search li {
+  width: 46%;
+  float: left;
+  margin-bottom: 10px;
+}
+/* line 2231, ../sass/screen.sass */
+#changelist-advanced-search li label {
+  display: inline-block;
+  font-size: 14px;
+  padding: 0;
+  width: 33%;
+  margin-right: 2%;
+  text-align: right;
+  color: #006fbb !important;
+}
+/* line 2239, ../sass/screen.sass */
+#changelist-advanced-search li input {
+  height: 24px;
+  width: 61%;
+  background: #f6f6f6;
+  border: 1px solid #cdcdcd;
+  -webkit-box-shadow: 0 2px 0 #e6e6e6 inset;
+  -moz-box-shadow: 0 2px 0 #e6e6e6 inset;
+  box-shadow: 0 2px 0 #e6e6e6 inset;
+  padding: 3px 1%;
+  color: #747474;
+  font-size: 14px;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+/* line 2249, ../sass/screen.sass */
+#changelist-advanced-search div.adv_search_button {
+  position: absolute;
+  top: 0;
+  right: -165px;
+}
+/* line 2253, ../sass/screen.sass */
+#changelist-advanced-search div.adv_search_button input {
+  background: #006fbb;
+  height: 41px;
+  width: 148px;
+  border: none;
+  font-size: 23px;
+  font-weight: bold;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: white;
+  cursor: pointer;
+}
+/* line 2263, ../sass/screen.sass */
+#changelist-advanced-search div.adv_search_button input:hover {
+  background: #f9910c;
+}
+/* line 2265, ../sass/screen.sass */
+#changelist-advanced-search div.adv_search_button span {
+  display: block;
+  font-size: 10px;
+  text-transform: uppercase;
+}

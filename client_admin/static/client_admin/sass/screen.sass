@@ -2216,3 +2216,53 @@ div.clockbox, div.calendarbox
     color: #fff
     padding: 10px
     margin-bottom: 30px
+
+
+//  Advanced Search
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+#changelist-advanced-search
+  margin: 0 160px 20px 0
+  +legacy-pie-clearfix
+  position: relative
+  li
+    width: 46%
+    float: left
+    margin-bottom: 10px
+    label
+      display: inline-block
+      font-size: 14px
+      padding: 0
+      width: 33%
+      margin-right: 2%
+      text-align: right
+      color: $primary !important
+    input
+      height: 24px
+      width: 61%
+      background: #f6f6f6
+      border: 1px solid #cdcdcd
+      +box-shadow(0 2px 0 #e6e6e6 inset)
+      padding: 3px 1%
+      color: $body
+      font-size: 14px
+      font-family: $body-font
+  div.adv_search_button
+    position: absolute
+    top: 0
+    right: -165px
+    input
+      background: $primary
+      height: 41px
+      width: 148px
+      border: none
+      font-size: 23px
+      font-weight: bold
+      font-family: $body-font
+      color: #fff
+      cursor: pointer
+      &:hover
+        background: $secondary
+    span
+      display: block
+      font-size: 10px
+      text-transform: uppercase
