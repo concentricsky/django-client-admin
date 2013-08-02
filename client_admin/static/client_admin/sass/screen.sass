@@ -58,7 +58,7 @@ h4 a
   &:hover
     color: #f79421
 
-a, a:link, a:visited, 
+a, a:link, a:visited,
   color: $body
   font-weight: bold
   text-decoration: none
@@ -93,13 +93,13 @@ p.errornote
   position: relative
   +sprite-icon(icon_error_white, $vertical: 9px, $horizontal: 8px)
 
-ul.errorlist 
+ul.errorlist
   margin-left: 140px !important
   padding-left: 0 !important
   li
     font-size: 14px
     display: block
-    padding: 0 0 0 20px 
+    padding: 0 0 0 20px
     color: #e72d2e
     font-weight: bold
     background-color: transparent !important
@@ -110,7 +110,7 @@ ul.errorlist
 .form-row.errors
   background-color: transparent
 
-.login div#admin_content 
+.login div#admin_content
   margin-top: 15px
   p.errornote
     width: 40%
@@ -125,7 +125,7 @@ ul.errorlist
 
 .login
   background: #fff !important
-  header nav 
+  header nav
     a#client_logo
       margin: 9px auto 0
       float: none
@@ -174,9 +174,9 @@ ul.errorlist
           background-color: $secondary
         &.forgot_password_submit
           width: 240px
-      a.reset_password_link 
-        font-weight: normal 
-        font-size: 12px 
+      a.reset_password_link
+        font-weight: normal
+        font-size: 12px
 
 body.logged_out div#admin_content
   h2
@@ -230,7 +230,7 @@ header
 
 
     // Main Nav
-    // - - - - - - - - - - - - -  
+    // - - - - - - - - - - - - -
     ul
       +legacy-pie-clearfix
       float: right
@@ -247,13 +247,13 @@ header
           font-weight: bold
           text-decoration: none
           text-transform: uppercase
-          padding: 0 10px          
+          padding: 0 10px
         a:hover, &:hover a
           color: $secondary
         a:active, &.selected a
           color: $secondary
 
-       
+
         // Bookmarks tab
         // - - - - - - - - - - - - -
         &.bookmark
@@ -353,7 +353,7 @@ header
               &:before
                 content: ""
                 position: absolute
-                right: -30px 
+                right: -30px
                 top: 0px
                 width: 0
                 height: 0
@@ -397,7 +397,7 @@ header
   h2
     float: left
     margin-right: 10px
- 
+
 
   // Message List
   // - - - - - - - - - - - - -
@@ -439,9 +439,9 @@ header
           color: $secondary
           +sprite-icon(icon_favorite_remove_hover, $vertical: -4px)
 
- 
+
   // Breadcrumbs
-  // - - - - - - - - - - - - -      
+  // - - - - - - - - - - - - -
   div.breadcrumbs
     font-size: 14px
     color: $body-secondary
@@ -458,11 +458,11 @@ header
 
 
 // Page Header Addtl Classes
-// - - - - - - - - - - - - -   
+// - - - - - - - - - - - - -
 .dashboard #page_header
   overflow: hidden
 .popup #page_header
-  width: 960px  
+  width: 960px
   margin-top: 20px
   +legacy-pie-clearfix
 
@@ -544,7 +544,7 @@ header
           &:hover
             +sprite-icon(icon_recover_orange)
             color: $secondary
-      
+
 
       // Dashboard View Additional
       //  - - - - - - - - - - - - - - -
@@ -615,7 +615,7 @@ header
 
 
 // Admin Content Addtl Classes
-// - - - - - - - - - - - - -   
+// - - - - - - - - - - - - -
 .popup #admin_content
   width: 960px
   +legacy-pie-clearfix
@@ -630,7 +630,7 @@ div
     +legacy-pie-clearfix
 
   // Dashboard Columns and Placeholders
-  // - - - - - - - - - - - - -   
+  // - - - - - - - - - - - - -
   &.dashboard-column
     padding-bottom: 15px
     &:first-child
@@ -649,13 +649,13 @@ div
     border: 1px dashed #f79421
     background-color: rgba(247, 148, 33, 0.15)
     margin: 0 0 25px 0
-  
+
 
   // Dashboard Modules
-  // - - - - - - - - - - - - -   
+  // - - - - - - - - - - - - -
   div.dashboard-module
     margin-bottom: 25px
-    span      
+    span
       &.changelink
         position: relative
         padding-left: 18px
@@ -675,12 +675,12 @@ div
 
 
     // Dashboard Headers
-    // - - - - - - - - - - - - -   
+    // - - - - - - - - - - - - -
     h3
       line-height: 40px
       height: 40px
       font-size: 23px !important
-      color: #fff 
+      color: #fff
       display: block
       cursor: move
       padding: 0 10px
@@ -697,7 +697,7 @@ div
           position: relative
           +sprite-icon(icon_delete_white)
           &:hover
-            +sprite-icon(icon_delete_orange)          
+            +sprite-icon(icon_delete_orange)
         &.toggle-icon
           height: 14px
           width: 14px
@@ -714,7 +714,7 @@ div
 
 
     // Dashboard Module Content
-    // - - - - - - - - - - - - -           
+    // - - - - - - - - - - - - -
     div.dashboard-module-content
       border: 1px solid #cdcdcd
       border-top: none
@@ -732,7 +732,7 @@ div
         position: relative
         &:nth-child(even)
           background: #f6f6f6
-        
+
         &:last-child
           border-bottom: none
 
@@ -743,15 +743,15 @@ div
 
 
         // Object Type Text
-        // - - - - - - - - - - - - -  
+        // - - - - - - - - - - - - -
         span.object_type
           color: #747474
           opacity: .5
 
 
         // Module Row Options
-        // - - - - - - - - - - - - -  
-        ul.list-options 
+        // - - - - - - - - - - - - -
+        ul.list-options
           position: absolute
           top: 0
           right: 0
@@ -785,16 +785,16 @@ div
                   +sprite-icon(icon_add_orange, $vertical: 1px)
                 &.listlink
                   +sprite-icon(icon_list_orange, $vertical: 2px)
-          
+
       &:hover ul.list-options li a:hover
-        opacity: 1 
-      
+        opacity: 1
+
       span.deletelink, a.deletelink
         padding-left: 18px
 
 
     // Sitemap Module
-    // - - - - - - - - - - - - - 
+    // - - - - - - - - - - - - -
     &.sitemap
       div.dashboard-module-content
         border: none
@@ -802,8 +802,8 @@ div
 
 
         // Sitemap First Row
-        // - - - - - - - - - - - - - 
-        ul 
+        // - - - - - - - - - - - - -
+        ul
           li.first
             height: 24px
             padding: 4px 7px 0 7px
@@ -819,7 +819,7 @@ div
               &:hover
                 color: #f79421
             ul.list-options li
-              margin: -3px 0 0 0 
+              margin: -3px 0 0 0
               a
                 position: relative
                 color: #fff
@@ -835,14 +835,14 @@ div
 
 
           // Sitemap Addtl Rows
-          // - - - - - - - - - - - - - 
+          // - - - - - - - - - - - - -
           li
             border-left: 1px solid #cdcdcd
             border-right: 1px solid #cdcdcd
-            
+
 
             // Sitemap Child Rows
-            // - - - - - - - - - - - - - 
+            // - - - - - - - - - - - - -
             ul.children
               margin: 10px 0 0 0
               > li
@@ -956,7 +956,7 @@ body.app_index #content-main
 
 // Change Lists
 //  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-body.change-list 
+body.change-list
   #changelist
     border: none
     margin-bottom: 0
@@ -965,14 +965,14 @@ body.change-list
 
 
     // Changelist Filters
-    // - - - - - - - - - - - 
+    // - - - - - - - - - - -
     div#changelist-filter
       padding: 0 10px 10px 10px
       width: 140px
       border-left: none
       float: right
       display: block
-      background: #fff 
+      background: #fff
       position: relative
       z-index: 150
       a.related-lookup
@@ -986,7 +986,7 @@ body.change-list
 
 
       // Search
-      // - - - - - - - - - - - 
+      // - - - - - - - - - - -
       #toolbar
         background: #fff !important
         border: none
@@ -1023,10 +1023,10 @@ body.change-list
               color: $body
               &:hover
                 color: $secondary
-      
+
 
       // Filter Content
-      // - - - - - - - - - - - 
+      // - - - - - - - - - - -
       h2
         background: none
         font-size: 24px
@@ -1063,7 +1063,7 @@ body.change-list
             position: absolute
             height: 14px
             width: 14px
-            margin: 3px 3px 0 0 
+            margin: 3px 3px 0 0
             text-indent: -9999px
             top: 29px
             right: 0
@@ -1075,16 +1075,16 @@ body.change-list
       select
         width: 100%
         margin-bottom: 15px
-   
+
 
     // Form
-    // - - - - - - - - - - - 
-    form#changelist-form 
+    // - - - - - - - - - - -
+    form#changelist-form
       background: #fff
 
 
     // Table Actions
-    // - - - - - - - - - - - 
+    // - - - - - - - - - - -
     div.actions
       font-size: 14px
       line-height: 40px
@@ -1126,16 +1126,16 @@ body.change-list
         text-transform: uppercase
         font-size: 10px
 
-    
+
     // List Table
-    // - - - - - - - - - - - 
+    // - - - - - - - - - - -
     div.results
       table#result_list
         border-bottom: 1px solid #dfdfdf
 
 
         // Table Head and Sorting
-        // - - - - - - - - - - - 
+        // - - - - - - - - - - -
         thead th
           border: 1px solid #434343
           border-top: 2px solid #434343
@@ -1153,7 +1153,7 @@ body.change-list
             background: #434343
             div.text a
               color: #fff
-            div.sortoptions 
+            div.sortoptions
               float: right
               text-align: right
               +legacy-pie-clearfix
@@ -1181,10 +1181,10 @@ body.change-list
                   +sprite-icon(icon_arrow_up)
             &:hover div.sortoptions a.sortremove
               display: block
-        
+
 
         // Table Body
-        // - - - - - - - - - - -           
+        // - - - - - - - - - - -
         tbody
           background: #fff
           tr
@@ -1250,7 +1250,7 @@ body.delete_confirmation div#admin_content
 
 // Change Form
 //  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-body.change-form 
+body.change-form
   width: 100%
   padding-bottom: 30px
   #content_container
@@ -1413,8 +1413,8 @@ fieldset.module, div.inline-group
 
       // Image Widget Remove Current Image
       //  - - - - - - - - - - - - - - -
-      &.hidden 
-        a.imageupload-thumbcontainer 
+      &.hidden
+        a.imageupload-thumbcontainer
           display: none
         img.imageupload-thumbnail-hidden
           display: inline-block
@@ -1438,7 +1438,7 @@ fieldset.module, div.inline-group
         padding: 5px
 
       // Image Widget
-      //  - - - - - - - - - - - - - - - 
+      //  - - - - - - - - - - - - - - -
       a.imageupload-thumbcontainer
         float: left
         width: 150px
@@ -1447,7 +1447,7 @@ fieldset.module, div.inline-group
         +legacy-pie-clearfix
       img.imageupload-thumbnail, img.imageupload-thumbnail-hidden
         max-width: 150px
-        margin: 0 15px 10px 0 
+        margin: 0 15px 10px 0
         float: left
       img.imageupload-thumbnail-hidden
         display: none
@@ -1499,7 +1499,7 @@ fieldset.module, div.inline-group
             &.hidden
               color: $secondary !important
               +sprite-icon(icon_undo_orange, $vertical: 0px, $horizontal: 0px)
-              span 
+              span
                 display: inline-block
 
 
@@ -1551,12 +1551,6 @@ fieldset.module, div.inline-group
             line-height: 14px !important
 
 
-      // CKEditor Positioning
-      //  - - - - - - - - - - - - - - -
-      span.cke_skin_kama
-        margin-left: 0 !important
-
-
     // Checkbox without Label (is active)
     //  - - - - - - - - - - - - - - -
     div.checkbox_container
@@ -1567,7 +1561,7 @@ fieldset.module, div.inline-group
         color: $body !important
 
 
-  // Stacked Inlines 
+  // Stacked Inlines
   //  - - - - - - - - - - - - - - -
   div.inline-related
     width: 100%
@@ -1644,12 +1638,12 @@ fieldset.module, div.inline-group
 
   // Stacked Inline Add Row
   //  - - - - - - - - - - - - - - -
-  div.add-row 
+  div.add-row
     border-bottom: none
     border-top: 1px solid #efefef
     background: #fff
     padding: 0
-    margin: 0 0 40px 0 
+    margin: 0 0 40px 0
     +legacy-pie-clearfix
     a
       +secondary-button()
@@ -1664,11 +1658,11 @@ fieldset.module, div.inline-group
   // Tabular Inlines
   //  - - - - - - - - - - - - - - -
   div.tabular
-    table    
+    table
       margin: 20px 0 40px 170px
       width: 790px !important
-      border: none 
-      thead 
+      border: none
+      thead
         border: none
         th
           padding: 3px 25px
@@ -1698,8 +1692,8 @@ fieldset.module, div.inline-group
             background: transparent
           &:last-child
             border-bottom: none
-          td 
-            padding: 15px 25px 3px 
+          td
+            padding: 15px 25px 3px
             font-size: 14px
             color: $body
             font-family: $body-font
@@ -1714,7 +1708,7 @@ fieldset.module, div.inline-group
             button
               +button()
 
-            // Tabular Select Object Column  
+            // Tabular Select Object Column
             // - - - - - - - - - - - - - - -
             &.link
               button
@@ -1723,7 +1717,7 @@ fieldset.module, div.inline-group
                 position: relative
                 +sprite-icon(icon_add)
 
-            
+
             // Tabular Organization Column
             // - - - - - - - - - - - - - - -
             &.field-organization
@@ -1754,7 +1748,7 @@ fieldset.module, div.inline-group
                   display: none
 
 
-            // Tabular Delete Column  
+            // Tabular Delete Column
             // - - - - - - - - - - - - - - -
             &.delete
               padding: 0 10px 0 0
@@ -1792,7 +1786,7 @@ fieldset.module, div.inline-group
                     +sprite-icon(icon_undo_white, $vertical: 1px)
                 &.hidden
                   display: none
-                  
+
           &.tobe_removed
             background: $secondary
             input, select, p, textarea, a
@@ -1801,7 +1795,7 @@ fieldset.module, div.inline-group
 
           // Tabular Inlines Add Row
           //  - - - - - - - - - - - - - - -
-          &.add-row td 
+          &.add-row td
             border-top: 1px solid #efefef
             background: #fff
             padding: 0
@@ -1881,7 +1875,7 @@ fieldset.module, div.inline-group
         padding: 0 0 0 18px
         text-indent: -9999px
         height: 14px
-        width: 14px 
+        width: 14px
         display: block
         position: relative
         margin: -4px 0 0 5px
@@ -1958,8 +1952,8 @@ a.add-another
   text-indent: -9999px
   position: relative
   padding: 0 0 0 18px
-  margin: 0 0 0 3px 
-  height: 14px 
+  margin: 0 0 0 3px
+  height: 14px
   width: 14px
   display: inline-block
   +sprite-icon(icon_add, $vertical: 2px)
@@ -2074,7 +2068,7 @@ div.clockbox, div.calendarbox
     &.advanced a
       display: inline-block
       margin: 8px 0
-      padding: 0 0 0 18px 
+      padding: 0 0 0 18px
       color: $body
       font-weight: bold
       cursor: pointer
@@ -2135,7 +2129,7 @@ div.clockbox, div.calendarbox
             +sprite-icon(icon_undo_white, $vertical: 2px)
     &.tobe_removed
       background: $secondary !important
-      h3 
+      h3
         span.inline_label
           color: #fff
           text-decoration: line-through
@@ -2143,7 +2137,7 @@ div.clockbox, div.calendarbox
           display: none
         span.detail a
           display: none
-      
+
 
 
     &.inline-related
@@ -2211,7 +2205,7 @@ div.clockbox, div.calendarbox
 
 
 // Message from Revision History or Auth templates
-// - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 .message-container
   width: 960px
   margin: 0 auto
