@@ -1059,19 +1059,19 @@ body.change-list
             color: $body-secondary
             &:hover
               color: $body
-          &:last-child
-            position: absolute
-            height: 14px
-            width: 14px
-            margin: 3px 3px 0 0
-            text-indent: -9999px
-            top: 29px
-            right: 0
-            a
-              display: block
-              background: url(images/icons/icon_delete.png)
-              height: 14px
-              width: 14px
+          // &:last-child
+          //   position: absolute
+          //   height: 14px
+          //   width: 14px
+          //   margin: 3px 3px 0 0
+          //   text-indent: -9999px
+          //   top: 29px
+          //   right: 0
+          //   a
+          //     display: block
+          //     background: url(images/icons/icon_delete.png)
+          //     height: 14px
+          //     width: 14px
       select
         width: 100%
         margin-bottom: 15px
@@ -1707,6 +1707,12 @@ fieldset.module, div.inline-group
               max-width: 344px
             button
               +button()
+              position: relative
+              width: auto
+              height: auto
+              padding: 5px 3px
+              margin: 0 0 0 0
+              font-size: 15px
 
             // Tabular Select Object Column
             // - - - - - - - - - - - - - - -
