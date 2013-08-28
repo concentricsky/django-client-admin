@@ -284,9 +284,13 @@ from django.core.urlresolvers import reverse
 @login_required
 def bulk_add(request, app_label, model_name):
     model_cls = get_model(app_label, model_name)
-    class form_cls(forms.ModelForm):
-        class Meta:
-            model = model_cls
+    form_cls = None
+    if model_cls in admin.site._registry:
+        form_cls = getattr(admin.site._registry[model_cls], 'bulk_form', None)
+    if form_cls is None:
+        class form_cls(forms.ModelForm):
+            class Meta:
+                model = model_cls
     formset_cls = formset_factory(form_cls, extra=25)
     if request.method == "POST":
         formset = formset_cls(request.POST, request.FILES)
