@@ -101,7 +101,7 @@
             if (this.object_input.value) {link_text = 'Change';}
             var link = '<a class="related-lookup" id="' + id + '" href="' + url + '">'+link_text+'</a>';
             // link = link + '<button id="lookup_button_' + this.object_input.id + '" style="cursor: pointer; margin-right: 10px; float:left;">'+link_text+'</button></a>';
-            link = link + '<strong id="lookup_text_' + this.object_input.id + '" style="line-height: 2.4em;"></strong>';
+            link = link + '<strong id="unicode_lookup_' + this.object_input.id + '" style="line-height: 2.4em;"></strong>';
             // insert link html after input element
             $(this.object_input).after(link);
 
@@ -119,7 +119,7 @@
             150);
         },
         popRelatedObjectLookup: function(link) {
-            var name = link.id.replace(/^lookup_/, '');
+            var name = link.id.replace(/^lookup_text_/, '');
             var href;
             var win;
 
