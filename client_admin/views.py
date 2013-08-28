@@ -275,3 +275,30 @@ def remove_bookmark(request, id):
         'bookmark': bookmark,
         'title': 'Delete Bookmark',
     })
+
+from django.forms.formsets import formset_factory
+from django.db.models.loading import get_model
+from django import forms
+from django.core.urlresolvers import reverse
+
+@login_required
+def bulk_add(request, app_label, model_name):
+    model_cls = get_model(app_label, model_name)
+    class form_cls(forms.ModelForm):
+        class Meta:
+            model = model_cls
+    formset_cls = formset_factory(form_cls, extra=25)
+    if request.method == "POST":
+        formset = formset_cls(request.POST, request.FILES)
+        if formset.is_valid():
+            for form in formset:
+                if form.is_valid() and form.has_changed():
+                    form.save()
+            return HttpResponseRedirect(reverse('admin:%s_%s_changelist' % (app_label, model_name)))
+    else:
+        formset = formset_cls()
+
+    return TemplateResponse(request, 'client_admin/bulk/add.html', context={
+        'formset': formset,
+    })
+    pass

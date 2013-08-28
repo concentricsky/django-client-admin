@@ -1,0 +1,28 @@
+{% extends "client_admin/client_admin_base.html" %}
+
+{% block content %}
+<form method="POST" enctype="multipart/form-data">
+{{csrf()}}
+{{formset.management_form|safe}}
+
+<button type="submit">Save</button>
+<table>
+<tr>
+    {% for field in formset.0 %}
+    <th>{{field.label}}</th>
+    {% endfor %}
+</tr>
+{% for form in formset %}
+<tr>
+    {%for field in form%}
+    <td>{{field|safe}}</td>
+    {%endfor%}
+    {% if form.errors %}
+    <td class="errors">{{form.errors|safe}}</td>
+    {% endif %}
+</tr>
+{% endfor %}
+</table>
+
+</form>
+{% endblock %}

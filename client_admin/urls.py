@@ -32,5 +32,7 @@ urlpatterns = patterns(
     url(r'^obj/$', client_admin_views.generic_lookup, name='admin_genericadmin_obj_lookup'),
     #url(r'^get-generic-rel-list/$', client_admin_views.get_generic_rel_list, name='admin_genericadmin_rel_list'),
 
+    url(r'^(?P<app_label>[^/]+)/(?P<model_name>[^/]+)/add/bulk', client_admin_views.bulk_add, name='client-admin-bulk-add'),
+
     url(r'^$', client_admin_views.dashboard, name='client_admin_dashboard'),
 )
