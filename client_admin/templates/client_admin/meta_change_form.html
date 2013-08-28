@@ -1,0 +1,37 @@
+{% extends "admin/change_form.html" %}
+
+
+
+{% load generic %}
+
+
+
+{% block field_sets %}
+
+    {% for fieldset in adminform %}    
+
+        {% ifnotequal fieldset.name "Meta" %}
+
+            {% include "admin/includes/fieldset.html" %}
+
+        {% endifnotequal %}
+
+    {% endfor %}
+
+{% endblock %}
+
+
+
+{% block after_related_objects %}
+
+    {% for fieldset in adminform %}
+
+        {% ifequal fieldset.name "Meta" %}
+
+            {% include "admin/includes/fieldset.html" %}
+
+        {% endifequal %}
+
+    {% endfor %}
+
+{% endblock %}
