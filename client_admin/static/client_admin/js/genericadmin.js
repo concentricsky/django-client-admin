@@ -91,7 +91,7 @@
         },
         hideLookupLink: function() {
             $('#lookup_' + this.object_input.id).unbind().remove();
-            $('#lookup_text_' + this.object_input.id).remove();
+            $('#unicode_' + this.object_input.id).remove();
         },
         showLookupLink: function() {
             var that = this;
@@ -101,7 +101,7 @@
             if (this.object_input.value) {link_text = 'Change';}
             var link = '<a class="related-lookup" id="' + id + '" href="' + url + '">'+link_text+'</a>';
             // link = link + '<button id="lookup_button_' + this.object_input.id + '" style="cursor: pointer; margin-right: 10px; float:left;">'+link_text+'</button></a>';
-            link = link + '<strong id="unicode_lookup_' + this.object_input.id + '" style="line-height: 2.4em;"></strong>';
+            link = link + '<strong id="unicode_' + this.object_input.id + '" style="line-height: 2.4em;"></strong>';
             // insert link html after input element
             $(this.object_input).after(link);
 
@@ -119,7 +119,7 @@
             150);
         },
         popRelatedObjectLookup: function(link) {
-            var name = link.id.replace(/^lookup_text_/, '');
+            var name = link.id.replace(/^lookup_/, '');
             var href;
             var win;
 
@@ -147,7 +147,7 @@
             return function() {
                 // if (!that.object_input.value) { return } 
                 // bail if no input
-                $('#lookup_text_' + that.object_input.id).text('').text('loading...');
+                $('#unicode_' + that.object_input.id).text('').text('loading...');
                 $.ajax({
                     url: that.obj_url,
                     dataType: 'json',
@@ -158,7 +158,7 @@
                     success: function(data) {
                         var item = data[0];
                         if (item && item.content_type_text && item.object_text) {
-                            $('#lookup_text_'+that.object_input.id).text(item.object_text);
+                            $('#unicode_'+that.object_input.id).text(item.object_text);
                             // run a callback to do other stuff like prepopulating url fields
                             // can't be done with normal django admin prepopulate
                             if (that.updateObjectDataCallback) {
