@@ -304,5 +304,8 @@ def bulk_add(request, app_label, model_name):
 
     return TemplateResponse(request, 'client_admin/bulk/add.html', context={
         'formset': formset,
+        'app_label': app_label,
+        'model_name': model_name,
+        'verbose_name_plural': model_cls._meta.verbose_name_plural.title(),
     })
     pass

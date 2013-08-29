@@ -64,7 +64,7 @@
               </a>
             </li>
             <li><a href="{% url 'client-admin-bulk-add' app_label=app_label model_name=cl.opts.verbose_name|lower %}">
-              {% blocktrans %}Bulk add{% endblocktrans %}</a>
+              {% blocktrans with cl.opts.verbose_name_plural as name %}Add multiple {{name}}{% endblocktrans %}</a>
             </li>
           {% endblock %}
         </ul>

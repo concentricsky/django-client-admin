@@ -1,8 +1,21 @@
 {% extends "client_admin/client_admin_base.html" %}
 
+{% set title="Add multiple %s" % (verbose_name_plural.lower(),) %}
+
 {% block bodyclass %}change-list{% endblock %}
 
-{% block extra_style %}
+{%block breadcrumbs%}
+
+<div class="breadcrumbs">
+<a href="{{ url('admin:index') }}">{{ _('Home') }}</a>
+&rsaquo; <a href="{{ url('admin:app_list', app_label=app_label) }}">{{ app_label.title()|escape }}</a>
+&rsaquo; <a href="{{ url('admin:%s_%s_changelist' % (app_label, model_name)) }}">{{ verbose_name_plural.title()|escape }}</a>
+&rsaquo; Add multiple {{ verbose_name_plural.lower() }}
+</div>
+
+{%endblock%}
+
+{% block extrastyle %}
 {{ super() }}
   <link rel="stylesheet" type="text/css" href="{{STATIC_URL}}admin/css/changelists.css" />
   <style>
@@ -49,11 +62,8 @@
             {% for form in formset %}
             <tr class="row{{loop.cycle(1,2)}}">
                 {%for field in form%}
-                <td>{{field|safe}}</td>
+                <td>{{field|safe}} {{field.errors|safe}}</td>
                 {%endfor%}
-                {% if form.errors %}
-                <td class="errors">{{form.errors|safe}}</td>
-                {% endif %}
             </tr>
             {% endfor %}
             </tbody>
@@ -66,4 +76,49 @@
     </div>
 
 </div>
+{% endblock %}
+
+{%block scripts%}
+{{super()}}
+<script src="{{STATIC_URL}}client_admin/js/jquery.csv-0.71.min.js"></script>
+<script>
+(function($) {
+
+    $(function() {
+
+        $(document).on('paste', function(e) {
+            var data = e.originalEvent.clipboardData.getData('text/plain')
+            csv_options = {}
+
+            if (data.match(/\t/)) {
+                //tab separated
+                csv_options.separator = '\t'
+            }
+
+            rows = $.csv.toArrays(data, csv_options)
+            if (rows.length < 1)
+                return true;
+
+            $('#result_list input').val('')
+
+            $('#result_list tbody tr').each(function(idx,el) {
+                var row = rows[idx];
+
+                if (row) {
+                    $(el).find('input').each(function(input_idx,input_el) {
+                        var cell = row[input_idx]
+                        $(input_el).val(cell)
+                    })
+                }
+
+            })
+
+            return false;
+
+        })
+
+    })
+
+})(django.jQuery);
+</script>
 {% endblock %}
