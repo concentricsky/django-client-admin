@@ -1,28 +1,69 @@
 {% extends "client_admin/client_admin_base.html" %}
 
+{% block bodyclass %}change-list{% endblock %}
+
+{% block extra_style %}
+{{ super() }}
+  <link rel="stylesheet" type="text/css" href="{{STATIC_URL}}admin/css/changelists.css" />
+  <style>
+  #changelist table input {
+        width: 98%;
+  }
+  body.change-list #changelist div.actions button {
+    float: right;
+    font-size: 16px !important;
+    margin-top: 11px !important;
+    padding: 4px 3px !important;
+  }
+  </style>
+{% endblock %}
+
 {% block content %}
-<form method="POST" enctype="multipart/form-data">
-{{csrf()}}
-{{formset.management_form|safe}}
 
-<button type="submit">Save</button>
-<table>
-<tr>
-    {% for field in formset.0 %}
-    <th>{{field.label}}</th>
-    {% endfor %}
-</tr>
-{% for form in formset %}
-<tr>
-    {%for field in form%}
-    <td>{{field|safe}}</td>
-    {%endfor%}
-    {% if form.errors %}
-    <td class="errors">{{form.errors|safe}}</td>
-    {% endif %}
-</tr>
-{% endfor %}
-</table>
+<div id="content-main">
 
-</form>
+    <div class="module" id="changelist">
+
+
+
+
+        <form method="POST" enctype="multipart/form-data">
+        {{csrf()}}
+        {{formset.management_form|safe}}
+
+        <div class="actions">
+            <button type="submit">Save</button>
+        </div>
+
+        <div class="results">
+
+            <table id="result_list">
+            <thead>
+                <tr>
+                    {% for field in formset.0 %}
+                    <th>{{field.label}}</th>
+                    {% endfor %}
+                </tr>
+            </thead>
+            <tbody>
+            {% for form in formset %}
+            <tr class="row{{loop.cycle(1,2)}}">
+                {%for field in form%}
+                <td>{{field|safe}}</td>
+                {%endfor%}
+                {% if form.errors %}
+                <td class="errors">{{form.errors|safe}}</td>
+                {% endif %}
+            </tr>
+            {% endfor %}
+            </tbody>
+            </table>
+
+        </div>
+
+        </form>
+
+    </div>
+
+</div>
 {% endblock %}
