@@ -13,13 +13,49 @@
 # limitations under the License.
 
 from django.contrib.admin import RelatedFieldListFilter, ChoicesFieldListFilter
+from django.contrib.admin.util import get_model_from_relation
 from django.utils.encoding import smart_text
 
 from client_admin.utils import get_admin_change_url
 
 
+
 class LookupFilter(RelatedFieldListFilter):
     template = "admin/lookup_filter.html"
+
+    def __init__(self, field, request, params, model, model_admin, field_path):
+        """cut/pasted from RelatedFieldListFilter parent constructor, with db hit removed"""
+        other_model = get_model_from_relation(field)
+        if hasattr(field, 'rel'):
+            rel_name = field.rel.get_related_field().name
+        else:
+            rel_name = other_model._meta.pk.name
+        self.lookup_kwarg = '%s__%s__exact' % (field_path, rel_name)
+        self.lookup_kwarg_isnull = '%s__isnull' % field_path
+        self.lookup_val = request.GET.get(self.lookup_kwarg, None)
+        self.lookup_val_isnull = request.GET.get(self.lookup_kwarg_isnull, None)
+
+        # this is the one change from the parent constructor. 
+        # instead of getting all choices from the table, only pick one if theres already one set so we can display it
+        self.lookup_choices = [("","")]  # needs at least one or admin wont show it if empty.
+        if self.lookup_val:
+            try:
+                obj = field.rel.to.objects.get(pk=self.lookup_val)
+                val = obj.__unicode__()
+            except field.rel.to.DoesNotExist:
+                val = ""
+                pass
+            self.lookup_choices.append((self.lookup_val,val))
+
+        # note we are deliberately calling our parent's parent constructor
+        super(RelatedFieldListFilter, self).__init__(field, request, params, model, model_admin, field_path)
+
+        if hasattr(field, 'verbose_name'):
+            self.lookup_title = field.verbose_name
+        else:
+            self.lookup_title = other_model._meta.verbose_name
+        self.title = self.lookup_title
+
 
     def choices(self, cl):
         yield {
@@ -42,6 +78,7 @@ class LookupFilter(RelatedFieldListFilter):
                 'query_string': '?',
                 'display': 'Remove filter',
             }
+
 
 
 class SelectFilter(ChoicesFieldListFilter):
