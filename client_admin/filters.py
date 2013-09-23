@@ -37,7 +37,7 @@ class LookupFilter(RelatedFieldListFilter):
 
         # this is the one change from the parent constructor. 
         # instead of getting all choices from the table, only pick one if theres already one set so we can display it
-        self.lookup_choices = [("","")]  # needs at least one or admin wont show it if empty.
+        self.lookup_choices = [(-1,""),(-2,"")]  # needs at least TWO or admin wont show it if empty.
         if self.lookup_val:
             try:
                 obj = field.rel.to.objects.get(pk=self.lookup_val)
