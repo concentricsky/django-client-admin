@@ -51,10 +51,12 @@ function dismissRelatedLookupPopup(win, chosenId, chosenString) {
     var unicode_elem = document.getElementById(id_to_unicode(name));
     if (elem.className.indexOf('vManyToManyRawIdAdminField') != -1 && elem.value) {
         elem.value += ',' + chosenId;
-        unicode_elem.innerText += ', ' + chosenString;
+        if (unicode_elem)
+            unicode_elem.innerText += ', ' + chosenString;
     } else {
         elem.value = chosenId;
-        unicode_elem.innerText = chosenString;
+        if (unicode_elem)
+            unicode_elem.innerText = chosenString;
     }
     win.close();
 }
