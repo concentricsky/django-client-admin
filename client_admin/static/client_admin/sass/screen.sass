@@ -178,6 +178,7 @@ ul.errorlist
         font-weight: normal
         font-size: 12px
 
+
 body.logged_out div#admin_content
   h2
     font-size: 23px
@@ -272,7 +273,6 @@ header
             +sprite-icon(icon_bookmark_disabled, $vertical: 19px, $horizontal: 12px)
             &:hover
               +sprite-icon(icon_bookmark_disabled, $vertical: 19px, $horizontal: 12px)
-
 
 
         // My account tab
@@ -625,6 +625,14 @@ header
 
 // Dashboard
 //  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+body.dashboard table
+  border: 1px solid red
+  background: blue
+
+// Generic Dashboard
+//  - - - - - - - - - - - - - - -
+
 div
   &#dashboard
     +legacy-pie-clearfix
@@ -712,6 +720,37 @@ div
             &:hover
               +sprite-icon(icon_add_orange)
 
+    // Dashboard Module Content
+    // - - - - - - - - - - - - -
+    div.dashboard-module-content
+      overflow: hidden
+      border: 1px solid #cdcdcd
+      border-top: none
+      h3
+        background: #434343
+        font-size: 14px !important
+        height: 30px
+        line-height: 30px
+        margin: 0 -1px
+        cursor: auto
+      li
+        border-bottom: 1px solid #cdcdcd
+        padding: 7px 10px 7px 10px
+        list-style: none
+        position: relative
+        &:nth-child(even)
+          background: #f6f6f6
+
+        &:last-child
+          border-bottom: none
+
+        span.date_time
+          color: #b0b0b0
+          float: right
+          margin-left: 15px
+
+// Generic Dashboard Module Content
+//  - - - - - - - - - - - - - - -
 
     // Dashboard Module Content
     // - - - - - - - - - - - - -
@@ -1723,7 +1762,6 @@ fieldset.module, div.inline-group
                 position: relative
                 +sprite-icon(icon_add)
 
-
             // Tabular Organization Column
             // - - - - - - - - - - - - - - -
             &.field-organization
@@ -1752,7 +1790,6 @@ fieldset.module, div.inline-group
                   background: #024f84
                 img
                   display: none
-
 
             // Tabular Delete Column
             // - - - - - - - - - - - - - - -
@@ -2206,8 +2243,37 @@ div.clockbox, div.calendarbox
       &:hover
         color: $secondary
         +sprite-icon(icon_add_orange, $vertical: 2px)
-
-
+      text-transform: none
+      font-weight: normal
+    h4
+      span
+        &.delete input
+          vertical-align: middle
+        &.detail a
+          &:link, &:visited
+            opacity: 1
+            color: #ed8d1f
+            font-weight: bold
+            text-transform: uppercase
+      a
+        &:link, &:visited
+          text-transform: none
+          font-weight: normal
+          color: #666
+          opacity: .15
+      span.delete
+        text-transform: none
+        font-weight: normal
+        color: #666
+        opacity: .15
+  div:hover h4
+    a, span.delete
+      opacity: 1
+  li h4
+    a:hover
+      color: #ed8d1f
+    span.delete
+      margin-right: 10px
 
 
 // Message from Revision History or Auth templates
