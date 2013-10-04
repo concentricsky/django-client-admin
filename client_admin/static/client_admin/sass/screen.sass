@@ -1074,6 +1074,9 @@ body.change-list
         border: none
         height: auto !important
         text-transform: uppercase
+        text-align: right
+        text-shadow: 1px 1px #ebebeb
+        font-size: 10px
       h3
         color: $secondary
       ul
@@ -1090,27 +1093,54 @@ body.change-list
             margin-top: 5px
             padding: 5px
             background: #f6f6f6
+            a.removefilter
+              background: url(images/icons/icon_delete.png)
+              background-repeat: no-repeat
+              height: 14px
+              width: 20%
             a
               color: $primary !important
-              display: block
+              display: inline-block
+              width: 80%
               padding-right: 20px
+              vertical-align: middle
           a
             color: $body-secondary
             &:hover
               color: $body
-          // &:last-child
-          //   position: absolute
-          //   height: 14px
-          //   width: 14px
-          //   margin: 3px 3px 0 0
-          //   text-indent: -9999px
-          //   top: 29px
-          //   right: 0
-          //   a
-          //     display: block
-          //     background: url(images/icons/icon_delete.png)
-          //     height: 14px
-          //     width: 14px
+          &:last-child
+            height: 14px
+            margin: 3px 3px 0 0
+            top: 29px
+            right: 0
+  div.actions
+    font-size: 19px
+    line-height: 36px
+    height: 36px
+    display: block
+    padding: 0 10px 0 2px
+    position: relative
+    border: 1px solid #7b7b7b
+    border-bottom: 1px solid #555657
+    border-top-left-radius: 5px
+    -webkit-border-top-left-radius: 5px
+    -moz-border-radius-topleft: 5px
+    border-top-right-radius: 5px
+    -webkit-border-top-right-radius: 5px
+    -moz-border-radius-topright: 5px
+    box-shadow: 0 1px 0 0 #ebebeb inset
+    background: #bdbdbd
+    background-image: -webkit-linear-gradient(top, #c8c8c8, #afafaf)
+    background-image: -moz-linear-gradient(top, #c8c8c8, #afafaf)
+    background-image: -o-linear-gradient(top, #c8c8c8, #afafaf)
+    background-image: -ms-linear-gradient(top, #c8c8c8, #afafaf)
+    margin-right: 0 !important
+    label
+      position: absolute
+      text-transform: uppercase
+      font-size: 10px
+      text-shadow: 1px 1px #ebebeb
+      color: #505050
       select
         width: 100%
         margin-bottom: 15px
