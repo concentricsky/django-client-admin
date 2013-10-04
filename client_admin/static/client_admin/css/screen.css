@@ -1935,46 +1935,44 @@ body.change-list #changelist div#changelist-filter ul li.selected {
   background: #f6f6f6;
 }
 /* line 1055, ../sass/screen.sass */
+body.change-list #changelist div#changelist-filter ul li.selected a.removefilter {
+  background: url(images/icons/icon_delete.png);
+  background-repeat: no-repeat;
+  height: 14px;
+  width: 20%;
+}
+/* line 1060, ../sass/screen.sass */
 body.change-list #changelist div#changelist-filter ul li.selected a {
   color: #006fbb !important;
-  display: block;
-  padding-right: 20px;
+  display: inline-block;
+  width: 80%;
+  vertical-align: middle;
 }
-/* line 1059, ../sass/screen.sass */
+/* line 1065, ../sass/screen.sass */
 body.change-list #changelist div#changelist-filter ul li a {
   color: #b4b4b4;
 }
-/* line 1061, ../sass/screen.sass */
+/* line 1067, ../sass/screen.sass */
 body.change-list #changelist div#changelist-filter ul li a:hover {
   color: #747474;
 }
-/* line 1063, ../sass/screen.sass */
+/* line 1069, ../sass/screen.sass */
 body.change-list #changelist div#changelist-filter ul li:last-child {
-  position: absolute;
   height: 14px;
-  width: 14px;
   margin: 3px 3px 0 0;
-  text-indent: -9999px;
   top: 29px;
   right: 0;
 }
-/* line 1071, ../sass/screen.sass */
-body.change-list #changelist div#changelist-filter ul li:last-child a {
-  display: block;
-  background: url(images/icons/icon_delete.png);
-  height: 14px;
-  width: 14px;
-}
-/* line 1076, ../sass/screen.sass */
+/* line 1074, ../sass/screen.sass */
 body.change-list #changelist div#changelist-filter select {
   width: 100%;
   margin-bottom: 15px;
 }
-/* line 1083, ../sass/screen.sass */
+/* line 1081, ../sass/screen.sass */
 body.change-list #changelist form#changelist-form {
   background: white;
 }
-/* line 1089, ../sass/screen.sass */
+/* line 1087, ../sass/screen.sass */
 body.change-list #changelist div.actions {
   font-size: 14px;
   line-height: 40px;
@@ -1987,7 +1985,7 @@ body.change-list #changelist div.actions {
   background: #006fbb;
   margin-right: 0 !important;
 }
-/* line 1100, ../sass/screen.sass */
+/* line 1098, ../sass/screen.sass */
 body.change-list #changelist div.actions label {
   position: absolute;
   text-transform: uppercase;
@@ -1996,17 +1994,17 @@ body.change-list #changelist div.actions label {
   color: white;
   font-weight: bold;
 }
-/* line 1107, ../sass/screen.sass */
+/* line 1105, ../sass/screen.sass */
 body.change-list #changelist div.actions label select {
   width: 145px;
   border: none;
   margin: -2px 0 0 5px;
 }
-/* line 1111, ../sass/screen.sass */
+/* line 1109, ../sass/screen.sass */
 body.change-list #changelist div.actions label select:focus {
   outline: none;
 }
-/* line 1113, ../sass/screen.sass */
+/* line 1111, ../sass/screen.sass */
 body.change-list #changelist div.actions button {
   margin: 16px 0 0 230px;
   padding: 0px 3px;
@@ -2018,21 +2016,21 @@ body.change-list #changelist div.actions button {
   border: none;
   cursor: pointer;
 }
-/* line 1123, ../sass/screen.sass */
+/* line 1121, ../sass/screen.sass */
 body.change-list #changelist div.actions button:hover {
   color: #f9910c;
 }
-/* line 1125, ../sass/screen.sass */
+/* line 1123, ../sass/screen.sass */
 body.change-list #changelist div.actions span.action-counter {
   color: white;
   text-transform: uppercase;
   font-size: 10px;
 }
-/* line 1134, ../sass/screen.sass */
+/* line 1132, ../sass/screen.sass */
 body.change-list #changelist div.results table#result_list {
   border-bottom: 1px solid #dfdfdf;
 }
-/* line 1140, ../sass/screen.sass */
+/* line 1138, ../sass/screen.sass */
 body.change-list #changelist div.results table#result_list thead th {
   border: 1px solid #434343;
   border-top: 2px solid #434343;
@@ -2052,23 +2050,23 @@ body.change-list #changelist div.results table#result_list thead th:after {
   overflow: hidden;
   visibility: hidden;
 }
-/* line 1149, ../sass/screen.sass */
+/* line 1147, ../sass/screen.sass */
 body.change-list #changelist div.results table#result_list thead th a {
   color: white;
 }
-/* line 1151, ../sass/screen.sass */
+/* line 1149, ../sass/screen.sass */
 body.change-list #changelist div.results table#result_list thead th a:hover {
   color: #434343;
 }
-/* line 1153, ../sass/screen.sass */
+/* line 1151, ../sass/screen.sass */
 body.change-list #changelist div.results table#result_list thead th.sorted {
   background: #434343;
 }
-/* line 1155, ../sass/screen.sass */
+/* line 1153, ../sass/screen.sass */
 body.change-list #changelist div.results table#result_list thead th.sorted div.text a {
   color: white;
 }
-/* line 1157, ../sass/screen.sass */
+/* line 1155, ../sass/screen.sass */
 body.change-list #changelist div.results table#result_list thead th.sorted div.sortoptions {
   float: right;
   text-align: right;
@@ -2083,13 +2081,13 @@ body.change-list #changelist div.results table#result_list thead th.sorted div.s
   overflow: hidden;
   visibility: hidden;
 }
-/* line 1161, ../sass/screen.sass */
+/* line 1159, ../sass/screen.sass */
 body.change-list #changelist div.results table#result_list thead th.sorted div.sortoptions span.sortpriority {
   float: left;
   display: block;
   font-size: 10px;
 }
-/* line 1165, ../sass/screen.sass */
+/* line 1163, ../sass/screen.sass */
 body.change-list #changelist div.results table#result_list thead th.sorted div.sortoptions a {
   display: block;
   height: 10px;
@@ -2098,7 +2096,7 @@ body.change-list #changelist div.results table#result_list thead th.sorted div.s
   margin: 4px 0 0 2px;
   position: relative;
 }
-/* line 1172, ../sass/screen.sass */
+/* line 1170, ../sass/screen.sass */
 body.change-list #changelist div.results table#result_list thead th.sorted div.sortoptions a.sortremove {
   height: 15px;
   width: 15px;
@@ -2136,41 +2134,41 @@ body.change-list #changelist div.results table#result_list thead th.sorted div.s
   height: 14px;
   width: 14px;
 }
-/* line 1183, ../sass/screen.sass */
+/* line 1181, ../sass/screen.sass */
 body.change-list #changelist div.results table#result_list thead th.sorted:hover div.sortoptions a.sortremove {
   display: block;
 }
-/* line 1189, ../sass/screen.sass */
+/* line 1187, ../sass/screen.sass */
 body.change-list #changelist div.results table#result_list tbody {
   background: white;
 }
-/* line 1191, ../sass/screen.sass */
+/* line 1189, ../sass/screen.sass */
 body.change-list #changelist div.results table#result_list tbody tr {
   border-bottom: 1px solid #cdcdcd;
 }
-/* line 1193, ../sass/screen.sass */
+/* line 1191, ../sass/screen.sass */
 body.change-list #changelist div.results table#result_list tbody tr.row1 {
   background: #f6f6f6;
 }
-/* line 1195, ../sass/screen.sass */
+/* line 1193, ../sass/screen.sass */
 body.change-list #changelist div.results table#result_list tbody tr.selected {
   background: rgba(249, 145, 12, 0.15);
 }
-/* line 1197, ../sass/screen.sass */
+/* line 1195, ../sass/screen.sass */
 body.change-list #changelist div.results table#result_list tbody td, body.change-list #changelist div.results table#result_list tbody th {
   padding: 7px;
   border: 1px solid #cdcdcd;
   border-bottom: none;
 }
-/* line 1201, ../sass/screen.sass */
+/* line 1199, ../sass/screen.sass */
 body.change-list #changelist div.results table#result_list tbody td a, body.change-list #changelist div.results table#result_list tbody th a {
   color: #006fbb;
 }
-/* line 1203, ../sass/screen.sass */
+/* line 1201, ../sass/screen.sass */
 body.change-list #changelist div.results table#result_list tbody td a:hover, body.change-list #changelist div.results table#result_list tbody th a:hover {
   color: #f9910c;
 }
-/* line 1209, ../sass/screen.sass */
+/* line 1207, ../sass/screen.sass */
 body.change-list #changelist p.paginator {
   font-size: 14px;
   font-weight: bold;
@@ -2178,7 +2176,7 @@ body.change-list #changelist p.paginator {
   background: transparent;
   position: relative;
 }
-/* line 1215, ../sass/screen.sass */
+/* line 1213, ../sass/screen.sass */
 body.change-list #changelist p.paginator input[type="submit"] {
   width: auto;
   height: auto;
@@ -2187,25 +2185,25 @@ body.change-list #changelist p.paginator input[type="submit"] {
   margin: 5px 0 0 0;
 }
 
-/* line 1228, ../sass/screen.sass */
+/* line 1226, ../sass/screen.sass */
 body.delete_confirmation div#admin_content h2 {
   font-size: 23px;
   color: #747474;
 }
-/* line 1231, ../sass/screen.sass */
+/* line 1229, ../sass/screen.sass */
 body.delete_confirmation div#admin_content a {
   color: #006fbb;
 }
-/* line 1233, ../sass/screen.sass */
+/* line 1231, ../sass/screen.sass */
 body.delete_confirmation div#admin_content a:hover {
   color: #f9910c;
 }
-/* line 1235, ../sass/screen.sass */
+/* line 1233, ../sass/screen.sass */
 body.delete_confirmation div#admin_content form {
   padding: 0;
   margin-top: 15px;
 }
-/* line 1238, ../sass/screen.sass */
+/* line 1236, ../sass/screen.sass */
 body.delete_confirmation div#admin_content form input[type="submit"] {
   width: 200px;
   color: white;
@@ -2232,49 +2230,49 @@ body.delete_confirmation div#admin_content form input[type="submit"] {
   border-top: none;
   font-size: 14px;
 }
-/* line 1247, ../sass/screen.sass */
+/* line 1245, ../sass/screen.sass */
 body.delete_confirmation div#admin_content form input[type="submit"]:hover {
   background-color: #f9910c;
 }
 
-/* line 1254, ../sass/screen.sass */
+/* line 1252, ../sass/screen.sass */
 body.change-form {
   width: 100%;
   padding-bottom: 30px;
 }
-/* line 1257, ../sass/screen.sass */
+/* line 1255, ../sass/screen.sass */
 body.change-form #content_container {
   width: 100%;
   margin: 0 auto;
 }
-/* line 1260, ../sass/screen.sass */
+/* line 1258, ../sass/screen.sass */
 body.change-form #content_container #page_header {
   width: 960px;
   margin: 80px auto 25px;
 }
-/* line 1263, ../sass/screen.sass */
+/* line 1261, ../sass/screen.sass */
 body.change-form #content_container #admin_content {
   width: 100%;
 }
-/* line 1266, ../sass/screen.sass */
+/* line 1264, ../sass/screen.sass */
 body.change-form #content_container #admin_content #content-main div.content-main-container {
   width: 960px;
   margin: 0 auto;
   position: relative;
 }
-/* line 1270, ../sass/screen.sass */
+/* line 1268, ../sass/screen.sass */
 body.change-form #content_container #admin_content #content-main form.change_form {
   background: white;
 }
-/* line 1272, ../sass/screen.sass */
+/* line 1270, ../sass/screen.sass */
 body.change-form #content_container #admin_content #content-main .object-tools {
   top: -53px;
 }
-/* line 1278, ../sass/screen.sass */
+/* line 1276, ../sass/screen.sass */
 body.change-form #content_container #admin_content .submit-row-placeholder {
   height: 58px;
 }
-/* line 1280, ../sass/screen.sass */
+/* line 1278, ../sass/screen.sass */
 body.change-form #content_container #admin_content .submit-row {
   background: #e1e1e1;
   border: none;
@@ -2290,7 +2288,7 @@ body.change-form #content_container #admin_content .submit-row {
   position: relative;
   z-index: 250;
 }
-/* line 1294, ../sass/screen.sass */
+/* line 1292, ../sass/screen.sass */
 body.change-form #content_container #admin_content .submit-row .submit_container {
   width: 960px;
   position: relative;
@@ -2306,7 +2304,7 @@ body.change-form #content_container #admin_content .submit-row .submit_container
   overflow: hidden;
   visibility: hidden;
 }
-/* line 1299, ../sass/screen.sass */
+/* line 1297, ../sass/screen.sass */
 body.change-form #content_container #admin_content .submit-row .submit_container input[name="_addanother"] {
   height: 57px;
   line-height: 57px;
@@ -2325,12 +2323,12 @@ body.change-form #content_container #admin_content .submit-row .submit_container
   position: relative;
   background: url(images/icons/icon_add.png) center left no-repeat transparent;
 }
-/* line 1302, ../sass/screen.sass */
+/* line 1300, ../sass/screen.sass */
 body.change-form #content_container #admin_content .submit-row .submit_container input[name="_addanother"]:hover, body.change-form #content_container #admin_content .submit-row .submit_container input[name="_addanother"]:active {
   color: #006fbb;
   background: url(images/icons/icon_add_blue.png) center left no-repeat transparent;
 }
-/* line 1305, ../sass/screen.sass */
+/* line 1303, ../sass/screen.sass */
 body.change-form #content_container #admin_content .submit-row .submit_container input[name="_continue"] {
   height: 57px;
   line-height: 57px;
@@ -2349,30 +2347,30 @@ body.change-form #content_container #admin_content .submit-row .submit_container
   position: relative;
   background: url(images/icons/icon_edit.png) center left no-repeat transparent;
 }
-/* line 1308, ../sass/screen.sass */
+/* line 1306, ../sass/screen.sass */
 body.change-form #content_container #admin_content .submit-row .submit_container input[name="_continue"]:hover, body.change-form #content_container #admin_content .submit-row .submit_container input[name="_continue"]:active {
   color: #006fbb;
   background: url(images/icons/icon_edit_blue.png) center left no-repeat transparent;
 }
-/* line 1311, ../sass/screen.sass */
+/* line 1309, ../sass/screen.sass */
 body.change-form #content_container #admin_content .submit-row .submit_container p.deletelink-box {
   margin: 0 0 0 0;
 }
-/* line 1313, ../sass/screen.sass */
+/* line 1311, ../sass/screen.sass */
 body.change-form #content_container #admin_content .submit-row .submit_container p.deletelink-box a.deletelink {
   padding: 0 0 0 16px;
 }
-/* line 1315, ../sass/screen.sass */
+/* line 1313, ../sass/screen.sass */
 body.change-form #content_container #admin_content .form_submit_container {
   width: 960px;
   margin: 0 auto;
 }
-/* line 1318, ../sass/screen.sass */
+/* line 1316, ../sass/screen.sass */
 body.change-form #content_container #admin_content .form_submit_container h3.change_password_help {
   margin: 20px 0;
 }
 
-/* line 1325, ../sass/screen.sass */
+/* line 1323, ../sass/screen.sass */
 .button.default, input[type="submit"].default {
   width: 200px;
   color: white;
@@ -2403,17 +2401,17 @@ body.change-form #content_container #admin_content .form_submit_container h3.cha
   height: 14px;
   width: 14px;
 }
-/* line 1329, ../sass/screen.sass */
+/* line 1327, ../sass/screen.sass */
 .button.default.change_password, input[type="submit"].default.change_password {
   width: 250px;
 }
-/* line 1331, ../sass/screen.sass */
+/* line 1329, ../sass/screen.sass */
 .button.default:hover, input[type="submit"].default:hover {
   color: white;
   background: #024f84;
 }
 
-/* line 1339, ../sass/screen.sass */
+/* line 1337, ../sass/screen.sass */
 fieldset.module, div.inline-group {
   border: none !important;
   margin: 5px 0;
@@ -2429,7 +2427,7 @@ fieldset.module:after, div.inline-group:after {
   overflow: hidden;
   visibility: hidden;
 }
-/* line 1344, ../sass/screen.sass */
+/* line 1342, ../sass/screen.sass */
 fieldset.module h2, div.inline-group h2 {
   font-size: 23px;
   color: #f9910c;
@@ -2437,22 +2435,22 @@ fieldset.module h2, div.inline-group h2 {
   border-top: 2px solid #cdcdcd;
   padding: 5px 0 5px 10px;
 }
-/* line 1350, ../sass/screen.sass */
+/* line 1348, ../sass/screen.sass */
 fieldset.module h2 a.collapse-toggle, div.inline-group h2 a.collapse-toggle {
   height: 16px;
   width: 16px;
   text-indent: -9999px;
   display: inline-block !important;
 }
-/* line 1355, ../sass/screen.sass */
+/* line 1353, ../sass/screen.sass */
 fieldset.module.collapse a.collapse-toggle, div.inline-group.collapse a.collapse-toggle {
   background: url(images/icon_show_hide.png) 0 -16px no-repeat;
 }
-/* line 1357, ../sass/screen.sass */
+/* line 1355, ../sass/screen.sass */
 fieldset.module.collapsed a.collapse-toggle, div.inline-group.collapsed a.collapse-toggle {
   background: url(images/icon_show_hide.png) 0 0 no-repeat;
 }
-/* line 1363, ../sass/screen.sass */
+/* line 1361, ../sass/screen.sass */
 fieldset.module div.form-row, div.inline-group div.form-row {
   padding: 5px 25px 15px 25px;
   margin: 10px 0;
@@ -2469,15 +2467,15 @@ fieldset.module div.form-row:after, div.inline-group div.form-row:after {
   overflow: hidden;
   visibility: hidden;
 }
-/* line 1369, ../sass/screen.sass */
+/* line 1367, ../sass/screen.sass */
 fieldset.module div.form-row:first-child, div.inline-group div.form-row:first-child {
   margin-top: 20px;
 }
-/* line 1371, ../sass/screen.sass */
+/* line 1369, ../sass/screen.sass */
 fieldset.module div.form-row:last-child, div.inline-group div.form-row:last-child {
   border-bottom: none;
 }
-/* line 1377, ../sass/screen.sass */
+/* line 1375, ../sass/screen.sass */
 fieldset.module div.form-row label, div.inline-group div.form-row label {
   font-size: 14px;
   padding: 0;
@@ -2487,7 +2485,7 @@ fieldset.module div.form-row label, div.inline-group div.form-row label {
   color: #006fbb !important;
   word-break: break-all;
 }
-/* line 1380, ../sass/screen.sass */
+/* line 1378, ../sass/screen.sass */
 fieldset.module div.form-row div.field_container, div.inline-group div.form-row div.field_container {
   float: left;
   *zoom: 1;
@@ -2501,24 +2499,24 @@ fieldset.module div.form-row div.field_container:after, div.inline-group div.for
   overflow: hidden;
   visibility: hidden;
 }
-/* line 1383, ../sass/screen.sass */
+/* line 1381, ../sass/screen.sass */
 fieldset.module div.form-row div.field_container:first-child, div.inline-group div.form-row div.field_container:first-child {
   min-width: 280px;
 }
-/* line 1389, ../sass/screen.sass */
+/* line 1387, ../sass/screen.sass */
 fieldset.module div.form-row div.field_container a.related_link, div.inline-group div.form-row div.field_container a.related_link {
   font-size: 14px;
   color: #747474;
 }
-/* line 1392, ../sass/screen.sass */
+/* line 1390, ../sass/screen.sass */
 fieldset.module div.form-row div.field_container a.related_link:hover, div.inline-group div.form-row div.field_container a.related_link:hover {
   color: #f9910c;
 }
-/* line 1394, ../sass/screen.sass */
+/* line 1392, ../sass/screen.sass */
 fieldset.module div.form-row div.field_container input.vForeignKeyRawIdAdminField, div.inline-group div.form-row div.field_container input.vForeignKeyRawIdAdminField {
   display: none;
 }
-/* line 1396, ../sass/screen.sass */
+/* line 1394, ../sass/screen.sass */
 fieldset.module div.form-row div.field_container a.related-lookup, div.inline-group div.form-row div.field_container a.related-lookup {
   width: 200px;
   color: white;
@@ -2559,23 +2557,23 @@ fieldset.module div.form-row div.field_container a.related-lookup:after, div.inl
   height: 14px;
   width: 14px;
 }
-/* line 1410, ../sass/screen.sass */
+/* line 1408, ../sass/screen.sass */
 fieldset.module div.form-row div.field_container a.related-lookup:hover, div.inline-group div.form-row div.field_container a.related-lookup:hover {
   background: #024f84;
 }
-/* line 1412, ../sass/screen.sass */
+/* line 1410, ../sass/screen.sass */
 fieldset.module div.form-row div.field_container a.related-lookup img, div.inline-group div.form-row div.field_container a.related-lookup img {
   display: none;
 }
-/* line 1419, ../sass/screen.sass */
+/* line 1417, ../sass/screen.sass */
 fieldset.module div.form-row div.field_container.hidden a.imageupload-thumbcontainer, div.inline-group div.form-row div.field_container.hidden a.imageupload-thumbcontainer {
   display: none;
 }
-/* line 1421, ../sass/screen.sass */
+/* line 1419, ../sass/screen.sass */
 fieldset.module div.form-row div.field_container.hidden img.imageupload-thumbnail-hidden, div.inline-group div.form-row div.field_container.hidden img.imageupload-thumbnail-hidden {
   display: inline-block;
 }
-/* line 1424, ../sass/screen.sass */
+/* line 1422, ../sass/screen.sass */
 fieldset.module div.form-row div.field_container p, fieldset.module div.form-row div.field_container ul, div.inline-group div.form-row div.field_container p, div.inline-group div.form-row div.field_container ul {
   padding: 0 !important;
   margin: 0 !important;
@@ -2583,7 +2581,7 @@ fieldset.module div.form-row div.field_container p, fieldset.module div.form-row
   font-size: 14px;
   color: #747474;
 }
-/* line 1430, ../sass/screen.sass */
+/* line 1428, ../sass/screen.sass */
 fieldset.module div.form-row div.field_container input, div.inline-group div.form-row div.field_container input {
   height: 24px;
   background: #f6f6f6;
@@ -2596,11 +2594,11 @@ fieldset.module div.form-row div.field_container input, div.inline-group div.for
   font-size: 14px;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
-/* line 1432, ../sass/screen.sass */
+/* line 1430, ../sass/screen.sass */
 fieldset.module div.form-row div.field_container input.vIntegerField, div.inline-group div.form-row div.field_container input.vIntegerField {
   width: 50px;
 }
-/* line 1434, ../sass/screen.sass */
+/* line 1432, ../sass/screen.sass */
 fieldset.module div.form-row div.field_container textarea, div.inline-group div.form-row div.field_container textarea {
   background: #f6f6f6;
   border: 1px solid #cdcdcd;
@@ -2615,16 +2613,16 @@ fieldset.module div.form-row div.field_container textarea, div.inline-group div.
   height: 100px;
   resize: vertical;
 }
-/* line 1436, ../sass/screen.sass */
+/* line 1434, ../sass/screen.sass */
 fieldset.module div.form-row div.field_container input[type="checkbox"], div.inline-group div.form-row div.field_container input[type="checkbox"] {
   margin-right: 10px;
 }
-/* line 1438, ../sass/screen.sass */
+/* line 1436, ../sass/screen.sass */
 fieldset.module div.form-row div.field_container input[type="file"], div.inline-group div.form-row div.field_container input[type="file"] {
   height: 20px;
   padding: 5px;
 }
-/* line 1444, ../sass/screen.sass */
+/* line 1442, ../sass/screen.sass */
 fieldset.module div.form-row div.field_container a.imageupload-thumbcontainer, div.inline-group div.form-row div.field_container a.imageupload-thumbcontainer {
   float: left;
   width: 150px;
@@ -2641,21 +2639,21 @@ fieldset.module div.form-row div.field_container a.imageupload-thumbcontainer:af
   overflow: hidden;
   visibility: hidden;
 }
-/* line 1450, ../sass/screen.sass */
+/* line 1448, ../sass/screen.sass */
 fieldset.module div.form-row div.field_container img.imageupload-thumbnail, fieldset.module div.form-row div.field_container img.imageupload-thumbnail-hidden, div.inline-group div.form-row div.field_container img.imageupload-thumbnail, div.inline-group div.form-row div.field_container img.imageupload-thumbnail-hidden {
   max-width: 150px;
   margin: 0 15px 10px 0;
   float: left;
 }
-/* line 1454, ../sass/screen.sass */
+/* line 1452, ../sass/screen.sass */
 fieldset.module div.form-row div.field_container img.imageupload-thumbnail-hidden, div.inline-group div.form-row div.field_container img.imageupload-thumbnail-hidden {
   display: none;
 }
-/* line 1456, ../sass/screen.sass */
+/* line 1454, ../sass/screen.sass */
 fieldset.module div.form-row div.field_container div.imageupload-widget, div.inline-group div.form-row div.field_container div.imageupload-widget {
   float: left;
 }
-/* line 1458, ../sass/screen.sass */
+/* line 1456, ../sass/screen.sass */
 fieldset.module div.form-row div.field_container div.imageupload-widget a.file_upload_button, div.inline-group div.form-row div.field_container div.imageupload-widget a.file_upload_button {
   width: 200px;
   color: white;
@@ -2695,11 +2693,11 @@ fieldset.module div.form-row div.field_container div.imageupload-widget a.file_u
   height: 16px;
   width: 16px;
 }
-/* line 1471, ../sass/screen.sass */
+/* line 1469, ../sass/screen.sass */
 fieldset.module div.form-row div.field_container div.imageupload-widget a.file_upload_button:hover, div.inline-group div.form-row div.field_container div.imageupload-widget a.file_upload_button:hover {
   background: #024f84;
 }
-/* line 1473, ../sass/screen.sass */
+/* line 1471, ../sass/screen.sass */
 fieldset.module div.form-row div.field_container div.imageupload-widget input[type="file"], div.inline-group div.form-row div.field_container div.imageupload-widget input[type="file"] {
   background: transparent;
   border: none;
@@ -2709,7 +2707,7 @@ fieldset.module div.form-row div.field_container div.imageupload-widget input[ty
   font-size: 12px;
   cursor: pointer;
 }
-/* line 1481, ../sass/screen.sass */
+/* line 1479, ../sass/screen.sass */
 fieldset.module div.form-row div.field_container div.imageupload-widget span.clearable-file-input, div.inline-group div.form-row div.field_container div.imageupload-widget span.clearable-file-input {
   display: block;
   *zoom: 1;
@@ -2723,13 +2721,13 @@ fieldset.module div.form-row div.field_container div.imageupload-widget span.cle
   overflow: hidden;
   visibility: hidden;
 }
-/* line 1484, ../sass/screen.sass */
+/* line 1482, ../sass/screen.sass */
 fieldset.module div.form-row div.field_container div.imageupload-widget span.clearable-file-input input[type="checkbox"], div.inline-group div.form-row div.field_container div.imageupload-widget span.clearable-file-input input[type="checkbox"] {
   cursor: pointer;
   margin-right: 5px;
   display: none;
 }
-/* line 1488, ../sass/screen.sass */
+/* line 1486, ../sass/screen.sass */
 fieldset.module div.form-row div.field_container div.imageupload-widget span.clearable-file-input label, div.inline-group div.form-row div.field_container div.imageupload-widget span.clearable-file-input label {
   cursor: pointer;
   margin-top: 2px;
@@ -2748,11 +2746,11 @@ fieldset.module div.form-row div.field_container div.imageupload-widget span.cle
   height: 14px;
   width: 14px;
 }
-/* line 1496, ../sass/screen.sass */
+/* line 1494, ../sass/screen.sass */
 fieldset.module div.form-row div.field_container div.imageupload-widget span.clearable-file-input label span, div.inline-group div.form-row div.field_container div.imageupload-widget span.clearable-file-input label span {
   display: none;
 }
-/* line 1498, ../sass/screen.sass */
+/* line 1496, ../sass/screen.sass */
 fieldset.module div.form-row div.field_container div.imageupload-widget span.clearable-file-input label:hover, div.inline-group div.form-row div.field_container div.imageupload-widget span.clearable-file-input label:hover {
   color: #f9910c !important;
 }
@@ -2766,7 +2764,7 @@ fieldset.module div.form-row div.field_container div.imageupload-widget span.cle
   height: 14px;
   width: 14px;
 }
-/* line 1501, ../sass/screen.sass */
+/* line 1499, ../sass/screen.sass */
 fieldset.module div.form-row div.field_container div.imageupload-widget span.clearable-file-input label.hidden, div.inline-group div.form-row div.field_container div.imageupload-widget span.clearable-file-input label.hidden {
   color: #f9910c !important;
 }
@@ -2780,18 +2778,18 @@ fieldset.module div.form-row div.field_container div.imageupload-widget span.cle
   height: 15px;
   width: 13px;
 }
-/* line 1504, ../sass/screen.sass */
+/* line 1502, ../sass/screen.sass */
 fieldset.module div.form-row div.field_container div.imageupload-widget span.clearable-file-input label.hidden span, div.inline-group div.form-row div.field_container div.imageupload-widget span.clearable-file-input label.hidden span {
   display: inline-block;
 }
-/* line 1511, ../sass/screen.sass */
+/* line 1509, ../sass/screen.sass */
 fieldset.module div.form-row div.field_container p.help, fieldset.module div.form-row div.field_container .help, div.inline-group div.form-row div.field_container p.help, div.inline-group div.form-row div.field_container .help {
   color: #999999;
   font-style: italic;
   font-size: 12px !important;
   margin-bottom: 10px !important;
 }
-/* line 1516, ../sass/screen.sass */
+/* line 1514, ../sass/screen.sass */
 fieldset.module div.form-row div.field_container p.help span, fieldset.module div.form-row div.field_container .help span, div.inline-group div.form-row div.field_container p.help span, div.inline-group div.form-row div.field_container .help span {
   background-color: #f6f6f6;
   padding: 5px 10px 5px 28px !important;
@@ -2807,7 +2805,7 @@ fieldset.module div.form-row div.field_container p.help span:after, fieldset.mod
   height: 14px;
   width: 14px;
 }
-/* line 1521, ../sass/screen.sass */
+/* line 1519, ../sass/screen.sass */
 fieldset.module div.form-row div.field_container p.help span:before, fieldset.module div.form-row div.field_container .help span:before, div.inline-group div.form-row div.field_container p.help span:before, div.inline-group div.form-row div.field_container .help span:before {
   content: "";
   position: absolute;
@@ -2819,11 +2817,11 @@ fieldset.module div.form-row div.field_container p.help span:before, fieldset.mo
   border-right: 12px solid #f6f6f6;
   border-bottom: 12px solid transparent;
 }
-/* line 1535, ../sass/screen.sass */
+/* line 1533, ../sass/screen.sass */
 fieldset.module div.form-row div.field_container div.chzn-container, div.inline-group div.form-row div.field_container div.chzn-container {
   left: 0;
 }
-/* line 1537, ../sass/screen.sass */
+/* line 1535, ../sass/screen.sass */
 fieldset.module div.form-row div.field_container div.chzn-container ul.chzn-choices, div.inline-group div.form-row div.field_container div.chzn-container ul.chzn-choices {
   height: 24px;
   background: #f6f6f6;
@@ -2836,7 +2834,7 @@ fieldset.module div.form-row div.field_container div.chzn-container ul.chzn-choi
   font-size: 14px;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
-/* line 1539, ../sass/screen.sass */
+/* line 1537, ../sass/screen.sass */
 fieldset.module div.form-row div.field_container div.chzn-container ul.chzn-choices li.search-choice, div.inline-group div.form-row div.field_container div.chzn-container ul.chzn-choices li.search-choice {
   background: white;
   border-radius: none !important;
@@ -2846,36 +2844,36 @@ fieldset.module div.form-row div.field_container div.chzn-container ul.chzn-choi
   padding: 4px 19px 4px 7px;
   border: 1px solid #cdcdcd;
 }
-/* line 1547, ../sass/screen.sass */
+/* line 1545, ../sass/screen.sass */
 fieldset.module div.form-row div.field_container div.chzn-container ul.chzn-choices li.search-field input, div.inline-group div.form-row div.field_container div.chzn-container ul.chzn-choices li.search-field input {
   height: 18px;
 }
-/* line 1549, ../sass/screen.sass */
+/* line 1547, ../sass/screen.sass */
 fieldset.module div.form-row div.field_container div.chzn-container div.chzn-drop, div.inline-group div.form-row div.field_container div.chzn-container div.chzn-drop {
   width: 200px !important;
   margin: 0 !important;
 }
-/* line 1552, ../sass/screen.sass */
+/* line 1550, ../sass/screen.sass */
 fieldset.module div.form-row div.field_container div.chzn-container div.chzn-drop ul.chzn-results li, div.inline-group div.form-row div.field_container div.chzn-container div.chzn-drop ul.chzn-results li {
   line-height: 14px !important;
 }
-/* line 1558, ../sass/screen.sass */
+/* line 1556, ../sass/screen.sass */
 fieldset.module div.form-row div.field_container span.cke_skin_kama, div.inline-group div.form-row div.field_container span.cke_skin_kama {
   margin-left: 0 !important;
 }
-/* line 1564, ../sass/screen.sass */
+/* line 1562, ../sass/screen.sass */
 fieldset.module div.form-row div.checkbox_container, div.inline-group div.form-row div.checkbox_container {
   margin-left: 140px;
 }
-/* line 1566, ../sass/screen.sass */
+/* line 1564, ../sass/screen.sass */
 fieldset.module div.form-row div.checkbox_container input[type="checkbox"], div.inline-group div.form-row div.checkbox_container input[type="checkbox"] {
   margin-right: 10px;
 }
-/* line 1568, ../sass/screen.sass */
+/* line 1566, ../sass/screen.sass */
 fieldset.module div.form-row div.checkbox_container label, div.inline-group div.form-row div.checkbox_container label {
   color: #747474 !important;
 }
-/* line 1574, ../sass/screen.sass */
+/* line 1572, ../sass/screen.sass */
 fieldset.module div.inline-related, div.inline-group div.inline-related {
   width: 100%;
   *zoom: 1;
@@ -2889,7 +2887,7 @@ fieldset.module div.inline-related:after, div.inline-group div.inline-related:af
   overflow: hidden;
   visibility: hidden;
 }
-/* line 1577, ../sass/screen.sass */
+/* line 1575, ../sass/screen.sass */
 fieldset.module div.inline-related h3, div.inline-group div.inline-related h3 {
   background: #f6f6f6;
   height: 44px;
@@ -2900,18 +2898,18 @@ fieldset.module div.inline-related h3, div.inline-group div.inline-related h3 {
   border-top: 2px solid white;
   color: #afafaf;
 }
-/* line 1586, ../sass/screen.sass */
+/* line 1584, ../sass/screen.sass */
 fieldset.module div.inline-related h3.tobe_removed, div.inline-group div.inline-related h3.tobe_removed {
   background: #f9910c;
   color: white;
   line-height: 44px;
   text-decoration: line-through;
 }
-/* line 1591, ../sass/screen.sass */
+/* line 1589, ../sass/screen.sass */
 fieldset.module div.inline-related h3.tobe_removed span.toggleswitch, div.inline-group div.inline-related h3.tobe_removed span.toggleswitch {
   display: none;
 }
-/* line 1593, ../sass/screen.sass */
+/* line 1591, ../sass/screen.sass */
 fieldset.module div.inline-related h3 span.toggleswitch, div.inline-group div.inline-related h3 span.toggleswitch {
   margin: 15px 10px 0 0;
   height: 16px;
@@ -2921,19 +2919,19 @@ fieldset.module div.inline-related h3 span.toggleswitch, div.inline-group div.in
   background: url(images/icon_show_hide.png) 0 -16px no-repeat;
   cursor: pointer;
 }
-/* line 1601, ../sass/screen.sass */
+/* line 1599, ../sass/screen.sass */
 fieldset.module div.inline-related h3 span.toggleswitch.hidden, div.inline-group div.inline-related h3 span.toggleswitch.hidden {
   background-position: 0 0;
 }
-/* line 1603, ../sass/screen.sass */
+/* line 1601, ../sass/screen.sass */
 fieldset.module div.inline-related h3 span.toggleswitch.tobe_removed, div.inline-group div.inline-related h3 span.toggleswitch.tobe_removed {
   display: none;
 }
-/* line 1606, ../sass/screen.sass */
+/* line 1604, ../sass/screen.sass */
 fieldset.module div.inline-related h3 span.delete input[type="checkbox"], div.inline-group div.inline-related h3 span.delete input[type="checkbox"] {
   display: none;
 }
-/* line 1608, ../sass/screen.sass */
+/* line 1606, ../sass/screen.sass */
 fieldset.module div.inline-related h3 span.delete label, div.inline-group div.inline-related h3 span.delete label {
   float: right;
   font-size: 14px !important;
@@ -2944,7 +2942,7 @@ fieldset.module div.inline-related h3 span.delete label, div.inline-group div.in
   cursor: pointer;
   position: relative;
 }
-/* line 1617, ../sass/screen.sass */
+/* line 1615, ../sass/screen.sass */
 fieldset.module div.inline-related h3 span.delete label.stackedinline_delete, div.inline-group div.inline-related h3 span.delete label.stackedinline_delete {
   color: #747474;
 }
@@ -2958,7 +2956,7 @@ fieldset.module div.inline-related h3 span.delete label.stackedinline_delete:aft
   height: 14px;
   width: 14px;
 }
-/* line 1620, ../sass/screen.sass */
+/* line 1618, ../sass/screen.sass */
 fieldset.module div.inline-related h3 span.delete label.stackedinline_delete:hover, div.inline-group div.inline-related h3 span.delete label.stackedinline_delete:hover {
   color: #f9910c;
 }
@@ -2972,7 +2970,7 @@ fieldset.module div.inline-related h3 span.delete label.stackedinline_delete:hov
   height: 14px;
   width: 14px;
 }
-/* line 1623, ../sass/screen.sass */
+/* line 1621, ../sass/screen.sass */
 fieldset.module div.inline-related h3 span.delete label.undo_stackedinline_delete, div.inline-group div.inline-related h3 span.delete label.undo_stackedinline_delete {
   color: white;
   margin: 0 10px 0 0;
@@ -2987,7 +2985,7 @@ fieldset.module div.inline-related h3 span.delete label.undo_stackedinline_delet
   height: 15px;
   width: 13px;
 }
-/* line 1627, ../sass/screen.sass */
+/* line 1625, ../sass/screen.sass */
 fieldset.module div.inline-related h3 span.delete label.undo_stackedinline_delete:hover, div.inline-group div.inline-related h3 span.delete label.undo_stackedinline_delete:hover {
   color: white;
 }
@@ -3001,11 +2999,11 @@ fieldset.module div.inline-related h3 span.delete label.undo_stackedinline_delet
   height: 15px;
   width: 13px;
 }
-/* line 1630, ../sass/screen.sass */
+/* line 1628, ../sass/screen.sass */
 fieldset.module div.inline-related h3 span.delete label.hidden, div.inline-group div.inline-related h3 span.delete label.hidden {
   display: none;
 }
-/* line 1633, ../sass/screen.sass */
+/* line 1631, ../sass/screen.sass */
 fieldset.module div.inline-related h3 a.inline-deletelink, div.inline-group div.inline-related h3 a.inline-deletelink {
   text-indent: 0;
   padding: 0 0 0 20px;
@@ -3036,7 +3034,7 @@ fieldset.module div.inline-related h3 a.inline-deletelink:hover:after, div.inlin
   height: 14px;
   width: 14px;
 }
-/* line 1649, ../sass/screen.sass */
+/* line 1647, ../sass/screen.sass */
 fieldset.module div.add-row, div.inline-group div.add-row {
   border-bottom: none;
   border-top: 1px solid #efefef;
@@ -3054,7 +3052,7 @@ fieldset.module div.add-row:after, div.inline-group div.add-row:after {
   overflow: hidden;
   visibility: hidden;
 }
-/* line 1656, ../sass/screen.sass */
+/* line 1654, ../sass/screen.sass */
 fieldset.module div.add-row a, div.inline-group div.add-row a {
   height: 40px;
   line-height: 40px;
@@ -3081,22 +3079,22 @@ fieldset.module div.add-row a:after, div.inline-group div.add-row a:after {
   height: 14px;
   width: 14px;
 }
-/* line 1661, ../sass/screen.sass */
+/* line 1659, ../sass/screen.sass */
 fieldset.module div.add-row a:hover, div.inline-group div.add-row a:hover {
   background-color: #006fbb;
   color: white;
 }
-/* line 1669, ../sass/screen.sass */
+/* line 1667, ../sass/screen.sass */
 fieldset.module div.tabular table, div.inline-group div.tabular table {
   margin: 20px 0 40px 170px;
   width: 790px !important;
   border: none;
 }
-/* line 1673, ../sass/screen.sass */
+/* line 1671, ../sass/screen.sass */
 fieldset.module div.tabular table thead, div.inline-group div.tabular table thead {
   border: none;
 }
-/* line 1675, ../sass/screen.sass */
+/* line 1673, ../sass/screen.sass */
 fieldset.module div.tabular table thead th, div.inline-group div.tabular table thead th {
   padding: 3px 25px;
   border: none;
@@ -3109,15 +3107,15 @@ fieldset.module div.tabular table thead th, div.inline-group div.tabular table t
   height: 40px;
   line-height: 40px;
 }
-/* line 1687, ../sass/screen.sass */
+/* line 1685, ../sass/screen.sass */
 fieldset.module div.tabular table tbody tr.has_original td, div.inline-group div.tabular table tbody tr.has_original td {
   padding-top: 20px !important;
 }
-/* line 1689, ../sass/screen.sass */
+/* line 1687, ../sass/screen.sass */
 fieldset.module div.tabular table tbody td.original, div.inline-group div.tabular table tbody td.original {
   position: relative;
 }
-/* line 1691, ../sass/screen.sass */
+/* line 1689, ../sass/screen.sass */
 fieldset.module div.tabular table tbody td.original p, div.inline-group div.tabular table tbody td.original p {
   top: -10px;
   left: 20px;
@@ -3125,19 +3123,19 @@ fieldset.module div.tabular table tbody td.original p, div.inline-group div.tabu
   overflow: visible;
   width: 300px;
 }
-/* line 1697, ../sass/screen.sass */
+/* line 1695, ../sass/screen.sass */
 fieldset.module div.tabular table tbody tr, div.inline-group div.tabular table tbody tr {
   border-bottom: 1px solid #efefef;
 }
-/* line 1699, ../sass/screen.sass */
+/* line 1697, ../sass/screen.sass */
 fieldset.module div.tabular table tbody tr.row2, div.inline-group div.tabular table tbody tr.row2 {
   background: transparent;
 }
-/* line 1701, ../sass/screen.sass */
+/* line 1699, ../sass/screen.sass */
 fieldset.module div.tabular table tbody tr:last-child, div.inline-group div.tabular table tbody tr:last-child {
   border-bottom: none;
 }
-/* line 1703, ../sass/screen.sass */
+/* line 1701, ../sass/screen.sass */
 fieldset.module div.tabular table tbody tr td, div.inline-group div.tabular table tbody tr td {
   padding: 15px 25px 3px;
   font-size: 14px;
@@ -3146,7 +3144,7 @@ fieldset.module div.tabular table tbody tr td, div.inline-group div.tabular tabl
   height: 40px;
   line-height: 40px;
 }
-/* line 1710, ../sass/screen.sass */
+/* line 1708, ../sass/screen.sass */
 fieldset.module div.tabular table tbody tr td input, div.inline-group div.tabular table tbody tr td input {
   height: 24px;
   background: #f6f6f6;
@@ -3160,7 +3158,7 @@ fieldset.module div.tabular table tbody tr td input, div.inline-group div.tabula
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   width: auto;
 }
-/* line 1713, ../sass/screen.sass */
+/* line 1711, ../sass/screen.sass */
 fieldset.module div.tabular table tbody tr td textarea, div.inline-group div.tabular table tbody tr td textarea {
   background: #f6f6f6;
   border: 1px solid #cdcdcd;
@@ -3176,7 +3174,7 @@ fieldset.module div.tabular table tbody tr td textarea, div.inline-group div.tab
   resize: vertical;
   max-width: 344px;
 }
-/* line 1716, ../sass/screen.sass */
+/* line 1714, ../sass/screen.sass */
 fieldset.module div.tabular table tbody tr td button, div.inline-group div.tabular table tbody tr td button {
   width: 200px;
   color: white;
@@ -3196,7 +3194,7 @@ fieldset.module div.tabular table tbody tr td button, div.inline-group div.tabul
   background-color: #006fbb;
   cursor: pointer;
 }
-/* line 1722, ../sass/screen.sass */
+/* line 1720, ../sass/screen.sass */
 fieldset.module div.tabular table tbody tr td.link button, div.inline-group div.tabular table tbody tr td.link button {
   font-weight: bold;
   color: #747474;
@@ -3212,20 +3210,20 @@ fieldset.module div.tabular table tbody tr td.link button:after, div.inline-grou
   height: 14px;
   width: 14px;
 }
-/* line 1732, ../sass/screen.sass */
+/* line 1730, ../sass/screen.sass */
 fieldset.module div.tabular table tbody tr td.field-organization a.related_link, div.inline-group div.tabular table tbody tr td.field-organization a.related_link {
   font-size: 14px;
   color: #747474;
 }
-/* line 1735, ../sass/screen.sass */
+/* line 1733, ../sass/screen.sass */
 fieldset.module div.tabular table tbody tr td.field-organization a.related_link:hover, div.inline-group div.tabular table tbody tr td.field-organization a.related_link:hover {
   color: #f9910c;
 }
-/* line 1737, ../sass/screen.sass */
+/* line 1735, ../sass/screen.sass */
 fieldset.module div.tabular table tbody tr td.field-organization input.vForeignKeyRawIdAdminField, div.inline-group div.tabular table tbody tr td.field-organization input.vForeignKeyRawIdAdminField {
   display: none;
 }
-/* line 1739, ../sass/screen.sass */
+/* line 1737, ../sass/screen.sass */
 fieldset.module div.tabular table tbody tr td.field-organization a.related-lookup, div.inline-group div.tabular table tbody tr td.field-organization a.related-lookup {
   width: 200px;
   color: white;
@@ -3266,20 +3264,20 @@ fieldset.module div.tabular table tbody tr td.field-organization a.related-looku
   height: 14px;
   width: 14px;
 }
-/* line 1753, ../sass/screen.sass */
+/* line 1751, ../sass/screen.sass */
 fieldset.module div.tabular table tbody tr td.field-organization a.related-lookup:hover, div.inline-group div.tabular table tbody tr td.field-organization a.related-lookup:hover {
   background: #024f84;
 }
-/* line 1755, ../sass/screen.sass */
+/* line 1753, ../sass/screen.sass */
 fieldset.module div.tabular table tbody tr td.field-organization a.related-lookup img, div.inline-group div.tabular table tbody tr td.field-organization a.related-lookup img {
   display: none;
 }
-/* line 1761, ../sass/screen.sass */
+/* line 1759, ../sass/screen.sass */
 fieldset.module div.tabular table tbody tr td.delete, div.inline-group div.tabular table tbody tr td.delete {
   padding: 0 10px 0 0;
   text-align: right;
 }
-/* line 1764, ../sass/screen.sass */
+/* line 1762, ../sass/screen.sass */
 fieldset.module div.tabular table tbody tr td.delete a.inline-deletelink, div.inline-group div.tabular table tbody tr td.delete a.inline-deletelink {
   text-indent: 0;
   padding: 0 0 0 20px;
@@ -3308,11 +3306,11 @@ fieldset.module div.tabular table tbody tr td.delete a.inline-deletelink:hover:a
   height: 14px;
   width: 14px;
 }
-/* line 1774, ../sass/screen.sass */
+/* line 1772, ../sass/screen.sass */
 fieldset.module div.tabular table tbody tr td.delete input[type="checkbox"], div.inline-group div.tabular table tbody tr td.delete input[type="checkbox"] {
   display: none;
 }
-/* line 1776, ../sass/screen.sass */
+/* line 1774, ../sass/screen.sass */
 fieldset.module div.tabular table tbody tr td.delete label, div.inline-group div.tabular table tbody tr td.delete label {
   cursor: pointer;
   font-weight: bold !important;
@@ -3321,7 +3319,7 @@ fieldset.module div.tabular table tbody tr td.delete label, div.inline-group div
   padding-left: 20px;
   margin-top: -4px;
 }
-/* line 1783, ../sass/screen.sass */
+/* line 1781, ../sass/screen.sass */
 fieldset.module div.tabular table tbody tr td.delete label.tabularinline_delete, div.inline-group div.tabular table tbody tr td.delete label.tabularinline_delete {
   color: #747474 !important;
 }
@@ -3335,7 +3333,7 @@ fieldset.module div.tabular table tbody tr td.delete label.tabularinline_delete:
   height: 14px;
   width: 14px;
 }
-/* line 1786, ../sass/screen.sass */
+/* line 1784, ../sass/screen.sass */
 fieldset.module div.tabular table tbody tr td.delete label.tabularinline_delete:hover, div.inline-group div.tabular table tbody tr td.delete label.tabularinline_delete:hover {
   color: #f9910c !important;
 }
@@ -3349,7 +3347,7 @@ fieldset.module div.tabular table tbody tr td.delete label.tabularinline_delete:
   height: 14px;
   width: 14px;
 }
-/* line 1789, ../sass/screen.sass */
+/* line 1787, ../sass/screen.sass */
 fieldset.module div.tabular table tbody tr td.delete label.undo_tabularinline_delete, div.inline-group div.tabular table tbody tr td.delete label.undo_tabularinline_delete {
   color: white !important;
 }
@@ -3363,7 +3361,7 @@ fieldset.module div.tabular table tbody tr td.delete label.undo_tabularinline_de
   height: 15px;
   width: 13px;
 }
-/* line 1792, ../sass/screen.sass */
+/* line 1790, ../sass/screen.sass */
 fieldset.module div.tabular table tbody tr td.delete label.undo_tabularinline_delete:hover, div.inline-group div.tabular table tbody tr td.delete label.undo_tabularinline_delete:hover {
   color: white !important;
 }
@@ -3377,19 +3375,19 @@ fieldset.module div.tabular table tbody tr td.delete label.undo_tabularinline_de
   height: 15px;
   width: 13px;
 }
-/* line 1795, ../sass/screen.sass */
+/* line 1793, ../sass/screen.sass */
 fieldset.module div.tabular table tbody tr td.delete label.hidden, div.inline-group div.tabular table tbody tr td.delete label.hidden {
   display: none;
 }
-/* line 1798, ../sass/screen.sass */
+/* line 1796, ../sass/screen.sass */
 fieldset.module div.tabular table tbody tr.tobe_removed, div.inline-group div.tabular table tbody tr.tobe_removed {
   background: #f9910c;
 }
-/* line 1800, ../sass/screen.sass */
+/* line 1798, ../sass/screen.sass */
 fieldset.module div.tabular table tbody tr.tobe_removed input, fieldset.module div.tabular table tbody tr.tobe_removed select, fieldset.module div.tabular table tbody tr.tobe_removed p, fieldset.module div.tabular table tbody tr.tobe_removed textarea, fieldset.module div.tabular table tbody tr.tobe_removed a, div.inline-group div.tabular table tbody tr.tobe_removed input, div.inline-group div.tabular table tbody tr.tobe_removed select, div.inline-group div.tabular table tbody tr.tobe_removed p, div.inline-group div.tabular table tbody tr.tobe_removed textarea, div.inline-group div.tabular table tbody tr.tobe_removed a {
   display: none;
 }
-/* line 1806, ../sass/screen.sass */
+/* line 1804, ../sass/screen.sass */
 fieldset.module div.tabular table tbody tr.add-row td, div.inline-group div.tabular table tbody tr.add-row td {
   border-top: 1px solid #efefef;
   background: white;
@@ -3406,7 +3404,7 @@ fieldset.module div.tabular table tbody tr.add-row td:after, div.inline-group di
   overflow: hidden;
   visibility: hidden;
 }
-/* line 1812, ../sass/screen.sass */
+/* line 1810, ../sass/screen.sass */
 fieldset.module div.tabular table tbody tr.add-row td a, div.inline-group div.tabular table tbody tr.add-row td a {
   height: 40px;
   line-height: 40px;
@@ -3433,12 +3431,12 @@ fieldset.module div.tabular table tbody tr.add-row td a:after, div.inline-group 
   height: 14px;
   width: 14px;
 }
-/* line 1817, ../sass/screen.sass */
+/* line 1815, ../sass/screen.sass */
 fieldset.module div.tabular table tbody tr.add-row td a:hover, div.inline-group div.tabular table tbody tr.add-row td a:hover {
   background-color: #006fbb;
   color: white;
 }
-/* line 1824, ../sass/screen.sass */
+/* line 1822, ../sass/screen.sass */
 fieldset.module div.form-row.grouped, div.inline-group div.form-row.grouped {
   margin-left: 165px !important;
   padding: 0 !important;
@@ -3453,7 +3451,7 @@ fieldset.module div.form-row.grouped:after, div.inline-group div.form-row.groupe
   overflow: hidden;
   visibility: hidden;
 }
-/* line 1828, ../sass/screen.sass */
+/* line 1826, ../sass/screen.sass */
 fieldset.module div.form-row.grouped ul, div.inline-group div.form-row.grouped ul {
   float: left;
   padding: 5px;
@@ -3471,16 +3469,16 @@ fieldset.module div.form-row.grouped ul:after, div.inline-group div.form-row.gro
   overflow: hidden;
   visibility: hidden;
 }
-/* line 1835, ../sass/screen.sass */
+/* line 1833, ../sass/screen.sass */
 fieldset.module div.form-row.grouped ul li, div.inline-group div.form-row.grouped ul li {
   float: left;
 }
-/* line 1837, ../sass/screen.sass */
+/* line 1835, ../sass/screen.sass */
 fieldset.module div.form-row.grouped ul li select, div.inline-group div.form-row.grouped ul li select {
   width: 134px;
   margin-top: 7px;
 }
-/* line 1840, ../sass/screen.sass */
+/* line 1838, ../sass/screen.sass */
 fieldset.module div.form-row.grouped ul li input, div.inline-group div.form-row.grouped ul li input {
   height: 24px;
   background: #f6f6f6;
@@ -3494,20 +3492,20 @@ fieldset.module div.form-row.grouped ul li input, div.inline-group div.form-row.
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   width: 170px;
 }
-/* line 1850, ../sass/screen.sass */
+/* line 1848, ../sass/screen.sass */
 fieldset.module div.form-row.grouped ul li.field-number, fieldset.module div.form-row.grouped ul li.field-url, div.inline-group div.form-row.grouped ul li.field-number, div.inline-group div.form-row.grouped ul li.field-url {
   margin-right: 0px;
 }
-/* line 1852, ../sass/screen.sass */
+/* line 1850, ../sass/screen.sass */
 fieldset.module div.form-row.grouped ul span.delete, div.inline-group div.form-row.grouped ul span.delete {
   margin: 5px;
   float: right;
 }
-/* line 1855, ../sass/screen.sass */
+/* line 1853, ../sass/screen.sass */
 fieldset.module div.form-row.grouped ul span.delete input, div.inline-group div.form-row.grouped ul span.delete input {
   display: none;
 }
-/* line 1857, ../sass/screen.sass */
+/* line 1855, ../sass/screen.sass */
 fieldset.module div.form-row.grouped ul span.delete label, div.inline-group div.form-row.grouped ul span.delete label {
   display: block;
   height: 14px;
@@ -3536,11 +3534,11 @@ fieldset.module div.form-row.grouped ul span.delete label:hover:after, div.inlin
   height: 14px;
   width: 14px;
 }
-/* line 1867, ../sass/screen.sass */
+/* line 1865, ../sass/screen.sass */
 fieldset.module div.form-row.grouped ul span.delete label.hidden, div.inline-group div.form-row.grouped ul span.delete label.hidden {
   display: none;
 }
-/* line 1869, ../sass/screen.sass */
+/* line 1867, ../sass/screen.sass */
 fieldset.module div.form-row.grouped ul span.delete.tobe_removed label, div.inline-group div.form-row.grouped ul span.delete.tobe_removed label {
   color: #f9910c !important;
 }
@@ -3554,19 +3552,19 @@ fieldset.module div.form-row.grouped ul span.delete.tobe_removed label:after, di
   height: 15px;
   width: 13px;
 }
-/* line 1873, ../sass/screen.sass */
+/* line 1871, ../sass/screen.sass */
 fieldset.module div.form-row.grouped ul.tobe_removed, div.inline-group div.form-row.grouped ul.tobe_removed {
   background: #f9910c;
 }
-/* line 1875, ../sass/screen.sass */
+/* line 1873, ../sass/screen.sass */
 fieldset.module div.form-row.grouped ul.tobe_removed input, fieldset.module div.form-row.grouped ul.tobe_removed select, fieldset.module div.form-row.grouped ul.tobe_removed p, fieldset.module div.form-row.grouped ul.tobe_removed strong, fieldset.module div.form-row.grouped ul.tobe_removed li a.related-lookup, div.inline-group div.form-row.grouped ul.tobe_removed input, div.inline-group div.form-row.grouped ul.tobe_removed select, div.inline-group div.form-row.grouped ul.tobe_removed p, div.inline-group div.form-row.grouped ul.tobe_removed strong, div.inline-group div.form-row.grouped ul.tobe_removed li a.related-lookup {
   display: none !important;
 }
-/* line 1877, ../sass/screen.sass */
+/* line 1875, ../sass/screen.sass */
 fieldset.module div.form-row.grouped ul.tobe_removed span.delete, div.inline-group div.form-row.grouped ul.tobe_removed span.delete {
   float: right !important;
 }
-/* line 1881, ../sass/screen.sass */
+/* line 1879, ../sass/screen.sass */
 fieldset.module div.form-row.grouped ul a.inline-deletelink, div.inline-group div.form-row.grouped ul a.inline-deletelink {
   padding: 0 0 0 18px;
   text-indent: -9999px;
@@ -3587,7 +3585,7 @@ fieldset.module div.form-row.grouped ul a.inline-deletelink:after, div.inline-gr
   height: 14px;
   width: 14px;
 }
-/* line 1891, ../sass/screen.sass */
+/* line 1889, ../sass/screen.sass */
 fieldset.module div.form-row.grouped ul a.inline-deletelink:hover, div.inline-group div.form-row.grouped ul a.inline-deletelink:hover {
   color: #f9910c;
 }
@@ -3601,34 +3599,34 @@ fieldset.module div.form-row.grouped ul a.inline-deletelink:hover:after, div.inl
   height: 14px;
   width: 14px;
 }
-/* line 1895, ../sass/screen.sass */
+/* line 1893, ../sass/screen.sass */
 fieldset.module div.form-row.grouped div.add-row, div.inline-group div.form-row.grouped div.add-row {
   clear: both;
 }
-/* line 1897, ../sass/screen.sass */
+/* line 1895, ../sass/screen.sass */
 fieldset.module div.form-row.grouped div.add-row .add-row, div.inline-group div.form-row.grouped div.add-row .add-row {
   border-top: none;
   border-bottom: none;
   float: left;
   min-width: 20%;
 }
-/* line 1902, ../sass/screen.sass */
+/* line 1900, ../sass/screen.sass */
 fieldset.module div.form-row.grouped div.add-row .inline-related, div.inline-group div.form-row.grouped div.add-row .inline-related {
   position: inherit;
   float: left;
   display: block;
 }
-/* line 1906, ../sass/screen.sass */
+/* line 1904, ../sass/screen.sass */
 fieldset.module div.form-row.grouped div.add-row select, div.inline-group div.form-row.grouped div.add-row select {
   height: 22px;
   margin: 3px 0;
 }
 
-/* line 1913, ../sass/screen.sass */
+/* line 1911, ../sass/screen.sass */
 table#change-history {
   width: 100%;
 }
-/* line 1916, ../sass/screen.sass */
+/* line 1914, ../sass/screen.sass */
 table#change-history thead th {
   height: 40px;
   line-height: 40px;
@@ -3638,54 +3636,54 @@ table#change-history thead th {
   border: none;
   padding: 3px 25px;
 }
-/* line 1924, ../sass/screen.sass */
+/* line 1922, ../sass/screen.sass */
 table#change-history thead th:first-child {
   width: 350px;
 }
-/* line 1927, ../sass/screen.sass */
+/* line 1925, ../sass/screen.sass */
 table#change-history tbody tr {
   border-bottom: 1px solid #cdcdcd;
 }
-/* line 1929, ../sass/screen.sass */
+/* line 1927, ../sass/screen.sass */
 table#change-history tbody tr td, table#change-history tbody tr th {
   padding: 10px 25px;
   vertical-align: top;
 }
-/* line 1932, ../sass/screen.sass */
+/* line 1930, ../sass/screen.sass */
 table#change-history tbody tr th {
   color: #006fbb;
 }
 
-/* line 1940, ../sass/screen.sass */
+/* line 1938, ../sass/screen.sass */
 p.datetime input {
   width: 75px;
   margin: 0 8px 8px 8px;
 }
-/* line 1943, ../sass/screen.sass */
+/* line 1941, ../sass/screen.sass */
 p.datetime input:first-child {
   margin-left: 11px;
 }
-/* line 1946, ../sass/screen.sass */
+/* line 1944, ../sass/screen.sass */
 p.datetime span.datetimeshortcuts a:first-child {
   font-size: 14px;
   color: #006fbb;
   margin-right: 5px;
 }
-/* line 1950, ../sass/screen.sass */
+/* line 1948, ../sass/screen.sass */
 p.datetime span.datetimeshortcuts a:first-child:hover {
   color: #f9910c;
 }
-/* line 1952, ../sass/screen.sass */
+/* line 1950, ../sass/screen.sass */
 p.datetime span.datetimeshortcuts a:last-child {
   display: inline-block;
   margin-left: 5px;
 }
-/* line 1955, ../sass/screen.sass */
+/* line 1953, ../sass/screen.sass */
 p.datetime span.datetimeshortcuts a:last-child img {
   margin-top: -3px;
 }
 
-/* line 1959, ../sass/screen.sass */
+/* line 1957, ../sass/screen.sass */
 a.add-another {
   text-indent: -9999px;
   position: relative;
@@ -3715,18 +3713,18 @@ a.add-another:hover:after {
   height: 14px;
   width: 14px;
 }
-/* line 1970, ../sass/screen.sass */
+/* line 1968, ../sass/screen.sass */
 a.add-another img {
   display: none;
 }
 
-/* line 1973, ../sass/screen.sass */
+/* line 1971, ../sass/screen.sass */
 div.clockbox, div.calendarbox {
   box-shadow: #434343 0 0 5px 0;
   border: none !important;
   margin: 22px 0 0 15px;
 }
-/* line 1977, ../sass/screen.sass */
+/* line 1975, ../sass/screen.sass */
 div.clockbox:before, div.calendarbox:before {
   content: "";
   position: absolute;
@@ -3738,7 +3736,7 @@ div.clockbox:before, div.calendarbox:before {
   border-top: 18px solid transparent;
   border-bottom: 18px solid transparent;
 }
-/* line 1987, ../sass/screen.sass */
+/* line 1985, ../sass/screen.sass */
 div.clockbox h2, div.calendarbox h2 {
   background: #006fbb;
   color: white;
@@ -3746,54 +3744,54 @@ div.clockbox h2, div.calendarbox h2 {
   font-size: 14px;
   border: none;
 }
-/* line 1993, ../sass/screen.sass */
+/* line 1991, ../sass/screen.sass */
 div.clockbox ul.timelist li, div.calendarbox ul.timelist li {
   border-bottom: 1px solid #f6f6f6;
 }
-/* line 1995, ../sass/screen.sass */
+/* line 1993, ../sass/screen.sass */
 div.clockbox ul.timelist li:last-child, div.calendarbox ul.timelist li:last-child {
   border-bottom: none;
 }
-/* line 1997, ../sass/screen.sass */
+/* line 1995, ../sass/screen.sass */
 div.clockbox ul.timelist li a, div.calendarbox ul.timelist li a {
   padding: 5px 0;
 }
-/* line 1999, ../sass/screen.sass */
+/* line 1997, ../sass/screen.sass */
 div.clockbox ul.timelist li a:hover, div.calendarbox ul.timelist li a:hover {
   background: #f9910c;
   color: white;
 }
-/* line 2002, ../sass/screen.sass */
+/* line 2000, ../sass/screen.sass */
 div.clockbox p.calendar-cancel, div.calendarbox p.calendar-cancel {
   border: none;
   font-size: 14px;
   background: #747474;
 }
-/* line 2006, ../sass/screen.sass */
+/* line 2004, ../sass/screen.sass */
 div.clockbox p.calendar-cancel a, div.calendarbox p.calendar-cancel a {
   color: white;
   padding: 5px 0;
 }
-/* line 2009, ../sass/screen.sass */
+/* line 2007, ../sass/screen.sass */
 div.clockbox p.calendar-cancel a:hover, div.calendarbox p.calendar-cancel a:hover {
   background: #f9910c;
 }
-/* line 2011, ../sass/screen.sass */
+/* line 2009, ../sass/screen.sass */
 div.clockbox table, div.calendarbox table {
   width: 100%;
 }
-/* line 2013, ../sass/screen.sass */
+/* line 2011, ../sass/screen.sass */
 div.clockbox .calendarnav-previous, div.clockbox .calendarnav-next, div.calendarbox .calendarnav-previous, div.calendarbox .calendarnav-next {
   background: #006fbb;
   height: 34px;
   line-height: 34px;
 }
-/* line 2017, ../sass/screen.sass */
+/* line 2015, ../sass/screen.sass */
 div.clockbox .calendarnav-previous:hover, div.clockbox .calendarnav-next:hover, div.calendarbox .calendarnav-previous:hover, div.calendarbox .calendarnav-next:hover {
   background: #003366;
   color: white;
 }
-/* line 2020, ../sass/screen.sass */
+/* line 2018, ../sass/screen.sass */
 div.clockbox caption, div.calendarbox caption {
   background: #006fbb;
   font-size: 14px;
@@ -3803,46 +3801,46 @@ div.clockbox caption, div.calendarbox caption {
   padding: 3px 0;
   width: 100%;
 }
-/* line 2029, ../sass/screen.sass */
+/* line 2027, ../sass/screen.sass */
 div.clockbox table td.today a, div.calendarbox table td.today a {
   background: #ed8d1f;
   color: white;
 }
-/* line 2032, ../sass/screen.sass */
+/* line 2030, ../sass/screen.sass */
 div.clockbox table td a:hover, div.calendarbox table td a:hover {
   background: #006fbb;
 }
 
-/* line 2039, ../sass/screen.sass */
+/* line 2037, ../sass/screen.sass */
 .ui-dialog fieldset {
   border-radius: 0px;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   background: white;
 }
-/* line 2043, ../sass/screen.sass */
+/* line 2041, ../sass/screen.sass */
 .ui-dialog fieldset label {
   width: 90px !important;
 }
-/* line 2045, ../sass/screen.sass */
+/* line 2043, ../sass/screen.sass */
 .ui-dialog fieldset input {
   width: 230px;
 }
-/* line 2047, ../sass/screen.sass */
+/* line 2045, ../sass/screen.sass */
 .ui-dialog fieldset div.checkbox_container {
   margin-left: 105px !important;
 }
-/* line 2049, ../sass/screen.sass */
+/* line 2047, ../sass/screen.sass */
 .ui-dialog fieldset div.checkbox_container input[type="checkbox"] {
   width: auto;
 }
-/* line 2051, ../sass/screen.sass */
+/* line 2049, ../sass/screen.sass */
 .ui-dialog fieldset div.field_container strong {
   font-size: 14px;
   color: #747474;
   font-weight: bold;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
-/* line 2056, ../sass/screen.sass */
+/* line 2054, ../sass/screen.sass */
 .ui-dialog fieldset button {
   color: white;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -3854,22 +3852,22 @@ div.clockbox table td a:hover, div.calendarbox table td a:hover {
   background-color: #006fbb;
   cursor: pointer;
 }
-/* line 2066, ../sass/screen.sass */
+/* line 2064, ../sass/screen.sass */
 .ui-dialog fieldset button:hover, .ui-dialog fieldset button:active {
   background: #024f84;
 }
-/* line 2069, ../sass/screen.sass */
+/* line 2067, ../sass/screen.sass */
 .ui-dialog fieldset div.advanced {
   background: white;
   border-top: 1px solid #cccccc;
   margin: 0;
   padding: 5px 10px 5px 18px;
 }
-/* line 2074, ../sass/screen.sass */
+/* line 2072, ../sass/screen.sass */
 .ui-dialog fieldset div.field-is_active {
   border: none;
 }
-/* line 2076, ../sass/screen.sass */
+/* line 2074, ../sass/screen.sass */
 .ui-dialog fieldset div.advanced a {
   display: inline-block;
   margin: 8px 0;
@@ -3889,7 +3887,7 @@ div.clockbox table td a:hover, div.calendarbox table td a:hover {
   height: 14px;
   width: 14px;
 }
-/* line 2085, ../sass/screen.sass */
+/* line 2083, ../sass/screen.sass */
 .ui-dialog fieldset div.advanced a:hover {
   color: #f9910c;
 }
@@ -3904,13 +3902,13 @@ div.clockbox table td a:hover, div.calendarbox table td a:hover {
   width: 14px;
 }
 
-/* line 2093, ../sass/screen.sass */
+/* line 2091, ../sass/screen.sass */
 #menuitem_set-group {
   margin: 20px 0 0 0;
   border: 1px solid #cdcdcd;
   border-top: none;
 }
-/* line 2097, ../sass/screen.sass */
+/* line 2095, ../sass/screen.sass */
 #menuitem_set-group li {
   *zoom: 1;
 }
@@ -3923,12 +3921,12 @@ div.clockbox table td a:hover, div.calendarbox table td a:hover {
   overflow: hidden;
   visibility: hidden;
 }
-/* line 2099, ../sass/screen.sass */
+/* line 2097, ../sass/screen.sass */
 #menuitem_set-group li h3 {
   margin: 0;
   padding: 0;
 }
-/* line 2102, ../sass/screen.sass */
+/* line 2100, ../sass/screen.sass */
 #menuitem_set-group li h3 > a {
   color: #cdcdcd;
   font-weight: normal;
@@ -3946,7 +3944,7 @@ div.clockbox table td a:hover, div.calendarbox table td a:hover {
   height: 12px;
   width: 14px;
 }
-/* line 2109, ../sass/screen.sass */
+/* line 2107, ../sass/screen.sass */
 #menuitem_set-group li h3 > a:hover {
   color: #f9910c;
 }
@@ -3960,20 +3958,20 @@ div.clockbox table td a:hover, div.calendarbox table td a:hover {
   height: 12px;
   width: 14px;
 }
-/* line 2112, ../sass/screen.sass */
+/* line 2110, ../sass/screen.sass */
 #menuitem_set-group li h3 span.detail a {
   color: #006fbb;
   margin-left: 10px;
 }
-/* line 2115, ../sass/screen.sass */
+/* line 2113, ../sass/screen.sass */
 #menuitem_set-group li h3 span.detail a:hover {
   color: #f9910c;
 }
-/* line 2118, ../sass/screen.sass */
+/* line 2116, ../sass/screen.sass */
 #menuitem_set-group li h3 span.delete input {
   display: none;
 }
-/* line 2120, ../sass/screen.sass */
+/* line 2118, ../sass/screen.sass */
 #menuitem_set-group li h3 span.delete label {
   background-image: none;
   padding: 0 0 0 18px;
@@ -3994,7 +3992,7 @@ div.clockbox table td a:hover, div.calendarbox table td a:hover {
   height: 14px;
   width: 14px;
 }
-/* line 2130, ../sass/screen.sass */
+/* line 2128, ../sass/screen.sass */
 #menuitem_set-group li h3 span.delete label:hover {
   color: #f9910c !important;
 }
@@ -4008,11 +4006,11 @@ div.clockbox table td a:hover, div.calendarbox table td a:hover {
   height: 14px;
   width: 14px;
 }
-/* line 2133, ../sass/screen.sass */
+/* line 2131, ../sass/screen.sass */
 #menuitem_set-group li h3 span.delete label.hidden {
   display: none;
 }
-/* line 2135, ../sass/screen.sass */
+/* line 2133, ../sass/screen.sass */
 #menuitem_set-group li h3 span.delete label.undo_stackedinline_delete {
   color: white !important;
 }
@@ -4026,43 +4024,43 @@ div.clockbox table td a:hover, div.calendarbox table td a:hover {
   height: 15px;
   width: 13px;
 }
-/* line 2138, ../sass/screen.sass */
+/* line 2136, ../sass/screen.sass */
 #menuitem_set-group li.tobe_removed {
   background: #f9910c !important;
 }
-/* line 2141, ../sass/screen.sass */
+/* line 2139, ../sass/screen.sass */
 #menuitem_set-group li.tobe_removed h3 span.inline_label {
   color: white;
   text-decoration: line-through;
 }
-/* line 2144, ../sass/screen.sass */
+/* line 2142, ../sass/screen.sass */
 #menuitem_set-group li.tobe_removed h3 > a {
   display: none;
 }
-/* line 2146, ../sass/screen.sass */
+/* line 2144, ../sass/screen.sass */
 #menuitem_set-group li.tobe_removed h3 span.detail a {
   display: none;
 }
-/* line 2151, ../sass/screen.sass */
+/* line 2149, ../sass/screen.sass */
 #menuitem_set-group li.inline-related {
   cursor: move;
 }
-/* line 2153, ../sass/screen.sass */
+/* line 2151, ../sass/screen.sass */
 #menuitem_set-group li li.inline-related {
   background: url(images/icon_nested_arrow.png) left 3px no-repeat transparent;
 }
-/* line 2155, ../sass/screen.sass */
+/* line 2153, ../sass/screen.sass */
 #menuitem_set-group li.inline-related fieldset {
   background: #f6f6f6;
   width: 100%;
   padding: 0 10px 0 10px;
   margin: 5px 0 0 -10px;
 }
-/* line 2160, ../sass/screen.sass */
+/* line 2158, ../sass/screen.sass */
 #menuitem_set-group li:nth-child(even) {
   background: #f6f6f6;
 }
-/* line 2162, ../sass/screen.sass */
+/* line 2160, ../sass/screen.sass */
 #menuitem_set-group li div {
   border: none;
   margin: 0;
@@ -4072,29 +4070,29 @@ div.clockbox table td a:hover, div.calendarbox table td a:hover {
   list-style: none;
   position: relative;
 }
-/* line 2170, ../sass/screen.sass */
+/* line 2168, ../sass/screen.sass */
 #menuitem_set-group li li div {
   border-top: 1px dashed #cdcdcd;
   background: transparent;
 }
-/* line 2174, ../sass/screen.sass */
+/* line 2172, ../sass/screen.sass */
 #menuitem_set-group li div.form-row {
   border-top: none;
   padding: 0;
   background: transparent;
 }
-/* line 2178, ../sass/screen.sass */
+/* line 2176, ../sass/screen.sass */
 #menuitem_set-group li div.object_id div {
   min-height: 29px !important;
 }
-/* line 2195, ../sass/screen.sass */
+/* line 2193, ../sass/screen.sass */
 #menuitem_set-group div.add-row {
   border: 1px solid #272727;
   padding: 10px 15px;
   margin: 0 -1px -1px -1px;
   background: #272727;
 }
-/* line 2200, ../sass/screen.sass */
+/* line 2198, ../sass/screen.sass */
 #menuitem_set-group div.add-row a {
   color: white;
   background: none;
@@ -4113,7 +4111,7 @@ div.clockbox table td a:hover, div.calendarbox table td a:hover {
   height: 14px;
   width: 14px;
 }
-/* line 2208, ../sass/screen.sass */
+/* line 2206, ../sass/screen.sass */
 #menuitem_set-group div.add-row a:hover {
   color: #f9910c;
 }
@@ -4128,13 +4126,13 @@ div.clockbox table td a:hover, div.calendarbox table td a:hover {
   width: 14px;
 }
 
-/* line 2217, ../sass/screen.sass */
+/* line 2215, ../sass/screen.sass */
 .message-container {
   width: 960px;
   margin: 0 auto;
   background: #006fbb;
 }
-/* line 2221, ../sass/screen.sass */
+/* line 2219, ../sass/screen.sass */
 .message-container p {
   font-size: 23px;
   font-weight: bold;
