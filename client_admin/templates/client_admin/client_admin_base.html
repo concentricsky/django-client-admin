@@ -235,22 +235,32 @@
                 $(this).parents("div.field_container").toggleClass("hidden");
             })
 
-            // Remove any pre-exisitng links, and add a link to the currently selected filter option to remove that filter entirely
+            // Remove any pre-existing links to remove filters
             $("div#changelist-filter ul li a.removefilter").remove();
             
+            // Grab the url and split it into an array of GET parameters
             var url = document.URL;
             baseurl = url.split("?")[0]
             getparams = url.split("?")[1].split("&");
 
+            // Read the name of each filter heading and filter out non-keywords.
             $("div#changelist-filter h3").each(function() {
                 filternamewordlist = $(this).text().split(" ");
                 cleanedfilternamewordlist = []
                 for (var i=0; i<filternamewordlist.length; i++) {
-                    if (filternamewordlist[i] != "" && filternamewordlist[i] != "By" && filternamewordlist[i] != "status" && filternamewordlist[i] != "is") {
+                    if (filternamewordlist[i] != "" &&
+                        filternamewordlist[i] != "By" &&
+                        filternamewordlist[i] != "status" &&
+                        filternamewordlist[i] != "is"
+                    ) {
                         cleanedfilternamewordlist.push(filternamewordlist[i]);
                     };
                 };
+                // The last keyword in the remaining list is most likely to be part of the GET parameter.
                 keyword = cleanedfilternamewordlist[cleanedfilternamewordlist.length-1];
+
+                // Go through the existing GET parameters, and exclude the ones that involve
+                // the filter we want to remove.
                 newgetparams = "";
                 for (var i=0; i<getparams.length; i++){
                     if (getparams[i].search(keyword) == -1) {
@@ -258,6 +268,9 @@
                     }
                 };
                 newgetparams = newgetparams.substring(0,newgetparams.length-1);
+                
+                // Create a new url with our modified list of GET parameters and anchor it to the selected li.
+                // Now, the user can opt to click it, and thus remove that filter, resetting it to "all" or "none".
                 removefilterurl = baseurl + "?" + newgetparams
                 $(this).next().find("li.selected").append('<a class="removefilter" href=' + removefilterurl + '></a>');
             });
