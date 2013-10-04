@@ -101,15 +101,6 @@
 
     <script type="text/javascript">
 
-        reset_order_fields = function(){
-            parent_item = jQuery('ul.inline-group');
-            order_fields = parent_item.find('select').filter(function() {
-                return this.id.match(/.*?-order/);
-            }).each(function(index) {
-                jQuery(this).val(index+1);
-            });
-        };
-
         jQuery(document).ready(function($){
 
             {% if has_bookmark_item %}

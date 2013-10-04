@@ -35,7 +35,7 @@ var show_advanced_search = function (){
 };
 
 var hide_advanced_search = function (){
-    // Hide the adv. search bar, show the basic one, and resize the header to look clean
+    // Hide the adv. search bar, hide the basic one, and resize the header to look clean
     $('#changelist-advanced-search').slideUp(slide_speed);
     $('#toolbar').slideDown(slide_speed);
     $('div#changelist-filter').show();
@@ -55,4 +55,13 @@ function submitFunc() {
             field.disabled='disabled';
         }
     }
-}
+};
+
+var reset_order_fields = function(){
+    parent_item = jQuery('ul.inline-group');
+    order_fields = parent_item.find('select').filter(function() {
+        return this.id.match(/.*?-order/);
+    }).each(function(index) {
+        jQuery(this).val(index+1);
+    });
+};
