@@ -235,6 +235,32 @@
                 $(this).parents("div.field_container").toggleClass("hidden");
             })
 
+            // Remove any pre-exisitng links, and add a link to the currently selected filter option to remove that filter entirely
+            $("div#changelist-filter ul li a.removefilter").remove();
+            
+            var url = document.URL;
+            baseurl = url.split("?")[0]
+            getparams = url.split("?")[1].split("&");
+
+            $("div#changelist-filter h3").each(function() {
+                filternamewordlist = $(this).text().split(" ");
+                cleanedfilternamewordlist = []
+                for (var i=0; i<filternamewordlist.length; i++) {
+                    if (filternamewordlist[i] != "" && filternamewordlist[i] != "By" && filternamewordlist[i] != "status" && filternamewordlist[i] != "is") {
+                        cleanedfilternamewordlist.push(filternamewordlist[i]);
+                    };
+                };
+                keyword = cleanedfilternamewordlist[cleanedfilternamewordlist.length-1];
+                newgetparams = "";
+                for (var i=0; i<getparams.length; i++){
+                    if (getparams[i].search(keyword) == -1) {
+                        newgetparams += getparams[i] + "&";
+                    }
+                };
+                newgetparams = newgetparams.substring(0,newgetparams.length-1);
+                removefilterurl = baseurl + "?" + newgetparams
+                $(this).next().find("li.selected").append('<a class="removefilter" href=' + removefilterurl + '></a>');
+            });
 
             $.fn.followTo = function ( pos ) {
                 var $this = this,
