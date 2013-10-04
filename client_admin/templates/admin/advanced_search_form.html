@@ -1,0 +1,42 @@
+{% load i18n admin_static %}
+{% if cl.search_fields %}
+
+
+<div id="advanced-search">
+    <form id="changelist-advanced-search" action="">
+        <div>
+
+            <ul>
+                {% for field in form %}
+                    <li>
+                        <label>{{ field.label }}:</label>
+                        {{ field|safe }}
+                        {% for error in field.errors %}
+                        <div class="error">
+                            <span>{{ error }}</span>
+                        </div>
+                        {% endfor %}
+                    </li>
+                {% endfor %}
+            </ul>
+
+            <div class="adv_search_button">
+                <input type="submit" value="{% trans 'Search' %}" onclick="submitFunc();" />
+                {% if show_result_count %}
+                    <span class="small quiet">{% blocktrans count counter=cl.result_count %}{{ counter }} result{% plural %}{{ counter }} results{% endblocktrans %} (<a href="?{% if cl.is_popup %}pop=1{% endif %}">{% blocktrans with full_result_count=cl.full_result_count %}{{ full_result_count }} total{% endblocktrans %}</a>)</span>
+                {% endif %}
+
+                <span class="small quiet"><a href="javascript:void(0)" onclick="hide_advanced_search();">Basic Search</a></span>
+                {% for pair in cl.params.items %}
+                    {% ifnotequal pair.0 search_var %}
+                        {% if not pair.0 in form.fields %}
+                            <input type="hidden" name="{{ pair.0 }}" value="{{ pair.1 }}"/>
+                        {% endif %}
+                    {% endifnotequal %}
+                {% endfor %}
+            </div> 
+        </div>
+    </form>
+</div>
+
+{% endif %}

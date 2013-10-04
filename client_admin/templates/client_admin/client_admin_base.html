@@ -6,13 +6,13 @@
 {% block title %}{{ title }} | {{ _('Site admin') }}{% endblock %}
 
 {% block branding %}
-<h1 id="site-name">{{ _('Site administration') }}</h1>
+<h3 id="site-name">{{ _('Site administration') }}</h3>
 {% endblock %}
 
 {% block extra_style %}
 {{ super() }}
 
-<link rel="stylesheet" type="text/css" href="{% block stylesheet %}{#{% load adminmedia %}#}{{ STATIC_URL }}admin/css/base.css{% endblock %}" />
+<!--<link rel="stylesheet" type="text/css" href="{% block stylesheet %}{#{% load adminmedia %}#}{{ STATIC_URL }}admin/css/base.css{% endblock %}" />-->
 {% if LANGUAGE_BIDI %}<link rel="stylesheet" type="text/css" href="{% block stylesheet_rtl %}{{ STATIC_URL }}admin/css/rtl.css{% endblock %}" />{% endif %}
 <script type="text/javascript">window.__admin_media_prefix__ = "{{ STATIC_URL }}admin/";</script>
 <link rel="stylesheet" href="{{ STATIC_URL }}client_admin/css/jquery/jquery-ui.css" type="text/css" media="screen, projection"/>
@@ -81,8 +81,8 @@
     {% if dashboard and dashboard.Media %}{% for js in dashboard.Media.js %}
     <script type="text/javascript" src="{{ STATIC_URL }}{{ js }}"></script>
     {% endfor %}{% endif %}
-    <script src="{{STATIC_URL}}client_admin/js/jquery/jquery-1.7.2.min.js"></script>
     <script type="text/javascript">
+        // just use the namespaced jQuery as the regular one
         var jQuery = django.jQuery;
     </script>
 {#    <script type="text/javascript" src="{{ STATIC_URL }}client_admin/js/jquery/jquery.collapsed_stacked_inlines.js"></script>#}
@@ -93,19 +93,13 @@
     <script type="text/javascript" src="{{ STATIC_URL }}client_admin/js/jquery/jquery.cookie.min.js"></script>
     <script type="text/javascript" src="{{ STATIC_URL }}client_admin/js/jquery/jquery.dashboard.js"></script>
     <script type="text/javascript" src="{{ STATIC_URL }}client_admin/js/jquery/jquery.ui.nestedSortable.js"></script>
+    <script type="text/javascript" src="{{ STATIC_URL }}client_admin/js/bootstrap.file-input.js"></script>
+    <script type="text/javascript" src="{{ STATIC_URL }}client_admin/js/watch.min.js"></script>
+    <script type="text/javascript" src="{{ STATIC_URL }}client_admin/js/client_admin.js"></script>
     <script type="text/javascript" src="{{ STATIC_URL }}client_admin/js/dashboard.js"></script>
     <script type="text/javascript" src="{{ STATIC_URL }}client_admin/js/menu.js"></script>
-    
-    <script type="text/javascript">
 
-        reset_order_fields = function(){
-            parent_item = jQuery('ul.inline-group');
-            order_fields = parent_item.find('select').filter(function() {
-                return this.id.match(/.*?-order/);
-            }).each(function(index) {
-                jQuery(this).val(index+1);
-            });
-        };
+    <script type="text/javascript">
 
         jQuery(document).ready(function($){
 
@@ -176,6 +170,155 @@
                 $('#toArrayOutput')[0].textContent = arraied : $('#toArrayOutput')[0].innerText = arraied;
             })
 
+            // $("div.inline-related").sortable();
+            // $("div.inline-related").disableSelection();
+
+            $('<span class="toggleswitch">Show/Hide</span>').insertBefore('div.inline-related h3 > b');
+            $("div.inline-related h3 > span.toggleswitch").click(function(){
+                $(this).toggleClass("hidden");
+                $(this).parents("div.inline-related").children("fieldset.module.aligned").slideToggle();
+            });
+            $('div.inline-group.start-collapsed div.inline-related:not(".empty-form") h3 > span.toggleswitch').trigger('click');
+
+            // $("div.inline-related h3 > span.deleteinline").click(function(){
+            //     $(this).addClass("hidden");
+            //     $(this).siblings("span.undo_deleteinline").removeClass("hidden");
+            //     $(this).parent("h3").addClass("tobe_removed");
+            //     $(this).parents("div.inline-related").children("fieldset.module.aligned").slideToggle();
+            //     $(this).siblings("span.toggleswitch").addClass("tobe_removed");
+            // })
+            // $("div.inline-related h3 > span.undo_deleteinline").click(function(){
+            //     $(this).addClass("hidden");
+            //     $(this).siblings("span.deleteinline").removeClass("hidden");
+            //     $(this).parent("h3").removeClass("tobe_removed");
+            //     $(this).parents("div.inline-related").children("fieldset.module.aligned").slideToggle();
+            //     $(this).siblings("span.toggleswitch").removeClass("tobe_removed");
+            // })
+
+            // When delete button is clicked, give the container li the class tobe_removed
+            $("ul#menuitem_set-group > li.inline-related > ul > li.inline-related > div > h3 > span.delete > input[type='checkbox']").click(function(){
+                $(this).siblings("label.stackedinline_delete").toggleClass("hidden");
+                $(this).siblings("label.undo_stackedinline_delete").toggleClass("hidden");
+                $(this).parent().parent().parent().parent().toggleClass("tobe_removed");
+            })
+
+            // Headers
+            $("ul#menuitem_set-group > li.inline-related > div > h3 > span.delete > input[type='checkbox']").click(function(){
+                $(this).siblings("label.undo_stackedinline_delete").toggleClass("hidden");
+                $(this).parents("li.inline-related").toggleClass("tobe_removed");
+                $(this).parents("li.inline-related").find("label.stackedinline_delete").toggleClass("hidden");
+            })
+
+            //Delete inline groups, hiding if shown, and staying hidden if hidden
+            $("div.inline-group > div.inline-related > h3 > span.delete > input[type='checkbox']").click(function(){
+                $(this).parents("h3").toggleClass("tobe_removed"); //Marks the h3 as to-be-removed
+                $(this).parents("h3").siblings("fieldset").css("display", "none"); //Sets the fieldset items block to no display
+                $(this).parent().find("label.stackedinline_delete").toggleClass("hidden"); //Toggles the delete label
+                $(this).parent().find("label.undo_stackedinline_delete").toggleClass("hidden"); //Toggles the undelete button
+            })
+
+            $("fieldset.module div.grouped input[type='checkbox']").click(function(){
+                $(this).parent("span.delete").toggleClass("tobe_removed");
+                $(this).parents("ul.inline-related").toggleClass("tobe_removed");
+            })
+
+            $("fieldset.module table td.delete input[type='checkbox']").click(function(){
+                $(this).siblings("label.tabularinline_delete").toggleClass("hidden");
+                $(this).siblings("label.undo_tabularinline_delete").toggleClass("hidden");
+                $(this).parents("tr").toggleClass("tobe_removed");
+            })
+
+            $("<img src='{{STATIC_URL}}client_admin/images/missing_image.png' class='imageupload-thumbnail-hidden' />").insertBefore("div.imageupload-widget");
+
+            $("span.clearable-file-input input[type='checkbox']").click(function(){
+                $(this).siblings("label").toggleClass("hidden");
+                $(this).parents("div.field_container").toggleClass("hidden");
+            })
+
+            // Remove any pre-existing links to remove filters
+            $("div#changelist-filter ul li a.removefilter").remove();
+            
+            // Grab the url and split it into an array of GET parameters
+            var url = document.URL;
+            baseurl = url.split("?")[0]
+            getparams = url.split("?")[1].split("&");
+
+            // Read the name of each filter heading and filter out non-keywords.
+            $("div#changelist-filter h3").each(function() {
+                filternamewordlist = $(this).text().split(" ");
+                cleanedfilternamewordlist = []
+                for (var i=0; i<filternamewordlist.length; i++) {
+                    if (filternamewordlist[i] != "" &&
+                        filternamewordlist[i] != "By" &&
+                        filternamewordlist[i] != "status" &&
+                        filternamewordlist[i] != "is"
+                    ) {
+                        cleanedfilternamewordlist.push(filternamewordlist[i]);
+                    };
+                };
+                // The last keyword in the remaining list is most likely to be part of the GET parameter.
+                keyword = cleanedfilternamewordlist[cleanedfilternamewordlist.length-1];
+
+                // Go through the existing GET parameters, and exclude the ones that involve
+                // the filter we want to remove.
+                newgetparams = "";
+                for (var i=0; i<getparams.length; i++){
+                    if (getparams[i].search(keyword) == -1) {
+                        newgetparams += getparams[i] + "&";
+                    }
+                };
+                newgetparams = newgetparams.substring(0,newgetparams.length-1);
+                
+                // Create a new url with our modified list of GET parameters and anchor it to the selected li.
+                // Now, the user can opt to click it, and thus remove that filter, resetting it to "all" or "none".
+                removefilterurl = baseurl + "?" + newgetparams
+                $(this).next().find("li.selected").append('<a class="removefilter" href=' + removefilterurl + '></a>');
+            });
+
+            $.fn.followTo = function ( pos ) {
+                var $this = this,
+                    $window = $(window);
+                
+                $window.scroll(function(e){
+                    if ($window.scrollTop() > pos) {
+                        $this.css({
+                            position: 'absolute',
+                            top: pos
+                        });
+                    } else {
+                        $this.css({
+                            position: 'fixed',
+                            top: 0
+                        });
+                    }
+                });
+            };
+
+            $.fn.followAt = function ( pos ) {
+                var $this = this,
+                    $window = $(window);
+                
+                $window.scroll(function(e){
+                    if ($window.scrollTop() > pos) {
+                        $this.css({
+                            position: 'fixed',
+                            top: '-5px'
+                        });
+                    } else {
+                        $this.css({
+                            position: 'relative',
+                            top: 0
+                        });
+                    }
+                });
+            };
+
+            $submitrow = $('div.submit-row');
+            if ($submitrow.length > 0) {
+                $('body.change-form header').followTo($submitrow.offset().top-$submitrow.height()-2);
+                $('div.submit-row').followAt($submitrow.offset().top);
+            }
         });
     </script>
+
 {% endblock %}

@@ -1,5 +1,19 @@
 # coding: utf-8
 
+# Copyright 2013 Concentric Sky, Inc.
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#   http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
 # python imports
 from functools import wraps
 
@@ -18,6 +32,7 @@ from django.utils.formats import get_format
 from django.utils.safestring import mark_safe
 from django.db import models
 from django.contrib import admin
+from django.core.urlresolvers import reverse
 from django.conf import settings
 
 register = template.Library()
@@ -203,3 +218,20 @@ def get_autocomplete_lookup_fields_m2m(model_admin):
 def get_autocomplete_lookup_fields_generic(model_admin):
     return model_admin.autocomplete_lookup_fields.get("generic", [])
 
+
+# Admin urls
+
+@register.filter
+def get_admin_object_change_url(obj):
+    if obj:
+        info = obj._meta.app_label, obj._meta.module_name
+        return reverse('admin:%s_%s_change' % info, args=(obj.pk,))
+    return None
+
+
+@register.filter
+def get_admin_object_add_url(obj):
+    if obj:
+        info = obj._meta.app_label, obj._meta.module_name
+        return reverse('admin:%s_%s_add' % info)
+    return None

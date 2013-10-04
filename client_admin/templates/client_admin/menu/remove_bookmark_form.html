@@ -2,6 +2,6 @@
 {% if form_url %}
 <form id="bookmark-form" action="{{ form_url }}" method="POST">
     <input type="hidden" name="next" value="{{ request.get_full_path()|escape }}" />
-    <button id="bookmark-button" class="bookmarked" type="submit">Remove</button>
+    <button id="bookmark-button" class="bookmarked" type="submit"></button>
 </form>
 {% endif %}

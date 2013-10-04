@@ -1,0 +1,2229 @@
+@import partials/base
+
+
+// Global Body
+//  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+body
+  background: #fff
+  font-family: $body-font
+  color: $body
+  font-size: 14px
+  line-height: 1.571428571em
+
+
+// Global Fonts
+//  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+h2, .h2
+  font-size: 37px
+  line-height: 37px
+  color: $secondary
+  font-weight: bold
+
+h3, .h3
+  color: $body
+  font-size: 14px !important
+  font-family: $body-font
+  font-weight: bold
+
+h4, .h4
+  color: #555555
+  font-size: 19px
+  text-transform: uppercase
+  text-shadow: 1px 1px #dadada
+
+h4, .h4
+  font-size: 10px
+  color: #fff
+  text-transform: uppercase
+  text-shadow: 1px 1px #181818
+  display: block
+  font-weight: 500
+  padding: 0 10px
+  border-top: 2px solid #434343
+  background: #565656
+
+
+// Global Links
+//  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+h4 a
+  &:link, &:visited
+    font-size: 10px
+    color: #fff
+    text-transform: uppercase
+    text-shadow: 1px 1px #181818
+    display: block
+  &:hover
+    color: #f79421
+
+a, a:link, a:visited, 
+  color: $body
+  font-weight: bold
+  text-decoration: none
+  &:hover
+    color: $secondary
+
+a.deletelink, a.deletelink:link, a.deletelink:visited
+  +sprite-icon(icon_delete, $vertical: 21px, $horizontal: -2px)
+  background-image: none
+  padding: 0 0 0 18px
+  height: 57px
+  line-height: 57px
+  display: block
+  color: $body
+  font-weight: bold
+  &:hover
+    +sprite-icon(icon_delete_blue, $vertical: 21px, $horizontal: -2px)
+    color: $primary
+
+
+// Global Errors
+//  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+p.errornote
+  font-size: 14px
+  display: block
+  padding: 5px 5px 5px 28px !important
+  color: #fff
+  font-weight: bold
+  background-color: #e72d2e
+  margin: 10px 0
+  position: relative
+  +sprite-icon(icon_error_white, $vertical: 9px, $horizontal: 8px)
+
+ul.errorlist 
+  margin-left: 140px !important
+  padding-left: 0 !important
+  li
+    font-size: 14px
+    display: block
+    padding: 0 0 0 20px 
+    color: #e72d2e
+    font-weight: bold
+    background-color: transparent !important
+    margin: 0 0 3px 0
+    position: relative
+    +sprite-icon(icon_error, $vertical: 4px, $horizontal: 0px)
+
+.form-row.errors
+  background-color: transparent
+
+.login div#admin_content 
+  margin-top: 15px
+  p.errornote
+    width: 40%
+    margin: 0 auto
+  ul.errorlist
+    margin-left: 98px !important
+
+
+
+// Login / Logout
+//  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+.login
+  background: #fff !important
+  header nav 
+    a#client_logo
+      margin: 9px auto 0
+      float: none
+      text-align: center
+    ul
+      display: none
+  #page_header
+    display: none
+
+
+  // Login Form
+  // - - - - - - - - - - - - -
+  h3.forgot_password
+    margin-top: 15px
+  #login-form
+    margin: 25px auto 0
+    width: 400px
+    &.forgot_password_form
+      margin: 40px 0 0 0
+    div.form-row, p
+      +legacy-pie-clearfix
+      label
+        +label()
+        float: left
+        width: 67px
+        font-weight: bold
+      input[type="text"], input[type="password"]
+        +input()
+        float: right
+        width: 20em
+        margin-bottom: 10px
+    div.submit-row
+      position: relative
+      text-align: right
+      padding: 5px 127px 0 0
+      input[type="submit"]
+        +button()
+        width: auto
+        margin: 0
+        height: 30px
+        line-height: 30px
+        border-top: none
+        font-size: 14px
+        padding: 0 10px
+        &:hover
+          background-color: $secondary
+        &.forgot_password_submit
+          width: 240px
+      a.reset_password_link 
+        font-weight: normal 
+        font-size: 12px 
+
+body.logged_out div#admin_content
+  h2
+    font-size: 23px
+    color: $body
+  p
+    padding-left: 0
+  a
+    +button()
+    position: relative
+    width: 100px
+    margin: 0
+    height: 30px
+    line-height: 30px
+    border-top: none
+    font-size: 14px
+    display: block
+    text-align: center
+    &:hover
+      background-color: $secondary
+
+
+
+
+// Header & Main Nav
+//  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+header
+  height: 59px
+  width: 100%
+  border-top: 1px solid #393939
+  background: #272727
+  position: fixed
+  z-index: 500
+  top: 0
+  nav
+    +legacy-pie-clearfix
+    width: 960px
+    margin: 0 auto
+    overflow: visible
+
+
+    // Logo
+    // - - - - - - - - - - - - -
+    a#client_logo
+      display: block
+      height: 59px
+      width: 400px
+      margin-top: 9px
+      float: left
+
+
+    // Main Nav
+    // - - - - - - - - - - - - -  
+    ul
+      +legacy-pie-clearfix
+      float: right
+      overflow: visible
+      li
+        float: left
+        list-style: none
+        position: relative
+        a, a:link, a:visited
+          display: block
+          height: 59px
+          line-height: 59px
+          color: #fff
+          font-weight: bold
+          text-decoration: none
+          text-transform: uppercase
+          padding: 0 10px          
+        a:hover, &:hover a
+          color: $secondary
+        a:active, &.selected a
+          color: $secondary
+
+       
+        // Bookmarks tab
+        // - - - - - - - - - - - - -
+        &.bookmark
+          width: 47px
+          height: 59px
+          padding: 0
+          position: relative
+          > a, &:visited
+            text-indent: -9999px
+            padding: 0
+            position: relative
+            +sprite-icon(icon_bookmark_white, $vertical: 19px, $horizontal: 12px)
+            &:hover
+              +sprite-icon(icon_bookmark_orange, $vertical: 19px, $horizontal: 12px)
+          &.disabled > a, &.disabled > a:visited
+            +sprite-icon(icon_bookmark_disabled, $vertical: 19px, $horizontal: 12px)
+            &:hover
+              +sprite-icon(icon_bookmark_disabled, $vertical: 19px, $horizontal: 12px)
+
+
+
+        // My account tab
+        // - - - - - - - - - - - - -
+        &.user-tools
+          width: 47px
+          height: 59px
+          padding: 0
+          position: relative
+          > a, &:visited
+            text-indent: -9999px
+            padding: 0
+            position: relative
+            +sprite-icon(icon_my_account, $vertical: 19px, $horizontal: 12px)
+            &:hover
+              +sprite-icon(icon_my_account_orange, $vertical: 19px, $horizontal: 12px)
+
+
+        // Second Level Nav
+        // - - - - - - - - - - - - -
+        ul
+          background: red
+          display: none
+          position: absolute
+          width: 150px
+          top: 54px
+          right: -1px
+          background: #bfbfbf
+          z-index: 100
+          box-shadow: #434343 0 2px 5px 0
+          padding-top: 5px
+          &:before
+            content: ""
+            position: absolute
+            right: 8px
+            top: -10px
+            width: 0
+            height: 0
+            border-left: 18px solid transparent
+            border-right: 18px solid transparent
+            border-bottom: 18px solid #bfbfbf
+        &:hover ul
+          display: block
+          li
+            position: relative
+            float: none
+            display: block
+            border-bottom: 1px solid #efefef
+            margin: 0
+            padding: 0
+            &:last-child
+              border-bottom: none
+            a, a:link, a:visited
+              line-height: 19px
+              height: auto
+              padding: 10px
+              font-size: 12px
+              color: #272727
+              text-transform: none
+              text-indent: 0
+              &:hover, &:active
+                background: #efefef
+
+
+            // Third Level Nav
+            // - - - - - - - - - - - - -
+            ul
+              display: none
+              position: absolute
+              top: 0px
+              left: -158px
+              background: #9a9999
+              box-shadow: none
+              padding-top: 0px
+              overflow: visible
+              z-index: 500
+              box-shadow: #434343 0 2px 5px 0
+              &:before
+                content: ""
+                position: absolute
+                right: -30px 
+                top: 0px
+                width: 0
+                height: 0
+                border-left: 18px solid #9a9999
+                border-top: 18px solid transparent
+                border-bottom: 18px solid transparent
+              li
+                border-bottom: 1px solid #bfbfbf
+                a, a:link, a:visited
+                  color: #555
+                  &:hover, &:active
+                    background: transparent
+                    color: #272727
+            &:hover ul
+              display: block
+
+
+// Content Container
+//  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+#content_container
+  width: 960px
+  margin: 60px auto 0
+  +legacy-pie-clearfix
+
+.popup #content_container
+  width: 960px
+  +legacy-pie-clearfix
+
+
+// Page Header
+//  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+#page_header
+  width: 960px
+  min-height: 60px
+  margin: 80px 0 25px
+  position: relative
+  z-index: 100
+  +legacy-pie-clearfix
+  h2
+    float: left
+    margin-right: 10px
+ 
+
+  // Message List
+  // - - - - - - - - - - - - -
+  ul.messagelist
+    background: $secondary
+    display: block
+    margin: 20px 0
+    li
+      padding: 15px
+      color: #fff
+
+
+
+  // Bookmarks
+  // - - - - - - - - - - - - -
+  #bookmark-form
+    float: left
+    margin-top: 16px
+    #bookmark-button
+      border: none
+      padding-left: 24px
+      line-height: 0
+      height: 13px
+      font-family: $body-font
+      color: $body
+      font-size: 12px
+      text-transform: lowercase
+      cursor: pointer
+      position: relative
+      +sprite-icon(icon_favorite_add, $vertical: -4px)
+      background-color: transparent
+      &:hover
+        color: $secondary
+        +sprite-icon(icon_favorite_add_hover, $vertical: -4px)
+      &.bookmarked
+        color: $body
+        +sprite-icon(icon_favorite_remove, $vertical: -4px)
+        &:hover
+          color: $secondary
+          +sprite-icon(icon_favorite_remove_hover, $vertical: -4px)
+
+ 
+  // Breadcrumbs
+  // - - - - - - - - - - - - -      
+  div.breadcrumbs
+    font-size: 14px
+    color: $body-secondary
+    border-top: none
+    border-bottom: none
+    background: none
+    padding: 5px 0 0 0
+    margin-bottom: -10px
+    clear: both
+    a, a:link, a:visited
+      color: $body-secondary
+      &:hover, &:active
+        color: $body
+
+
+// Page Header Addtl Classes
+// - - - - - - - - - - - - -   
+.dashboard #page_header
+  overflow: hidden
+.popup #page_header
+  width: 960px  
+  margin-top: 20px
+  +legacy-pie-clearfix
+
+
+// Content
+//  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+#admin_content
+  +legacy-pie-clearfix
+  position: relative
+  width: 960px
+  background: transparent
+  margin-top: -42px
+  padding: 50px 0 0 0
+  >
+    p, ul, ol, form
+      padding: 15px
+    ul li, ol li
+      margin-left: 15px
+
+
+  // Object Tools
+  //  - - - - - - - - - - - - - - -
+  ul.object-tools
+    position: absolute
+    top: 0
+    right: 0
+    margin: 0
+    padding: 0
+    float: none
+    z-index: 200
+    +legacy-pie-clearfix
+    li
+      background: none
+      height: 14px
+      line-height: 14px
+      margin: 0
+      padding: 0 10px
+      float: left
+      display: block
+      border-right: 2px solid $body
+      &:last-child
+        border: none
+        margin: 0 0 0 10px
+        padding: 0
+
+
+      // Single Links
+      //  - - - - - - - - - - - - - - -
+      a, a:link, a:visited
+        background: none
+        display: block
+        color: $body
+        font-weight: bold
+        background-position: 0 0
+        padding: 0 0 10px 0
+        position: relative
+        &.historylink
+          +sprite-icon(icon_history)
+          padding: 0 0 10px 20px
+          &:hover
+            +sprite-icon(icon_history_orange)
+            color: $secondary
+        &.viewsitelink
+          +sprite-icon(icon_view_onsite, $vertical: 1px)
+          padding: 0 0 10px 20px
+          &:hover
+            +sprite-icon(icon_view_onsite_orange, $vertical: 1px)
+            color: $secondary
+        &.addlink
+          +sprite-icon(icon_add)
+          padding: 0 0 10px 20px
+          &:hover
+            +sprite-icon(icon_add_orange)
+            color: $secondary
+        &.recoverlink
+          +sprite-icon(icon_recover)
+          padding: 0 0 10px 20px
+          &:hover
+            +sprite-icon(icon_recover_orange)
+            color: $secondary
+      
+
+      // Dashboard View Additional
+      //  - - - - - - - - - - - - - - -
+      &#dashboard-panel > a
+        +sprite-icon(icon_view_additional)
+        padding: 0 0 10px 20px
+        &:hover
+          +sprite-icon(icon_view_additional_orange)
+          color: $secondary
+      &#dashboard-panel:hover > a
+        color: $secondary
+        +sprite-icon(icon_view_additional_orange)
+
+
+    // Sub Menu
+    //  - - - - - - - - - - - - - - -
+    ul
+      display: none
+      position: absolute
+      z-index: 90
+      top: 24px
+      right: 0
+      width: 85%
+      background: #bfbfbf
+      border-top: 1px solid #bfbfbf
+      box-shadow: #434343 0 2px 5px 0
+      &:before
+        content: ""
+        position: absolute
+        left: 20%
+        top: -10px
+        width: 0
+        height: 0
+        border-left: 10px solid transparent
+        border-right: 10px solid transparent
+        border-bottom: 10px solid #bfbfbf
+      li
+        background: none
+        width: 100%
+        height: 35px
+        line-height: 35px
+        text-align: left
+        margin: 0
+        border-bottom: 1px solid #efefef
+        &:first-child
+          padding-right: 0
+          margin-right: 0
+          border-right: none
+        &:last-child
+          margin: 0
+        a
+          &:link, &:visited
+            font-size: 12px
+            background: none
+            margin: 0
+            border: none
+            display: block
+            padding: 0 5% !important
+            width: 90%
+            height: 100%
+            color: #434343
+          &:hover, &:active
+            color: $primary !important
+          &:after
+            display: none
+    li:hover ul
+      display: block
+
+
+// Admin Content Addtl Classes
+// - - - - - - - - - - - - -   
+.popup #admin_content
+  width: 960px
+  +legacy-pie-clearfix
+
+
+
+
+// Dashboard
+//  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+div
+  &#dashboard
+    +legacy-pie-clearfix
+
+  // Dashboard Columns and Placeholders
+  // - - - - - - - - - - - - -   
+  &.dashboard-column
+    padding-bottom: 15px
+    &:first-child
+      width: 66% !important
+    &:last-child
+      width: 34% !important
+    &:first-child div.dashboard-placeholder
+      margin: 0 13px 25px 0
+    &:last-child div.dashboard-placeholder
+      margin: 0 13px 25px 12px
+    &:first-child div.dashboard-module
+      margin-right: 13px
+    &:last-child div.dashboard-module
+      margin-left: 12px
+  &.dashboard-placeholder
+    border: 1px dashed #f79421
+    background-color: rgba(247, 148, 33, 0.15)
+    margin: 0 0 25px 0
+  
+
+  // Dashboard Modules
+  // - - - - - - - - - - - - -   
+  div.dashboard-module
+    margin-bottom: 25px
+    span      
+      &.changelink
+        position: relative
+        padding-left: 18px
+        +sprite-icon(icon_edit_orange, $vertical: 1px)
+      &.addlink
+        position: relative
+        padding-left: 18px
+        +sprite-icon(icon_add_orange, $vertical: 1px)
+      &.listlink
+        position: relative
+        padding-left: 18px
+        +sprite-icon(icon_list_orange, $vertical: 2px)
+      &.deletelink
+        position: relative
+        padding-left: 18px
+        +sprite-icon(icon_delete_orange, $vertical: 2px)
+
+
+    // Dashboard Headers
+    // - - - - - - - - - - - - -   
+    h3
+      line-height: 40px
+      height: 40px
+      font-size: 23px !important
+      color: #fff 
+      display: block
+      cursor: move
+      padding: 0 10px
+      position: relative
+      background: $primary
+      a
+        text-indent: -9999px
+        display: block
+        margin-top: 13px
+        float: right
+        &.close-icon
+          height: 14px
+          width: 14px
+          position: relative
+          +sprite-icon(icon_delete_white)
+          &:hover
+            +sprite-icon(icon_delete_orange)          
+        &.toggle-icon
+          height: 14px
+          width: 14px
+          position: relative
+          float: left
+          margin-right: 10px
+          +sprite-icon(icon_minus_white)
+          &:hover
+            +sprite-icon(icon_minus_orange)
+          &.collapsed
+            +sprite-icon(icon_add_white)
+            &:hover
+              +sprite-icon(icon_add_orange)
+
+
+    // Dashboard Module Content
+    // - - - - - - - - - - - - -           
+    div.dashboard-module-content
+      overflow: hidden
+      border: 1px solid #cdcdcd
+      border-top: none
+      h3
+        background: #434343
+        font-size: 14px !important
+        height: 30px
+        line-height: 30px
+        margin: 0 -1px
+        cursor: auto
+      li
+        border-bottom: 1px solid #cdcdcd
+        padding: 7px 10px 7px 10px
+        list-style: none
+        position: relative
+        &:nth-child(even)
+          background: #f6f6f6
+        
+        &:last-child
+          border-bottom: none
+
+        span.date_time
+          color: #b0b0b0
+          float: right
+          margin-left: 15px
+
+
+        // Object Type Text
+        // - - - - - - - - - - - - -  
+        span.object_type
+          color: #747474
+          opacity: .5
+
+
+        // Module Row Options
+        // - - - - - - - - - - - - -  
+        ul.list-options 
+          position: absolute
+          top: 0
+          right: 0
+          display: block
+          li
+            float: left
+            height: 30px
+            margin: 0
+            padding: 7px 12px 0 0
+            border: none !important
+            &:nth-child(even)
+              background: transparent
+            a
+              position: relative
+              color: $body
+              opacity: .25
+              &.changelink
+                padding-left: 18px
+                +sprite-icon(icon_edit, $vertical: 1px)
+              &.addlink
+                padding-left: 18px
+                +sprite-icon(icon_add, $vertical: 1px)
+              &.listlink
+                padding-left: 18px
+                +sprite-icon(icon_list, $vertical: 2px)
+              &:hover
+                color: $secondary
+                &.changelink
+                  +sprite-icon(icon_edit_orange, $vertical: 1px)
+                &.addlink
+                  +sprite-icon(icon_add_orange, $vertical: 1px)
+                &.listlink
+                  +sprite-icon(icon_list_orange, $vertical: 2px)
+          
+      &:hover ul.list-options li a:hover
+        opacity: 1 
+      
+      span.deletelink, a.deletelink
+        padding-left: 18px
+
+
+    // Sitemap Module
+    // - - - - - - - - - - - - - 
+    &.sitemap
+      div.dashboard-module-content
+        border: none
+        border-bottom: 1px solid #cdcdcd
+
+
+        // Sitemap First Row
+        // - - - - - - - - - - - - - 
+        ul 
+          li.first
+            height: 24px
+            padding: 4px 7px 0 7px
+            vertical-align: middle
+            color: white
+            background: #434343
+            border: 1px solid #434343
+            span.object_type
+              display: none
+            a
+              &:link, &:visited
+                color: #fff
+              &:hover
+                color: #f79421
+            ul.list-options li
+              margin: -3px 0 0 0 
+              a
+                position: relative
+                color: #fff
+                opacity: 1
+                &.changelink
+                  padding-left: 18px
+                  +sprite-icon(icon_edit_white, $vertical: 1px)
+                &:hover
+                  color: $secondary
+                  &.changelink
+                    padding-left: 18px
+                    +sprite-icon(icon_edit_orange, $vertical: 1px)
+
+
+          // Sitemap Addtl Rows
+          // - - - - - - - - - - - - - 
+          li
+            border-left: 1px solid #cdcdcd
+            border-right: 1px solid #cdcdcd
+            
+
+            // Sitemap Child Rows
+            // - - - - - - - - - - - - - 
+            ul.children
+              margin: 10px 0 0 0
+              > li
+                padding-left: 4%
+                width: 96%
+                background: url(images/icon_nested_arrow.png) left top no-repeat
+                border: none
+                border-top: 1px dashed #c5c5c5
+                &:last-child
+                  padding-bottom: 0
+
+
+    // Recent Activity Module
+    //  - - - - - - - - - - - - - - -
+    &.activity ul li.activity-types
+      font-size: 12px
+      display: block
+      height: 24px
+      padding: 4px 7px 0 7px
+      background: #434343
+      margin: 0 -1px 0 -1px
+      span.object_type
+        display: none
+      a
+        padding-right: 2em
+        &:link, &:visited
+          color: #fff
+          position: relative
+          display: block
+          float: left
+        &.active, &:hover
+          color: #f79421
+        &.active:after
+          content: ""
+          position: absolute
+          left: -3px
+          bottom: -3px
+          width: 0
+          height: 0
+          border-left: 7px solid transparent
+          border-right: 7px solid transparent
+          border-bottom: 7px solid #f6f6f6
+
+
+
+    // Snippet Module
+    //  - - - - - - - - - - - - - - -
+    &.snippets ul li.listmeta
+      background: #434343
+      a
+        color: #fff
+        padding-left: 18px
+        position: relative
+        +sprite-icon(icon_edit_white, $vertical: 1px)
+        &:hover
+          color: $secondary
+          +sprite-icon(icon_edit_orange, $vertical: 1px)
+
+
+// App Index
+//  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+body.app_index #content-main
+  width: 960px
+  table
+    border: 1px solid #cdcdcd
+    width: 960px
+    caption
+      font-size: 23px
+      height: 40px
+      line-height: 40px
+      position: relative
+      background: $primary
+      a
+        padding-left: 10px
+        color: #fff
+        &:hover
+          color: $secondary
+    tbody
+      background: #fff
+      tr
+        border-bottom: 1px solid #cdcdcd
+        &:nth-child(even)
+          background: #f6f6f6
+        td
+          padding: 7px 10px
+          a
+            position: relative
+            padding-left: 18px
+            color: $body
+            &.addlink
+              +sprite-icon(icon_add, $vertical: 2px)
+              &:hover
+                +sprite-icon(icon_add_orange, $vertical: 2px)
+                color: $secondary
+            &.changelink
+              +sprite-icon(icon_edit, $vertical: 2px)
+              &:hover
+                +sprite-icon(icon_edit_orange, $vertical: 2px)
+                color: $secondary
+        th
+          width: 880px
+          padding: 7px
+          a
+            color: $primary
+            &:hover
+              color: $secondary
+      td:last-child
+        border-right: none
+
+
+
+// Change Lists
+//  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+body.change-list 
+  #changelist
+    border: none
+    margin-bottom: 0
+    &.filtered
+      background: transparent !important
+
+
+    // Changelist Filters
+    // - - - - - - - - - - - 
+    div#changelist-filter
+      padding: 0 10px 10px 10px
+      width: 140px
+      border-left: none
+      float: right
+      display: block
+      background: #fff 
+      position: relative
+      z-index: 150
+      a.related-lookup
+        color: $body-secondary
+        position: relative
+        padding-left: 18px
+        +sprite-icon(icon_search_light, $vertical: 2px)
+        &:hover
+          color: $body
+          +sprite-icon(icon_search, $vertical: 2px)
+
+
+      // Search
+      // - - - - - - - - - - - 
+      #toolbar
+        background: #fff !important
+        border: none
+        padding: 0
+        width: 150px !important
+        margin: 0 0 10px 0 !important
+        position: relative
+        label
+          display: none
+        form
+          #searchbar
+            +input()
+            width: 115px
+            height: 33px
+            padding: 3px 25px 3px 6px
+            &:focus
+              outline: none
+          input[type="submit"]
+            background: url(images/icons/icon_search_orange.png) no-repeat
+            height: 14px
+            width: 14px
+            border: none
+            position: absolute
+            top: 14px
+            right: 12px
+            text-indent: -9999px
+            cursor: pointer
+          span.small
+            width: 160px
+            color: $body !important
+            text-transform: uppercase
+            font-size: 10px
+            a
+              color: $body
+              &:hover
+                color: $secondary
+      
+
+      // Filter Content
+      // - - - - - - - - - - - 
+      h2
+        background: none
+        font-size: 24px
+        margin: 0 0 0 -4px
+        color: $primary
+        border: none
+        height: auto !important
+        text-transform: uppercase
+      h3
+        color: $secondary
+      ul
+        margin-bottom: 10px
+        margin-left: 0
+        position: relative
+        li
+          font-size: 12px
+          font-weight: bold
+          margin: 0 0 8px 0
+          line-height: 1.2em
+          &.selected
+            border: none
+            margin-top: 5px
+            padding: 5px
+            background: #f6f6f6
+            a.removefilter
+              background: url(images/icons/icon_delete.png)
+              background-repeat: no-repeat
+              height: 14px
+              width: 20%
+            a
+              color: $primary !important
+              display: inline-block
+              width: 80%
+              vertical-align: middle
+          a
+            color: $body-secondary
+            &:hover
+              color: $body
+          &:last-child
+            height: 14px
+            margin: 3px 3px 0 0
+            top: 29px
+            right: 0
+      select
+        width: 100%
+        margin-bottom: 15px
+   
+
+    // Form
+    // - - - - - - - - - - - 
+    form#changelist-form 
+      background: #fff
+
+
+    // Table Actions
+    // - - - - - - - - - - - 
+    div.actions
+      font-size: 14px
+      line-height: 40px
+      height: 40px
+      display: block
+      padding: 0 10px 0 2px
+      position: relative
+      z-index: 100
+      border: none
+      background: $primary
+      margin-right: 0 !important
+      label
+        position: absolute
+        text-transform: uppercase
+        font-size: 14px
+        margin: 2px 0 0 10px
+        color: #fff
+        font-weight: bold
+        select
+          width: 145px
+          border: none
+          margin: -2px 0 0 5px
+          &:focus
+            outline: none
+      button
+        margin: 16px 0 0 230px
+        padding: 0px 3px
+        font-family: $body-font
+        font-weight: bold
+        color: $primary
+        font-size: 12px
+        background: #fff
+        border: none
+        cursor: pointer
+        &:hover
+          color: $secondary
+      span.action-counter
+        color: #fff
+        text-transform: uppercase
+        font-size: 10px
+
+    
+    // List Table
+    // - - - - - - - - - - - 
+    div.results
+      table#result_list
+        border-bottom: 1px solid #dfdfdf
+
+
+        // Table Head and Sorting
+        // - - - - - - - - - - - 
+        thead th
+          border: 1px solid #434343
+          border-top: 2px solid #434343
+          height: 24px
+          padding: 0 7px 2px 7px
+          vertical-align: middle
+          color: #fff
+          background: $body
+          +legacy-pie-clearfix
+          a
+            color: #fff
+            &:hover
+              color: #434343
+          &.sorted
+            background: #434343
+            div.text a
+              color: #fff
+            div.sortoptions 
+              float: right
+              text-align: right
+              +legacy-pie-clearfix
+              span.sortpriority
+                float: left
+                display: block
+                font-size: 10px
+              a
+                display: block
+                height: 10px
+                width: 12px
+                float: right
+                margin: 4px 0 0 2px
+                position: relative
+                &.sortremove
+                  height: 15px
+                  width: 15px
+                  display: none
+                  margin: 6px 4px 0 0
+                  float: left
+                  +sprite-icon(icon_delete_white_small)
+                &.ascending
+                  +sprite-icon(icon_arrow_down)
+                &.descending
+                  +sprite-icon(icon_arrow_up)
+            &:hover div.sortoptions a.sortremove
+              display: block
+        
+
+        // Table Body
+        // - - - - - - - - - - -           
+        tbody
+          background: #fff
+          tr
+            border-bottom: 1px solid #cdcdcd
+            &.row1
+              background: #f6f6f6
+            &.selected
+              background: rgba($secondary, .15)
+          td, th
+            padding: 7px
+            border: 1px solid #cdcdcd
+            border-bottom: none
+            a
+              color: $primary
+              &:hover
+                color: $secondary
+
+
+    // Listing Paginator
+    //  - - - - - - - - - - - - - - -
+    p.paginator
+      font-size: 14px
+      font-weight: bold
+      border: none
+      background: transparent
+      position: relative
+      input[type="submit"]
+        width: auto
+        height: auto
+        padding: 10px
+        font-size: 14px
+        margin: 5px 0 0 0
+
+
+
+
+// Delete Confirmation
+//  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+body.delete_confirmation div#admin_content
+  h2
+    font-size: 23px
+    color: $body
+  a
+    cursor: pointer
+    color: $primary
+    &:hover
+      color: $secondary
+  form
+    padding: 0
+    margin-top: 15px
+    input[type="submit"]
+      +button()
+      position: relative
+      width: 100px
+      margin: 0
+      height: 30px
+      line-height: 30px
+      border-top: none
+      font-size: 14px
+      &:hover
+        background-color: $secondary
+
+
+
+// Change Form
+//  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+body.change-form 
+  width: 100%
+  padding-bottom: 30px
+  #content_container
+    width: 100%
+    margin: 0 auto
+    #page_header
+      width: 960px
+      margin: 80px auto 25px
+    #admin_content
+      width: 100%
+      #content-main
+        div.content-main-container
+          width: 960px
+          margin: 0 auto
+          position: relative
+        form.change_form
+          background: #fff
+        .object-tools
+          top: -53px
+
+
+      // Submit Row
+      //  - - - - - - - - - - - - - - -
+      .submit-row-placeholder
+        height: 58px
+      .submit-row
+        background: #e1e1e1
+        border: none
+        border-top: 2px solid #cdcdcd
+        height: 58px
+        line-height: 58px
+        display: block
+        margin-bottom: 0
+        padding: 0
+        width: 100%
+        border-bottom: 5px solid #fff
+        overflow: visible
+        position: relative
+        z-index: 250
+        .submit_container
+          width: 960px
+          position: relative
+          margin: 0 auto
+          +legacy-pie-clearfix
+          input[name="_addanother"]
+            +action-button($height: 57px, $lineheight: 57px)
+            background: url(images/icons/icon_add.png) center left no-repeat transparent
+            &:hover, &:active
+              color: $primary
+              background: url(images/icons/icon_add_blue.png) center left no-repeat transparent
+          input[name="_continue"]
+            +action-button($height: 57px, $lineheight: 57px)
+            background: url(images/icons/icon_edit.png) center left no-repeat transparent
+            &:hover, &:active
+              color: $primary
+              background: url(images/icons/icon_edit_blue.png) center left no-repeat transparent
+          p.deletelink-box
+            margin: 0 0 0 0
+            a.deletelink
+              padding: 0 0 0 16px
+      .form_submit_container
+        width: 960px
+        margin: 0 auto
+        h3.change_password_help
+          margin: 20px 0
+
+
+
+// Save Button
+//  - - - - - - - - - - - - - - -
+.button.default, input[type="submit"].default
+  +button()
+  +sprite-icon(icon_add)
+  z-index: 250
+  &.change_password
+    width: 250px
+  &:hover
+    color: #fff
+    background: #024f84
+
+
+
+// Basic Label / Field Styles
+//  - - - - - - - - - - - - - - -
+fieldset.module, div.inline-group
+  border: none !important
+  margin: 5px 0
+  width: 100%
+  +legacy-pie-clearfix
+  h2
+    font-size: 23px
+    color: $secondary
+    background: transparent
+    border-top: 2px solid #cdcdcd
+    padding: 5px 0 5px 10px
+    a.collapse-toggle
+      height: 16px
+      width: 16px
+      text-indent: -9999px
+      display: inline-block !important
+  &.collapse a.collapse-toggle
+    background: url(images/icon_show_hide.png) 0 -16px no-repeat
+  &.collapsed a.collapse-toggle
+    background: url(images/icon_show_hide.png) 0 0 no-repeat
+
+
+  // Basic Form Rows
+  //  - - - - - - - - - - - - - - -
+  div.form-row
+    padding: 5px 25px 15px 25px
+    margin: 10px 0
+    border-bottom: none
+    overflow: visible
+    +legacy-pie-clearfix
+    &:first-child
+      margin-top: 20px
+    &:last-child
+      border-bottom: none
+
+
+    // Form Labels and Fields
+    //  - - - - - - - - - - - - - - -
+    label
+      +label()
+      word-break: break-all
+    div.field_container
+      width: 655px
+      float: left
+      +legacy-pie-clearfix
+      &:first-child
+        min-width: 280px
+
+
+      // RAW ID Selector
+      //  - - - - - - - - - - - - - - -
+      a.related_link
+        font-size: 14px
+        color: $body
+        &:hover
+          color: $secondary
+      input.vForeignKeyRawIdAdminField
+        display: none
+      a.related-lookup
+        +button()
+        position: relative
+        font-size: 14px
+        height: 34px
+        line-height: 34px
+        margin: -5px 10px 10px 0
+        padding: 0 12px 0 36px
+        width: 30px
+        top: 0
+        left: 0
+        display: inline-block
+        float: left
+        +sprite-icon(icon_search_white, $vertical: 9px, $horizontal: 10px)
+        &:hover
+          background: #024f84
+        img
+          display: none
+
+
+      // Image Widget Remove Current Image
+      //  - - - - - - - - - - - - - - -
+      &.hidden 
+        a.imageupload-thumbcontainer 
+          display: none
+        img.imageupload-thumbnail-hidden
+          display: inline-block
+
+      p, ul
+        padding: 0 !important
+        margin: 0 !important
+        font-family: $body-font
+        font-size: 14px
+        color: $body
+      input
+        +input()
+        &.vIntegerField
+          width: 50px
+      textarea
+        +textarea()
+      input[type="checkbox"]
+        margin-right: 10px
+      input[type="file"]
+        height: 20px
+        padding: 5px
+
+      // Image Widget
+      //  - - - - - - - - - - - - - - - 
+      a.imageupload-thumbcontainer
+        float: left
+        width: 150px
+        margin-right: 15px
+        display: inline-block
+        +legacy-pie-clearfix
+      img.imageupload-thumbnail, img.imageupload-thumbnail-hidden
+        max-width: 150px
+        margin: 0 15px 10px 0 
+        float: left
+      img.imageupload-thumbnail-hidden
+        display: none
+      div.imageupload-widget
+        float: left
+        a.file_upload_button
+          +button()
+          position: relative
+          font-size: 14px
+          height: 34px
+          line-height: 34px
+          margin: 0 0 10px 0
+          padding: 0 12px 0 36px
+          width: auto
+          top: 0
+          left: 0
+          display: inline-block
+          +sprite-icon(icon_change_image, $vertical: 9px, $horizontal: 10px)
+          &:hover
+            background: #024f84
+        input[type="file"]
+          background: transparent
+          border: none
+          box-shadow: none
+          height: 24px
+          padding: 0
+          font-size: 12px
+          cursor: pointer
+        span.clearable-file-input
+          display: block
+          +legacy-pie-clearfix
+          input[type="checkbox"]
+            cursor: pointer
+            margin-right: 5px
+            display: none
+          label
+            cursor: pointer
+            margin-top: 2px
+            font-weight: bold !important
+            color: $body !important
+            position: relative
+            padding-left: 20px
+            +sprite-icon(icon_delete, $vertical: 2px, $horizontal: 0px)
+            span
+              display: none
+            &:hover
+              color: $secondary !important
+              +sprite-icon(icon_delete_orange, $vertical: 2px, $horizontal: 0px)
+            &.hidden
+              color: $secondary !important
+              +sprite-icon(icon_undo_orange, $vertical: 0px, $horizontal: 0px)
+              span 
+                display: inline-block
+
+
+
+      // Help Text
+      //  - - - - - - - - - - - - - - -
+      p.help, .help
+        color: #999
+        font-style: italic
+        font-size: 12px !important
+        margin-bottom: 10px !important
+        span
+          background-color: #f6f6f6
+          padding: 5px 10px 5px 28px !important
+          position: relative
+          +sprite-icon(icon_helptext, $vertical: 5px, $horizontal: 5px)
+          &:before
+            content: ""
+            position: absolute
+            left: -8px
+            top: 0px
+            width: 0
+            height: 0
+            border-top: 12px solid transparent
+            border-right: 12px solid #f6f6f6
+            border-bottom: 12px solid transparent
+
+
+      // Muli-select boxes
+      //  - - - - - - - - - - - - - - -
+      div.chzn-container
+        left: 0
+        ul.chzn-choices
+          +input()
+          li.search-choice
+            background: #fff
+            border-radius: none !important
+            -moz-border-radius: none !important
+            -webkit-border-radius: none !important
+            color: $body
+            padding: 4px 19px 4px 7px
+            border: 1px solid #cdcdcd
+          li.search-field input
+            height: 18px
+        div.chzn-drop
+          width: 200px !important
+          margin: 0 !important
+          ul.chzn-results li
+            line-height: 14px !important
+
+
+      // CKEditor Positioning
+      //  - - - - - - - - - - - - - - -
+      div.cke
+        margin-left: 0 !important
+
+      span.cke_skin_kama
+        margin-left: 0 !important
+
+
+    // Checkbox without Label (is active)
+    //  - - - - - - - - - - - - - - -
+    div.checkbox_container
+      margin-left: 140px
+      input[type="checkbox"]
+        margin-right: 10px
+      label
+        color: $body !important
+
+
+  // Stacked Inlines 
+  //  - - - - - - - - - - - - - - -
+  div.inline-related
+    width: 100%
+    +legacy-pie-clearfix
+    h3
+      background: #f6f6f6
+      height: 44px
+      line-height: 15px
+      padding: 0 2px 0 10px
+      margin: 0
+      border: none
+      border-top: 2px solid #fff
+      color: #afafaf
+      &.tobe_removed
+        background: $secondary
+        color: #fff
+        line-height: 44px
+        text-decoration: line-through
+        span.toggleswitch
+          display: none
+      span.toggleswitch
+        margin: 15px 10px 0 0
+        height: 16px
+        width: 16px
+        text-indent: -9999px
+        display: inline-block
+        background: url(images/icon_show_hide.png) 0 -16px no-repeat
+        cursor: pointer
+        &.hidden
+          background-position: 0 0
+        &.tobe_removed
+          display: none
+      span.delete
+        input[type="checkbox"]
+          display: none
+        label
+          float: right
+          font-size: 14px !important
+          font-weight: bold !important
+          padding: 0 0 0 20px
+          display: inline-block
+          margin: 14px 10px 0 0
+          cursor: pointer
+          position: relative
+          &.stackedinline_delete
+            color: $body
+            +sprite-icon(icon_delete, $vertical: 0, $horizontal: 0)
+            &:hover
+              +sprite-icon(icon_delete_orange, $vertical: 0, $horizontal: 0)
+              color: $secondary
+          &.undo_stackedinline_delete
+            +sprite-icon(icon_undo_white, $vertical: 13px, $horizontal: 0)
+            color: #fff
+            margin: 0 10px 0 0
+            &:hover
+              color: #fff
+              +sprite-icon(icon_undo_white, $vertical: 13px, $horizontal: 0)
+          &.hidden
+            display: none
+
+      a.inline-deletelink
+        text-indent: 0
+        padding: 0 0 0 20px
+        margin: 0 10px 0 0
+        height: 44px
+        line-height: 44px
+        width: auto
+        position: relative
+        background: none
+        +sprite-icon(icon_delete, $vertical: 15px)
+        &:hover
+          +sprite-icon(icon_delete_orange, $vertical: 15px)
+
+
+  // Stacked Inline Add Row
+  //  - - - - - - - - - - - - - - -
+  div.add-row 
+    border-bottom: none
+    border-top: 1px solid #efefef
+    background: #fff
+    padding: 0
+    margin: 0 0 40px 0 
+    +legacy-pie-clearfix
+    a
+      +secondary-button()
+      +sprite-icon(icon_add_white, $vertical: 13px, $horizontal: 8px)
+      position: relative
+      display: inline-block
+      &:hover
+        background-color: $primary
+        color: #fff
+
+
+  // Tabular Inlines
+  //  - - - - - - - - - - - - - - -
+  div.tabular
+    table    
+      margin: 20px 0 40px 170px
+      width: 790px !important
+      border: none 
+      thead 
+        border: none
+        th
+          padding: 3px 25px
+          border: none
+          text-shadow: none
+          background: #f6f6f6 !important
+          font-size: 14px
+          color: $primary
+          font-family: $body-font
+          font-weight: bold
+          height: 40px
+          line-height: 40px
+      tbody
+        tr.has_original td
+          padding-top: 20px !important
+        td.original
+          position: relative
+          p
+            top: -10px
+            left: 20px
+            color: $body
+            overflow: visible
+            width: 300px
+        tr
+          border-bottom: 1px solid #efefef
+          &.row2
+            background: transparent
+          &:last-child
+            border-bottom: none
+          td 
+            padding: 15px 25px 3px 
+            font-size: 14px
+            color: $body
+            font-family: $body-font
+            height: 40px
+            line-height: 40px
+            input
+              +input()
+              width: auto
+            textarea
+              +textarea()
+              max-width: 344px
+            button
+              +button()
+
+            // Tabular Select Object Column  
+            // - - - - - - - - - - - - - - -
+            &.link
+              button
+                font-weight: bold
+                color: $body
+                position: relative
+                +sprite-icon(icon_add)
+
+            
+            // Tabular Organization Column
+            // - - - - - - - - - - - - - - -
+            &.field-organization
+              a.related_link
+                font-size: 14px
+                color: $body
+                &:hover
+                  color: $secondary
+              input.vForeignKeyRawIdAdminField
+                display: none
+              a.related-lookup
+                +button()
+                position: relative
+                font-size: 14px
+                height: 34px
+                line-height: 34px
+                margin: -5px 10px 10px 0
+                padding: 0 12px 0 36px
+                width: 30px
+                top: 0
+                left: 0
+                display: inline-block
+                float: left
+                +sprite-icon(icon_search_white, $vertical: 9px, $horizontal: 10px)
+                &:hover
+                  background: #024f84
+                img
+                  display: none
+
+
+            // Tabular Delete Column  
+            // - - - - - - - - - - - - - - -
+            &.delete
+              padding: 0 10px 0 0
+              text-align: right
+              a.inline-deletelink
+                text-indent: 0
+                padding: 0 0 0 20px
+                height: auto
+                width: auto
+                position: relative
+                background: none
+                +sprite-icon(icon_delete, $vertical: 12px)
+                &:hover
+                  +sprite-icon(icon_delete_orange, $vertical: 12px)
+              input[type="checkbox"]
+                display: none
+              label
+                cursor: pointer
+                font-weight: bold !important
+                font-size: 14px !important
+                position: relative
+                padding-left: 20px
+                margin-top: -4px
+                &.tabularinline_delete
+                  +sprite-icon(icon_delete, $vertical: 1px)
+                  color: $body !important
+                  &:hover
+                    color: $secondary !important
+                    +sprite-icon(icon_delete_orange, $vertical: 1px)
+                &.undo_tabularinline_delete
+                  +sprite-icon(icon_undo_white, $vertical: 1px)
+                  color: #fff !important
+                  &:hover
+                    color: #fff !important
+                    +sprite-icon(icon_undo_white, $vertical: 1px)
+                &.hidden
+                  display: none
+                  
+          &.tobe_removed
+            background: $secondary
+            input, select, p, textarea, a
+              display: none
+
+
+          // Tabular Inlines Add Row
+          //  - - - - - - - - - - - - - - -
+          &.add-row td 
+            border-top: 1px solid #efefef
+            background: #fff
+            padding: 0
+            margin-bottom: 40px
+            +legacy-pie-clearfix
+            a
+              +secondary-button()
+              +sprite-icon(icon_add_white, $vertical: 13px, $horizontal: 8px)
+              position: relative
+              display: inline-block
+              &:hover
+                background-color: $primary
+                color: #fff
+
+
+  // Grouped Inlines
+  // - - - - - - - - - -
+  div.form-row.grouped
+    margin-left: 165px !important
+    padding: 0 !important
+    +legacy-pie-clearfix
+    ul
+      float: left
+      padding: 5px
+      width: 386px
+      min-height: 32px
+      margin: 0 1px 15px 0
+      +legacy-pie-clearfix
+      li
+        float: left
+        select
+          width: 134px
+          margin-top: 7px
+        input
+          height: 24px
+          background: #f6f6f6
+          border: 1px solid #cdcdcd
+          +box-shadow(0 2px 0 #e6e6e6 inset)
+          padding: 3px 8px
+          color: $body
+          font-size: 14px
+          font-family: $body-font
+          width: 170px
+        &.field-number, &.field-url
+          margin-right: 0px
+      span.delete
+        margin: 5px
+        float: right
+        input
+          display: none
+        label
+          display: block
+          height: 14px
+          width: 14px
+          color: #fff !important
+          position: relative
+          cursor: pointer
+          +sprite-icon(icon_delete, $vertical: 2px)
+          &:hover
+            +sprite-icon(icon_delete_orange, $vertical: 2px)
+          &.hidden
+            display: none
+        &.tobe_removed label
+          +sprite-icon(icon_undo_white, $vertical: 2px)
+          color: $secondary !important
+
+      &.tobe_removed
+        background: $secondary
+        input, select, p, strong, li a.related-lookup
+          display: none !important
+        span.delete
+          float: right !important
+
+
+      a.inline-deletelink
+        +sprite-icon(icon_delete, $vertical: 2px)
+        padding: 0 0 0 18px
+        text-indent: -9999px
+        height: 14px
+        width: 14px 
+        display: block
+        position: relative
+        margin: -4px 0 0 5px
+        background: none
+        &:hover
+          +sprite-icon(icon_delete_orange, $vertical: 2px)
+          color: $secondary
+
+    div.add-row
+      clear: both
+      .add-row
+        border-top: none
+        border-bottom: none
+        float: left
+        min-width: 20%
+      .inline-related
+        position: inherit
+        float: left
+        display: block
+      select
+        height: 22px
+        margin: 3px 0
+
+
+// History Table
+//  - - - - - - - - - - - - - - -
+table#change-history
+  width: 100%
+  thead
+    th
+      height: 40px
+      line-height: 40px
+      color: $primary
+      font-weight: bold
+      background: #f6f6f6
+      border: none
+      padding: 3px 25px
+      &:first-child
+        width: 350px
+  tbody
+    tr
+      border-bottom: 1px solid #cdcdcd
+      td, th
+        padding: 10px 25px
+        vertical-align: top
+      th
+        color: $primary
+
+
+
+// Date Time Stamp
+//  - - - - - - - - - - - - - - -
+p.datetime
+  input
+    width: 75px
+    margin: 0 8px 8px 8px
+    &:first-child
+      margin-left: 11px
+  span.datetimeshortcuts
+    a:first-child
+      font-size: 14px
+      color: $primary
+      margin-right: 5px
+      &:hover
+        color: $secondary
+    a:last-child
+      display: inline-block
+      margin-left: 5px
+      img
+        margin-top: -3px
+
+
+a.add-another
+  text-indent: -9999px
+  position: relative
+  padding: 0 0 0 18px
+  margin: 0 0 0 3px 
+  height: 14px 
+  width: 14px
+  display: inline-block
+  +sprite-icon(icon_add, $vertical: 2px)
+  &:hover
+    +sprite-icon(icon_add_orange, $vertical: 2px)
+  img
+    display: none
+
+div.clockbox, div.calendarbox
+  box-shadow: #434343 0 0 5px 0
+  border: none !important
+  margin: 22px 0 0 15px
+  &:before
+    content: ""
+    position: absolute
+    left: -10px
+    top: 0px
+    width: 0
+    height: 0
+    border-right: 18px solid #116bb9
+    border-top: 18px solid transparent
+    border-bottom: 18px solid transparent
+  h2
+    background: $primary
+    color: #fff
+    padding: 0 16px
+    font-size: 14px
+    border: none
+  ul.timelist li
+    border-bottom: 1px solid #f6f6f6
+    &:last-child
+      border-bottom: none
+    a
+      padding: 5px 0
+      &:hover
+        background: $secondary
+        color: #fff
+  p.calendar-cancel
+    border: none
+    font-size: 14px
+    background: #747474
+    a
+      color: #fff
+      padding: 5px 0
+      &:hover
+        background: $secondary
+  table
+    width: 100%
+  .calendarnav-previous, .calendarnav-next
+    background: $primary
+    height: 34px
+    line-height: 34px
+  .calendarnav-previous:hover, .calendarnav-next:hover
+    background: #036
+    color: #fff
+  caption
+    background: $primary
+    font-size: 14px
+    font-weight: bold
+    color: #fff
+    line-height: 31px
+    padding: 3px 0
+    width: 100%
+  table td
+    &.today a
+      background: #ed8d1f
+      color: #fff
+    a:hover
+      background: $primary
+
+
+
+// Sitemap Modal
+//  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+.ui-dialog fieldset
+  border-radius: 0px
+  font-family: $body-font
+  background: #fff
+  label
+    width: 90px !important
+  input
+    width: 230px
+  div.checkbox_container
+    margin-left: 105px !important
+    input[type="checkbox"]
+      width: auto
+  div.field_container strong
+    font-size: 14px
+    color: $body
+    font-weight: bold
+    font-family: $body-font
+  button
+    color: #fff
+    font-family: $body-font
+    font-weight: bold
+    font-size: 14px
+    border: none
+    border-top: 2px solid #024f84
+    padding: 10px
+    background-color: $primary
+    cursor: pointer
+    &:hover, &:active
+      background: #024f84
+  div
+    &.advanced
+      background: #fff
+      border-top: 1px solid #CCC
+      margin: 0
+      padding: 5px 10px 5px 18px
+    &.field-is_active
+      border: none
+    &.advanced a
+      display: inline-block
+      margin: 8px 0
+      padding: 0 0 0 18px 
+      color: $body
+      font-weight: bold
+      cursor: pointer
+      position: relative
+      +sprite-icon(icon_add, $vertical: 4px)
+      &:hover
+        color: $secondary
+        +sprite-icon(icon_add_orange, $vertical: 4px)
+
+
+
+// Menu Edit Screen
+//  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+#menuitem_set-group
+  margin: 20px 0 0 0
+  border: 1px solid #cdcdcd
+  border-top: none
+  li
+    +legacy-pie-clearfix
+    h3
+      margin: 0
+      padding: 0
+      > a
+        color: #cdcdcd
+        font-weight: normal
+        position: relative
+        padding: 0 0 0 18px
+        margin-left: 10px
+        +sprite-icon(icon_view_onsite_light, $vertical: 2px)
+        &:hover
+          color: $secondary
+          +sprite-icon(icon_view_onsite_orange, $vertical: 2px)
+      span.detail a
+        color: $primary
+        margin-left: 10px
+        &:hover
+          color: $secondary
+      span.delete
+        input
+          display: none
+        label
+          +sprite-icon(icon_delete, $vertical: 2px)
+          background-image: none
+          padding: 0 0 0 18px
+          display: inline-block
+          color: $body !important
+          font-weight: bold !important
+          font-size: 14px !important
+          position: relative
+          cursor: pointer
+          &:hover
+            +sprite-icon(icon_delete_orange, $vertical: 2px)
+            color: $secondary !important
+          &.hidden
+            display: none
+          &.undo_stackedinline_delete
+            color: #fff !important
+            +sprite-icon(icon_undo_white, $vertical: 2px)
+    &.tobe_removed
+      background: $secondary !important
+      h3 
+        span.inline_label
+          color: #fff
+          text-decoration: line-through
+        > a
+          display: none
+        span.detail a
+          display: none
+      
+
+
+    &.inline-related
+      cursor: move
+    li.inline-related
+      background: url(images/icon_nested_arrow.png) left 3px no-repeat transparent
+    &.inline-related fieldset
+      background: #f6f6f6
+      width: 100%
+      padding: 0 10px 0 10px
+      margin: 5px 0 0 -10px
+    &:nth-child(even)
+      background: #f6f6f6
+    div
+      border: none
+      margin: 0
+      line-height: 19px
+      border-top: 1px solid #cdcdcd
+      padding: 9px 10px 9px 18px
+      list-style: none
+      position: relative
+    li div
+      border-top: 1px dashed #cdcdcd
+      background: transparent
+    div
+      &.form-row
+        border-top: none
+        padding: 0
+        background: transparent
+      &.object_id div
+        min-height: 29px !important
+        // button
+        //   background: none
+        //   height: 28px
+        //   line-height: 10px
+        //   border: 1px solid #185488
+        //   border-radius: 15px
+        //   padding: 8px 13px
+        //   color: #fff
+        //   text-shadow: -1px -1px #185488
+        //   text-transform: uppercase
+        //   font-size: 12px
+        //   font-weight: normal
+        //   background: purple
+        //   &:hover
+        //     background: green
+  div.add-row
+    border: 1px solid #272727
+    padding: 10px 15px
+    margin: 0 -1px -1px -1px
+    background: #272727
+    a
+      color: #fff
+      background: none
+      font-size: 14px
+      border: none
+      padding: 0 0 0 18px
+      position: relative
+      +sprite-icon(icon_add_white, $vertical: 2px)
+      &:hover
+        color: $secondary
+        +sprite-icon(icon_add_orange, $vertical: 2px)
+
+
+
+
+// Message from Revision History or Auth templates
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+.message-container
+  width: 960px
+  margin: 0 auto
+  background: $primary
+  p
+    font-size: 23px
+    font-weight: bold
+    color: #fff
+    padding: 10px
+    margin-bottom: 30px

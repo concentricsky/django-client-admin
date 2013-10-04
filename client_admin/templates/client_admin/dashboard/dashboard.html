@@ -23,7 +23,7 @@
             {% block object_tools_items %}
             {% if has_absolute_url %}<li><a href="../../../r/{{ content_type_id }}/{{ object_id }}/" class="viewsitelink">{{ _("View on site") }}</a></li>{% endif%}
             <li id="dashboard-panel">
-                <a href="#">{{ _("Additional Modules") }}</a>
+                <a href="#">{{ _("View Additional Modules") }}</a>
                 {% if has_disabled_modules %}
                 <ul>
                     {% for module in dashboard.children %}
