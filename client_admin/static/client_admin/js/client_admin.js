@@ -29,11 +29,13 @@ slide_speed = 200;
 var show_advanced_search = function (){
     $('#changelist-advanced-search').slideDown(slide_speed);
     $('#toolbar').slideUp(slide_speed);
+    $('div#changelist-filter').hide();
 };
 
 var hide_advanced_search = function (){
     $('#changelist-advanced-search').slideUp(slide_speed);
     $('#toolbar').slideDown(slide_speed);
+    $('div#changelist-filter').show();
 };
 
 function submitFunc() {

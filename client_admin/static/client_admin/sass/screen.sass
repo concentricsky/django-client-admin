@@ -1115,11 +1115,57 @@ body.change-list
         width: 100%
         margin-bottom: 15px
 
-
     // Form
     // - - - - - - - - - - -
     form#changelist-form
       background: #fff
+
+    // Table Actions
+    // - - - - - - - - - - -
+    div.actions
+      font-size: 14px
+      line-height: 40px
+      height: 40px
+      width: 788.5px
+      display: block
+      padding: 0 10px 0 2px
+      position: relative
+      z-index: 100
+      border: none
+      background: $primary
+      margin-right: 0 !important
+      label
+        position: absolute
+        text-transform: uppercase
+        font-size: 14px
+        margin: 2px 0 0 10px
+        color: #fff
+        font-weight: bold
+        select
+          width: 145px
+          border: none
+          margin: -2px 0 0 5px
+          &:focus
+            outline: none
+      button
+        margin: 16px 0 0 230px
+        padding: 0px 3px
+        font-family: $body-font
+        font-weight: bold
+        color: $primary
+        font-size: 12px
+        background: #fff
+        border: none
+        cursor: pointer
+        &:hover
+          color: $secondary
+      span.action-counter
+        color: #fff
+        text-transform: uppercase
+        font-size: 10px
+
+// Listing Table
+//  - - - - - - - - - - - - - - -
 
 
     // Table Actions
