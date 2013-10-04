@@ -27,15 +27,23 @@
 slide_speed = 200;
 
 var show_advanced_search = function (){
+    // Show the adv. search bar, hide the basic one, and resize the header to look clean
     $('#changelist-advanced-search').slideDown(slide_speed);
     $('#toolbar').slideUp(slide_speed);
     $('div#changelist-filter').hide();
+    $('div.actions').css({'width':'788.5px'});
 };
 
 var hide_advanced_search = function (){
+    // Hide the adv. search bar, show the basic one, and resize the header to look clean
     $('#changelist-advanced-search').slideUp(slide_speed);
     $('#toolbar').slideDown(slide_speed);
     $('div#changelist-filter').show();
+    // Wait a second before restoring the width so the basic search box can move into position
+    setTimeout(function (){
+        $('div.actions').css({'width':''});
+    }, 1000);
+
 };
 
 function submitFunc() {
