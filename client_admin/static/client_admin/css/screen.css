@@ -2585,7 +2585,6 @@ fieldset.module div.form-row label, div.inline-group div.form-row label {
 }
 /* line 1458, ../sass/screen.sass */
 fieldset.module div.form-row div.field_container, div.inline-group div.form-row div.field_container {
-  width: 655px;
   float: left;
   *zoom: 1;
 }
@@ -2598,24 +2597,24 @@ fieldset.module div.form-row div.field_container:after, div.inline-group div.for
   overflow: hidden;
   visibility: hidden;
 }
-/* line 1462, ../sass/screen.sass */
+/* line 1461, ../sass/screen.sass */
 fieldset.module div.form-row div.field_container:first-child, div.inline-group div.form-row div.field_container:first-child {
   min-width: 280px;
 }
-/* line 1468, ../sass/screen.sass */
+/* line 1467, ../sass/screen.sass */
 fieldset.module div.form-row div.field_container a.related_link, div.inline-group div.form-row div.field_container a.related_link {
   font-size: 14px;
   color: #747474;
 }
-/* line 1471, ../sass/screen.sass */
+/* line 1470, ../sass/screen.sass */
 fieldset.module div.form-row div.field_container a.related_link:hover, div.inline-group div.form-row div.field_container a.related_link:hover {
   color: #f9910c;
 }
-/* line 1473, ../sass/screen.sass */
+/* line 1472, ../sass/screen.sass */
 fieldset.module div.form-row div.field_container input.vForeignKeyRawIdAdminField, div.inline-group div.form-row div.field_container input.vForeignKeyRawIdAdminField {
   display: none;
 }
-/* line 1475, ../sass/screen.sass */
+/* line 1474, ../sass/screen.sass */
 fieldset.module div.form-row div.field_container a.related-lookup, div.inline-group div.form-row div.field_container a.related-lookup {
   width: 200px;
   color: white;
@@ -2656,23 +2655,23 @@ fieldset.module div.form-row div.field_container a.related-lookup:after, div.inl
   height: 14px;
   width: 14px;
 }
-/* line 1489, ../sass/screen.sass */
+/* line 1488, ../sass/screen.sass */
 fieldset.module div.form-row div.field_container a.related-lookup:hover, div.inline-group div.form-row div.field_container a.related-lookup:hover {
   background: #024f84;
 }
-/* line 1491, ../sass/screen.sass */
+/* line 1490, ../sass/screen.sass */
 fieldset.module div.form-row div.field_container a.related-lookup img, div.inline-group div.form-row div.field_container a.related-lookup img {
   display: none;
 }
-/* line 1498, ../sass/screen.sass */
+/* line 1497, ../sass/screen.sass */
 fieldset.module div.form-row div.field_container.hidden a.imageupload-thumbcontainer, div.inline-group div.form-row div.field_container.hidden a.imageupload-thumbcontainer {
   display: none;
 }
-/* line 1500, ../sass/screen.sass */
+/* line 1499, ../sass/screen.sass */
 fieldset.module div.form-row div.field_container.hidden img.imageupload-thumbnail-hidden, div.inline-group div.form-row div.field_container.hidden img.imageupload-thumbnail-hidden {
   display: inline-block;
 }
-/* line 1503, ../sass/screen.sass */
+/* line 1502, ../sass/screen.sass */
 fieldset.module div.form-row div.field_container p, fieldset.module div.form-row div.field_container ul, div.inline-group div.form-row div.field_container p, div.inline-group div.form-row div.field_container ul {
   padding: 0 !important;
   margin: 0 !important;
@@ -2680,7 +2679,7 @@ fieldset.module div.form-row div.field_container p, fieldset.module div.form-row
   font-size: 14px;
   color: #747474;
 }
-/* line 1509, ../sass/screen.sass */
+/* line 1508, ../sass/screen.sass */
 fieldset.module div.form-row div.field_container input, div.inline-group div.form-row div.field_container input {
   height: 24px;
   background: #f6f6f6;
@@ -2693,11 +2692,11 @@ fieldset.module div.form-row div.field_container input, div.inline-group div.for
   font-size: 14px;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
-/* line 1511, ../sass/screen.sass */
+/* line 1510, ../sass/screen.sass */
 fieldset.module div.form-row div.field_container input.vIntegerField, div.inline-group div.form-row div.field_container input.vIntegerField {
   width: 50px;
 }
-/* line 1513, ../sass/screen.sass */
+/* line 1512, ../sass/screen.sass */
 fieldset.module div.form-row div.field_container textarea, div.inline-group div.form-row div.field_container textarea {
   background: #f6f6f6;
   border: 1px solid #cdcdcd;
@@ -2712,16 +2711,16 @@ fieldset.module div.form-row div.field_container textarea, div.inline-group div.
   height: 100px;
   resize: vertical;
 }
-/* line 1515, ../sass/screen.sass */
+/* line 1514, ../sass/screen.sass */
 fieldset.module div.form-row div.field_container input[type="checkbox"], div.inline-group div.form-row div.field_container input[type="checkbox"] {
   margin-right: 10px;
 }
-/* line 1517, ../sass/screen.sass */
+/* line 1516, ../sass/screen.sass */
 fieldset.module div.form-row div.field_container input[type="file"], div.inline-group div.form-row div.field_container input[type="file"] {
   height: 20px;
   padding: 5px;
 }
-/* line 1523, ../sass/screen.sass */
+/* line 1522, ../sass/screen.sass */
 fieldset.module div.form-row div.field_container a.imageupload-thumbcontainer, div.inline-group div.form-row div.field_container a.imageupload-thumbcontainer {
   float: left;
   width: 150px;
@@ -2738,21 +2737,21 @@ fieldset.module div.form-row div.field_container a.imageupload-thumbcontainer:af
   overflow: hidden;
   visibility: hidden;
 }
-/* line 1529, ../sass/screen.sass */
+/* line 1528, ../sass/screen.sass */
 fieldset.module div.form-row div.field_container img.imageupload-thumbnail, fieldset.module div.form-row div.field_container img.imageupload-thumbnail-hidden, div.inline-group div.form-row div.field_container img.imageupload-thumbnail, div.inline-group div.form-row div.field_container img.imageupload-thumbnail-hidden {
   max-width: 150px;
   margin: 0 15px 10px 0;
   float: left;
 }
-/* line 1533, ../sass/screen.sass */
+/* line 1532, ../sass/screen.sass */
 fieldset.module div.form-row div.field_container img.imageupload-thumbnail-hidden, div.inline-group div.form-row div.field_container img.imageupload-thumbnail-hidden {
   display: none;
 }
-/* line 1535, ../sass/screen.sass */
+/* line 1534, ../sass/screen.sass */
 fieldset.module div.form-row div.field_container div.imageupload-widget, div.inline-group div.form-row div.field_container div.imageupload-widget {
   float: left;
 }
-/* line 1537, ../sass/screen.sass */
+/* line 1536, ../sass/screen.sass */
 fieldset.module div.form-row div.field_container div.imageupload-widget a.file_upload_button, div.inline-group div.form-row div.field_container div.imageupload-widget a.file_upload_button {
   width: 200px;
   color: white;
@@ -2792,11 +2791,11 @@ fieldset.module div.form-row div.field_container div.imageupload-widget a.file_u
   height: 16px;
   width: 16px;
 }
-/* line 1550, ../sass/screen.sass */
+/* line 1549, ../sass/screen.sass */
 fieldset.module div.form-row div.field_container div.imageupload-widget a.file_upload_button:hover, div.inline-group div.form-row div.field_container div.imageupload-widget a.file_upload_button:hover {
   background: #024f84;
 }
-/* line 1552, ../sass/screen.sass */
+/* line 1551, ../sass/screen.sass */
 fieldset.module div.form-row div.field_container div.imageupload-widget input[type="file"], div.inline-group div.form-row div.field_container div.imageupload-widget input[type="file"] {
   background: transparent;
   border: none;
@@ -2806,7 +2805,7 @@ fieldset.module div.form-row div.field_container div.imageupload-widget input[ty
   font-size: 12px;
   cursor: pointer;
 }
-/* line 1560, ../sass/screen.sass */
+/* line 1559, ../sass/screen.sass */
 fieldset.module div.form-row div.field_container div.imageupload-widget span.clearable-file-input, div.inline-group div.form-row div.field_container div.imageupload-widget span.clearable-file-input {
   display: block;
   *zoom: 1;
@@ -2820,13 +2819,13 @@ fieldset.module div.form-row div.field_container div.imageupload-widget span.cle
   overflow: hidden;
   visibility: hidden;
 }
-/* line 1563, ../sass/screen.sass */
+/* line 1562, ../sass/screen.sass */
 fieldset.module div.form-row div.field_container div.imageupload-widget span.clearable-file-input input[type="checkbox"], div.inline-group div.form-row div.field_container div.imageupload-widget span.clearable-file-input input[type="checkbox"] {
   cursor: pointer;
   margin-right: 5px;
   display: none;
 }
-/* line 1567, ../sass/screen.sass */
+/* line 1566, ../sass/screen.sass */
 fieldset.module div.form-row div.field_container div.imageupload-widget span.clearable-file-input label, div.inline-group div.form-row div.field_container div.imageupload-widget span.clearable-file-input label {
   cursor: pointer;
   margin-top: 2px;
@@ -2845,11 +2844,11 @@ fieldset.module div.form-row div.field_container div.imageupload-widget span.cle
   height: 14px;
   width: 14px;
 }
-/* line 1575, ../sass/screen.sass */
+/* line 1574, ../sass/screen.sass */
 fieldset.module div.form-row div.field_container div.imageupload-widget span.clearable-file-input label span, div.inline-group div.form-row div.field_container div.imageupload-widget span.clearable-file-input label span {
   display: none;
 }
-/* line 1577, ../sass/screen.sass */
+/* line 1576, ../sass/screen.sass */
 fieldset.module div.form-row div.field_container div.imageupload-widget span.clearable-file-input label:hover, div.inline-group div.form-row div.field_container div.imageupload-widget span.clearable-file-input label:hover {
   color: #f9910c !important;
 }
@@ -2863,7 +2862,7 @@ fieldset.module div.form-row div.field_container div.imageupload-widget span.cle
   height: 14px;
   width: 14px;
 }
-/* line 1580, ../sass/screen.sass */
+/* line 1579, ../sass/screen.sass */
 fieldset.module div.form-row div.field_container div.imageupload-widget span.clearable-file-input label.hidden, div.inline-group div.form-row div.field_container div.imageupload-widget span.clearable-file-input label.hidden {
   color: #f9910c !important;
 }
@@ -2877,16 +2876,17 @@ fieldset.module div.form-row div.field_container div.imageupload-widget span.cle
   height: 15px;
   width: 13px;
 }
-/* line 1583, ../sass/screen.sass */
+/* line 1582, ../sass/screen.sass */
 fieldset.module div.form-row div.field_container div.imageupload-widget span.clearable-file-input label.hidden span, div.inline-group div.form-row div.field_container div.imageupload-widget span.clearable-file-input label.hidden span {
   display: inline-block;
 }
-/* line 1590, ../sass/screen.sass */
+/* line 1589, ../sass/screen.sass */
 fieldset.module div.form-row div.field_container p.help, fieldset.module div.form-row div.field_container .help, div.inline-group div.form-row div.field_container p.help, div.inline-group div.form-row div.field_container .help {
   color: #999999;
   font-style: italic;
   font-size: 12px !important;
   margin-bottom: 10px !important;
+  max-width: 655px;
 }
 /* line 1595, ../sass/screen.sass */
 fieldset.module div.form-row div.field_container p.help span, fieldset.module div.form-row div.field_container .help span, div.inline-group div.form-row div.field_container p.help span, div.inline-group div.form-row div.field_container .help span {
