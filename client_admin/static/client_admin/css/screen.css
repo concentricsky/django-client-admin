@@ -2581,7 +2581,7 @@ fieldset.module div.form-row label, div.inline-group div.form-row label {
   margin-right: 20px;
   text-align: right;
   color: #006fbb !important;
-  word-break: break-all;
+  word-break: break-word;
 }
 /* line 1458, ../sass/screen.sass */
 fieldset.module div.form-row div.field_container, div.inline-group div.form-row div.field_container {
