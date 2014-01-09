@@ -1,7 +1,7 @@
 # Client Admin for Django
 
-Client Admin enhances Django Admin by providing organization tools and features that make the interface more appropriate for clients. Some of the code started as 
-[Admin Tools](https://bitbucket.org/izi/django-admin-tools/overview), although the theming engine has been removed and many features have been added.
+Client Admin is an open source project developed by [Concentric Sky](https://concentricsky.com) that enhances Django Admin by providing organization tools and features that make the interface more appropriate for clients. Some of the code started as
+  [Admin Tools](https://bitbucket.org/izi/django-admin-tools/overview), although the theming engine has been removed and many features have been added.
 
 ### Table of Contents
 - [Out of the Box](#out-of-the-box)
@@ -9,7 +9,7 @@ Client Admin enhances Django Admin by providing organization tools and features 
   - [Additional Features](#additional-features)
 - [Installation](#installation)
   - [Customization](#customization)
-- [Dashboard Widgets](#dashboard-widgets) 
+- [Dashboard Widgets](#dashboard-widgets)
   - [App List](#app-list)
   - [Link List](#link-list)
   - [Memcached Status](#memcached-status)
@@ -29,7 +29,7 @@ Client Admin enhances Django Admin by providing organization tools and features 
 - Provides a system of admin bookmarks that allow users to quickly star favorite pages and have them available from the menu.
 - Provides a ClientModelAdmin class to inherit from that improves default widgets and settings.
 - Provides an additional inline type, Grouped, that acts much like a Stacked inline but floats each field group instead of clearing them.
-- Allows admin templates to extend Jinja2 templates. Assuming certain blocks are present 
+- Allows admin templates to extend Jinja2 templates. Assuming certain blocks are present
 in your template, this means the admin interface could inherit a header and footer from the front-end templates.
 
 
@@ -47,7 +47,7 @@ in your template, this means the admin interface could inherit a header and foot
 
 Include Client Admin in your settings.py. It should be listed before the django.contrib.admin module so that client_admin can override the default Django admin templates.
 
-    INSTALLED_APPS = [   
+    INSTALLED_APPS = [
         'client_admin',
 
         ...
@@ -124,14 +124,14 @@ Basic Django admin allows for a model to be edited inline with a related model, 
 
 #### Example
 
-    
+
     class ChapterInline(admin.TabularInline):
         model = Chapter
-    
+
     class BookInline(client_admin.StackedInline):
         model = Book
         inlines = [ChapterInline]
-    
+
     class AuthorAdmin(client_admin.RecursiveInlinesModelAdmin):
         model = Author
         inlines = [BookInline, AwardInline]
@@ -150,7 +150,7 @@ If search fields are provided to a ClientModelAdmin class, they will automatical
 
     class BookInline(StackedInline):
         model = Book
-    
+
     class AuthorAdmin(client_admin.RecursiveInlinesModelAdmin):
         model = Author
         search_fields = ('name', 'book_set__title', 'award_set__name')
@@ -162,7 +162,7 @@ If search fields are provided to a ClientModelAdmin class, they will automatical
 
 ## Best Practices
 
-- Create a 'staff' user that belongs to a 'staff' group with limited permissions. 
+- Create a 'staff' user that belongs to a 'staff' group with limited permissions.
     - The staff group should have access to:
         - Editing and creating all site-specific structured content
         - Deleting any structured content that is used as an inline
@@ -181,6 +181,6 @@ If search fields are provided to a ClientModelAdmin class, they will automatical
 ###Features
 - Create a Jinja2 helper that would print the admin menu bar on front-end templates. This would most likely be inserted dynamically and position absolutely to maintain the existing front-end structure.
 - Create Jinja2 helpers that insert links to corresponding admin pages for content displayed in front-end templates. Again, these would most likely be inserted dynamically and position absolutely to maintain the existing front-end structure.
-- Provide a modal interface to edit WYSIWYG fields (currently CKEditor) directly from the front end. 
+- Provide a modal interface to edit WYSIWYG fields (currently CKEditor) directly from the front end.
 - Support including foreign keys and many-to-many relationships as inlines on a change form. This would mean the original field would be excluded in the main form, and the inverse inlines would be saved first, with their resulting PKs saved as the value for the corresponding relationship on the main form.
 - Support for nested inlines using AJAX submissions of inline forms instead of nested formsets.
