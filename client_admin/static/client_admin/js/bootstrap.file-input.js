@@ -20,7 +20,7 @@ $('input[type=file]').each(function(i,elem){
   }
 
   // Set the word to be displayed on the button
-  var buttonWord = 'Choose Image';
+  var buttonWord = 'Choose File';
 
   if (typeof $(this).attr('title') != 'undefined') {
     buttonWord = $(this).attr('title');
