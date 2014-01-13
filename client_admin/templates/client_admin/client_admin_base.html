@@ -237,11 +237,15 @@
 
             // Remove any pre-existing links to remove filters
             $("div#changelist-filter ul li a.removefilter").remove();
-            
+
             // Grab the url and split it into an array of GET parameters
             var url = document.URL;
             baseurl = url.split("?")[0]
-            getparams = url.split("?")[1].split("&");
+            if (url.split("?")[1]){
+                getparams = url.split("?")[1].split("&");
+            } else {
+                getparams = [];
+            }
 
             // Read the name of each filter heading and filter out non-keywords.
             $("div#changelist-filter h3").each(function() {
