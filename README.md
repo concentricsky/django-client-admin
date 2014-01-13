@@ -1,7 +1,7 @@
 # Client Admin for Django
 
-Client Admin enhances Django Admin. It provides organization and features that make the interface more appropriate for clients. Some of the code started as 
-[Admin Tools](https://bitbucket.org/izi/django-admin-tools/overview), although the theming engine has been removed and many features have been added.
+Client Admin is an open source project developed by [Concentric Sky](https://concentricsky.com) that enhances Django Admin by providing organization tools and features that make the interface more appropriate for clients. Some of the code started as 
+  [Admin Tools](https://bitbucket.org/izi/django-admin-tools/overview), although the theming engine has been removed and many features have been added.
 
 
 ## What does it give you by default?
