@@ -54,7 +54,7 @@ class Dashboard(object):
 
     class Media:
         css = ()
-        js = ['admin/js/jquery.min.js', 'admin/js/jquery.init.js', 'admin/js/inlines.min.js']
+        js = ['admin/js/jquery.min.js', 'admin/js/jquery.init.js']
 
     def __init__(self, **kwargs):
         for key in kwargs:
@@ -94,7 +94,7 @@ class Dashboard(object):
         #self.children.append(modules.RecentActions(_('My Actions'), 5))
         # append an all actions module
         self.children.append(modules.AllRecentActions(
-            _('Recent Activity') 
+            _('Recent Activity')
             , 10
             , css_classes=('activity',)
         ))
@@ -124,7 +124,7 @@ class Dashboard(object):
         for id, module in enumerate(self.children):
             module.id = uniquify(module.id or str(id+1), seen)
             module._prepare_children()
-    
+
     def init_children_with_context(self, context):
         for module in self.children:
             module.init_with_context(context)
