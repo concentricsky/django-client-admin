@@ -36,7 +36,7 @@ setup(
     packages = find_packages(),
     package_data = find_package_data(client_admin=['static', 'templates']),
     install_requires = [
-        "Django-Select2==4.0.0"
+        "Django-Select2==4.2.2"
     ],
 
     author = 'Concentric Sky',
