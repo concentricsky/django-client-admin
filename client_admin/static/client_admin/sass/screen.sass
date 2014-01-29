@@ -1534,23 +1534,23 @@ fieldset.module, div.inline-group
         float: left
       img.imageupload-thumbnail-hidden
         display: none
+      a.file_upload_button
+        +button()
+        position: relative
+        font-size: 14px
+        height: 34px
+        line-height: 34px
+        margin: 0 0 10px 0
+        padding: 0 12px 0 36px
+        width: auto
+        top: 0
+        left: 0
+        display: inline-block
+        +sprite-icon(icon_change_image, $vertical: 9px, $horizontal: 10px)
+        &:hover
+          background: #024f84
       div.imageupload-widget
         float: left
-        a.file_upload_button
-          +button()
-          position: relative
-          font-size: 14px
-          height: 34px
-          line-height: 34px
-          margin: 0 0 10px 0
-          padding: 0 12px 0 36px
-          width: auto
-          top: 0
-          left: 0
-          display: inline-block
-          +sprite-icon(icon_change_image, $vertical: 9px, $horizontal: 10px)
-          &:hover
-            background: #024f84
         input[type="file"]
           background: transparent
           border: none
