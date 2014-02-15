@@ -28,7 +28,14 @@ from django.core.urlresolvers import reverse
 from django.core.cache import get_cache
 
 if get_cache.__module__.startswith('debug_toolbar'):
-    from debug_toolbar.panels.cache import base_get_cache as get_cache
+    try:
+        from debug_toolbar.panels.cache import get_cache
+    except ImportError:
+        # for debugtoolbar < 1.0
+        try:
+            from debug_toolbar.panels.cache import base_get_cache as get_cache
+        except:
+            pass
 
 
 def check_permission(request, mode_name, app_label, model_name):
