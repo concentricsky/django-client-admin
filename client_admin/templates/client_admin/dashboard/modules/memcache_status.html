@@ -8,21 +8,19 @@
     }
 
     div.cache_stats table{
-        width: 100%
+        width: 100%;
+        background: white;
+        border: none;
+        margin: 0 .5em;
     }
 
-    div.cache_stats table tbody th,
-    div.cache_stats table tbody td{
-        width: 50% !important;
-    }
-
-    div.cache_stats table tbody th{
-        text-align: right;
+    div.cache_stats tr:nth-child(even) {
+        background-color: #f6f6f6;
     }
 
     div.cache_stats table tbody th.cache_title{
         text-align: center;
-        font-weight: normal;
+        font-weight: bold;
         padding-top: 1em;
     }
 
@@ -36,8 +34,6 @@
 
     div.cache_graph.inline{
         display: inline-block;
-        width: 180px;
-        margin-left: 2em;
     }
 
     div.cache_graph_value{
