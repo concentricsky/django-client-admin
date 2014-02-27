@@ -228,6 +228,7 @@
                 alternatingRows(row);
                 install_on_add(row);
                 InitCKEditors();
+                InitFilePickers();
             }
         });
 
@@ -294,6 +295,7 @@
                 update_inline_labels(row.parent());
                 install_on_add(row);
                 InitCKEditors();
+                InitFilePickers();
             })
         });
 
@@ -366,6 +368,7 @@
                 alternatingRows(row);
                 install_on_add(row);
                 InitCKEditors();
+                InitFilePickers();
             }
         });
 

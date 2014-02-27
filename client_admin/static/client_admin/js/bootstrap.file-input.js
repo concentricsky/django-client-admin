@@ -10,6 +10,7 @@
   <a class="btn">Browse</a>
 
 */
+
 (function($) {
 
 $('input[type=file]').each(function(i,elem){
@@ -76,11 +77,16 @@ $('input[type=file]').each(function(i,elem){
     });
   });
 
-  $('.file-input-wrapper input[type=file]').change(function(){
-    // Remove any previous file names
-    $(this).parent().next('.file-input-name').remove();
-    $(this).parent().after('<span class="file-input-name">'+$(this).val().split('\\').pop()+'</span>');
-  });
+  var InitFilePickers = function() {
+      $('.file-input-wrapper input[type=file]').change(function(){
+        // Remove any previous file names
+        // only happening on base, not inlines?
+        $(this).parent().next('.file-input-name').remove();
+        $(this).parent().after('<span class="file-input-name">'+$(this).val().split('\\').pop()+'</span>');
+      });
+  }
+  InitFilePickers();
+  window.InitFilePickers = InitFilePickers;
 
 });
 
