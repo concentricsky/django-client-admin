@@ -90,12 +90,12 @@ class RecursiveInlinesModelAdmin(admin.ModelAdmin):
                 self.save_formset(request, form, recursive_formset, change=change)
         super(RecursiveInlinesModelAdmin, self).save_formset(request, form, formset, change=change)
 
-    def add_recursive_inline_formsets(self, request, inline, formset):
+    def add_recursive_inline_formsets(self, request, inline, formset, obj=None):
         for form in formset.forms:
             recursive_formsets = []
             if form.instance.pk:
                 if hasattr(inline, 'get_inline_instances'):
-                    for recursive_inline in inline.get_inline_instances(request):
+                    for recursive_inline in inline.get_inline_instances(request, obj):
                         FormSet = recursive_inline.get_formset(request, form.instance)
                         prefix = "%s-%s" % (form.prefix, FormSet.get_default_prefix())
                         if request.method == 'POST':
@@ -107,7 +107,7 @@ class RecursiveInlinesModelAdmin(admin.ModelAdmin):
                             self.add_recursive_inline_formsets(request, recursive_inline, recursive_formset)
             form.recursive_formsets = recursive_formsets
 
-    def wrap_recursive_inline_formsets(self, request, inline, formset):
+    def wrap_recursive_inline_formsets(self, request, inline, formset, obj=None):
         media = None
 
         def get_media(extra_media):
@@ -119,7 +119,7 @@ class RecursiveInlinesModelAdmin(admin.ModelAdmin):
         for form in formset.forms:
             wrapped_recursive_formsets = []
             if hasattr(form, 'recursive_formsets') and hasattr(inline, 'get_inline_instances'):
-                for recursive_inline, recursive_formset in zip(inline.get_inline_instances(request), form.recursive_formsets):
+                for recursive_inline, recursive_formset in zip(inline.get_inline_instances(request, obj), form.recursive_formsets):
                     fieldsets = list(recursive_inline.get_fieldsets(request))
                     readonly = list(recursive_inline.get_readonly_fields(request))
                     prepopulated = dict(recursive_inline.get_prepopulated_fields(request))
@@ -267,7 +267,7 @@ class RecursiveInlinesModelAdmin(admin.ModelAdmin):
 
         ModelForm = self.get_form(request, obj)
         formsets = []
-        inline_instances = self.get_inline_instances(request)
+        inline_instances = self.get_inline_instances(request, obj)
         if request.method == 'POST':
             form = ModelForm(request.POST, request.FILES, instance=obj)
             if form.is_valid():
@@ -288,7 +288,7 @@ class RecursiveInlinesModelAdmin(admin.ModelAdmin):
 
                 formsets.append(formset)
                 if hasattr(inline, 'inlines'):
-                    self.add_recursive_inline_formsets(request, inline, formset)
+                    self.add_recursive_inline_formsets(request, inline, formset, obj)
 
             if self.all_valid(formsets) and form_validated:
                 self.save_model(request, new_object, form, True)
@@ -329,7 +329,7 @@ class RecursiveInlinesModelAdmin(admin.ModelAdmin):
             inline_admin_formsets.append(inline_admin_formset)
             media = media + inline_admin_formset.media
             if hasattr(inline, 'inlines'):
-                media = media + self.wrap_recursive_inline_formsets(request, inline, formset)
+                media = media + self.wrap_recursive_inline_formsets(request, inline, formset, obj)
 
         context = {
             'title': _('Change %s') % force_unicode(opts.verbose_name),
@@ -349,7 +349,7 @@ class RecursiveInlinesModelAdmin(admin.ModelAdmin):
 class ReverseInlinesModelAdminMixin(object):
 
     def get_inline_instances(self, request, obj=None):
-        inline_instances = super(ReverseInlinesModelAdminMixin, self).get_inline_instances(request)
+        inline_instances = super(ReverseInlinesModelAdminMixin, self).get_inline_instances(request, obj)
         if hasattr(self, 'inverse_inlines'):
             for inline_class in self.inverse_inlines:
                 inline = inline_class(self.model, self.admin_site)
