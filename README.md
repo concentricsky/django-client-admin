@@ -1,3 +1,5 @@
+![Concentric Sky](https://concentricsky.com/media/uploads/images/csky_logo.jpg)
+
 # Client Admin for Django
 
 Client Admin is an open source project developed by [Concentric Sky](https://concentricsky.com) that enhances Django Admin by providing organization tools and features that make the interface more appropriate for clients. Some of the code started as
