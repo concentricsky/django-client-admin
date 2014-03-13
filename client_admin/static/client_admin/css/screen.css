@@ -1844,7 +1844,7 @@ body.change-list #changelist.filtered {
 /* line 1007, ../sass/screen.sass */
 body.change-list #changelist div#changelist-filter {
   padding: 0 10px 10px 10px;
-  width: 138px;
+  width: 140px;
   border-left: none;
   float: right;
   display: block;
