@@ -2123,7 +2123,10 @@ body.change-list #changelist div.actions span.action-counter {
   text-transform: uppercase;
   font-size: 10px;
 }
-/* line 1211, ../sass/screen.sass */
+/* line 1210, ../sass/screen.sass */
+body.change-list #changelist div.results {
+  overflow-x: scroll;
+}
 body.change-list #changelist div.results table#result_list {
   border-bottom: 1px solid #dfdfdf;
 }
