@@ -186,3 +186,6 @@ If search fields are provided to a ClientModelAdmin class, they will automatical
 - Provide a modal interface to edit WYSIWYG fields (currently CKEditor) directly from the front end.
 - Support including foreign keys and many-to-many relationships as inlines on a change form. This would mean the original field would be excluded in the main form, and the inverse inlines would be saved first, with their resulting PKs saved as the value for the corresponding relationship on the main form.
 - Support for nested inlines using AJAX submissions of inline forms instead of nested formsets.
+
+
+_For nearly a decade, Concentric Sky has been building technology solutions that impact people everywhere. We work in the mobile, enterprise and web application spaces. Our team, based in Eugene Oregon, loves to solve complex problems. Concentric Sky believes in contributing back to our community and one of the ways we do that is by open sourcing our code on GitHub. Contact Concentric Sky at hello@concentricsky.com._
