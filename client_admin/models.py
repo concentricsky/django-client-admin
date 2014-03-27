@@ -12,15 +12,18 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+from django.conf import settings
 from django.db import models
-from django.contrib.auth import get_user_model
+
+
+AUTH_USER_MODEL = getattr(settings, 'AUTH_USER_MODEL', 'auth.User')
 
 
 class Bookmark(models.Model):
     """
     This model represents a user created bookmark.
     """
-    user = models.ForeignKey(get_user_model())
+    user = models.ForeignKey(AUTH_USER_MODEL)
     url = models.CharField(max_length=255)
     title = models.CharField(max_length=255)
 
@@ -36,7 +39,7 @@ class DashboardPreferences(models.Model):
     """
     This model represents the dashboard preferences for a user.
     """
-    user = models.ForeignKey(get_user_model())
+    user = models.ForeignKey(AUTH_USER_MODEL)
     data = models.TextField()
     dashboard_id = models.CharField(max_length=100)
 
