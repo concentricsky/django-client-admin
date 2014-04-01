@@ -28,24 +28,26 @@ The sitemap module allows listing models in a hierarchy similar to a front-end s
 
 
 Recursive Inlines
+-------------------
 
 Basic Django admin allows for a model to be edited inline with a related model, but it is limited to one level of nesting. Client Admin provides several classes that allow inlines to be nested recursively.
 
 Example:
 
+.. code-block:: python
 
-    class ChapterInline(admin.TabularInline):
+    class ChapterInline(client_admin.TabularInline):
         model = Chapter
 
     class BookInline(client_admin.StackedInline):
         model = Book
         inlines = [ChapterInline]
 
-    class AuthorAdmin(client_admin.RecursiveInlinesModelAdmin):
+    class AuthorAdmin(client_admin.ClientModelAdmin):
         model = Author
         inlines = [BookInline, AwardInline]
 
-By default `RecursiveInlinesModelAdmin` is inherited by `ClientModelAdmin`. This example is only to demonstrate how to use the class on its own. Normally, only `ClientModelAdmin` and the inline classes from Client Admin would be used.
+By default `RecursiveInlinesModelAdmin` is inherited by `ClientModelAdmin`. It is possible to inherit from and use the `RecursiveInlinesModelAdmin` class on its own. Normally, only `ClientModelAdmin` and the inline classes from Client Admin would be used.
 
 
 .. toctree::

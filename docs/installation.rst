@@ -5,6 +5,8 @@ Installation
 
 Include Client Admin in your settings.py. It should be listed before the django.contrib.admin module so that client_admin can override the default Django admin templates.
 
+.. code-block:: python
+
     INSTALLED_APPS = [
         'client_admin',
 
@@ -13,6 +15,8 @@ Include Client Admin in your settings.py. It should be listed before the django.
     ]
 
 Include Client Admin urls in your urls.py at the same path as normal contrib.admin
+
+.. code-block:: python
 
     urlpatterns = patterns('',
 
@@ -26,6 +30,8 @@ Include Client Admin urls in your urls.py at the same path as normal contrib.adm
     )
 
 Import and inherit from ClientModelAdmin and Inline classes.
+
+.. code-block:: python
 
     from client_admin.admin import ClientModelAdmin, GroupedInline, TabularInline, StackedInline
 
