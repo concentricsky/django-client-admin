@@ -1,6 +1,5 @@
-Client Admin Features
+Features
 =====================
-
 
 Default Features
 -----------------
