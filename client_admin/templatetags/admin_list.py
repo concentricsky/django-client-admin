@@ -243,7 +243,7 @@ def items_for_result(cl, result, form):
                               table_tag,
                               row_class,
                               url,
-                              format_html(""" onclick=\"opener.dismissRelatedLookupPopup(window, {0}, \'{1}\'); return false;\"""", result_id, str(result_repr).replace("'", ""))
+                              format_html(""" onclick=\"opener.dismissRelatedLookupPopup(window, {0}, \'{1}\'); return false;\"""", result_id, unicode(result_repr).replace("'", ""))
                                 if cl.is_popup else '',
                               result_repr,
                               table_tag)
