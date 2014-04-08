@@ -227,7 +227,9 @@
                 updateSelectFilter();
                 alternatingRows(row);
                 install_on_add(row);
-                InitCKEditors();
+                if (window.hasOwnProperty('InitCKEditors')) {
+                    InitCKEditors();
+                }
                 InitFilePickers();
             }
         });
@@ -294,7 +296,9 @@
                 updateSelectFilter();
                 update_inline_labels(row.parent());
                 install_on_add(row);
-                InitCKEditors();
+                if (window.hasOwnProperty('InitCKEditors')) {
+                    InitCKEditors();
+                }
                 InitFilePickers();
             })
         });
@@ -367,7 +371,9 @@
                 updateSelectFilter();
                 alternatingRows(row);
                 install_on_add(row);
-                InitCKEditors();
+                if (window.hasOwnProperty('InitCKEditors')) {
+                    InitCKEditors();
+                }
                 InitFilePickers();
             }
         });
