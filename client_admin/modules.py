@@ -668,8 +668,11 @@ class Sitemap(DashboardModule, AppListElementMixin):
 
     def _menu_child(self, item, child_query, context):
         item_dict = {}
-        if item.content_type:
-            item_dict = self._sitemap_child(item.content_type.model_class(), item.object_id, child_query, context)
+        try:
+            if item.content_type:
+                item_dict = self._sitemap_child(item.content_type.model_class(), item.object_id, child_query, context)
+        except ContentType.DoesNotExist:
+            pass
         if child_query:
             children = getattr(item, child_query, None)
             try:
