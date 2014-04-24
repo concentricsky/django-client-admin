@@ -25,7 +25,9 @@
         {% for fieldset in inline_admin_form %}
             {% include "admin/includes/fieldset.html" %}
         {% endfor %}
-        {% if inline_admin_form.has_auto_field %}{{ inline_admin_form.pk_field.field }}{% endif %}
+        {% if inline_admin_form.has_auto_field or inline_admin_form.needs_explicit_pk_field %}
+            {{ inline_admin_form.pk_field.field }}
+        {% endif %}
         {{ inline_admin_form.fk_field.field }}
         {% if inline_admin_form.form.inline_admin_formsets %}
             {% for child_inline_admin_formset in inline_admin_form.form.inline_admin_formsets %}
