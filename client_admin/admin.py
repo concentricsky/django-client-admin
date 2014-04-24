@@ -22,7 +22,7 @@ from django.conf import settings
 from django.conf.urls import patterns, url
 from django.contrib import admin
 from django.contrib.admin import helpers
-from django.contrib.admin.options import get_ul_class
+from django.contrib.admin.options import get_ul_class, IS_POPUP_VAR
 from django.contrib.admin.templatetags.admin_static import static
 from django.contrib.admin.util import unquote
 from django.contrib.admin.widgets import AdminRadioSelect
@@ -178,7 +178,7 @@ class RecursiveInlinesModelAdmin(admin.ModelAdmin):
                 formset = FormSet(data=request.POST, files=request.FILES,
                                   instance=new_object,
                                   save_as_new="_saveasnew" in request.POST,
-                                  prefix=prefix, queryset=inline.queryset(request))
+                                  prefix=prefix, queryset=inline.get_queryset(request))
                 formsets.append(formset)
                 if hasattr(inline, 'inlines') and inline.inlines:
                     self.add_recursive_inline_formsets(request, inline, formset)
@@ -206,9 +206,9 @@ class RecursiveInlinesModelAdmin(admin.ModelAdmin):
                 if prefixes[prefix] != 1 or not prefix:
                     prefix = "%s-%s" % (prefix, prefixes[prefix])
                 formset = FormSet(instance=self.model(), prefix=prefix,
-                                  queryset=inline.queryset(request))
+                                  queryset=inline.get_queryset(request))
                 formsets.append(formset)
-                if hasattr(inline, 'inlines'):
+                if hasattr(inline, 'inlines') and hasattr(self, 'add_recursive_inline_formsets'):
                     self.add_recursive_inline_formsets(request, inline, formset)
 
         adminForm = helpers.AdminForm(form, list(
@@ -234,12 +234,14 @@ class RecursiveInlinesModelAdmin(admin.ModelAdmin):
         context = {
             'title': _('Add %s') % force_unicode(opts.verbose_name),
             'adminform': adminForm,
-            'is_popup': "_popup" in request.REQUEST,
+            'is_popup': IS_POPUP_VAR in request.REQUEST,
             'show_delete': False,
             'media': media,
             'inline_admin_formsets': inline_admin_formsets,
             'errors': helpers.AdminErrorList(form, formsets),
             'app_label': opts.app_label,
+            'preserved_filters': self.get_preserved_filters(request),
+
         }
         context.update(extra_context or {})
         return self.render_change_form(request, context, form_url=form_url, add=True)
@@ -262,7 +264,7 @@ class RecursiveInlinesModelAdmin(admin.ModelAdmin):
 
         if request.method == 'POST' and "_saveasnew" in request.POST:
             return self.add_view(request, form_url=reverse(
-                'admin:%s_%s_add' % (opts.app_label, opts.module_name),
+                'admin:%s_%s_add' % (opts.app_label, opts.model_name),
                 current_app=self.admin_site.name))
 
         ModelForm = self.get_form(request, obj)
@@ -284,10 +286,9 @@ class RecursiveInlinesModelAdmin(admin.ModelAdmin):
                     prefix = "%s-%s" % (prefix, prefixes[prefix])
                 formset = FormSet(request.POST, request.FILES,
                                   instance=new_object, prefix=prefix,
-                                  queryset=inline.queryset(request))
-
+                                  queryset=inline.get_queryset(request))
                 formsets.append(formset)
-                if hasattr(inline, 'inlines'):
+                if hasattr(inline, 'inlines') and inline.inlines:
                     self.add_recursive_inline_formsets(request, inline, formset, obj)
 
             if self.all_valid(formsets) and form_validated:
@@ -306,7 +307,7 @@ class RecursiveInlinesModelAdmin(admin.ModelAdmin):
                 if prefixes[prefix] != 1 or not prefix:
                     prefix = "%s-%s" % (prefix, prefixes[prefix])
                 formset = FormSet(instance=obj, prefix=prefix,
-                                  queryset=inline.queryset(request))
+                                  queryset=inline.get_queryset(request))
                 formsets.append(formset)
                 if hasattr(inline, 'inlines') and hasattr(self, 'add_recursive_inline_formsets'):
                     self.add_recursive_inline_formsets(request, inline, formset)
@@ -336,11 +337,13 @@ class RecursiveInlinesModelAdmin(admin.ModelAdmin):
             'adminform': adminForm,
             'object_id': object_id,
             'original': obj,
-            'is_popup': "_popup" in request.REQUEST,
+            'is_popup': IS_POPUP_VAR in request.REQUEST,
             'media': media,
             'inline_admin_formsets': inline_admin_formsets,
             'errors': helpers.AdminErrorList(form, formsets),
             'app_label': opts.app_label,
+            'preserved_filters': self.get_preserved_filters(request),
+
         }
         context.update(extra_context or {})
         return self.render_change_form(request, context, change=True, obj=obj, form_url=form_url)
