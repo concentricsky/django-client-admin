@@ -36,9 +36,9 @@ function showRelatedObjectLookupPopup(triggeringLink) {
     name = id_to_windowname(name);
     var href;
     if (triggeringLink.href.search(/\?/) >= 0) {
-        href = triggeringLink.href + '&pop=1';
+        href = triggeringLink.href + '&_popup=1';
     } else {
-        href = triggeringLink.href + '?pop=1';
+        href = triggeringLink.href + '?_popup=1';
     }
     var win = window.open(href, name, 'height=600,width=1000,resizable=yes,scrollbars=yes');
     win.focus();
