@@ -1,4 +1,4 @@
-![Concentric Sky](https://concentricsky.com/media/uploads/images/csky_logo.jpg)
+![Concentric Sky](http://concentricsky.com/media/uploads/images/csky_logo.jpg)
 
 # Client Admin for Django
 
