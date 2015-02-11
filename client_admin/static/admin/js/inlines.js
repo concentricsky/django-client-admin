@@ -106,6 +106,10 @@
                         options.removed(formset_to_update);
                     }
 
+                    // Show add button again if appropriate.
+                    if ((get_max_forms(options.prefix) !== '') || (get_max_forms(options.prefix) - get_no_forms(options.prefix)) > 0) {
+                        addButton.parent().show();
+                    }
                 });
 
                 var recursive_formsets;
@@ -533,7 +537,7 @@
 
     // This return the maximum amount of forms in the given formset
     function get_max_forms(formset_prefix) {
-        var max_forms = $("#id_" + formset_prefix + "-MAX_FORMS").attr("autocomplete", "off").val();
+        var max_forms = $("#id_" + formset_prefix + "-MAX_NUM_FORMS").attr("autocomplete", "off").val();
         if ( typeof max_forms == 'undefined') {
             return '';
         }
