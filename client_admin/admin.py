@@ -13,32 +13,15 @@
 # limitations under the License.
 
 # # Client Admin admin classes
-from client_admin.views import generic_lookup, get_generic_rel_list
-from client_admin.widgets import ThumbnailImageWidget, AdminURLFieldWidget, UnicodeForeignKeyRawIdWidget
+from client_admin.widgets import ThumbnailImageWidget, AdminURLFieldWidget
 
 import re
 
 from django.conf import settings
-from django.conf.urls import patterns, url
-from django.contrib import admin
-from django.contrib.admin import helpers
-from django.contrib.admin.options import get_ul_class
-from django.contrib.admin.templatetags.admin_static import static
-from django.contrib.admin.util import unquote
-from django.contrib.admin.widgets import AdminRadioSelect
-from django.contrib.contenttypes import generic
-from django.core.urlresolvers import reverse
-from django.core.exceptions import PermissionDenied
-from django.db import transaction
-from django.db.models import ImageField, ManyToManyField, FieldDoesNotExist, URLField
+from django.db.models import ImageField, URLField
 from django.forms import Form
 from django.forms.fields import CharField
-from django.forms.formsets import all_valid
-from django.http import Http404
 from django.utils.decorators import method_decorator
-from django.utils.encoding import force_unicode
-from django.utils.html import escape
-from django.utils.translation import ugettext as _
 from django.views.decorators.csrf import csrf_protect
 
 csrf_protect_m = method_decorator(csrf_protect)
