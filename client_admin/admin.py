@@ -46,16 +46,6 @@ csrf_protect_m = method_decorator(csrf_protect)
 JS_PATH = getattr(settings, 'GENERICADMIN_JS', 'client_admin/js/')
 
 
-class EmptyVersionAdmin(object):
-    pass
-
-try:
-    import reversion
-    VersionAdmin = reversion.VersionAdmin
-except:
-    VersionAdmin = EmptyVersionAdmin
-
-
 class AdvancedSearchForm(Form):
     def __init__(self, *args, **kwargs):
         admin_class = kwargs.pop('admin_class')
@@ -122,37 +112,14 @@ class ImageWidgetMixin(object):
     }
 
 
-class UnicodeForeignKeyRawIdWidgetMixin(object):
-    def formfield_for_foreignkey(self, db_field, request=None, **kwargs):
-        """
-        Get a form Field for a ForeignKey.
-        """
-        db = kwargs.get('using')
-        if db_field.name in self.raw_id_fields:
-            kwargs['widget'] = UnicodeForeignKeyRawIdWidget(db_field.rel, self.admin_site, using=db)
-        elif db_field.name in self.radio_fields:
-            kwargs['widget'] = AdminRadioSelect(attrs={
-                'class': get_ul_class(self.radio_fields[db_field.name]),
-            })
-            kwargs['empty_label'] = db_field.blank and _('None') or None
-        return db_field.formfield(**kwargs)
-
 class DeprecationExceptionMixin(object):
     raise DeprecationWarning('Deprecated as of v2.X')
 
-class BaseClientAdminMixin(UnicodeForeignKeyRawIdWidgetMixin, GenericModelAdminMixin, AdvancedSearchMixin, ImageWidgetMixin, URLFieldMixin):
-    formfield_overrides = dict(ImageWidgetMixin.formfield_overrides.items() + URLFieldMixin.formfield_overrides.items())
 
 class RecursiveInlinesModelAdmin(DeprecationExceptionMixin):
     pass
 
-class StackedInlineMixin(object):
-    collapse = False
 
-    def get_formset(self, request, obj=None, **kwargs):
-        FormSet = super(StackedInlineMixin, self).get_formset(request, obj, **kwargs)
-        FormSet.collapse = self.collapse
-        return FormSet
 class GenericModelAdminMixin(DeprecationExceptionMixin):
     pass
 
@@ -169,24 +136,23 @@ class GenericTabularInline(DeprecationExceptionMixin):
     pass
 
 
-class StackedInline(StackedInlineMixin, BaseRecursiveInlineMixin, BaseClientAdminMixin, GenericModelAdminMixin, admin.StackedInline):
+class StackedInline(DeprecationExceptionMixin):
     pass
 
 
-class TabularInline(BaseRecursiveInlineMixin, BaseClientAdminMixin, GenericModelAdminMixin, admin.TabularInline):
+class TabularInline(DeprecationExceptionMixin):
     pass
 
 
-class GenericTabularInline(BaseRecursiveInlineMixin, BaseClientAdminMixin, GenericModelAdminMixin, generic.GenericTabularInline):
-    # Model admin for generic tabular inlines.
+class GroupedInline(DeprecationExceptionMixin):
     pass
 
 
-class GroupedInline(StackedInline):
-    template = 'admin/edit_inline/grouped.html'
+class ClientModelAdmin(DeprecationExceptionMixin):
+    pass
 
 
-class ClientModelAdmin(VersionAdmin, ReverseInlinesModelAdminMixin, BaseClientAdminMixin, RecursiveInlinesModelAdmin):
+class GenericAdminModelAdmin(DeprecationExceptionMixin):
     pass
 
 
