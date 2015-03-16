@@ -28,14 +28,7 @@ from django.core.urlresolvers import reverse
 from django.core.cache import get_cache
 
 if get_cache.__module__.startswith('debug_toolbar'):
-    try:
-        from debug_toolbar.panels.cache import get_cache
-    except ImportError:
-        # for debugtoolbar < 1.0
-        try:
-            from debug_toolbar.panels.cache import base_get_cache as get_cache
-        except:
-            pass
+    from debug_toolbar.panels.cache import get_cache
 
 
 def check_permission(request, mode_name, app_label, model_name):
@@ -49,6 +42,7 @@ def check_permission(request, mode_name, app_label, model_name):
 @jingo.register.function
 @jinja2.contextfunction
 def edit_link(context, obj, label='Edit'):
+    # TODO: Not in use
 
     # Check if `model_object` is a model-instance
     if not isinstance(obj, Model):
@@ -176,16 +170,24 @@ def get_current_dashboard(context):
 
 @jingo.register.filter
 def prettyname(name):
+    """
+    Used in memcache_status dashboard.
+    """
     return ' '.join([word.capitalize() for word in name.split('_')])
 
 
 @jingo.register.filter
 def prettyvalue(value, key):
+    """
+    Used in memcache_status dashboard.
+    """
     return PrettyValue().format(key, value)
 
 
 class PrettyValue(object):
     """
+    Used in memcache_status dashboard.
+
     Helper class that reformats the value. Looks for a method named
     ``format_<key>_value`` and returns that value. Returns the value
     as is, if no format method is found.
@@ -239,6 +241,9 @@ class PrettyValue(object):
 
 @jingo.register.function
 def widthratio(value, max_value, max_width):
+    """
+    Used in memcache_status dashboard.
+    """
     try:
         value = float(value)
         max_value = float(max_value)
