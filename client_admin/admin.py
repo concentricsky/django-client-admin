@@ -56,53 +56,6 @@ except:
     VersionAdmin = EmptyVersionAdmin
 
 
-# ## GenericModelAdminMixin
-class GenericModelAdminMixin(object):
-
-    class Media:
-        js = ()
-
-    content_type_lookups = {}
-
-    def __init__(self, model, admin_site):
-        media = list(getattr(self.Media, 'js', ()))
-        media.append(JS_PATH + 'genericadmin.js')
-        self.Media.js = tuple(media)
-        super(GenericModelAdminMixin, self).__init__(model, admin_site)
-
-    def get_urls(self):
-        base_urls = super(GenericModelAdminMixin, self).get_urls()
-        opts = self.get_generic_relation_options()
-        custom_urls = patterns(
-            '',
-            url(r'^obj/$', self.admin_site.admin_view(generic_lookup), name='admin_genericadmin_obj_lookup'),
-            url(
-                r'^get-generic-rel-list/$',
-                self.admin_site.admin_view(get_generic_rel_list),
-                kwargs=opts,
-                name='admin_genericadmin_rel_list'),
-        )
-        return custom_urls + base_urls
-
-    # Return a dictionary of keywords that are fed to the get_generic_rel_list view
-    def get_generic_relation_options(self):
-        return {'url_params': self.content_type_lookups,
-                'blacklist': self.get_blacklisted_relations(),
-                'whitelist': self.get_whitelisted_relations()}
-
-    def get_blacklisted_relations(self):
-        try:
-            return self.content_type_blacklist
-        except (AttributeError, ):
-            return ()
-
-    def get_whitelisted_relations(self):
-        try:
-            return self.content_type_whitelist
-        except (AttributeError, ):
-            return ()
-
-
 class AdvancedSearchForm(Form):
     def __init__(self, *args, **kwargs):
         admin_class = kwargs.pop('admin_class')
@@ -200,15 +153,20 @@ class StackedInlineMixin(object):
         FormSet = super(StackedInlineMixin, self).get_formset(request, obj, **kwargs)
         FormSet.collapse = self.collapse
         return FormSet
-
-
-class GenericStackedInline(StackedInlineMixin, BaseClientAdminMixin, GenericModelAdminMixin, generic.GenericStackedInline):
+class GenericModelAdminMixin(DeprecationExceptionMixin):
     pass
 
 
-class GenericGroupedInline(StackedInlineMixin, BaseClientAdminMixin, GenericModelAdminMixin, generic.GenericStackedInline):
-    # Model admin for generic stacked inlines.
-    template = 'admin/edit_inline/grouped.html'
+class GenericStackedInline(DeprecationExceptionMixin):
+    pass
+
+
+class GenericGroupedInline(DeprecationExceptionMixin):
+    pass
+
+
+class GenericTabularInline(DeprecationExceptionMixin):
+    pass
 
 
 class StackedInline(StackedInlineMixin, BaseRecursiveInlineMixin, BaseClientAdminMixin, GenericModelAdminMixin, admin.StackedInline):
@@ -231,11 +189,6 @@ class GroupedInline(StackedInline):
 class ClientModelAdmin(VersionAdmin, ReverseInlinesModelAdminMixin, BaseClientAdminMixin, RecursiveInlinesModelAdmin):
     pass
 
-# deprecated
-class GenericAdminModelAdmin(ClientModelAdmin):
-    #raise DeprecationWarning('Use ClientModelAdmin instead')
-    pass
 
-# deprecated
-class BaseGenericModelAdmin(GenericModelAdminMixin):
+class BaseGenericModelAdmin(DeprecationExceptionMixin):
     pass
