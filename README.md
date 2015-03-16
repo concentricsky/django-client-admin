@@ -11,13 +11,14 @@ Client Admin is an open source project developed by [Concentric Sky](https://con
 - [Documentation](#documentation)
 - [Installation](#installation)
 - [Getting Started](#getting-started)
-  - [Default Features](#default-features)
-  - [Additional Features](#additional-features)
+  - [Features](#default-features)
+  - [Removed as of 2.0](#removed-as-of-2.0)
 - [License](#license)
 - [About Concentric Sky](#about-concentric-sky)
 
 
 ## Version History
+- v2.0.0  Do one thing well; Client Admin now focuses solely on theme features. Antiquated admin enhancements, and widgets, decoupled into requirements.
 - v1.0.11 Various bug fixes and style changes
 - v1.0.0 Public codebase was released
 
@@ -61,43 +62,21 @@ Client Admin depends on Jingo to process Jinja2 templates. Please follow the ins
 
 ## Getting Started
 
-Import and inherit from ClientModelAdmin and Inline classes.
-
-    from client_admin.admin import ClientModelAdmin, GroupedInline, TabularInline, StackedInline
-
-
-    class BindingInline(GroupedInline):
-        model = Binding
-
-
-    class RetailerInline(TabularInline):
-        model = Retailer
-
-
-    class AuthorInline(StackedInline):
-        model = Author
-
-
-    class BookAdmin(ClientModelAdmin):
-        inlines = [PhoneNumberInline, RetailerInline, MailingAddressInline]
-
     ...
 
-### Default Features
+### Features
 - Provides a new style for the Django Admin interface.
 - Provides a dashboard with draggable widgets.
 - Creates a menu persistent on all admin pages.
 - Provides a system of admin bookmarks that allow users to quickly star favorite pages and have them available from the menu.
+- Allows admin templates to extend Jinja2 templates. Assuming certain blocks are present
+- Adds an advanced search form to change list views.
+
+### Removed as of 2.0
 - Provides a ClientModelAdmin class to inherit from that improves default widgets and settings.
 - Provides an additional inline type, Grouped, that acts much like a Stacked inline but floats each field group instead of clearing them.
-- Allows admin templates to extend Jinja2 templates. Assuming certain blocks are present
 in your template, this means the admin interface could inherit a header and footer from the front-end templates.
-
-
-### Additional Features
 - Provides nested inline formsets for ModelAdmin classes.
-- Adds an advanced search form to change list views.
-- Provides an improved generic-foreignkey widget.
 - Provides an improved Raw ID foreignkey widget that displays unicode instead of the object's pk.
 - Includes revision history and deleted object recovery via django-reversion
 

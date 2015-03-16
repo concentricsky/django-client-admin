@@ -13,8 +13,7 @@
 # limitations under the License.
 
 """
-django-client-admin is a collection of extensions/tools for the default django
-administration interface, including a dashboard, a customizable menu bar, and
-
+django-client-admin is a collection of theme enhancements for the default django
+administration interface including a dashboard and a customizable menu bar.
 """
-VERSION = '1.1.5'
+VERSION = '2.0.0'
