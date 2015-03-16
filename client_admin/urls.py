@@ -29,8 +29,5 @@ urlpatterns = patterns(
 
     url(r'^dashboard/set_preferences/(?P<dashboard_id>.+)/$', client_admin_views.set_preferences, name='client-admin-dashboard-set-preferences'),
 
-    url(r'^obj/$', client_admin_views.generic_lookup, name='admin_genericadmin_obj_lookup'),
-    #url(r'^get-generic-rel-list/$', client_admin_views.get_generic_rel_list, name='admin_genericadmin_rel_list'),
-
     url(r'^$', client_admin_views.dashboard, name='client_admin_dashboard'),
 )
