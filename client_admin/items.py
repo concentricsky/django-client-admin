@@ -12,6 +12,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+from django.apps import apps as app_registry
 from django.contrib import admin
 from django.utils.safestring import mark_safe
 from django.utils.text import capfirst
@@ -203,8 +204,9 @@ class AppList(MenuItem, AppListElementMixin):
                 continue
             app_label = getattr(admin.site._registry[model], 'app_label', None) or model._meta.app_label
             if app_label not in apps:
+                app_title = app_registry.get_app_config(app_label).verbose_name
                 apps[app_label] = {
-                    'title': capfirst(app_label.title()),
+                    'title': app_title,
                     'url': get_admin_app_list_url(model),
                     'models': []
                 }
