@@ -15,6 +15,7 @@
 """
 Module where client admin dashboard modules classes are defined.
 """
+from django.apps import apps as app_registry
 from django.contrib import admin
 from django.db.models import get_model
 from django.conf import settings
@@ -344,8 +345,9 @@ class AppList(DashboardModule, AppListElementMixin):
         for model, perms in items:
             app_label = model._meta.app_label
             if app_label not in apps:
+                app_title = app_registry.get_app_config(app_label).verbose_name
                 apps[app_label] = {
-                    'title': capfirst(app_label.title()),
+                    'title': app_title,
                     'url': get_admin_app_list_url(model),
                     'models': []
                 }
