@@ -26,8 +26,6 @@ from django.views.decorators.csrf import csrf_protect
 
 csrf_protect_m = method_decorator(csrf_protect)
 
-JS_PATH = getattr(settings, 'GENERICADMIN_JS', 'client_admin/js/')
-
 
 class AdvancedSearchForm(Form):
     def __init__(self, *args, **kwargs):
