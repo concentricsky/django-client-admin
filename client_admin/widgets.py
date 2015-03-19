@@ -24,8 +24,6 @@ from django.utils.html import escape, format_html, format_html_join, smart_urlqu
 from django.utils.text import Truncator
 from django.utils.translation import ugettext as _
 
-from client_admin.templatetags.generic import get_admin_object_change_url
-
 
 def thumbnail(image_path):
    return u'<img src="%s" class="imageupload-thumbnail">' % image_path
@@ -111,49 +109,3 @@ class AdminURLFieldWidget(forms.TextInput):
                 flatatt(final_attrs), html
             )
         return html
-
-
-class UnicodeForeignKeyRawIdWidget(ForeignKeyRawIdWidget):
-    """
-    A Widget for displaying ForeignKeys in the "raw_id" interface rather than
-    in a <select> box, but displaying the unicode of the object instead of the id.
-    """
-    def __init__(self, rel, admin_site, attrs=None, using=None):
-        self.rel = rel
-        self.admin_site = admin_site
-        self.db = using
-        super(ForeignKeyRawIdWidget, self).__init__(attrs)
-
-    def render(self, name, value, attrs=None):
-        rel_to = self.rel.to
-        if attrs is None:
-            attrs = {}
-        extra = []
-        if rel_to in self.admin_site._registry:
-            # The related object is registered with the same AdminSite
-            related_url = reverse('admin:%s_%s_changelist' %
-                                    (rel_to._meta.app_label,
-                                    rel_to._meta.module_name),
-                                    current_app=self.admin_site.name)
-
-            params = self.url_parameters()
-            if params:
-                url = '?' + '&amp;'.join(['%s=%s' % (k, v) for k, v in params.items()])
-            else:
-                url = ''
-            if "class" not in attrs:
-                attrs['class'] = 'vForeignKeyRawIdAdminField' # The JavaScript code looks for this hook.
-            # TODO: "lookup_id_" is hard-coded here. This should instead use
-            # the correct API to determine the ID dynamically.
-            extra.append('<a href="%s%s" class="related-lookup" id="lookup_id_%s" onclick="return showRelatedObjectLookupPopup(this);">%s</a>'
-                            % (related_url, url, name, 'Find'))
-        output = [self.label_for_value(value, name), super(ForeignKeyRawIdWidget, self).render(name, value, attrs)] + extra
-        return mark_safe(''.join(output))
-
-    def label_for_value(self, value, name):
-        key = self.rel.get_related_field().name
-        try:
-            obj = self.rel.to._default_manager.using(self.db).get(**{key: value})
-            return '<a href="%s" target="_blank" class="related_link" id="unicode_id_%s">%s</a>' % (get_admin_object_change_url(obj), name, escape(Truncator(obj).words(14, truncate='...')))
-        except (ValueError, self.rel.to.DoesNotExist):
-            return '<a target="_blank" id="unicode_id_%s"></a>' % name
