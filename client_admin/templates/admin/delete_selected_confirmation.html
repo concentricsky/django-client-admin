@@ -1,9 +1,7 @@
 {% extends "admin/base_site.html" %}
-{% load i18n l10n %}
-{% load url from future %}
-{% load admin_urls %}
+{% load i18n l10n admin_urls %}
 
-{% block bodyclass %}delete_confirmation{% endblock %}
+{% block bodyclass %}{{ block.super }} app-{{ opts.app_label }} model-{{ opts.model_name }} delete-confirmation delete-selected-confirmation{% endblock %}
 
 {% block breadcrumbs %}
 <div class="breadcrumbs">
@@ -33,8 +31,7 @@
         </ul>
     {% endif %}
 {% else %}
-    <h2>{% blocktrans %}Are you sure you want to delete the selected {{ objects_name }}?</h2>
-    <h3>All of the following objects and their related items will be deleted:{% endblocktrans %}</h3>
+<h2>{% blocktrans %}Are you sure you want to delete the selected {{ objects_name }}?</h2><h3>All of the following objects and their related items will be deleted:{% endblocktrans %}</h3>
     {% for deletable_object in deletable_objects %}
         <ul>{{ deletable_object|unordered_list }}</ul>
     {% endfor %}

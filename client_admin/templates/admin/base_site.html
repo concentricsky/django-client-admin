@@ -1,18 +1,20 @@
 {% load i18n %}
 {% load jinja %}
 
-{% extends_jinja "client_admin/client_admin_base.html" %}
-
-{% block title %}{{ title }} | {% trans 'Django site admin' %}{% endblock %}
+{% extends_jinja "client_admin/client_admin_base.html" %}<!-- Client Admin addition -->
+{# extends "admin/base.html" #}
 
 {% block bodyclass %}{% endblock %}
 
+{% block title %}{{ title }} | {{ site_title|default:_('Django site admin') }}{% endblock %}
+
 {% block branding %}
-<h1 id="site-name">{% trans 'Django administration' %}</h1>
+<h1 id="site-name"><a href="{% url 'admin:index' %}">{{ site_header|default:_('Django administration') }}</a></h1>
 {% endblock %}
 
 {% block nav-global %}{% endblock %}
 
+<!-- START Client Admin addition -->
 {% block extrastyle %}{% endblock %}
 
 {% block stylesheet_rtl %}{% endblock %}
@@ -42,3 +44,4 @@
 {# block scripts %}{%block_super%}{% endblock #}
     
 {% block footer %}<div id="footer"></div>{% endblock %}
+<!-- END Client Admin addition -->

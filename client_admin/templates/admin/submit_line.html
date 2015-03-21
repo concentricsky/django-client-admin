@@ -1,12 +1,15 @@
-{% load i18n %}
-<div class="submit-row-placeholder">
+{% load i18n admin_urls %}
+<div class="submit-row-placeholder"><!-- Client Admin addition -->
     <div class="submit-row">
-        <div class="submit_container">
-            {% if show_save %}<input type="submit" value="{% trans 'Save &amp; finish' %}" class="default" name="_save" {{ onclick_attrib }}/>{% endif %}
-            {% if show_delete_link %}<p class="deletelink-box"><a href="delete/" class="deletelink">{% trans "Delete" %}</a></p>{% endif %}
-            {% if show_save_as_new %}<input type="submit" value="{% trans 'Save as new' %}" name="_saveasnew" {{ onclick_attrib }}/>{%endif%}
-            {% if show_save_and_add_another %}<input type="submit" value="{% trans 'Save and add another' %}" name="_addanother" {{ onclick_attrib }} />{% endif %}
-            {% if show_save_and_continue %}<input type="submit" value="{% trans 'Save and continue editing' %}" name="_continue" {{ onclick_attrib }}/>{% endif %}
+    <div class="submit_container"><!-- Client Admin addition -->
+        {% if show_save %}<input type="submit" value="{% trans 'Save &amp; finish' %}" class="default" name="_save" />{% endif %}
+        {% if show_delete_link %}
+            {% url opts|admin_urlname:'delete' original.pk|admin_urlquote as delete_url %}
+            <p class="deletelink-box"><a href="{% add_preserved_filters delete_url %}" class="deletelink">{% trans "Delete" %}</a></p>
+        {% endif %}
+        {% if show_save_as_new %}<input type="submit" value="{% trans 'Save as new' %}" name="_saveasnew" />{%endif%}
+        {% if show_save_and_add_another %}<input type="submit" value="{% trans 'Save and add another' %}" name="_addanother" />{% endif %}
+        {% if show_save_and_continue %}<input type="submit" value="{% trans 'Save and continue editing' %}" name="_continue" />{% endif %}
         </div>
-    </div>
-</div>
+    </div><!-- Client Admin addition -->
+</div><!-- Client Admin addition -->

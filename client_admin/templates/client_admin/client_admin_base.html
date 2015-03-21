@@ -6,23 +6,22 @@
 {% block title %}{{ title }} | {{ _('Site admin') }}{% endblock %}
 
 {% block branding %}
-<h3 id="site-name">{{ _('Site administration') }}</h3>
+    <h3 id="site-name">{{ _('Site administration') }}</h3>
 {% endblock %}
 
 {% block extra_style %}
 {{ super() }}
 
-<!--<link rel="stylesheet" type="text/css" href="{% block stylesheet %}{#{% load adminmedia %}#}{{ STATIC_URL }}admin/css/base.css{% endblock %}" />-->
-{% if LANGUAGE_BIDI %}<link rel="stylesheet" type="text/css" href="{% block stylesheet_rtl %}{{ STATIC_URL }}admin/css/rtl.css{% endblock %}" />{% endif %}
-<script type="text/javascript">window.__admin_media_prefix__ = "{{ STATIC_URL }}admin/";</script>
-<link rel="stylesheet" href="{{ STATIC_URL }}client_admin/css/jquery/jquery-ui.css" type="text/css" media="screen, projection"/>
-{% if dashboard and dashboard.Media %}
-{% for css in dashboard.Media.css %}
-<link rel="stylesheet" href="{{ STATIC_URL }}{{ css }}" type="text/css" media="screen, projection"/>
-{% endfor %}
-{% endif %}
+    {% if LANGUAGE_BIDI %}<link rel="stylesheet" type="text/css" href="{% block stylesheet_rtl %}{{ STATIC_URL }}admin/css/rtl.css{% endblock %}" />{% endif %}
+    <script type="text/javascript">window.__admin_media_prefix__ = "{{ STATIC_URL }}admin/";</script>
+    <link rel="stylesheet" href="{{ STATIC_URL }}client_admin/css/jquery/jquery-ui.css" type="text/css" media="screen, projection"/>
+    {% if dashboard and dashboard.Media %}
+        {% for css in dashboard.Media.css %}
+            <link rel="stylesheet" href="{{ STATIC_URL }}{{ css }}" type="text/css" media="screen, projection"/>
+        {% endfor %}
+    {% endif %}
 
-{% block extrastyle %}{% endblock %}
+    {% block extrastyle %}{% endblock %}
 {% endblock %}
 
 
@@ -34,7 +33,6 @@
 {% endblock %}
 
 {% block secondary_nav %}
-    {# if user.is_active and user.is_staff and not is_popup #}
     {% if user.is_active and user.is_staff %}
 
             {% if menu %}
@@ -49,13 +47,16 @@
 
     {% block messages %}
         {% if messages %}
-        <ul class="messagelist">{% for message in messages %}
-          <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
-        {% endfor %}</ul>
+            <ul class="messagelist">
+                {% for message in messages %}
+                    <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+                {% endfor %}
+            </ul>
         {% endif %}
     {% endblock messages %}
 
     <h2>{% block content_title %}{{ title }}{% endblock %}</h2>
+
 	{% if has_bookmark_item and not is_popup %}
 	    {% if bookmark %}
 	        {% include "client_admin/menu/remove_bookmark_form.html" %}
@@ -70,16 +71,16 @@
 
 
 {% block scripts %}
-    {% if dashboard and dashboard.Media %}{% for js in dashboard.Media.js %}
-    <script type="text/javascript" src="{{ STATIC_URL }}{{ js }}"></script>
-    {% endfor %}{% endif %}
+    {% if dashboard and dashboard.Media %}
+        {% for js in dashboard.Media.js %}
+            <script type="text/javascript" src="{{ STATIC_URL }}{{ js }}"></script>
+        {% endfor %}
+    {% endif %}
     <script type="text/javascript">
         // just use the namespaced jQuery as the regular one
         var jQuery = django.jQuery;
     </script>
-{#    <script type="text/javascript" src="{{ STATIC_URL }}client_admin/js/jquery/jquery.collapsed_stacked_inlines.js"></script>#}
     <script type="text/javascript" src="{{ STATIC_URL }}client_admin/js/utils.js"></script>
-{#    <script type="text/javascript" src="{{ STATIC_URL }}client_admin/js/jquery/jquery.grp_autocomplete_generic.min.js"></script> #}
     <script type="text/javascript" src="{{ STATIC_URL }}client_admin/js/jquery/jquery-ui.min.js"></script>
     <script type="text/javascript" src="{{ STATIC_URL }}client_admin/js/json.min.js"></script>
     <script type="text/javascript" src="{{ STATIC_URL }}client_admin/js/jquery/jquery.cookie.min.js"></script>
@@ -162,30 +163,12 @@
                 $('#toArrayOutput')[0].textContent = arraied : $('#toArrayOutput')[0].innerText = arraied;
             })
 
-            // $("div.inline-related").sortable();
-            // $("div.inline-related").disableSelection();
-
             $('<span class="toggleswitch">Show/Hide</span>').insertBefore('div.inline-related h3 > b');
             $("div.inline-related h3 > span.toggleswitch").click(function(){
                 $(this).toggleClass("hidden");
                 $(this).parents("div.inline-related").children("fieldset.module.aligned").slideToggle();
             });
             $('div.inline-group.start-collapsed div.inline-related:not(".empty-form") h3 > span.toggleswitch').trigger('click');
-
-            // $("div.inline-related h3 > span.deleteinline").click(function(){
-            //     $(this).addClass("hidden");
-            //     $(this).siblings("span.undo_deleteinline").removeClass("hidden");
-            //     $(this).parent("h3").addClass("tobe_removed");
-            //     $(this).parents("div.inline-related").children("fieldset.module.aligned").slideToggle();
-            //     $(this).siblings("span.toggleswitch").addClass("tobe_removed");
-            // })
-            // $("div.inline-related h3 > span.undo_deleteinline").click(function(){
-            //     $(this).addClass("hidden");
-            //     $(this).siblings("span.deleteinline").removeClass("hidden");
-            //     $(this).parent("h3").removeClass("tobe_removed");
-            //     $(this).parents("div.inline-related").children("fieldset.module.aligned").slideToggle();
-            //     $(this).siblings("span.toggleswitch").removeClass("tobe_removed");
-            // })
 
             // When delete button is clicked, give the container li the class tobe_removed
             $("ul#menuitem_set-group > li.inline-related > ul > li.inline-related > div > h3 > span.delete > input[type='checkbox']").click(function(){
