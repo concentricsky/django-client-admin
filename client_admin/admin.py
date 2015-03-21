@@ -94,7 +94,9 @@ class ImageWidgetMixin(object):
 
 
 class DeprecationExceptionMixin(object):
-    raise DeprecationWarning('Deprecated as of v2.X')
+
+    def __init__(self, *args, **kwargs):
+        raise DeprecationWarning('Deprecated as of v2.X')
 
 
 class RecursiveInlinesModelAdmin(DeprecationExceptionMixin):
