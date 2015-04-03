@@ -12,13 +12,9 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-# # Client Admin admin classes
-from client_admin.widgets import ThumbnailImageWidget, AdminURLFieldWidget
-
+# Client Admin admin classes
 import re
 
-from django.conf import settings
-from django.db.models import ImageField, URLField
 from django.forms import Form
 from django.forms.fields import CharField
 from django.utils.decorators import method_decorator
@@ -80,23 +76,18 @@ class AdvancedSearchMixin(object):
             return super(AdvancedSearchMixin, self).lookup_allowed(lookup, value)
 
 
-class URLFieldMixin(object):
-    formfield_overrides = {
-        URLField: {'widget': AdminURLFieldWidget},
-    }
-
-
-class ImageWidgetMixin(object):
-    # Override image widget
-    formfield_overrides = {
-        ImageField: {'widget': ThumbnailImageWidget},
-    }
-
-
 class DeprecationExceptionMixin(object):
 
     def __init__(self, *args, **kwargs):
         raise DeprecationWarning('Deprecated as of v2.X')
+
+
+class URLFieldMixin(DeprecationExceptionMixin):
+    pass
+
+
+class ImageWidgetMixin(DeprecationExceptionMixin):
+    pass
 
 
 class RecursiveInlinesModelAdmin(DeprecationExceptionMixin):
