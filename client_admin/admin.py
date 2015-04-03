@@ -24,37 +24,50 @@ csrf_protect_m = method_decorator(csrf_protect)
 
 
 class AdvancedSearchForm(Form):
+
     def __init__(self, *args, **kwargs):
         admin_class = kwargs.pop('admin_class')
         super(AdvancedSearchForm, self).__init__(*args, **kwargs)
         for item in admin_class.search_fields:
 
-            # Check for this field in the advanced search titles dict on the admin class
-            property_verbose_name = getattr(admin_class, 'advanced_search_titles', {}).get(item)
+            # Check for this field in the advanced search titles dict on the
+            # admin class
+            property_verbose_name = \
+                getattr(admin_class, 'advanced_search_titles', {}).get(item)
             if property_verbose_name:
                 verbose_name = property_verbose_name
             else:
-                # See if this field is a regular field or a related field property
+                # See if this field is a regular field or a related field
+                # property
                 item_parts = item.split('__')
                 if len(item_parts) > 1:
-                    # This assumes it was only two parts, else this should be recursive
+                    # This assumes it was only two parts, else this should be
+                    # recursive
 
                     # Get the field and fk info from get_field_by_name()
-                    field, model, direct, m2m = admin_class.model._meta.get_field_by_name(item_parts[0])
+                    field, model, direct, m2m = \
+                        admin_class.model._meta.get_field_by_name(item_parts[0])
                     if direct or m2m:
-                        # This is a related property of a fk or m2m, so the field_class is the field.model
+                        # This is a related property of a fk or m2m, so the
+                        # field_class is the field.model
                         field_class = field.related.parent_model
                     else:
-                        # This is a reverse m2m _set, so the field class is that related class
-                        field_class = getattr(admin_class.model, item_parts[0]).related.model
+                        # This is a reverse m2m _set, so the field class is that
+                        # related class
+                        field_class = getattr(admin_class.model,
+                                              item_parts[0]).related.model
 
-                    field, model, direct, m2m = field_class._meta.get_field_by_name(item_parts[1])
-                    verbose_name = "%s %s" % (field_class._meta.verbose_name.title(), field.verbose_name.title())
+                    field, model, direct, m2m = \
+                        field_class._meta.get_field_by_name(item_parts[1])
+                    verbose_name = "%s %s" % (
+                        field_class._meta.verbose_name.title(),
+                        field.verbose_name.title())
                 else:
                     # This was just a regular field
                     field_class = admin_class.model
                     field_name = item
-                    field, model, direct, m2m = field_class._meta.get_field_by_name(field_name)
+                    field, model, direct, m2m = \
+                        field_class._meta.get_field_by_name(field_name)
                     verbose_name = field.verbose_name.title()
 
             self.fields['%s__icontains' % item] = CharField(label=verbose_name)
@@ -65,9 +78,13 @@ class AdvancedSearchMixin(object):
 
     @csrf_protect_m
     def changelist_view(self, request, extra_context=None):
-        new_context = {'advanced_search_form': AdvancedSearchForm(admin_class=self, initial=request.GET)}
+        new_context = {
+            'advanced_search_form': AdvancedSearchForm(admin_class=self,
+                                                       initial=request.GET)
+        }
         new_context.update(extra_context or {})
-        return super(AdvancedSearchMixin, self).changelist_view(request, extra_context=new_context)
+        return super(AdvancedSearchMixin, self).changelist_view(
+            request, extra_context=new_context)
 
     def lookup_allowed(self, lookup, value):
         if re.sub('\__icontains$', '', lookup) in self.search_fields:
