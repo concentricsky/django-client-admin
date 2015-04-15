@@ -80,7 +80,7 @@ class RecursiveInlinesModelAdmin(admin.ModelAdmin):
 
     def __init__(self, model, admin_site):
         media = list(getattr(self.Media, 'js', ()))
-        media.append(static('client_admin/js/recursiveinlines.js'))
+        media.append('client_admin/js/recursiveinlines.js')
         self.Media.js = tuple(media)
         super(RecursiveInlinesModelAdmin, self).__init__(model, admin_site)
 
