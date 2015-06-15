@@ -224,7 +224,7 @@ def get_autocomplete_lookup_fields_generic(model_admin):
 @register.filter
 def get_admin_object_change_url(obj):
     if obj:
-        info = obj._meta.app_label, obj._meta.module_name
+        info = obj._meta.app_label, obj._meta.model_name
         return reverse('admin:%s_%s_change' % info, args=(obj.pk,))
     return None
 
@@ -232,6 +232,6 @@ def get_admin_object_change_url(obj):
 @register.filter
 def get_admin_object_add_url(obj):
     if obj:
-        info = obj._meta.app_label, obj._meta.module_name
+        info = obj._meta.app_label, obj._meta.model_name
         return reverse('admin:%s_%s_add' % info)
     return None

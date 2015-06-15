@@ -133,7 +133,7 @@ class UnicodeForeignKeyRawIdWidget(ForeignKeyRawIdWidget):
             # The related object is registered with the same AdminSite
             related_url = reverse('admin:%s_%s_changelist' %
                                     (rel_to._meta.app_label,
-                                    rel_to._meta.module_name),
+                                    rel_to._meta.model_name),
                                     current_app=self.admin_site.name)
 
             params = self.url_parameters()

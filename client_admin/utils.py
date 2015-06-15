@@ -35,7 +35,7 @@ def uniquify(value, seen_values):
 
 
 def get_admin_object_change_url(obj):
-    info = obj._meta.app_label, obj._meta.module_name
+    info = obj._meta.app_label, obj._meta.model_name
     return reverse('admin:%s_%s_change' % info, args=(obj.id,))
 
 

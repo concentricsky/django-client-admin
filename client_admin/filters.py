@@ -61,7 +61,7 @@ class LookupFilter(RelatedFieldListFilter):
         yield {
             'lookup_url': "%s?t=id" % get_admin_change_url(self.field.rel.to),
             'query_string': cl.get_query_string({self.lookup_kwarg: "PLACEHOLDER"}),
-            'filter_name': self.field.rel.to._meta.module_name,
+            'filter_name': self.field.rel.to._meta.model_name,
         }
         for pk_val, val in self.lookup_choices:
             if self.lookup_val == smart_text(pk_val):

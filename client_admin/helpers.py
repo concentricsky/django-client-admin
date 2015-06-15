@@ -55,7 +55,7 @@ def edit_link(context, obj, label='Edit'):
         raise template.TemplateSyntaxError, "'%s' argument must be a model-instance" % obj
 
     app_label = obj._meta.app_label
-    model_name = obj._meta.module_name
+    model_name = obj._meta.model_name
     edit_link = reverse('admin:%s_%s_change' % (app_label, model_name), args=(obj.id,))
 
     if check_permission(request=context['request'], mode_name='change', app_label=app_label, model_name=model_name):
