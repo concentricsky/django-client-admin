@@ -434,7 +434,7 @@ class AdvancedSearchForm(Form):
                     field, model, direct, m2m = admin_class.model._meta.get_field_by_name(item_parts[0])
                     if direct or m2m:
                         # This is a related property of a fk or m2m, so the field_class is the field.model
-                        field_class = field.related.parent_model
+                        field_class = field.related.model
                     else:
                         # This is a reverse m2m _set, so the field class is that related class
                         field_class = getattr(admin_class.model, item_parts[0]).related.model
