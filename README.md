@@ -54,11 +54,6 @@ Include Client Admin urls in your urls.py at the same path as normal contrib.adm
     )
 
 
-Client Admin depends on Jingo to process Jinja2 templates. Please follow the installation instructions according to that library (available at https://jingo.readthedocs.org/en/latest/), and be sure to include contrib.admin in the excluded apps setting:
-
-    JINGO_EXCLUDE_APPS = ( 'admin',)
-
-
 ## Getting Started
 
     ...
