@@ -19,13 +19,12 @@ Client Admin is an open source project developed by [Concentric Sky](https://con
 
 ## Version History
 - v2.0.0  Do one thing well; Client Admin now focuses solely on theme features. Antiquated admin enhancements, and widgets, decoupled into requirements.
-- v1.0.11 Various bug fixes and style changes
 - v1.0.0 Public codebase was released
 
 
 ## Documentation
 
-Detailed documentation is available on [Read The Docs](http://client-admin-for-django.readthedocs.org/en/latest/).
+Detailed (v1.x) documentation is available on [Read The Docs](http://client-admin-for-django.readthedocs.org/en/latest/).
 
 
 ## Installation
